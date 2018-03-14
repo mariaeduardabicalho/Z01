@@ -19,25 +19,19 @@ use work.all;
 ----------------------------
 entity TopLevel is
 	port(
-		SW      : in  std_logic_vector(9 downto 0);
-		LEDR    : out std_logic_vector(9 downto 0)
-	);
+		a : in std_logic;
+		b : in std_logic;
+		c : in std_logic;
+
+		q : out std_logic);
 end entity;
 
 ----------------------------
 -- Implementacao do bloco -- 
 ----------------------------
 architecture rtl of TopLevel is
-
---------------
--- signals
---------------
-
----------------
--- implementacao
----------------
 begin
  
-  LEDR(0) <= SW(0);
+	q <= not a or (b and c);
 
 end rtl;
