@@ -7,4 +7,4 @@ entity DMux2Way is
 			sel: in  STD_LOGIC;
 			q0:  out STD_LOGIC;
 			q1:  out STD_LOGIC);
-end entity;
+end entity
