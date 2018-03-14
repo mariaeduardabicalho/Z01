@@ -1,0 +1,7 @@
+|TopLevel
+a => q.IN1
+b => q.IN0
+c => q.IN1
+q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
