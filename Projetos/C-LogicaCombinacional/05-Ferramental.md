@@ -46,6 +46,8 @@ Ferramenta do github para gerenciamento de projetos (estilo Kambam), cada reposi
 
 ## GitHub issues
 
+> Você deverá ativar o issues no github, vá em **Settings -> e clique em issues**
+
 Plataforma do github para criação de tarefas, as tarefas aqui criadas serão associadas a um projeto específico e a um grupo de pessoas específicas.
 
 ## Pull-request
