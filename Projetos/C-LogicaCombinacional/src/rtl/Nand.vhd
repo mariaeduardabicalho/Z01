@@ -7,7 +7,7 @@ entity nand_z01 is
 	      b : in  std_logic;
 	      q : out std_logic
    );
-end nand_z01;
+end entity;
 
 architecture rtl of nand_z01 is
 begin
