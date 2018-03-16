@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(5CEBA4F23) Path("C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/") File("DE0_CV_Default.sof") MfrSpec(OpMask(1));
+		Device PartName(5CEBA4F23) Path("C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-ULA-Alunos/") File("ula.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
