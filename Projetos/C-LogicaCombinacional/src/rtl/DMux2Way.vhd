@@ -20,4 +20,3 @@ q0 <= a and(not sel);
 q1 <= a and sel;
 
 end dmux2;
->>>>>>> 06f3d95dce78874a13468f90b615701b7df47da9
