@@ -1,5 +1,9 @@
 Fitter report for DE0_CV_Default
+<<<<<<< HEAD
 Wed Mar 14 17:33:56 2018
+=======
+Wed Mar 14 17:35:47 2018
+>>>>>>> d3641fa1a9c5aaa87df7a61e544f954e6ef3ca03
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -58,7 +62,11 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
+<<<<<<< HEAD
 ; Fitter Status                   ; Successful - Wed Mar 14 17:33:56 2018       ;
+=======
+; Fitter Status                   ; Successful - Wed Mar 14 17:35:47 2018       ;
+>>>>>>> d3641fa1a9c5aaa87df7a61e544f954e6ef3ca03
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DE0_CV_Default                              ;
 ; Top-level Entity Name           ; TopLevel                                    ;
@@ -146,6 +154,7 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
+<<<<<<< HEAD
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
@@ -155,6 +164,17 @@ refer to the applicable agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processors 2-4         ;   0.0%      ;
+=======
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+>>>>>>> d3641fa1a9c5aaa87df7a61e544f954e6ef3ca03
 +----------------------------+-------------+
 
 
@@ -576,7 +596,11 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
+<<<<<<< HEAD
 The pin-out file can be found in C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.pin.
+=======
+The pin-out file can be found in C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.pin.
+>>>>>>> d3641fa1a9c5aaa87df7a61e544f954e6ef3ca03
 
 
 +------------------------------------------------------------------------------------------+
@@ -1512,7 +1536,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+<<<<<<< HEAD
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+=======
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+>>>>>>> d3641fa1a9c5aaa87df7a61e544f954e6ef3ca03
 Info (119006): Selected device 5CEBA4F23C7 for design "DE0_CV_Default"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1712,6 +1740,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[2]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_R[3]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
+<<<<<<< HEAD
 Info (11798): Fitter preparation operations ending: elapsed time is 00:00:05
 Info (332104): Reading SDC File: 'DE0_CV_Default.sdc'
 Warning (332174): Ignored filter at DE0_CV_Default.sdc(5): CLOCK2_50 could not be matched with a port File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 5
@@ -1726,6 +1755,22 @@ Warning (332049): Ignored create_clock at DE0_CV_Default.sdc(7): Argument <targe
 Warning (332174): Ignored filter at DE0_CV_Default.sdc(8): CLOCK4_50 could not be matched with a port File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 8
 Warning (332049): Ignored create_clock at DE0_CV_Default.sdc(8): Argument <targets> is an empty collection File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 8
     Info (332050): create_clock -period 20 [get_ports CLOCK4_50] File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 8
+=======
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:06
+Info (332104): Reading SDC File: 'DE0_CV_Default.sdc'
+Warning (332174): Ignored filter at DE0_CV_Default.sdc(5): CLOCK2_50 could not be matched with a port File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 5
+Warning (332049): Ignored create_clock at DE0_CV_Default.sdc(5): Argument <targets> is an empty collection File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 5
+    Info (332050): create_clock -period 20 [get_ports CLOCK2_50] File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 5
+Warning (332174): Ignored filter at DE0_CV_Default.sdc(6): CLOCK3_50 could not be matched with a port File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 6
+Warning (332049): Ignored create_clock at DE0_CV_Default.sdc(6): Argument <targets> is an empty collection File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 6
+    Info (332050): create_clock -period 20 [get_ports CLOCK3_50] File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 6
+Warning (332174): Ignored filter at DE0_CV_Default.sdc(7): CLOCK_50 could not be matched with a port File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 7
+Warning (332049): Ignored create_clock at DE0_CV_Default.sdc(7): Argument <targets> is an empty collection File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 7
+    Info (332050): create_clock -period 20 [get_ports CLOCK_50] File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 7
+Warning (332174): Ignored filter at DE0_CV_Default.sdc(8): CLOCK4_50 could not be matched with a port File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 8
+Warning (332049): Ignored create_clock at DE0_CV_Default.sdc(8): Argument <targets> is an empty collection File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 8
+    Info (332050): create_clock -period 20 [get_ports CLOCK4_50] File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 8
+>>>>>>> d3641fa1a9c5aaa87df7a61e544f954e6ef3ca03
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
 Info (332144): No user constrained base clocks found in the design
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
@@ -1737,32 +1782,54 @@ Info (332159): No clocks to report
 Warning (332068): No clocks defined in design.
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
+<<<<<<< HEAD
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:02
+=======
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:04
+>>>>>>> d3641fa1a9c5aaa87df7a61e544f954e6ef3ca03
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X22_Y11 to location X32_Y22
+<<<<<<< HEAD
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (11888): Total time spent on timing analysis during the Fitter is 0.10 seconds.
+=======
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during the Fitter is 0.27 seconds.
+>>>>>>> d3641fa1a9c5aaa87df7a61e544f954e6ef3ca03
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
+<<<<<<< HEAD
 Info (144001): Generated suppressed messages file C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 202 warnings
     Info: Peak virtual memory: 2128 megabytes
     Info: Processing ended: Wed Mar 14 17:33:57 2018
     Info: Elapsed time: 00:00:28
     Info: Total CPU time (on all processors): 00:00:26
+=======
+Info (144001): Generated suppressed messages file C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 202 warnings
+    Info: Peak virtual memory: 1802 megabytes
+    Info: Processing ended: Wed Mar 14 17:35:47 2018
+    Info: Elapsed time: 00:00:38
+    Info: Total CPU time (on all processors): 00:00:44
+>>>>>>> d3641fa1a9c5aaa87df7a61e544f954e6ef3ca03
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
+<<<<<<< HEAD
 The suppressed messages can be found in C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.fit.smsg.
+=======
+The suppressed messages can be found in C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.fit.smsg.
+>>>>>>> d3641fa1a9c5aaa87df7a61e544f954e6ef3ca03
 
 
