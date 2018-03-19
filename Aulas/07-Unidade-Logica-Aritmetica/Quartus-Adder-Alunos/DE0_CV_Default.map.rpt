@@ -1,5 +1,9 @@
 Analysis & Synthesis report for DE0_CV_Default
+<<<<<<< HEAD
+Wed Mar 14 17:33:26 2018
+=======
 Wed Mar 14 17:35:08 2018
+>>>>>>> d3641fa1a9c5aaa87df7a61e544f954e6ef3ca03
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -42,7 +46,11 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
+<<<<<<< HEAD
+; Analysis & Synthesis Status     ; Successful - Wed Mar 14 17:33:26 2018       ;
+=======
 ; Analysis & Synthesis Status     ; Successful - Wed Mar 14 17:35:08 2018       ;
+>>>>>>> d3641fa1a9c5aaa87df7a61e544f954e6ef3ca03
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DE0_CV_Default                              ;
 ; Top-level Entity Name           ; TopLevel                                    ;
@@ -154,8 +162,13 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
+<<<<<<< HEAD
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+=======
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
+>>>>>>> d3641fa1a9c5aaa87df7a61e544f954e6ef3ca03
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -165,6 +178,15 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
+<<<<<<< HEAD
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                            ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                     ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------+---------+
+; rtl/TopLevel.vhd                 ; yes             ; User VHDL File  ; C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------+---------+
+=======
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Source Files Read                                                                                                                                                                                   ;
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------+
@@ -172,6 +194,7 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; rtl/TopLevel.vhd                 ; yes             ; User VHDL File  ; C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd ;         ;
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------+
+>>>>>>> d3641fa1a9c5aaa87df7a61e544f954e6ef3ca03
 
 
 +-----------------------------------------------------+
@@ -256,6 +279,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+<<<<<<< HEAD
+    Info: Processing started: Wed Mar 14 17:33:09 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_CV_Default -c DE0_CV_Default
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file rtl/toplevel.vhd
+    Info (12022): Found design unit 1: TopLevel-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 29
+    Info (12023): Found entity 1: TopLevel File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 19
+Info (12021): Found 2 design units, including 1 entities, in source file rtl/halfadder.vhd
+    Info (12022): Found design unit 1: HalfAdder-arch File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/HalfAdder.vhd Line: 17
+    Info (12023): Found entity 1: HalfAdder File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/HalfAdder.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file rtl/fulladder.vhd
+    Info (12022): Found design unit 1: FullAdder-arch File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/FullAdder.vhd Line: 17
+    Info (12023): Found entity 1: FullAdder File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/FullAdder.vhd Line: 10
+Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
+Warning (10873): Using initial value X (don't care) for net "LEDR[9..1]" at TopLevel.vhd(22) File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 22
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 22
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 22
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 22
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 22
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 22
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 22
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 22
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 22
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 22
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 9 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 21
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 21
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 21
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 21
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 21
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 21
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 21
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 21
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 21
+=======
     Info: Processing started: Wed Mar 14 17:34:50 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_CV_Default -c DE0_CV_Default
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -293,13 +355,21 @@ Warning (21074): Design contains 9 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 21
     Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 21
     Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/rtl/TopLevel.vhd Line: 21
+>>>>>>> d3641fa1a9c5aaa87df7a61e544f954e6ef3ca03
 Info (21057): Implemented 20 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 10 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
+<<<<<<< HEAD
+    Info: Peak virtual memory: 783 megabytes
+    Info: Processing ended: Wed Mar 14 17:33:26 2018
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:26
+=======
     Info: Peak virtual memory: 782 megabytes
     Info: Processing ended: Wed Mar 14 17:35:08 2018
     Info: Elapsed time: 00:00:18
     Info: Total CPU time (on all processors): 00:00:36
+>>>>>>> d3641fa1a9c5aaa87df7a61e544f954e6ef3ca03
 
 
