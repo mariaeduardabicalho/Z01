@@ -9,7 +9,10 @@ entity DMux2Way is
 			q1:  out STD_LOGIC);
 end entity;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 
@@ -23,6 +26,9 @@ q1 <= a and sel;
 
 end dmux2;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 =======
 >>>>>>> master

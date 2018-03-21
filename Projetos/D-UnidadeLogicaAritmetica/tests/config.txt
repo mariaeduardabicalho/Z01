@@ -4,9 +4,15 @@
 #FullAdder.vhd
 #HalfAdder.vhd
 <<<<<<< HEAD
+<<<<<<< HEAD
 Add16.vhd
 #Inc16.vhd
 #comparador16.vhd
+=======
+#Add16.vhd
+#Inc16.vhd
+comparador16.vhd
+>>>>>>> master
 =======
 #Add16.vhd
 #Inc16.vhd
