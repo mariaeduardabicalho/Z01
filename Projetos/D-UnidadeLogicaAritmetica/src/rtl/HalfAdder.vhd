@@ -17,7 +17,14 @@ end entity;
 architecture rtl of HalfAdder is
 
 begin
+<<<<<<< HEAD
 	soma   <= a xor b;
    vaium <= a and b;
 
 end architecture;
+=======
+	soma  <= a xor b;
+  	vaium <= a and b;
+	
+end architecture;
+>>>>>>> master

@@ -1,5 +1,9 @@
 TimeQuest Timing Analyzer report for DE0_CV_Default
+<<<<<<< HEAD
 Wed Mar 14 17:34:18 2018
+=======
+Wed Mar 14 17:36:05 2018
+>>>>>>> d3641fa1a9c5aaa87df7a61e544f954e6ef3ca03
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -95,6 +99,7 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
+<<<<<<< HEAD
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
@@ -104,6 +109,17 @@ refer to the applicable agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processors 2-4         ;   0.2%      ;
+=======
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.2%      ;
+>>>>>>> d3641fa1a9c5aaa87df7a61e544f954e6ef3ca03
 +----------------------------+-------------+
 
 
@@ -112,7 +128,11 @@ refer to the applicable agreement for further details.
 +--------------------+--------+--------------------------+
 ; SDC File Path      ; Status ; Read at                  ;
 +--------------------+--------+--------------------------+
+<<<<<<< HEAD
 ; DE0_CV_Default.sdc ; OK     ; Wed Mar 14 17:34:15 2018 ;
+=======
+; DE0_CV_Default.sdc ; OK     ; Wed Mar 14 17:36:00 2018 ;
+>>>>>>> d3641fa1a9c5aaa87df7a61e544f954e6ef3ca03
 +--------------------+--------+--------------------------+
 
 
@@ -476,6 +496,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+<<<<<<< HEAD
     Info: Processing started: Wed Mar 14 17:34:13 2018
 Info: Command: quartus_sta DE0_CV_Default -c DE0_CV_Default
 Info: qsta_default_script.tcl version: #3
@@ -496,6 +517,28 @@ Warning (332049): Ignored create_clock at DE0_CV_Default.sdc(7): Argument <targe
 Warning (332174): Ignored filter at DE0_CV_Default.sdc(8): CLOCK4_50 could not be matched with a port File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 8
 Warning (332049): Ignored create_clock at DE0_CV_Default.sdc(8): Argument <targets> is an empty collection File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 8
     Info (332050): create_clock -period 20 [get_ports CLOCK4_50] File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 8
+=======
+    Info: Processing started: Wed Mar 14 17:35:58 2018
+Info: Command: quartus_sta DE0_CV_Default -c DE0_CV_Default
+Info: qsta_default_script.tcl version: #3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332104): Reading SDC File: 'DE0_CV_Default.sdc'
+Warning (332174): Ignored filter at DE0_CV_Default.sdc(5): CLOCK2_50 could not be matched with a port File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 5
+Warning (332049): Ignored create_clock at DE0_CV_Default.sdc(5): Argument <targets> is an empty collection File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 5
+    Info (332050): create_clock -period 20 [get_ports CLOCK2_50] File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 5
+Warning (332174): Ignored filter at DE0_CV_Default.sdc(6): CLOCK3_50 could not be matched with a port File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 6
+Warning (332049): Ignored create_clock at DE0_CV_Default.sdc(6): Argument <targets> is an empty collection File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 6
+    Info (332050): create_clock -period 20 [get_ports CLOCK3_50] File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 6
+Warning (332174): Ignored filter at DE0_CV_Default.sdc(7): CLOCK_50 could not be matched with a port File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 7
+Warning (332049): Ignored create_clock at DE0_CV_Default.sdc(7): Argument <targets> is an empty collection File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 7
+    Info (332050): create_clock -period 20 [get_ports CLOCK_50] File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 7
+Warning (332174): Ignored filter at DE0_CV_Default.sdc(8): CLOCK4_50 could not be matched with a port File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 8
+Warning (332049): Ignored create_clock at DE0_CV_Default.sdc(8): Argument <targets> is an empty collection File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 8
+    Info (332050): create_clock -period 20 [get_ports CLOCK4_50] File: C:/Users/Thomas Pilnik/Desktop/Insper/3 Semestre/Elementos/Z01/Aulas/07-Unidade-Logica-Aritmetica/Quartus-Adder-Alunos/DE0_CV_Default.sdc Line: 8
+>>>>>>> d3641fa1a9c5aaa87df7a61e544f954e6ef3ca03
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
@@ -552,9 +595,16 @@ Warning (18330): Ignoring Synchronizer Identification setting Off, and using Aut
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 17 warnings
+<<<<<<< HEAD
     Info: Peak virtual memory: 957 megabytes
     Info: Processing ended: Wed Mar 14 17:34:18 2018
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:05
+=======
+    Info: Peak virtual memory: 933 megabytes
+    Info: Processing ended: Wed Mar 14 17:36:05 2018
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:06
+>>>>>>> d3641fa1a9c5aaa87df7a61e544f954e6ef3ca03
 
 
