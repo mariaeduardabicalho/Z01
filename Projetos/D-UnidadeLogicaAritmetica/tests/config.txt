@@ -5,8 +5,13 @@
 #HalfAdder.vhd
 #Add16.vhd
 #Inc16.vhd
+<<<<<<< HEAD
 #comparador16.vhd
 inversor16.vhd
+=======
+comparador16.vhd
+#inversor16.vhd
+>>>>>>> e911564db3c14b21e32537ffbdcf5ff1c9cc017b
 #zerador16.vhd
 #ALU.vhd
   
