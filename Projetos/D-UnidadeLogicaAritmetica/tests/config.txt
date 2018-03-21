@@ -1,7 +1,6 @@
 # Testes a serem executados
 # Descomente os módulos que deseja testar
 
-<<<<<<< HEAD
 FullAdder.vhd
 HalfAdder.vhd
 Add16.vhd
@@ -10,15 +9,3 @@ comparador16.vhd
 inversor16.vhd
 zerador16.vhd
 ALU.vhd
-#
-=======
-#FullAdder.vhd
-#HalfAdder.vhd
-#Add16.vhd
-#Inc16.vhd
-#comparador16.vhd
-#inversor16.vhd
-zerador16.vhd
-#ALU.vhd
-  
->>>>>>> e200ce781aed10891d572b00d235670a39832855

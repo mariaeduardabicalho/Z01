@@ -15,15 +15,25 @@ entity Inc16 is
 	);
 end entity;
 
-architecture rtl of Inc16 is
+architecture rtl of Inc16 is	
 
-component HalfAdder is
+component Add16 is
 	port(
-		a,b:        in STD_LOGIC;   -- entradas
-		soma,vaium: out STD_LOGIC   -- sum e carry
+		a   :  in STD_LOGIC_VECTOR(15 downto 0);
+		b   :  in STD_LOGIC_VECTOR(15 downto 0);
+		q   : out STD_LOGIC_VECTOR(15 downto 0)
 	);
 end component;
 
-begin
 
+
+signal s1 : std_logic:='0';
+ -- Para fazer o inc basta pegar o Add16 e deixar a entrada b sempre em 0000000000000001, pq aii sempre somará 1 a um vetor de 16
+begin
+fullader1 : Add16 port map (
+							a => a,
+							b => "0000000000000001",
+							q => q
+
+					);
 end architecture;
