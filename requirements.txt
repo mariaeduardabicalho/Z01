@@ -1,4 +1,3 @@
 termcolor
-log
 vunit
 vunit_hdl
