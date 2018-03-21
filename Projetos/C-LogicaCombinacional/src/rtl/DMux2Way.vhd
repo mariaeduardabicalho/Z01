@@ -8,13 +8,6 @@ entity DMux2Way is
 			q0:  out STD_LOGIC;
 			q1:  out STD_LOGIC);
 end entity;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> master
-=======
->>>>>>> master
 
 architecture dmux2 of DMux2Way is
 
@@ -25,10 +18,4 @@ q0 <= a and(not sel);
 q1 <= a and sel;
 
 end dmux2;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> master
-=======
->>>>>>> master
