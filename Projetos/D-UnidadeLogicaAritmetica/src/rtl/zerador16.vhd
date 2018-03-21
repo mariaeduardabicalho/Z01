@@ -16,5 +16,11 @@ architecture rtl of zerador16 is
 
 
 begin
-
+	process(z,a) is begin
+		if (z = '0') then
+			y <= a;
+		else
+			y <= (others => '0');
+		end if;
+	end process;
 end architecture;
