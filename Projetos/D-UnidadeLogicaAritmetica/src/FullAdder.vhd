@@ -32,7 +32,7 @@ begin
 	soma => s1,
 	vaium => c1
 	);
-	
+
 	HA2 : HalfAdder port map(
 	a => s1,
 	b => c,
@@ -42,4 +42,3 @@ begin
 vaium <= c1 or c2;
 
 end architecture;
-
