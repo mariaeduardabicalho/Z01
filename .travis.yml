@@ -1,4 +1,4 @@
-# Refs
+﻿# Refs
 # customizing the boot
 #   - https://docs.travis-ci.com/user/customizing-the-build/#Build-Matrix
 
@@ -45,4 +45,5 @@ script:
   - python Projetos/0-Infra/testeVHDL.py
   - python Projetos/C-LogicaCombinacional/script/testeLogicaCombinacional.py
   - python Projetos/D-UnidadeLogicaAritmetica/script/testeULA.py
+  - python Projetos/E-LogicaSequencial/script/testeLogicaSequencial.py
     
