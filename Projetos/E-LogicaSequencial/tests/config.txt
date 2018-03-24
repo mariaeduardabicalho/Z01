@@ -1,4 +1,4 @@
-# Testes a serem executados
+﻿# Testes a serem executados
 # Descomente os módulos que deseja testar
   
 FlipFlopD.vhd
