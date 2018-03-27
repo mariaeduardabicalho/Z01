@@ -34,4 +34,3 @@ begin
 	c8:	BinaryDigit port map(clock, input(7), load, output(7));
 
 end architecture;
-
