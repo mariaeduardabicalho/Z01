@@ -1,0 +1,6 @@
+Link Video ULA: https://youtu.be/d7np63OpCWI
+
+As entradas X e Y colocadas no TOP LEVEL eram:
+
+signal x : std_logic_vector(15 downto 0) := x"0073"; -- 163
+signal y : std_logic_vector(15 downto 0) := x"005F"; -- 95
