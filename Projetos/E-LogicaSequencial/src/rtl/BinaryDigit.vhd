@@ -37,6 +37,3 @@ begin
 	output <= s2;
 
 end	architecture;
-
-
-
