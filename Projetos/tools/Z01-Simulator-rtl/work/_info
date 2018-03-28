@@ -1,0 +1,1986 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator
+Eadd16
+Z1 w1500406895
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/Add16.vhd
+Z5 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/Add16.vhd
+l0
+L11
+V756he=zhY6CI=Dn@ki6kU2
+!s100 SiSIIDRe2L<Y`4Mn=<Q<i1
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1513010129
+!i10b 1
+Z8 !s108 1513010129.000000
+Z9 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/Add16.vhd|
+Z10 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/Add16.vhd|
+!i113 1
+Z11 o-work work
+Z12 tExplicit 1 CvgOpt 0
+Aarch
+R2
+R3
+DEx4 work 5 add16 0 22 756he=zhY6CI=Dn@ki6kU2
+l30
+L19
+V0hRI4aLPlmeMfNb2SL;d`1
+!s100 HPAE7I2DMLn3Z?nNHk9j;3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ealu
+R1
+R2
+R3
+R0
+Z13 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/ALU.vhd
+Z14 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/ALU.vhd
+l0
+L29
+VebIVm0RVP8XP<3CahQgZ;1
+!s100 ;H:E>8hji@:aE]F93AJU@0
+R6
+32
+R7
+!i10b 1
+R8
+Z15 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/ALU.vhd|
+Z16 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/ALU.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 3 alu 0 22 ebIVm0RVP8XP<3CahQgZ;1
+l95
+L44
+Vfe^lXeKNnamQS4oeY^XSh1
+!s100 lKo?bTd4l^=<OfjJmzATL0
+R6
+32
+R7
+!i10b 1
+R8
+R15
+R16
+!i113 1
+R11
+R12
+Eand16
+R1
+R2
+R3
+R0
+Z17 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/And16.vhd
+Z18 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/And16.vhd
+l0
+L8
+V6C>B^;DFOC2=AGT`fbJZd2
+!s100 _B22@4oL_LiJ_Ce7?VNdh3
+R6
+32
+R7
+!i10b 1
+R8
+Z19 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/And16.vhd|
+Z20 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/And16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 5 and16 0 22 6C>B^;DFOC2=AGT`fbJZd2
+l16
+L15
+V=ZFg;<>Ja5]1@;P_0[E5m2
+!s100 PCYLLkd?GOl>WeLFBSFj[2
+R6
+32
+R7
+!i10b 1
+R8
+R19
+R20
+!i113 1
+R11
+R12
+Ebarrelshifter16
+R1
+Z21 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R2
+R3
+R0
+Z22 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/BarrelShifter16.vhd
+Z23 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/BarrelShifter16.vhd
+l0
+L9
+VKZ6J5AMFQgQlLhh]_^gl>1
+!s100 YZUAf73e@TH`A<Ym@h7Um0
+R6
+32
+Z24 !s110 1513010130
+!i10b 1
+R8
+Z25 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/BarrelShifter16.vhd|
+Z26 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/BarrelShifter16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R21
+R2
+R3
+DEx4 work 15 barrelshifter16 0 22 KZ6J5AMFQgQlLhh]_^gl>1
+l18
+L17
+VL5B=AL6iki_Zz5`doY35R3
+!s100 0adEm`:fgUQ2Zc]IkZKVC0
+R6
+32
+R24
+!i10b 1
+R8
+R25
+R26
+!i113 1
+R11
+R12
+Ebarrelshifter8
+R1
+R21
+R2
+R3
+R0
+Z27 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/BarrelShifter8.vhd
+Z28 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/BarrelShifter8.vhd
+l0
+L9
+Vh<E[mljM1bnUiAbJHHXDC1
+!s100 iIURO9NWD3PZLlV1`jeQO0
+R6
+32
+R24
+!i10b 1
+Z29 !s108 1513010130.000000
+Z30 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/BarrelShifter8.vhd|
+Z31 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/BarrelShifter8.vhd|
+!i113 1
+R11
+R12
+Aarch
+R21
+R2
+R3
+DEx4 work 14 barrelshifter8 0 22 h<E[mljM1bnUiAbJHHXDC1
+l18
+L17
+VVG^5>Caj<3EYTB`aUU=>31
+!s100 b51K6@GiJ_g8;CfSzcfFN1
+R6
+32
+R24
+!i10b 1
+R29
+R30
+R31
+!i113 1
+R11
+R12
+Ebinarydigit
+Z32 w1513010121
+R2
+R3
+R0
+Z33 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/BinaryDigit.vhd
+Z34 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/BinaryDigit.vhd
+l0
+L8
+V`GiY714H<AVRAZ8LW3z[V2
+!s100 n^<iU8FL6WS_@iLlidHO_3
+R6
+32
+R24
+!i10b 1
+R29
+Z35 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/BinaryDigit.vhd|
+Z36 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/BinaryDigit.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 11 binarydigit 0 22 `GiY714H<AVRAZ8LW3z[V2
+l41
+L18
+VEY59K2>iZKB_YVeY0@1ZF0
+!s100 _@T7K:g5a;Na<;Rfg<?Gd2
+R6
+32
+R24
+!i10b 1
+R29
+R35
+R36
+!i113 1
+R11
+R12
+Ecomparador16
+R1
+R2
+R3
+R0
+Z37 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/comparador16.vhd
+Z38 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/comparador16.vhd
+l0
+L8
+VVS^[iFkzCYDo75`Mf]FQo1
+!s100 HD:k]=26;BheSZMCC[cIo3
+R6
+32
+R24
+!i10b 1
+R29
+Z39 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/comparador16.vhd|
+Z40 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/comparador16.vhd|
+!i113 1
+R11
+R12
+Astruccomp16
+R2
+R3
+DEx4 work 12 comparador16 0 22 VS^[iFkzCYDo75`Mf]FQo1
+l17
+L16
+VVSA?`6o[o6PHXI48maP=j0
+!s100 U5g:=lNL:A?;ie>]K7TEc2
+R6
+32
+R24
+!i10b 1
+R29
+R39
+R40
+!i113 1
+R11
+R12
+Ecomputador
+Z41 w1509754630
+R21
+R2
+R3
+R0
+Z42 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/Computador.vhd
+Z43 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/Computador.vhd
+l0
+L17
+VdAnM`AWoQA0dhmYcBQU]Q2
+!s100 imUIkGSnI4mG45h695CO?1
+R6
+32
+R24
+!i10b 1
+R29
+Z44 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/Computador.vhd|
+Z45 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/Computador.vhd|
+!i113 1
+R11
+R12
+Alogic
+R21
+R2
+R3
+DEx4 work 10 computador 0 22 dAnM`AWoQA0dhmYcBQU]Q2
+l147
+L42
+V2;=MLWL_O5:kG;@B>iD`62
+!s100 FGI_8S]fc@M0cF:@M4JZF2
+R6
+32
+R24
+!i10b 1
+R29
+R44
+R45
+!i113 1
+R11
+R12
+Ecomputador_tb
+Z46 w1510613838
+R21
+R2
+R3
+R0
+Z47 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/Computador_tb.vhd
+Z48 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/Computador_tb.vhd
+l0
+L17
+V^<T_kEk4AEg2XQQdZNHhg3
+!s100 TNE09aYh8d4DH0B==1NGH3
+R6
+32
+Z49 !s110 1513010132
+!i10b 1
+Z50 !s108 1513010132.000000
+Z51 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/Computador_tb.vhd|
+Z52 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/Computador_tb.vhd|
+!i113 1
+R11
+R12
+Artl
+R21
+R2
+R3
+DEx4 work 13 computador_tb 0 22 ^<T_kEk4AEg2XQQdZNHhg3
+l47
+L20
+V4jz[kRhFUaZWkSzHDaVG=0
+!s100 ZCfJUnoNi3_ke9^IA<2CB0
+R6
+32
+R49
+!i10b 1
+R50
+R51
+R52
+!i113 1
+R11
+R12
+Econtrolunit
+R1
+R2
+R3
+R0
+Z53 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/ControlUnit.vhd
+Z54 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/ControlUnit.vhd
+l0
+L11
+VP98ag]BRc<4@o4>KJCedW2
+!s100 I]gYVOd_XkL:kliJA]lL30
+R6
+32
+R24
+!i10b 1
+R29
+Z55 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/ControlUnit.vhd|
+Z56 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/ControlUnit.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 11 controlunit 0 22 P98ag]BRc<4@o4>KJCedW2
+l23
+L22
+VZ`gS1@JFz_]c6_c;1S9MQ2
+!s100 >Il@34K;U@T6kn]XVFR2H3
+R6
+32
+R24
+!i10b 1
+R29
+R55
+R56
+!i113 1
+R11
+R12
+Ecpu
+Z57 w1513009854
+R2
+R3
+R0
+Z58 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/CPU.vhd
+Z59 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/CPU.vhd
+l0
+L9
+VJB]FB3?68F2=EY]hSLKdL1
+!s100 Dl[8b:G5POKTU78iLA7Xk1
+R6
+32
+R24
+!i10b 1
+R29
+Z60 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/CPU.vhd|
+Z61 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/CPU.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 3 cpu 0 22 JB]FB3?68F2=EY]hSLKdL1
+l100
+L22
+Vj8_;n`j8l6UNONIP>kFOF0
+!s100 F=[MRP0Ib8P_GMEEh_YWg2
+R6
+32
+R24
+!i10b 1
+R29
+R60
+R61
+!i113 1
+R11
+R12
+Edmux2way
+R1
+R2
+R3
+R0
+Z62 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/DMux2Way.vhd
+Z63 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/DMux2Way.vhd
+l0
+L8
+Vz419=f`MP<g<Xj<SRV2Dn2
+!s100 UB80OAXHg;J3Y[9ma5ajI1
+R6
+32
+R24
+!i10b 1
+R29
+Z64 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/DMux2Way.vhd|
+Z65 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/DMux2Way.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 8 dmux2way 0 22 z419=f`MP<g<Xj<SRV2Dn2
+l17
+L16
+VYk2m[cHPmZMa?zm3UcACD0
+!s100 <C]3^^O87AT3N?f;REAEG3
+R6
+32
+R24
+!i10b 1
+R29
+R64
+R65
+!i113 1
+R11
+R12
+Edmux4way
+R1
+R2
+R3
+R0
+Z66 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/DMux4Way.vhd
+Z67 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/DMux4Way.vhd
+l0
+L8
+Vl`OR`kzZdZbb54GWTRTX23
+!s100 ZJUTPI>fKT<9ZW_aaj_^53
+R6
+32
+R24
+!i10b 1
+R29
+Z68 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/DMux4Way.vhd|
+Z69 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/DMux4Way.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 8 dmux4way 0 22 l`OR`kzZdZbb54GWTRTX23
+l19
+L18
+V^nZ`jK?LNiZPOY7?=aFX[2
+!s100 nfCDAUfih]VDZM:L<P[P:1
+R6
+32
+R24
+!i10b 1
+R29
+R68
+R69
+!i113 1
+R11
+R12
+Edmux8way
+R1
+R2
+R3
+R0
+Z70 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/DMux8Way.vhd
+Z71 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/DMux8Way.vhd
+l0
+L8
+V?5d3309CQM9Ja898Q4nC_2
+!s100 8h@?5:W@5aN?bFLAShn?J3
+R6
+32
+R24
+!i10b 1
+R29
+Z72 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/DMux8Way.vhd|
+Z73 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/DMux8Way.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 8 dmux8way 0 22 ?5d3309CQM9Ja898Q4nC_2
+l23
+L22
+VRZX_FNZCLZYm<=gJ4l]`]0
+!s100 PBNJzb]DRcCGUBL14iHb`2
+R6
+32
+R24
+!i10b 1
+R29
+R72
+R73
+!i113 1
+R11
+R12
+Edmux8way16
+R1
+R2
+R3
+R0
+Z74 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/DMux8Way16.vhd
+Z75 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/DMux8Way16.vhd
+l0
+L8
+V@]Xd0^LWD7315h:B6R>0_0
+!s100 JOa0=jJWk<bJKC17AK^M30
+R6
+32
+R24
+!i10b 1
+R29
+Z76 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/DMux8Way16.vhd|
+Z77 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/DMux8Way16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 10 dmux8way16 0 22 @]Xd0^LWD7315h:B6R>0_0
+l24
+L23
+VA:MH:HYOcGd53;B>OW0bY1
+!s100 RSVMBfH8HMgd2OL@UGDfQ1
+R6
+32
+R24
+!i10b 1
+R29
+R76
+R77
+!i113 1
+R11
+R12
+Eflipflopd
+Z78 w1513009958
+R2
+R3
+R0
+Z79 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/FlipFlopD.vhd
+Z80 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/FlipFlopD.vhd
+l0
+L8
+VQ6:OCJbZbI5Rld>Kj`DgQ1
+!s100 SA:0:]R5E=XfTT6`I?h;E0
+R6
+32
+R24
+!i10b 1
+R29
+Z81 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/FlipFlopD.vhd|
+Z82 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/FlipFlopD.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 9 flipflopd 0 22 Q6:OCJbZbI5Rld>Kj`DgQ1
+l20
+L19
+V6>mGT@WlV5=dRmOVc?YHX2
+!s100 ij8l?OlRhUO@dQFAe7YC`2
+R6
+32
+R24
+!i10b 1
+R29
+R81
+R82
+!i113 1
+R11
+R12
+Efulladder
+R1
+R2
+R3
+R0
+Z83 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/FullAdder.vhd
+Z84 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/FullAdder.vhd
+l0
+L10
+VDRYL6eKo9>mlT:T[XVkjm2
+!s100 ^oFEXWUb;T^9LUJXBGnJH2
+R6
+32
+R24
+!i10b 1
+R29
+Z85 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/FullAdder.vhd|
+Z86 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/FullAdder.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 9 fulladder 0 22 DRYL6eKo9>mlT:T[XVkjm2
+l19
+L17
+VOOX2=OVf@5kPk59[X<fiH0
+!s100 Wb1E?8cFG`V9Zc[]Ob_mM0
+R6
+32
+R24
+!i10b 1
+R29
+R85
+R86
+!i113 1
+R11
+R12
+Ehalfadder
+R1
+R2
+R3
+R0
+Z87 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/HalfAdder.vhd
+Z88 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/HalfAdder.vhd
+l0
+L10
+VET9;8QadDUzcYLJM]71HR3
+!s100 h@?RhTGZ[QMJjM?>AnoBQ0
+R6
+32
+R24
+!i10b 1
+R29
+Z89 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/HalfAdder.vhd|
+Z90 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/HalfAdder.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 9 halfadder 0 22 ET9;8QadDUzcYLJM]71HR3
+l19
+L17
+VkJ1e;=eUB4gn?^Ym=JR0P3
+!s100 _Hh4o?9N1YQjTH5gJgEVm2
+R6
+32
+R24
+!i10b 1
+R29
+R89
+R90
+!i113 1
+R11
+R12
+Einc16
+R1
+R2
+R3
+R0
+Z91 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/Inc16.vhd
+Z92 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/Inc16.vhd
+l0
+L11
+Vi37fX8CV5m:Q2T@=H6M^X3
+!s100 zf5`@f[Vj[mSi<_bFTEQi3
+R6
+32
+R24
+!i10b 1
+R29
+Z93 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/Inc16.vhd|
+Z94 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/Inc16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 5 inc16 0 22 i37fX8CV5m:Q2T@=H6M^X3
+l29
+L18
+VeGhlmFKmZ7L^HYWGO5f4T2
+!s100 0KO9QnJz^KTAUXFPgbLgJ1
+R6
+32
+R24
+!i10b 1
+R29
+R93
+R94
+!i113 1
+R11
+R12
+Einterfacesdram
+R1
+Z95 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z96 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R21
+R2
+R3
+R0
+Z97 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/dispositivos/RAM/interfaceSDRAM.vhd
+Z98 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/dispositivos/RAM/interfaceSDRAM.vhd
+l0
+L7
+VJJXF3Ak=PQHcMWDBn53:j3
+!s100 ]bX=n2jdJTQ9L0aeR7@@Q1
+R6
+32
+Z99 !s110 1513010131
+!i10b 1
+R29
+Z100 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/dispositivos/RAM/interfaceSDRAM.vhd|
+Z101 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/dispositivos/RAM/interfaceSDRAM.vhd|
+!i113 1
+R11
+R12
+Alogic
+R95
+R96
+R21
+R2
+R3
+DEx4 work 14 interfacesdram 0 22 JJXF3Ak=PQHcMWDBn53:j3
+l92
+L35
+VV>JR8B9Fb;8[:cC1fa]Wz2
+!s100 6e]JeNdEkcl_8`^hdA5A[2
+R6
+32
+R99
+!i10b 1
+R29
+R100
+R101
+!i113 1
+R11
+R12
+Einversor16
+R1
+R2
+R3
+R0
+Z102 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/inversor16.vhd
+Z103 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/inversor16.vhd
+l0
+L8
+V]YYC`D6QUX^Y?]>Fk>XYB2
+!s100 DO=@n^nGVg3J<NEg@^<i10
+R6
+32
+R99
+!i10b 1
+Z104 !s108 1513010131.000000
+Z105 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/inversor16.vhd|
+Z106 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/inversor16.vhd|
+!i113 1
+R11
+R12
+Astrucnega16
+R2
+R3
+DEx4 work 10 inversor16 0 22 ]YYC`D6QUX^Y?]>Fk>XYB2
+l16
+L15
+VS8@OLcH]?hz?8MM=UA=C20
+!s100 _]0^oHRIclC]cKzPjX;bk2
+R6
+32
+R99
+!i10b 1
+R104
+R105
+R106
+!i113 1
+R11
+R12
+Ememoryio
+Z107 w1509756666
+R21
+R2
+R3
+R0
+Z108 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/MemoryIO.vhd
+Z109 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/MemoryIO.vhd
+l0
+L5
+Vm5XWg6[To]UkC]MgJ5A@`2
+!s100 b>OE`mG_ASY9APJD;F<C=3
+R6
+32
+R99
+!i10b 1
+R104
+Z110 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/MemoryIO.vhd|
+Z111 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/MemoryIO.vhd|
+!i113 1
+R11
+R12
+Alogic
+R21
+R2
+R3
+DEx4 work 8 memoryio 0 22 m5XWg6[To]UkC]MgJ5A@`2
+l120
+L38
+VA7NFBaP;31BShKXil@o`f2
+!s100 d]<E45F8:W8Pn74LLligg0
+R6
+32
+R99
+!i10b 1
+R104
+R110
+R111
+!i113 1
+R11
+R12
+Emux16
+R1
+R2
+R3
+R0
+Z112 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux16.vhd
+Z113 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux16.vhd
+l0
+L8
+VWNQ4e>2eQga1X5iL_U^@m2
+!s100 jfBFdh`[T]PT1b52:KEb;3
+R6
+32
+R99
+!i10b 1
+R104
+Z114 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux16.vhd|
+Z115 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 5 mux16 0 22 WNQ4e>2eQga1X5iL_U^@m2
+l17
+L16
+ViAc9e1LSk=^?N>IlP6QYl1
+!s100 k_^dXROk:iSH>APSDKL=:1
+R6
+32
+R99
+!i10b 1
+R104
+R114
+R115
+!i113 1
+R11
+R12
+Emux2way
+R1
+R2
+R3
+R0
+Z116 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux2Way.vhd
+Z117 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux2Way.vhd
+l0
+L8
+V3;T;^SMd8AM2b]lon;N`B0
+!s100 nMi?A[MKJJbLjHo4Z7zj=1
+R6
+32
+R99
+!i10b 1
+R104
+Z118 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux2Way.vhd|
+Z119 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux2Way.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 7 mux2way 0 22 3;T;^SMd8AM2b]lon;N`B0
+l20
+L16
+VeE1emYe?[>1MDGj^_M3mD1
+!s100 <nO@lRMTJgRKR660MR^`02
+R6
+32
+R99
+!i10b 1
+R104
+R118
+R119
+!i113 1
+R11
+R12
+Emux4way
+R1
+R2
+R3
+R0
+Z120 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux4Way.vhd
+Z121 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux4Way.vhd
+l0
+L8
+VPH[5@>i<_Z4gF?c2:@2^l0
+!s100 =BCZ<:62[JRF;nRiGYdcm0
+R6
+32
+R99
+!i10b 1
+R104
+Z122 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux4Way.vhd|
+Z123 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux4Way.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 7 mux4way 0 22 PH[5@>i<_Z4gF?c2:@2^l0
+l19
+L18
+V^ec^Q9l`<fl1Se3D>J:oQ2
+!s100 [QQVHSTO]oN>6QnbiVhQ83
+R6
+32
+R99
+!i10b 1
+R104
+R122
+R123
+!i113 1
+R11
+R12
+Emux4way16
+R1
+R2
+R3
+R0
+Z124 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux4Way16.vhd
+Z125 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux4Way16.vhd
+l0
+L8
+V@Oj8L2CGUbBM_MljZd7ZA2
+!s100 dEF_:?>`l2ljVXVAF@a230
+R6
+32
+R99
+!i10b 1
+R104
+Z126 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux4Way16.vhd|
+Z127 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux4Way16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 9 mux4way16 0 22 @Oj8L2CGUbBM_MljZd7ZA2
+l19
+L18
+V8V>Vhdh[Q38jizUEiJXh^0
+!s100 3LQOgebTlZnjSfoM<TP`k2
+R6
+32
+R99
+!i10b 1
+R104
+R126
+R127
+!i113 1
+R11
+R12
+Emux8way
+R1
+R2
+R3
+R0
+Z128 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux8Way.vhd
+Z129 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux8Way.vhd
+l0
+L8
+V;B[bZO:NHn]Ecz>g2D[LO1
+!s100 FJS:i^ZZCf2@:;i0^>8<S1
+R6
+32
+R99
+!i10b 1
+R104
+Z130 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux8Way.vhd|
+Z131 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux8Way.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 7 mux8way 0 22 ;B[bZO:NHn]Ecz>g2D[LO1
+l23
+L22
+V15WclW2EnzDOP6eF60^4O0
+!s100 dIImW8<>zLkg;;@C4?oh@3
+R6
+32
+R99
+!i10b 1
+R104
+R130
+R131
+!i113 1
+R11
+R12
+Emux8way16
+R1
+R2
+R3
+R0
+Z132 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux8Way16.vhd
+Z133 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux8Way16.vhd
+l0
+L8
+VfH4TSfc7W?mfRMOVKjzMA0
+!s100 ]6aBc5_RnKgn26B_EGSf:0
+R6
+32
+R99
+!i10b 1
+R104
+Z134 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux8Way16.vhd|
+Z135 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Mux8Way16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 9 mux8way16 0 22 fH4TSfc7W?mfRMOVKjzMA0
+l23
+L22
+V`TME`6X^gNWOPLBSI0l663
+!s100 QZW6O>Ui<7^H>@;[kjoic2
+R6
+32
+R99
+!i10b 1
+R104
+R134
+R135
+!i113 1
+R11
+R12
+Enand_vhdl
+R1
+R2
+R3
+R0
+Z136 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/nand_vhdl.vhd
+Z137 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/nand_vhdl.vhd
+l0
+L8
+VJ_d]Pg`JX7I;jSL0b?N?I2
+!s100 JY>NCQjbfSY[4UZ<fJ=XX2
+R6
+32
+R99
+!i10b 1
+R104
+Z138 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/nand_vhdl.vhd|
+Z139 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/nand_vhdl.vhd|
+!i113 1
+R11
+R12
+Amain
+R2
+R3
+DEx4 work 9 nand_vhdl 0 22 J_d]Pg`JX7I;jSL0b?N?I2
+l16
+L15
+V96bmHkLKeR;;UgK^BG?:j1
+!s100 ?=4Q<dahmFOUheNOF@U3C3
+R6
+32
+R99
+!i10b 1
+R104
+R138
+R139
+!i113 1
+R11
+R12
+Enor8way
+R1
+R2
+R3
+R0
+Z140 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Nor8Way.vhd
+Z141 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Nor8Way.vhd
+l0
+L8
+V[WN@k>3oT0Z1I10_AcMc80
+!s100 C=BOn;G^jdCaUQLfN>WXR0
+R6
+32
+R99
+!i10b 1
+R104
+Z142 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Nor8Way.vhd|
+Z143 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Nor8Way.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 7 nor8way 0 22 [WN@k>3oT0Z1I10_AcMc80
+l22
+L21
+V4i8NAZ9TFz[Ei0]L_10aW1
+!s100 bAWN@HKi2EDEn=T<M[hHY2
+R6
+32
+R99
+!i10b 1
+R104
+R142
+R143
+!i113 1
+R11
+R12
+Enot16
+R1
+R2
+R3
+R0
+Z144 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Not16.vhd
+Z145 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Not16.vhd
+l0
+L8
+VLTj_B:fGefL6fWYTjiJb^0
+!s100 ?CM>c5aKMkEZ[DI<jEzLR0
+R6
+32
+R99
+!i10b 1
+R104
+Z146 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Not16.vhd|
+Z147 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Not16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 5 not16 0 22 LTj_B:fGefL6fWYTjiJb^0
+l15
+L14
+V<nYzd>Z`_^7P<LiOg4L^a1
+!s100 ;JJHRTfJefah_dfC1MD490
+R6
+32
+R99
+!i10b 1
+R104
+R146
+R147
+!i113 1
+R11
+R12
+Eor16
+R1
+R2
+R3
+R0
+Z148 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Or16.vhd
+Z149 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Or16.vhd
+l0
+L8
+VoJNe?LPcE06VJ0HCk;5F13
+!s100 aC2VFRdg>S33ShJ^U6n@m3
+R6
+32
+R99
+!i10b 1
+R104
+Z150 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Or16.vhd|
+Z151 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Or16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 4 or16 0 22 oJNe?LPcE06VJ0HCk;5F13
+l16
+L15
+V]@SY>0oAZ8B34S5OFfbI_0
+!s100 Zbj<mgBUOKLRJlWZUZYOG0
+R6
+32
+R99
+!i10b 1
+R104
+R150
+R151
+!i113 1
+R11
+R12
+Eor8way
+R1
+R2
+R3
+R0
+Z152 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Or8Way.vhd
+Z153 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Or8Way.vhd
+l0
+L8
+V<Sd_8?VoeizDSh=?dVLUh3
+!s100 k7hgjf;1TB4>i_TRe;Wg<1
+R6
+32
+R99
+!i10b 1
+R104
+Z154 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Or8Way.vhd|
+Z155 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/PortasLogicas/Or8Way.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 6 or8way 0 22 <Sd_8?VoeizDSh=?dVLUh3
+l22
+L21
+V;<hAVO37=2NSKC6Me?0mU3
+!s100 HE@fcdcShT97jn@3d6Uak1
+R6
+32
+R99
+!i10b 1
+R104
+R154
+R155
+!i113 1
+R11
+R12
+Epc
+Z156 w1513009924
+R21
+R2
+R3
+R0
+Z157 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/PC.vhd
+Z158 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/PC.vhd
+l0
+L16
+VoaNc:DBZoD5Yl1OAkOlnH1
+!s100 cP9RXYi;HhcECRc0dS5UT2
+R6
+32
+R99
+!i10b 1
+R104
+Z159 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/PC.vhd|
+Z160 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CPU/PC.vhd|
+!i113 1
+R11
+R12
+Aarch
+R21
+R2
+R3
+DEx4 work 2 pc 0 22 oaNc:DBZoD5Yl1OAkOlnH1
+l28
+L27
+VbEDHlPCn=Q`YNXz[Ie1;k0
+!s100 aNcISCnj2mV6;kNXMGMQL1
+R6
+32
+R99
+!i10b 1
+R104
+R159
+R160
+!i113 1
+R11
+R12
+Eram16k
+Z161 w1512772352
+Z162 DPx9 altera_mf 20 altera_mf_components 0 22 :YRc5<ojH^WgP]^Vezi9c1
+R2
+R3
+Z163 d/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Z0-Simulator-rtl
+Z164 8./Modulos/dispositivos/RAM_fpga/RAM16K.vhd
+Z165 F./Modulos/dispositivos/RAM_fpga/RAM16K.vhd
+l0
+L43
+V?W3fU8AJPJ2S[;=PMJaMU1
+!s100 Pe>;JD`:?:`O3@C?zeRZV0
+R6
+32
+Z166 !s110 1513624576
+!i10b 1
+Z167 !s108 1513624576.000000
+Z168 !s90 -work|work|./Modulos/dispositivos/RAM_fpga/RAM16K.vhd|
+Z169 !s107 ./Modulos/dispositivos/RAM_fpga/RAM16K.vhd|
+!i113 1
+R11
+R12
+Asyn
+R162
+R2
+R3
+DEx4 work 6 ram16k 0 22 ?W3fU8AJPJ2S[;=PMJaMU1
+l59
+L55
+VNbV5c0287YGzE6CDmh`X11
+!s100 g:hlO]2;aEj6f3_hafdCl3
+R6
+32
+R166
+!i10b 1
+R167
+R168
+R169
+!i113 1
+R11
+R12
+Eram4k
+R1
+R2
+R3
+R0
+Z170 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Ram4K.vhd
+Z171 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Ram4K.vhd
+l0
+L8
+V2RJ7Uok0a9@l?<IZKM:hW0
+!s100 ESk?XNEfJCWi[LAlUVY:i3
+R6
+32
+R99
+!i10b 1
+R104
+Z172 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Ram4K.vhd|
+Z173 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Ram4K.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 5 ram4k 0 22 2RJ7Uok0a9@l?<IZKM:hW0
+l61
+L18
+Va1JR_19haXgV1OX>GB`U71
+!s100 F5OZO<Yb[h5e9kk^O@lc:3
+R6
+32
+R99
+!i10b 1
+R104
+R172
+R173
+!i113 1
+R11
+R12
+Eram512
+R1
+R2
+R3
+R0
+Z174 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Ram512.vhd
+Z175 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Ram512.vhd
+l0
+L8
+VXBT5[VikKknDFdaNSFR:72
+!s100 1@Ji=O6R2bCM?3<4JVEVe1
+R6
+32
+R99
+!i10b 1
+R104
+Z176 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Ram512.vhd|
+Z177 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Ram512.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 6 ram512 0 22 XBT5[VikKknDFdaNSFR:72
+l61
+L18
+VObGa:@2H[R><5`:Mc7AK<2
+!s100 XzR1Ng9SLC63n9F^LAPDK2
+R6
+32
+R99
+!i10b 1
+R104
+R176
+R177
+!i113 1
+R11
+R12
+Eram64
+R1
+R2
+R3
+R0
+Z178 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Ram64.vhd
+Z179 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Ram64.vhd
+l0
+L8
+VRB5`ZMb2VWX7JTI]b6`]_1
+!s100 gg_:9eMG?gXI@fHk9bKn=3
+R6
+32
+R49
+!i10b 1
+R104
+Z180 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Ram64.vhd|
+Z181 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Ram64.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 5 ram64 0 22 RB5`ZMb2VWX7JTI]b6`]_1
+l61
+L18
+VnFR<4I_j;LTYlG;`UAje12
+!s100 f`4K:a]iHJPzjUcERI`_C0
+R6
+32
+R49
+!i10b 1
+R104
+R180
+R181
+!i113 1
+R11
+R12
+Eram8
+R1
+R2
+R3
+R0
+Z182 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Ram8.vhd
+Z183 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Ram8.vhd
+l0
+L8
+VJ^dIlVa1jaALNOH@HK];a0
+!s100 R5mZ`al9n>P1>n^5Jl6z_1
+R6
+32
+R49
+!i10b 1
+R50
+Z184 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Ram8.vhd|
+Z185 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Ram8.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 4 ram8 0 22 J^dIlVa1jaALNOH@HK];a0
+l60
+L18
+VX7:CTB@nIDXQbB=X2314k3
+!s100 NkT;c5PbQim58:V<QOKZW2
+R6
+32
+R49
+!i10b 1
+R50
+R184
+R185
+!i113 1
+R11
+R12
+Pref_pack
+R21
+R2
+R3
+w1510610540
+R0
+R47
+R48
+l0
+L20
+ViVJ`PiB6^HR:G_DFWbYkP3
+!s100 SGOEWKhFF:PMbR=NXj3FO0
+R6
+32
+!s110 1510610557
+!i10b 1
+!s108 1510610557.000000
+R51
+R52
+!i113 1
+R11
+R12
+Eregister16
+Z186 w1513009613
+R2
+R3
+R0
+Z187 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Register16.vhd
+Z188 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Register16.vhd
+l0
+L8
+VSXfWzLnh>jm:TgO2h]j@11
+!s100 [Hf5z]6^joS_^S?DMghab1
+R6
+32
+R49
+!i10b 1
+R50
+Z189 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Register16.vhd|
+Z190 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Register16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 10 register16 0 22 SXfWzLnh>jm:TgO2h]j@11
+l30
+L18
+V]eH959`l]jS_SI@]5^0>j1
+!s100 H0m`S>_`m[BSWi8[j5D`O2
+R6
+32
+R49
+!i10b 1
+R50
+R189
+R190
+!i113 1
+R11
+R12
+Eregister32
+R1
+R2
+R3
+R0
+Z191 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Register32.vhd
+Z192 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Register32.vhd
+l0
+L8
+VDcNSWzoRLc5DJn@UbWZR]1
+!s100 []:^=AY8a3]ML1PkdZ@Ea3
+R6
+32
+R49
+!i10b 1
+R50
+Z193 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Register32.vhd|
+Z194 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Register32.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 10 register32 0 22 DcNSWzoRLc5DJn@UbWZR]1
+l28
+L17
+VIB9;4fJ2iMjE`_@@^FzMW3
+!s100 S^he`KSCS@0NKi;lDmhf02
+R6
+32
+R49
+!i10b 1
+R50
+R193
+R194
+!i113 1
+R11
+R12
+Eregister64
+R1
+R2
+R3
+R0
+Z195 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Register64.vhd
+Z196 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Register64.vhd
+l0
+L8
+V_31lC;H>Rg3UQ9VWdSY_A3
+!s100 LCbS]1neA;d2ePolK?XW]3
+R6
+32
+R49
+!i10b 1
+R50
+Z197 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Register64.vhd|
+Z198 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Register64.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 10 register64 0 22 _31lC;H>Rg3UQ9VWdSY_A3
+l28
+L17
+Vg>D:o6B`6amc<`BIeJFFk3
+!s100 fVg<FjOc]0L:FQ:O6RJFG2
+R6
+32
+R49
+!i10b 1
+R50
+R197
+R198
+!i113 1
+R11
+R12
+Eregister8
+R1
+R2
+R3
+R0
+Z199 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Register8.vhd
+Z200 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Register8.vhd
+l0
+L8
+VI9bFH32^`LLZl1[jmYL2B1
+!s100 RH;m?0bQIi^ohZMhS9XdS0
+R6
+32
+R49
+!i10b 1
+R50
+Z201 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Register8.vhd|
+Z202 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/Register8.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 9 register8 0 22 I9bFH32^`LLZl1[jmYL2B1
+l28
+L17
+VDT2n]Fn3QznLY2<TVg^hg0
+!s100 [hh@dVFaIT?QBbf]lTB9j0
+R6
+32
+R49
+!i10b 1
+R50
+R201
+R202
+!i113 1
+R11
+R12
+Erom32k
+Z203 w1512772431
+R162
+R2
+R3
+R163
+Z204 8./Modulos/dispositivos/ROM/ROM32K.vhd
+Z205 F./Modulos/dispositivos/ROM/ROM32K.vhd
+l0
+L43
+VYc4^=NLgoXG<7H?^B_=Jh1
+!s100 Y0Eb<EfiYKB=@5Y7bHG?J2
+R6
+32
+R166
+!i10b 1
+R167
+Z206 !s90 -work|work|./Modulos/dispositivos/ROM/ROM32K.vhd|
+Z207 !s107 ./Modulos/dispositivos/ROM/ROM32K.vhd|
+!i113 1
+R11
+R12
+Asyn
+R162
+R2
+R3
+Z208 DEx4 work 6 rom32k 0 22 Yc4^=NLgoXG<7H?^B_=Jh1
+l57
+L53
+Z209 Vd:S3c91ln>NDSn9R;21XP0
+Z210 !s100 >YF>D?8=R1U807d2h36N?2
+R6
+32
+R166
+!i10b 1
+R167
+R206
+R207
+!i113 1
+R11
+R12
+vsdram
+R49
+!i10b 1
+!s100 H>D2DDXaB@8JTbRo0M[PO3
+I?U^VZek8b9fdOFOzgDGT>2
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+R1
+8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/dispositivos/RAM/sdram/synthesis/sdram.v
+F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/dispositivos/RAM/sdram/synthesis/sdram.v
+L0 6
+OV;L;10.5b;63
+r1
+!s85 0
+31
+R50
+!s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/dispositivos/RAM/sdram/synthesis/sdram.v|
+!s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/dispositivos/RAM/sdram/synthesis/sdram.v|
+!i113 1
+R11
+tCvgOpt 0
+Eshiftregisterpipo16
+R1
+R2
+R3
+R0
+Z211 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/ShiftRegisterPIPO16.vhd
+Z212 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/ShiftRegisterPIPO16.vhd
+l0
+L13
+V2O7?oLW?_4J8l:X3BEe2R1
+!s100 5`PFhDP^5:4f9:IV5G@<>2
+R6
+32
+R49
+!i10b 1
+R50
+Z213 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/ShiftRegisterPIPO16.vhd|
+Z214 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/ShiftRegisterPIPO16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 19 shiftregisterpipo16 0 22 2O7?oLW?_4J8l:X3BEe2R1
+l45
+L22
+V`E4n<W<l9QGPiNGzoa1GT2
+!s100 NGJ1il<zO4N6ccOhQT=k]1
+R6
+32
+R49
+!i10b 1
+R50
+R213
+R214
+!i113 1
+R11
+R12
+Eshiftregisterpiso16
+R1
+R2
+R3
+R0
+Z215 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/ShiftRegisterPISO16.vhd
+Z216 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/ShiftRegisterPISO16.vhd
+l0
+L14
+VUEnR37T`j;hJ=;lFTOz;U3
+!s100 WnU_<;IBa[YC?CEH85dm10
+R6
+32
+R49
+!i10b 1
+R50
+Z217 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/ShiftRegisterPISO16.vhd|
+Z218 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/ShiftRegisterPISO16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 19 shiftregisterpiso16 0 22 UEnR37T`j;hJ=;lFTOz;U3
+l39
+L23
+VU5FdG=nB0=agJV^14`^@D2
+!s100 z?J2ODG^^ebcUjMnBNfOk3
+R6
+32
+R49
+!i10b 1
+R50
+R217
+R218
+!i113 1
+R11
+R12
+Eshiftregistersipo16
+R1
+R2
+R3
+R0
+Z219 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/ShiftRegisterSIPO16.vhd
+Z220 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/ShiftRegisterSIPO16.vhd
+l0
+L11
+VmRoj[23<j6?PFV:W_lUKW3
+!s100 CEoRC=QDN_?[lmDNo4eT<2
+R6
+32
+R49
+!i10b 1
+R50
+Z221 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/ShiftRegisterSIPO16.vhd|
+Z222 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/ShiftRegisterSIPO16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 19 shiftregistersipo16 0 22 mRoj[23<j6?PFV:W_lUKW3
+l33
+L19
+Vaa`8DRH^zM@UmA2;mad@[2
+!s100 nkTK5DbVKR8f`ceZ<ChcC0
+R6
+32
+R49
+!i10b 1
+R50
+R221
+R222
+!i113 1
+R11
+R12
+Eshiftregistersiso16
+R1
+R2
+R3
+R0
+Z223 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/ShiftRegisterSISO16.vhd
+Z224 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/ShiftRegisterSISO16.vhd
+l0
+L11
+VF`ca;3]`:D[XEV1NU];9L2
+!s100 9@bkbdQXR<iiTM8jEgV]z1
+R6
+32
+R49
+!i10b 1
+R50
+Z225 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/ShiftRegisterSISO16.vhd|
+Z226 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/CircuitosSequenciais/ShiftRegisterSISO16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 19 shiftregistersiso16 0 22 F`ca;3]`:D[XEV1NU];9L2
+l33
+L19
+Vb^Id[b;m>hVViLmTfLz6L2
+!s100 2HTD00GcNi>_9cJd9<I?40
+R6
+32
+R49
+!i10b 1
+R50
+R225
+R226
+!i113 1
+R11
+R12
+Ezerador16
+R1
+R2
+R3
+R0
+Z227 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/zerador16.vhd
+Z228 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/zerador16.vhd
+l0
+L8
+V@A>j=[QNRTJR`QV_oBmIE2
+!s100 5[I:HNEI56WNfSm5f^c2U1
+R6
+32
+R49
+!i10b 1
+R50
+Z229 !s90 -reportprogress|300|-work|work|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/zerador16.vhd|
+Z230 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/2-Materiais/Computador-Simulator/Modulos/UnidadeLogicaAritmetica/zerador16.vhd|
+!i113 1
+R11
+R12
+Astruczero16
+R2
+R3
+DEx4 work 9 zerador16 0 22 @A>j=[QNRTJR`QV_oBmIE2
+l17
+L15
+Vl3GCd6W?k4AEP36ScZDQO0
+!s100 XY4EVDd<e16hDRO`>_9ja2
+R6
+32
+R49
+!i10b 1
+R50
+R229
+R230
+!i113 1
+R11
+R12

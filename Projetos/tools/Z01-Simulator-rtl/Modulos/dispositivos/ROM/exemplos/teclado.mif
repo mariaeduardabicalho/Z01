@@ -1,0 +1,57 @@
+-- Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, the Altera Quartus Prime License Agreement,
+-- the Altera MegaCore Function License Agreement, or other 
+-- applicable license agreement, including, without limitation, 
+-- that your use is for the sole purpose of programming logic 
+-- devices manufactured by Altera and sold by Altera or its 
+-- authorized distributors.  Please refer to the applicable 
+-- agreement for further details.
+
+-- Quartus Prime generated Memory Initialization File (.mif)
+
+WIDTH=16;
+DEPTH=31;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	0   :   0000000000000001;  -- leaw 1, %A	
+	1   :   1110110000010000;  -- movw %A, %D
+	2   :   0000000000001010;  -- leaw 10, %A	
+	3   :   1110001100001000;  -- movw %D, (%A)
+	4   :   0100000000000000;  -- leaw 16384, %A
+	5   :   1110110000010000;  -- movw %A, %D
+	6   :   0000000000001011;  -- leaw 11, %A
+	7   :   1110001100001000;  -- movw %D, (%A)
+	8   :   0111111111111111;  -- leaw 10, %A	[LOOP]
+	9   :   1111110000010000;  -- movw (%A), %D
+	10  :   0000000000001011;  -- leaw 11, %A
+	11  :   1111110000100000;  -- movw (%A), %A
+	12  :   1110001100001000;  -- movw %D, (%A)  [DESENHA]
+	13  :   1110011111010000;  -- incw %D          [D++]
+	14  :   0000000000001010;  -- leaw 10, %A
+	15  :   1110001100001000;  -- movw %D, (%A)
+	16  :   0000000000010100;  -- leaw 20, %A    [A+20]
+	17  :   1110110000010000;  -- movw %A, %D
+	18  :   0000000000001011;  -- leaw 11, %A
+	19  :   1111110000100000;  -- movw (%A), %A
+	20  :   1110000010010000;  -- addw %A, %D
+	21  :   0000000000001011;  -- leaw 11, %A
+	22  :   1110001100001000;  -- movw %D, (%A)
+	23  :   0111111111111111;  -- leaw 32767, %A
+	24  :   1111110000010000;  -- movw (%A), %D
+	25  :   0000000000010111;  -- leaw 23, %A
+	26  :   1110001100000010;  -- jeq
+	27  :   1110101010000000;  -- nop
+	28  :   0000000000001000;  -- leaw 8, %A
+	29  :   1110000000000111;  -- jmp
+	30  :   1110101010000000;  -- nop
+END;
+

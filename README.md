@@ -46,7 +46,7 @@ Resumo Material Elementos de Sistemas :
      - https://github.com/Insper/Z01/blob/master/Aulas/04-CI/04-Lista-CI.pdf
 - Vídeo 
     - https://www.youtube.com/watch?v=zX36rn_lIl0
-    
+
 # Aula 5 - Lógica Combinacional 
 
 - Slides 
@@ -57,7 +57,9 @@ Resumo Material Elementos de Sistemas :
      - https://github.com/Insper/Z01/blob/master/Aulas/05-Logica-Combinacional/05-Lista-LogicaCombinacional.pdf
 - Vídeo 
      - https://www.youtube.com/watch?v=ImFt9YjEHHc
-     
+- Bibliografia :
+    -
+    
 # Aula 6 - Dados Digitais 
 
 - Slides 
