@@ -1,0 +1,120 @@
+# do /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01/Projetos/tools/scripts/../Z01-Simulator-rtl/do/sim.do
+# 1
+# 1
+# 1
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:13:52 on Mar 28,2018
+# vcom -work work ./Modulos/dispositivos/RAM_fpga/RAM16K.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_mf_components
+# -- Compiling entity RAM16K
+# -- Compiling architecture SYN of ram16k
+# End time: 12:13:52 on Mar 28,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:13:52 on Mar 28,2018
+# vcom -work work ./Modulos/dispositivos/ROM/ROM32K.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_mf_components
+# -- Compiling entity ROM32K
+# -- Compiling architecture SYN of rom32k
+# End time: 12:13:52 on Mar 28,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:13:52 on Mar 28,2018
+# vcom -work work ./Modulos/dispositivos/PLL/PLL.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PLL
+# -- Compiling architecture rtl of PLL
+# End time: 12:13:52 on Mar 28,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:13:52 on Mar 28,2018
+# vcom -work work ./Modulos/dispositivos/PLL/PLL_sim/PLL.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_lnsim_components
+# -- Compiling entity PLL
+# -- Compiling architecture RTL of PLL
+# End time: 12:13:52 on Mar 28,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.computador_tb 
+# Start time: 12:13:52 on Mar 28,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.computador_tb(rtl)
+# Loading work.computador(logic)
+# Loading work.cpu(arch)
+# Loading work.controlunit(arch)
+# Loading work.register16(arch)
+# Loading work.binarydigit(arch)
+# Loading work.mux2way(arch)
+# Loading work.flipflopd(arch)
+# Loading work.mux16(arch)
+# Loading work.pc(arch)
+# Loading work.alu(arch)
+# Loading work.zerador16(struczero16)
+# Loading work.inversor16(strucnega16)
+# Loading work.add16(arch)
+# Loading work.fulladder(arch)
+# Loading work.and16(arch)
+# Loading work.comparador16(struccomp16)
+# Loading altera_mf.altera_mf_components
+# Loading work.rom32k(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+# Loading work.ram16k(syn)
+# ** Warning: Design size of 10915 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1 ns  Iteration: 1  Instance: /computador_tb/c1/RAM/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 1 ns  Iteration: 1  Instance: /computador_tb/c1/RAM/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1 ns  Iteration: 1  Instance: /computador_tb/c1/RAM/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 1 ns  Iteration: 1  Instance: /computador_tb/c1/RAM/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1 ns  Iteration: 1  Instance: /computador_tb/c1/RAM/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 1 ns  Iteration: 1  Instance: /computador_tb/c1/RAM/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3 ns  Iteration: 1  Instance: /computador_tb/c1/RAM/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 3 ns  Iteration: 1  Instance: /computador_tb/c1/RAM/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3 ns  Iteration: 1  Instance: /computador_tb/c1/RAM/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 3 ns  Iteration: 1  Instance: /computador_tb/c1/RAM/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3 ns  Iteration: 1  Instance: /computador_tb/c1/RAM/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 3 ns  Iteration: 1  Instance: /computador_tb/c1/RAM/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 1  Instance: /computador_tb/c1/RAM/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 1  Instance: /computador_tb/c1/RAM/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 1  Instance: /computador_tb/c1/RAM/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 1  Instance: /computador_tb/c1/RAM/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 1  Instance: /computador_tb/c1/RAM/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 1  Instance: /computador_tb/c1/RAM/altsyncram_component
+# End time: 12:13:52 on Mar 28,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
