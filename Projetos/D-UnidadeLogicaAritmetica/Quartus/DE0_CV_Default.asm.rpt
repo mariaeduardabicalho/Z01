@@ -1,6 +1,6 @@
 Assembler report for DE0_CV_Default
-Wed Mar 14 09:38:49 2018
-Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+Wed Mar 21 18:42:58 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -10,8 +10,8 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: DE0_CV_Default.sof
-  6. Assembler Device Options: DE0_CV_Default.pof
+  5. Assembler Device Options: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/Quartus/DE0_CV_Default.sof
+  6. Assembler Device Options: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/Quartus/DE0_CV_Default.pof
   7. Assembler Messages
 
 
@@ -27,19 +27,18 @@ functions, and any output files from any of the foregoing
 associated documentation or information are expressly subject 
 to the terms and conditions of the Intel Program License 
 Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel MegaCore Function License Agreement, or other 
-applicable license agreement, including, without limitation, 
-that your use is for the sole purpose of programming logic 
-devices manufactured by Intel and sold by Intel or its 
-authorized distributors.  Please refer to the applicable 
-agreement for further details.
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
 
 
 
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Mar 14 09:38:49 2018 ;
+; Assembler Status      ; Successful - Wed Mar 21 18:42:58 2018 ;
 ; Revision Name         ; DE0_CV_Default                        ;
 ; Top-level Entity Name ; TopLevel                              ;
 ; Family                ; Cyclone V                             ;
@@ -54,35 +53,35 @@ agreement for further details.
 +--------+---------+---------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                          ;
-+--------------------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                          ;
-+--------------------------------------------------------------------------------------------------------------------+
-; /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/Quartus/DE0_CV_Default.sof ;
-; /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/Quartus/DE0_CV_Default.pof ;
-+--------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                                             ;
++-----------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                             ;
++-----------------------------------------------------------------------------------------------------------------------+
+; C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/Quartus/DE0_CV_Default.sof ;
+; C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/Quartus/DE0_CV_Default.pof ;
++-----------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------+
-; Assembler Device Options: DE0_CV_Default.sof ;
-+----------------+-----------------------------+
-; Option         ; Setting                     ;
-+----------------+-----------------------------+
-; JTAG usercode  ; 0x004DE713                  ;
-; Checksum       ; 0x004DE713                  ;
-+----------------+-----------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/Quartus/DE0_CV_Default.sof ;
++----------------+--------------------------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                                        ;
++----------------+--------------------------------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x004E2802                                                                                                                     ;
+; Checksum       ; 0x004E2802                                                                                                                     ;
++----------------+--------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------+
-; Assembler Device Options: DE0_CV_Default.pof ;
-+--------------------+-------------------------+
-; Option             ; Setting                 ;
-+--------------------+-------------------------+
-; JTAG usercode      ; 0x00000000              ;
-; Checksum           ; 0x74B66B8A              ;
-; Compression Ratio  ; 3                       ;
-+--------------------+-------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/Quartus/DE0_CV_Default.pof ;
++--------------------+----------------------------------------------------------------------------------------------------------------------------+
+; Option             ; Setting                                                                                                                    ;
++--------------------+----------------------------------------------------------------------------------------------------------------------------+
+; JTAG usercode      ; 0x00000000                                                                                                                 ;
+; Checksum           ; 0x74B8042D                                                                                                                 ;
+; Compression Ratio  ; 3                                                                                                                          ;
++--------------------+----------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -90,15 +89,15 @@ agreement for further details.
 +--------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
-    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Mar 14 09:38:40 2018
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Wed Mar 21 18:42:53 2018
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off DE0_CV_Default -c DE0_CV_Default
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 950 megabytes
-    Info: Processing ended: Wed Mar 14 09:38:49 2018
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Peak virtual memory: 740 megabytes
+    Info: Processing ended: Wed Mar 21 18:42:58 2018
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 

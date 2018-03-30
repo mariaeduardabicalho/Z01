@@ -7,7 +7,7 @@ entity FlipFlopD is
 		d:      in std_logic;
 		clear:  in std_logic;
 		preset: in std_logic;
-		q:     out std_logic
+		q:     out std_logic := '0'
 	);
 end entity;
 
@@ -19,7 +19,7 @@ begin
 			q<='0';
 		elsif (preset='1') then   -- coloca um na saída
 			q<='1';
-		elsif (rising_edge(CLOCK)) then    -- verifica se o processo foi de borda de subida 
+		elsif (rising_edge(CLOCK)) then    -- verifica se o processo foi de borda de subida
 			q<=d;						   -- se for, atribui novo sinal, se não for, mantem sinal anterior
 	end if;
 

@@ -1,0 +1,200 @@
+# Current time Sun Dec 31 15:47:16 2017
+# ModelSim - Intel FPGA Edition Stack Trace
+# Program = vsim
+# Id = "10.5b"
+# Version = "2016.10"
+# Date = "Oct  5 2016"
+# Platform = linuxpe
+# Signature = 400ea32bebde3acba4e1f6d8e4522046
+# 0    0x085a0c76: '<unknown (@0x85a0c76)>'
+# 1    0x085a0e15: '<unknown (@0x85a0e15)>'
+# 2    0x081faa68: '<unknown (@0x81faa68)>'
+# 3    0x084a3a5e: '<unknown (@0x84a3a5e)>'
+# 4    0x084a3d0c: '<unknown (@0x84a3d0c)>'
+# --> START OF USERCODE
+# 5    0xf7cfbace: '__run_exit_handlers + 0xfe' in '/usr/lib32/libc.so.6'
+# 6    0xf7cfbb2c: 'exit + 0x1c' in '/usr/lib32/libc.so.6'
+# <-- END OF USERCODE
+# 7    0x084a2bde: '<unknown (@0x84a2bde)>'
+# 8    0x0910972c: '<unknown (@0x910972c)>'
+# 9    0x084a7122: '<unknown (@0x84a7122)>'
+# 10   0xf7fd5ddb: '<unknown (@0xf7fd5ddb)>'
+# 11   0xf7fd5db4: '<unknown (@0xf7fd5db4)>'
+# --> START OF USERCODE
+# 12   0xf7cf9131: '__GI_kill + 0x11' in '/usr/lib32/libc.so.6'
+# <-- END OF USERCODE
+# 13   0x084a775c: '<unknown (@0x84a775c)>'
+# 14   0xf7fd5ddb: '<unknown (@0xf7fd5ddb)>'
+# 15   0xf7fd5db4: '<unknown (@0xf7fd5db4)>'
+# --> START OF USERCODE
+# 16   0xf7f7fe99: 'pthread_cond_timedwait@@GLIBC_2.3.2 + 0x3a9' in '/usr/lib32/libpthread.so.0'
+# <-- END OF USERCODE
+# 17   0x0810c75c: '<unknown (@0x810c75c)>'
+# 18   0x088c82a6: '<unknown (@0x88c82a6)>'
+# 19   0x088be065: '<unknown (@0x88be065)>'
+# 20   0x08592ef7: '<unknown (@0x8592ef7)>'
+# 21   0x0859c9b8: '<unknown (@0x859c9b8)>'
+# 22   0x091e476d: '<unknown (@0x91e476d)>'
+# 23   0x091e6226: '<unknown (@0x91e6226)>'
+# 24   0x091e6815: '<unknown (@0x91e6815)>'
+# 25   0x089c52e7: '<unknown (@0x89c52e7)>'
+# 26   0x09249dee: '<unknown (@0x9249dee)>'
+# 27   0x0929b092: '<unknown (@0x929b092)>'
+# 28   0x092610f3: '<unknown (@0x92610f3)>'
+# 29   0x0926145a: '<unknown (@0x926145a)>'
+# 30   0x090c3c50: '<unknown (@0x90c3c50)>'
+# 31   0x085c8bfb: '<unknown (@0x85c8bfb)>'
+# 32   0x084a6ab4: '<unknown (@0x84a6ab4)>'
+# End of Stack Trace
+
+
+# Current time Sun Dec 31 15:47:16 2017
+# ModelSim - Intel FPGA Edition Stack Trace
+# Program = vsim
+# Id = "10.5b"
+# Version = "2016.10"
+# Date = "Oct  5 2016"
+# Platform = linuxpe
+# Signature = 400ea32bebde3acba4e1f6d8e4522046
+# 0    0x085a0c76: '<unknown (@0x85a0c76)>'
+# 1    0x085a0e15: '<unknown (@0x85a0e15)>'
+# 2    0x081faa68: '<unknown (@0x81faa68)>'
+# 3    0x084a3a5e: '<unknown (@0x84a3a5e)>'
+# 4    0x084a3d0c: '<unknown (@0x84a3d0c)>'
+# --> START OF USERCODE
+# 5    0xf7cfbace: '__run_exit_handlers + 0xfe' in '/usr/lib32/libc.so.6'
+# 6    0xf7cfbb2c: 'exit + 0x1c' in '/usr/lib32/libc.so.6'
+# <-- END OF USERCODE
+# 7    0x084a2bde: '<unknown (@0x84a2bde)>'
+# 8    0x0910972c: '<unknown (@0x910972c)>'
+# 9    0x084a7122: '<unknown (@0x84a7122)>'
+# 10   0xf7fd5ddb: '<unknown (@0xf7fd5ddb)>'
+# 11   0xf7fd5db4: '<unknown (@0xf7fd5db4)>'
+# --> START OF USERCODE
+# 12   0xf7cf9131: '__GI_kill + 0x11' in '/usr/lib32/libc.so.6'
+# <-- END OF USERCODE
+# 13   0x084a775c: '<unknown (@0x84a775c)>'
+# 14   0xf7fd5ddb: '<unknown (@0xf7fd5ddb)>'
+# 15   0xf7fd5db4: '<unknown (@0xf7fd5db4)>'
+# --> START OF USERCODE
+# 16   0xf7f7fe99: 'pthread_cond_timedwait@@GLIBC_2.3.2 + 0x3a9' in '/usr/lib32/libpthread.so.0'
+# <-- END OF USERCODE
+# 17   0x0810c75c: '<unknown (@0x810c75c)>'
+# 18   0x088c82a6: '<unknown (@0x88c82a6)>'
+# 19   0x088be065: '<unknown (@0x88be065)>'
+# 20   0x08592ef7: '<unknown (@0x8592ef7)>'
+# 21   0x0859c9b8: '<unknown (@0x859c9b8)>'
+# 22   0x091e476d: '<unknown (@0x91e476d)>'
+# 23   0x091e6226: '<unknown (@0x91e6226)>'
+# 24   0x091e6815: '<unknown (@0x91e6815)>'
+# 25   0x089c52e7: '<unknown (@0x89c52e7)>'
+# 26   0x09249dee: '<unknown (@0x9249dee)>'
+# 27   0x0929b092: '<unknown (@0x929b092)>'
+# 28   0x092610f3: '<unknown (@0x92610f3)>'
+# 29   0x0926145a: '<unknown (@0x926145a)>'
+# 30   0x090c3c50: '<unknown (@0x90c3c50)>'
+# 31   0x085c8bfb: '<unknown (@0x85c8bfb)>'
+# 32   0x084a6ab4: '<unknown (@0x84a6ab4)>'
+# End of Stack Trace
+
+
+# Current time Sun Dec 31 15:47:16 2017
+# ModelSim - Intel FPGA Edition Stack Trace
+# Program = vsim
+# Id = "10.5b"
+# Version = "2016.10"
+# Date = "Oct  5 2016"
+# Platform = linuxpe
+# Signature = 400ea32bebde3acba4e1f6d8e4522046
+# 0    0x085a0c76: '<unknown (@0x85a0c76)>'
+# 1    0x085a0e15: '<unknown (@0x85a0e15)>'
+# 2    0x081faa68: '<unknown (@0x81faa68)>'
+# 3    0x084a3a5e: '<unknown (@0x84a3a5e)>'
+# 4    0x084a3d0c: '<unknown (@0x84a3d0c)>'
+# --> START OF USERCODE
+# 5    0xf7cfbace: '__run_exit_handlers + 0xfe' in '/usr/lib32/libc.so.6'
+# 6    0xf7cfbb2c: 'exit + 0x1c' in '/usr/lib32/libc.so.6'
+# <-- END OF USERCODE
+# 7    0x084a2bde: '<unknown (@0x84a2bde)>'
+# 8    0x0910972c: '<unknown (@0x910972c)>'
+# 9    0x084a7122: '<unknown (@0x84a7122)>'
+# 10   0xf7fd5ddb: '<unknown (@0xf7fd5ddb)>'
+# 11   0xf7fd5db4: '<unknown (@0xf7fd5db4)>'
+# --> START OF USERCODE
+# 12   0xf7cf9131: '__GI_kill + 0x11' in '/usr/lib32/libc.so.6'
+# <-- END OF USERCODE
+# 13   0x084a775c: '<unknown (@0x84a775c)>'
+# 14   0xf7fd5ddb: '<unknown (@0xf7fd5ddb)>'
+# 15   0xf7fd5db4: '<unknown (@0xf7fd5db4)>'
+# --> START OF USERCODE
+# 16   0xf7f7fe99: 'pthread_cond_timedwait@@GLIBC_2.3.2 + 0x3a9' in '/usr/lib32/libpthread.so.0'
+# <-- END OF USERCODE
+# 17   0x0810c75c: '<unknown (@0x810c75c)>'
+# 18   0x088c82a6: '<unknown (@0x88c82a6)>'
+# 19   0x088be065: '<unknown (@0x88be065)>'
+# 20   0x08592ef7: '<unknown (@0x8592ef7)>'
+# 21   0x0859c9b8: '<unknown (@0x859c9b8)>'
+# 22   0x091e476d: '<unknown (@0x91e476d)>'
+# 23   0x091e6226: '<unknown (@0x91e6226)>'
+# 24   0x091e6815: '<unknown (@0x91e6815)>'
+# 25   0x089c52e7: '<unknown (@0x89c52e7)>'
+# 26   0x09249dee: '<unknown (@0x9249dee)>'
+# 27   0x0929b092: '<unknown (@0x929b092)>'
+# 28   0x092610f3: '<unknown (@0x92610f3)>'
+# 29   0x0926145a: '<unknown (@0x926145a)>'
+# 30   0x090c3c50: '<unknown (@0x90c3c50)>'
+# 31   0x085c8bfb: '<unknown (@0x85c8bfb)>'
+# 32   0x084a6ab4: '<unknown (@0x84a6ab4)>'
+# End of Stack Trace
+
+
+# Current time Sun Dec 31 15:47:16 2017
+# ModelSim - Intel FPGA Edition Stack Trace
+# Program = vsim
+# Id = "10.5b"
+# Version = "2016.10"
+# Date = "Oct  5 2016"
+# Platform = linuxpe
+# Signature = 400ea32bebde3acba4e1f6d8e4522046
+# 0    0x085a0c76: '<unknown (@0x85a0c76)>'
+# 1    0x085a0e15: '<unknown (@0x85a0e15)>'
+# 2    0x081faa68: '<unknown (@0x81faa68)>'
+# 3    0x084a3a5e: '<unknown (@0x84a3a5e)>'
+# 4    0x084a3d0c: '<unknown (@0x84a3d0c)>'
+# --> START OF USERCODE
+# 5    0xf7cfbace: '__run_exit_handlers + 0xfe' in '/usr/lib32/libc.so.6'
+# 6    0xf7cfbb2c: 'exit + 0x1c' in '/usr/lib32/libc.so.6'
+# <-- END OF USERCODE
+# 7    0x084a2bde: '<unknown (@0x84a2bde)>'
+# 8    0x0910972c: '<unknown (@0x910972c)>'
+# 9    0x084a7122: '<unknown (@0x84a7122)>'
+# 10   0xf7fd5ddb: '<unknown (@0xf7fd5ddb)>'
+# 11   0xf7fd5db4: '<unknown (@0xf7fd5db4)>'
+# --> START OF USERCODE
+# 12   0xf7cf9131: '__GI_kill + 0x11' in '/usr/lib32/libc.so.6'
+# <-- END OF USERCODE
+# 13   0x084a775c: '<unknown (@0x84a775c)>'
+# 14   0xf7fd5ddb: '<unknown (@0xf7fd5ddb)>'
+# 15   0xf7fd5db4: '<unknown (@0xf7fd5db4)>'
+# --> START OF USERCODE
+# 16   0xf7f7fe99: 'pthread_cond_timedwait@@GLIBC_2.3.2 + 0x3a9' in '/usr/lib32/libpthread.so.0'
+# <-- END OF USERCODE
+# 17   0x0810c75c: '<unknown (@0x810c75c)>'
+# 18   0x088c82a6: '<unknown (@0x88c82a6)>'
+# 19   0x088be065: '<unknown (@0x88be065)>'
+# 20   0x08592ef7: '<unknown (@0x8592ef7)>'
+# 21   0x0859c9b8: '<unknown (@0x859c9b8)>'
+# 22   0x091e476d: '<unknown (@0x91e476d)>'
+# 23   0x091e6226: '<unknown (@0x91e6226)>'
+# 24   0x091e6815: '<unknown (@0x91e6815)>'
+# 25   0x089c52e7: '<unknown (@0x89c52e7)>'
+# 26   0x09249dee: '<unknown (@0x9249dee)>'
+# 27   0x0929b092: '<unknown (@0x929b092)>'
+# 28   0x092610f3: '<unknown (@0x92610f3)>'
+# 29   0x0926145a: '<unknown (@0x926145a)>'
+# 30   0x090c3c50: '<unknown (@0x90c3c50)>'
+# 31   0x085c8bfb: '<unknown (@0x85c8bfb)>'
+# 32   0x084a6ab4: '<unknown (@0x84a6ab4)>'
+# End of Stack Trace
+
+

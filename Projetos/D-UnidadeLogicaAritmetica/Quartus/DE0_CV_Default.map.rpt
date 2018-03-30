@@ -1,6 +1,6 @@
 Analysis & Synthesis report for DE0_CV_Default
-Wed Mar 14 10:42:40 2018
-Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+Wed Mar 21 18:42:10 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -14,12 +14,13 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "ALU:ula0|Add16:u4|FullAdder:u15"
- 10. Port Connectivity Checks: "ALU:ula0|Add16:u4|FullAdder:u0"
- 11. Port Connectivity Checks: "ALU:ula0"
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Port Connectivity Checks: "ALU:ula0|Add16:ad16|FullAdder:fulladder16"
+ 11. Port Connectivity Checks: "ALU:ula0|Add16:ad16|FullAdder:fullader1"
+ 12. Port Connectivity Checks: "ALU:ula0"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -34,20 +35,19 @@ functions, and any output files from any of the foregoing
 associated documentation or information are expressly subject 
 to the terms and conditions of the Intel Program License 
 Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel MegaCore Function License Agreement, or other 
-applicable license agreement, including, without limitation, 
-that your use is for the sole purpose of programming logic 
-devices manufactured by Intel and sold by Intel or its 
-authorized distributors.  Please refer to the applicable 
-agreement for further details.
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
 
 
 
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Mar 14 10:42:40 2018       ;
-; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Analysis & Synthesis Status     ; Successful - Wed Mar 21 18:42:10 2018       ;
+; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DE0_CV_Default                              ;
 ; Top-level Entity Name           ; TopLevel                                    ;
 ; Family                          ; Cyclone V                                   ;
@@ -82,7 +82,7 @@ agreement for further details.
 ; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
 ; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
 ; Preserve fewer node names                                                       ; On                 ; On                 ;
-; OpenCore Plus hardware evaluation                                               ; Enable             ; Enable             ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
 ; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
 ; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
 ; State Machine Processing                                                        ; Auto               ; Auto               ;
@@ -132,7 +132,7 @@ agreement for further details.
 ; Report Connectivity Checks                                                      ; On                 ; On                 ;
 ; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
 ; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
-; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
 ; HDL message level                                                               ; Level2             ; Level2             ;
 ; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
 ; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
@@ -158,8 +158,8 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -169,21 +169,30 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                         ;
-+-----------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path              ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                     ; Library ;
-+-----------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------+---------+
-; ../src/rtl/inversor16.vhd                     ; yes             ; User VHDL File  ; /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/inversor16.vhd   ;         ;
-; ../src/rtl/zerador16.vhd                      ; yes             ; User VHDL File  ; /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/zerador16.vhd    ;         ;
-; ../src/rtl/FullAdder.vhd                      ; yes             ; User VHDL File  ; /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/FullAdder.vhd    ;         ;
-; ../src/rtl/comparador16.vhd                   ; yes             ; User VHDL File  ; /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/comparador16.vhd ;         ;
-; ../src/rtl/ALU.vhd                            ; yes             ; User VHDL File  ; /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/ALU.vhd          ;         ;
-; ../src/rtl/Add16.vhd                          ; yes             ; User VHDL File  ; /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/Add16.vhd        ;         ;
-; ../src/TopLevel.vhd                           ; yes             ; User VHDL File  ; /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/TopLevel.vhd         ;         ;
-; ../../C-LogicaCombinacional/src/rtl/Mux16.vhd ; yes             ; User VHDL File  ; /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd              ;         ;
-; ../../C-LogicaCombinacional/src/rtl/And16.vhd ; yes             ; User VHDL File  ; /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/And16.vhd              ;         ;
-+-----------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                      ;
++---------------------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                        ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                        ; Library ;
++---------------------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+---------+
+; ../src/rtl/inversor16.vhd                               ; yes             ; User VHDL File  ; C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/inversor16.vhd   ;         ;
+; ../src/rtl/zerador16.vhd                                ; yes             ; User VHDL File  ; C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/zerador16.vhd    ;         ;
+; ../src/rtl/Inc16.vhd                                    ; yes             ; User VHDL File  ; C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/Inc16.vhd        ;         ;
+; ../src/rtl/HalfAdder.vhd                                ; yes             ; User VHDL File  ; C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/HalfAdder.vhd    ;         ;
+; ../src/rtl/FullAdder.vhd                                ; yes             ; User VHDL File  ; C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/FullAdder.vhd    ;         ;
+; ../src/rtl/comparador16.vhd                             ; yes             ; User VHDL File  ; C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd ;         ;
+; ../src/rtl/ALU.vhd                                      ; yes             ; User VHDL File  ; C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/ALU.vhd          ;         ;
+; ../src/rtl/Add16.vhd                                    ; yes             ; User VHDL File  ; C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/Add16.vhd        ;         ;
+; ../src/TopLevel.vhd                                     ; yes             ; User VHDL File  ; C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/TopLevel.vhd         ;         ;
+; ../../C-LogicaCombinacional/src/rtl/Or16.vhd            ; yes             ; User VHDL File  ; C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Or16.vhd             ;         ;
+; ../../C-LogicaCombinacional/src/rtl/Or8Way.vhd          ; yes             ; User VHDL File  ; C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Or8Way.vhd           ;         ;
+; ../../C-LogicaCombinacional/src/rtl/Not16.vhd           ; yes             ; User VHDL File  ; C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Not16.vhd            ;         ;
+; ../../C-LogicaCombinacional/src/rtl/Nor8Way.vhd         ; yes             ; User VHDL File  ; C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Nor8Way.vhd          ;         ;
+; ../../C-LogicaCombinacional/src/rtl/Nand.vhd            ; yes             ; User VHDL File  ; C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Nand.vhd             ;         ;
+; ../../C-LogicaCombinacional/src/rtl/Mux16.vhd           ; yes             ; User VHDL File  ; C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd            ;         ;
+; ../../C-LogicaCombinacional/src/rtl/BarrelShifter16.vhd ; yes             ; User VHDL File  ; C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/BarrelShifter16.vhd  ;         ;
+; ../../C-LogicaCombinacional/src/rtl/BarrelShifter8.vhd  ; yes             ; User VHDL File  ; C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/BarrelShifter8.vhd   ;         ;
+; ../../C-LogicaCombinacional/src/rtl/And16.vhd           ; yes             ; User VHDL File  ; C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/And16.vhd            ;         ;
++---------------------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -206,23 +215,23 @@ agreement for further details.
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
-; Maximum fan-out node                        ; SW[5]~input ;
+; Maximum fan-out node                        ; SW[4]~input ;
 ; Maximum fan-out                             ; 10          ;
 ; Total fan-out                               ; 90          ;
 ; Average fan-out                             ; 1.80        ;
 +---------------------------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+--------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name  ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+--------------+--------------+
-; |TopLevel                  ; 10 (0)              ; 0 (0)                     ; 0                 ; 0          ; 20   ; 0            ; |TopLevel                          ; TopLevel     ; work         ;
-;    |ALU:ula0|              ; 10 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|ALU:ula0                 ; ALU          ; work         ;
-;       |comparador16:u8|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|ALU:ula0|comparador16:u8 ; comparador16 ; work         ;
-;       |inversor16:u7|      ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|ALU:ula0|inversor16:u7   ; inversor16   ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+--------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------+--------------+--------------+
+; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Entity Name  ; Library Name ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------+--------------+--------------+
+; |TopLevel                   ; 10 (0)              ; 0 (0)                     ; 0                 ; 0          ; 20   ; 0            ; |TopLevel                              ; TopLevel     ; work         ;
+;    |ALU:ula0|               ; 10 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|ALU:ula0                     ; ALU          ; work         ;
+;       |comparador16:comp16| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|ALU:ula0|comparador16:comp16 ; comparador16 ; work         ;
+;       |inversor16:if16|     ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|ALU:ula0|inversor16:if16     ; inversor16   ; work         ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -241,8 +250,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |TopLevel|ALU:ula0|inversor16:if16|y[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+
+
 +-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:ula0|Add16:u4|FullAdder:u15"                                                     ;
+; Port Connectivity Checks: "ALU:ula0|Add16:ad16|FullAdder:fulladder16"                                           ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port  ; Type   ; Severity ; Details                                                                             ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
@@ -250,13 +268,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:ula0|Add16:u4|FullAdder:u0" ;
-+------+-------+----------+----------------------------------+
-; Port ; Type  ; Severity ; Details                          ;
-+------+-------+----------+----------------------------------+
-; c    ; Input ; Info     ; Stuck at GND                     ;
-+------+-------+----------+----------------------------------+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:ula0|Add16:ad16|FullAdder:fullader1" ;
++------+-------+----------+-------------------------------------------+
+; Port ; Type  ; Severity ; Details                                   ;
++------+-------+----------+-------------------------------------------+
+; c    ; Input ; Info     ; Stuck at GND                              ;
++------+-------+----------+-------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------+
@@ -281,14 +299,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 12                          ;
-;     normal            ; 12                          ;
-;         1 data inputs ; 2                           ;
+; arriav_lcell_comb     ; 10                          ;
+;     normal            ; 10                          ;
 ;         6 data inputs ; 10                          ;
 ; boundary_port         ; 20                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.56                        ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 1.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -297,7 +314,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -306,120 +323,110 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Mar 14 10:42:16 2018
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Wed Mar 21 18:41:53 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_CV_Default -c DE0_CV_Default
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/inversor16.vhd
-    Info (12022): Found design unit 1: inversor16-strucNega16 File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/inversor16.vhd Line: 15
-    Info (12023): Found entity 1: inversor16 File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/inversor16.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/zerador16.vhd
-    Info (12022): Found design unit 1: zerador16-strucZero16 File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/zerador16.vhd Line: 15
-    Info (12023): Found entity 1: zerador16 File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/zerador16.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/Inc16.vhd
-    Info (12022): Found design unit 1: Inc16-arch File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/Inc16.vhd Line: 18
-    Info (12023): Found entity 1: Inc16 File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/Inc16.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/HalfAdder.vhd
-    Info (12022): Found design unit 1: HalfAdder-arch File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/HalfAdder.vhd Line: 17
-    Info (12023): Found entity 1: HalfAdder File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/HalfAdder.vhd Line: 10
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/FullAdder.vhd
-    Info (12022): Found design unit 1: FullAdder-arch File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/FullAdder.vhd Line: 17
-    Info (12023): Found entity 1: FullAdder File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/FullAdder.vhd Line: 10
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/comparador16.vhd
-    Info (12022): Found design unit 1: comparador16-strucComp16 File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/comparador16.vhd Line: 16
-    Info (12023): Found entity 1: comparador16 File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/comparador16.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/ALU.vhd
-    Info (12022): Found design unit 1: alu-arch File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/ALU.vhd Line: 44
-    Info (12023): Found entity 1: ALU File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/ALU.vhd Line: 29
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/Add16.vhd
-    Info (12022): Found design unit 1: Add16-arch File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/Add16.vhd Line: 19
-    Info (12023): Found entity 1: Add16 File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/Add16.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/TopLevel.vhd
-    Info (12022): Found design unit 1: TopLevel-rtl File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/TopLevel.vhd Line: 29
-    Info (12023): Found entity 1: TopLevel File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/TopLevel.vhd Line: 19
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Or16.vhd
-    Info (12022): Found design unit 1: Or16-arch File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Or16.vhd Line: 15
-    Info (12023): Found entity 1: Or16 File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Or16.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Or8Way.vhd
-    Info (12022): Found design unit 1: Or8Way-arch File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Or8Way.vhd Line: 21
-    Info (12023): Found entity 1: Or8Way File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Or8Way.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Not16.vhd
-    Info (12022): Found design unit 1: Not16-arch File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Not16.vhd Line: 14
-    Info (12023): Found entity 1: Not16 File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Not16.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Nor8Way.vhd
-    Info (12022): Found design unit 1: Nor8Way-arch File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Nor8Way.vhd Line: 21
-    Info (12023): Found entity 1: Nor8Way File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Nor8Way.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Nand.vhd
-    Info (12022): Found design unit 1: nand_vhdl-main File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Nand.vhd Line: 15
-    Info (12023): Found entity 1: nand_vhdl File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Nand.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd
-    Info (12022): Found design unit 1: Mux16-arch File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 16
-    Info (12023): Found entity 1: Mux16 File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Mux8Way16.vhd
-    Info (12022): Found design unit 1: Mux8Way16-arch File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Mux8Way16.vhd Line: 22
-    Info (12023): Found entity 1: Mux8Way16 File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Mux8Way16.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Mux8Way.vhd
-    Info (12022): Found design unit 1: Mux8Way-arch File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Mux8Way.vhd Line: 22
-    Info (12023): Found entity 1: Mux8Way File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Mux8Way.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Mux4Way16.vhd
-    Info (12022): Found design unit 1: Mux4Way16-arch File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Mux4Way16.vhd Line: 18
-    Info (12023): Found entity 1: Mux4Way16 File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Mux4Way16.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Mux4Way.vhd
-    Info (12022): Found design unit 1: Mux4Way-arch File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Mux4Way.vhd Line: 18
-    Info (12023): Found entity 1: Mux4Way File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Mux4Way.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Mux2Way.vhd
-    Info (12022): Found design unit 1: Mux2Way-arch File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Mux2Way.vhd Line: 16
-    Info (12023): Found entity 1: Mux2Way File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/Mux2Way.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/DMux8Way16.vhd
-    Info (12022): Found design unit 1: DMux8Way16-arch File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/DMux8Way16.vhd Line: 23
-    Info (12023): Found entity 1: DMux8Way16 File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/DMux8Way16.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/DMux8Way.vhd
-    Info (12022): Found design unit 1: DMux8Way-arch File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/DMux8Way.vhd Line: 22
-    Info (12023): Found entity 1: DMux8Way File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/DMux8Way.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/DMux4Way.vhd
-    Info (12022): Found design unit 1: DMux4Way-arch File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/DMux4Way.vhd Line: 18
-    Info (12023): Found entity 1: DMux4Way File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/DMux4Way.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/DMux2Way.vhd
-    Info (12022): Found design unit 1: DMux2Way-arch File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/DMux2Way.vhd Line: 16
-    Info (12023): Found entity 1: DMux2Way File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/DMux2Way.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/BarrelShifter16.vhd
-    Info (12022): Found design unit 1: BarrelShifter16-arch File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/BarrelShifter16.vhd Line: 17
-    Info (12023): Found entity 1: BarrelShifter16 File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/BarrelShifter16.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/BarrelShifter8.vhd
-    Info (12022): Found design unit 1: BarrelShifter8-arch File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/BarrelShifter8.vhd Line: 17
-    Info (12023): Found entity 1: BarrelShifter8 File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/BarrelShifter8.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/And16.vhd
-    Info (12022): Found design unit 1: And16-arch File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/And16.vhd Line: 15
-    Info (12023): Found entity 1: And16 File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/C-LogicaCombinacional/src/rtl/And16.vhd Line: 8
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/z01/projetos/d-unidadelogicaaritmetica/src/rtl/inversor16.vhd
+    Info (12022): Found design unit 1: inversor16-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/inversor16.vhd Line: 17
+    Info (12023): Found entity 1: inversor16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/inversor16.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/z01/projetos/d-unidadelogicaaritmetica/src/rtl/zerador16.vhd
+    Info (12022): Found design unit 1: zerador16-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/zerador16.vhd Line: 15
+    Info (12023): Found entity 1: zerador16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/zerador16.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/z01/projetos/d-unidadelogicaaritmetica/src/rtl/inc16.vhd
+    Info (12022): Found design unit 1: Inc16-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/Inc16.vhd Line: 18
+    Info (12023): Found entity 1: Inc16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/Inc16.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/z01/projetos/d-unidadelogicaaritmetica/src/rtl/halfadder.vhd
+    Info (12022): Found design unit 1: HalfAdder-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/HalfAdder.vhd Line: 17
+    Info (12023): Found entity 1: HalfAdder File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/HalfAdder.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/z01/projetos/d-unidadelogicaaritmetica/src/rtl/fulladder.vhd
+    Info (12022): Found design unit 1: FullAdder-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/FullAdder.vhd Line: 17
+    Info (12023): Found entity 1: FullAdder File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/FullAdder.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/z01/projetos/d-unidadelogicaaritmetica/src/rtl/comparador16.vhd
+    Info (12022): Found design unit 1: comparador16-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd Line: 16
+    Info (12023): Found entity 1: comparador16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/z01/projetos/d-unidadelogicaaritmetica/src/rtl/alu.vhd
+    Info (12022): Found design unit 1: alu-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/ALU.vhd Line: 44
+    Info (12023): Found entity 1: ALU File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/ALU.vhd Line: 29
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/z01/projetos/d-unidadelogicaaritmetica/src/rtl/add16.vhd
+    Info (12022): Found design unit 1: Add16-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/Add16.vhd Line: 19
+    Info (12023): Found entity 1: Add16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/Add16.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/z01/projetos/d-unidadelogicaaritmetica/src/toplevel.vhd
+    Info (12022): Found design unit 1: TopLevel-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/TopLevel.vhd Line: 29
+    Info (12023): Found entity 1: TopLevel File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/TopLevel.vhd Line: 19
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/z01/projetos/c-logicacombinacional/src/rtl/or16.vhd
+    Info (12022): Found design unit 1: Or16-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Or16.vhd Line: 11
+    Info (12023): Found entity 1: Or16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Or16.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/z01/projetos/c-logicacombinacional/src/rtl/or8way.vhd
+    Info (12022): Found design unit 1: Or8Way-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Or8Way.vhd Line: 17
+    Info (12023): Found entity 1: Or8Way File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Or8Way.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/z01/projetos/c-logicacombinacional/src/rtl/not16.vhd
+    Info (12022): Found design unit 1: Not16-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Not16.vhd Line: 10
+    Info (12023): Found entity 1: Not16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Not16.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/z01/projetos/c-logicacombinacional/src/rtl/nor8way.vhd
+    Info (12022): Found design unit 1: Nor8Way-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Nor8Way.vhd Line: 17
+    Info (12023): Found entity 1: Nor8Way File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Nor8Way.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/z01/projetos/c-logicacombinacional/src/rtl/nand.vhd
+    Info (12022): Found design unit 1: nand_z01-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Nand.vhd Line: 12
+    Info (12023): Found entity 1: nand_z01 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Nand.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/z01/projetos/c-logicacombinacional/src/rtl/mux16.vhd
+    Info (12022): Found design unit 1: Mux16-pep File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 12
+    Info (12023): Found entity 1: Mux16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/z01/projetos/c-logicacombinacional/src/rtl/barrelshifter16.vhd
+    Info (12022): Found design unit 1: BarrelShifter16-Barrel16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/BarrelShifter16.vhd Line: 11
+    Info (12023): Found entity 1: BarrelShifter16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/BarrelShifter16.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/z01/projetos/c-logicacombinacional/src/rtl/barrelshifter8.vhd
+    Info (12022): Found design unit 1: BarrelShifter8-Barrel File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/BarrelShifter8.vhd Line: 11
+    Info (12023): Found entity 1: BarrelShifter8 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/BarrelShifter8.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/z01/projetos/c-logicacombinacional/src/rtl/and16.vhd
+    Info (12022): Found design unit 1: And16-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/And16.vhd Line: 11
+    Info (12023): Found entity 1: And16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/And16.vhd Line: 4
 Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at TopLevel.vhd(35): used explicit default value for signal "x" because signal was never assigned a value File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/TopLevel.vhd Line: 35
-Warning (10540): VHDL Signal Declaration warning at TopLevel.vhd(36): used explicit default value for signal "y" because signal was never assigned a value File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/TopLevel.vhd Line: 36
-Critical Warning (10920): VHDL Incomplete Partial Association warning at TopLevel.vhd(65): port or argument "saida" has 8/16 unassociated elements File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/TopLevel.vhd Line: 65
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ula0" File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/TopLevel.vhd Line: 65
-Info (12128): Elaborating entity "zerador16" for hierarchy "ALU:ula0|zerador16:u0" File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/ALU.vhd Line: 96
-Info (12128): Elaborating entity "inversor16" for hierarchy "ALU:ula0|inversor16:u1" File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/ALU.vhd Line: 97
-Info (12128): Elaborating entity "Add16" for hierarchy "ALU:ula0|Add16:u4" File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/ALU.vhd Line: 100
-Info (12128): Elaborating entity "FullAdder" for hierarchy "ALU:ula0|Add16:u4|FullAdder:u0" File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/Add16.vhd Line: 32
-Info (12128): Elaborating entity "And16" for hierarchy "ALU:ula0|And16:u5" File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/ALU.vhd Line: 101
-Info (12128): Elaborating entity "Mux16" for hierarchy "ALU:ula0|Mux16:u6" File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/ALU.vhd Line: 102
-Info (12128): Elaborating entity "comparador16" for hierarchy "ALU:ula0|comparador16:u8" File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/rtl/ALU.vhd Line: 104
+Warning (10540): VHDL Signal Declaration warning at TopLevel.vhd(35): used explicit default value for signal "x" because signal was never assigned a value File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/TopLevel.vhd Line: 35
+Warning (10540): VHDL Signal Declaration warning at TopLevel.vhd(36): used explicit default value for signal "y" because signal was never assigned a value File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/TopLevel.vhd Line: 36
+Critical Warning (10920): VHDL Incomplete Partial Association warning at TopLevel.vhd(65): port or argument "saida" has 8/16 unassociated elements File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/TopLevel.vhd Line: 65
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ula0" File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/TopLevel.vhd Line: 65
+Info (12128): Elaborating entity "zerador16" for hierarchy "ALU:ula0|zerador16:zx16" File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/ALU.vhd Line: 97
+Info (12128): Elaborating entity "inversor16" for hierarchy "ALU:ula0|inversor16:ix16" File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/ALU.vhd Line: 109
+Info (12128): Elaborating entity "And16" for hierarchy "ALU:ula0|And16:an16" File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/ALU.vhd Line: 121
+Info (12128): Elaborating entity "Add16" for hierarchy "ALU:ula0|Add16:ad16" File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/ALU.vhd Line: 127
+Info (12128): Elaborating entity "FullAdder" for hierarchy "ALU:ula0|Add16:ad16|FullAdder:fullader1" File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/Add16.vhd Line: 34
+Info (12128): Elaborating entity "HalfAdder" for hierarchy "ALU:ula0|Add16:ad16|FullAdder:fullader1|HalfAdder:HA1" File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/FullAdder.vhd Line: 29
+Info (12128): Elaborating entity "Mux16" for hierarchy "ALU:ula0|Mux16:mx16" File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/ALU.vhd Line: 134
+Info (10041): Inferred latch for "q[0]" at Mux16.vhd(16) File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 16
+Info (10041): Inferred latch for "q[1]" at Mux16.vhd(16) File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 16
+Info (10041): Inferred latch for "q[2]" at Mux16.vhd(16) File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 16
+Info (10041): Inferred latch for "q[3]" at Mux16.vhd(16) File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 16
+Info (10041): Inferred latch for "q[4]" at Mux16.vhd(16) File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 16
+Info (10041): Inferred latch for "q[5]" at Mux16.vhd(16) File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 16
+Info (10041): Inferred latch for "q[6]" at Mux16.vhd(16) File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 16
+Info (10041): Inferred latch for "q[7]" at Mux16.vhd(16) File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 16
+Info (10041): Inferred latch for "q[8]" at Mux16.vhd(16) File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 16
+Info (10041): Inferred latch for "q[9]" at Mux16.vhd(16) File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 16
+Info (10041): Inferred latch for "q[10]" at Mux16.vhd(16) File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 16
+Info (10041): Inferred latch for "q[11]" at Mux16.vhd(16) File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 16
+Info (10041): Inferred latch for "q[12]" at Mux16.vhd(16) File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 16
+Info (10041): Inferred latch for "q[13]" at Mux16.vhd(16) File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 16
+Info (10041): Inferred latch for "q[14]" at Mux16.vhd(16) File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 16
+Info (10041): Inferred latch for "q[15]" at Mux16.vhd(16) File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 16
+Info (12128): Elaborating entity "comparador16" for hierarchy "ALU:ula0|comparador16:comp16" File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/ALU.vhd Line: 147
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[6]" File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/TopLevel.vhd Line: 21
-    Warning (15610): No output dependent on input pin "SW[7]" File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/TopLevel.vhd Line: 21
-    Warning (15610): No output dependent on input pin "SW[8]" File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/TopLevel.vhd Line: 21
-    Warning (15610): No output dependent on input pin "SW[9]" File: /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/4-Projetos/D-Unidade-Logica-Aritmetica/src/TopLevel.vhd Line: 21
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/TopLevel.vhd Line: 21
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/TopLevel.vhd Line: 21
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/TopLevel.vhd Line: 21
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Z01/Projetos/D-UnidadeLogicaAritmetica/src/TopLevel.vhd Line: 21
 Info (21057): Implemented 30 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 10 output pins
     Info (21061): Implemented 10 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 1027 megabytes
-    Info: Processing ended: Wed Mar 14 10:42:40 2018
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:54
+    Info: Peak virtual memory: 782 megabytes
+    Info: Processing ended: Wed Mar 21 18:42:10 2018
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:26
 
 
