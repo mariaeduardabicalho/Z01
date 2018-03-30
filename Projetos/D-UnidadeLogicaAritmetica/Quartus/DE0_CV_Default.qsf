@@ -41,7 +41,7 @@
 # Project-Wide Assignments
 # ========================
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13
-set_global_assignment -name LAST_QUARTUS_VERSION "17.0.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "MON MAY  5 11:54:18 2014"
 set_global_assignment -name FLOW_ENABLE_RTL_VIEWER ON
 set_global_assignment -name SMART_RECOMPILE ON
@@ -552,15 +552,6 @@ set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Not16
 set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Nor8Way.vhd"
 set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Nand.vhd"
 set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Mux16.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Mux8Way16.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Mux8Way.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Mux4Way16.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Mux4Way.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Mux2Way.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/DMux8Way16.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/DMux8Way.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/DMux4Way.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/DMux2Way.vhd"
 set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/BarrelShifter16.vhd"
 set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/BarrelShifter8.vhd"
 set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/And16.vhd"

@@ -1,3 +1,4 @@
+
 -- Elementos de Sistemas
 -- developed by Luciano Soares
 -- tb_FlipFlopD.vhd
@@ -9,11 +10,11 @@ use ieee.std_logic_1164.all;
 library vunit_lib;
 context vunit_lib.vunit_context;
 
-entity tb_FlipFlopD is
+entity tb_PC is
   generic (runner_cfg : string);
 end entity;
 
-architecture tb of tb_FlipFlopD is
+architecture tb of tb_PC is
 
   component PC is
       port(
