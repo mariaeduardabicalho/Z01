@@ -1,0 +1,9 @@
+o Assembler
+  - (10/04/18) Rafa
+     Possibilitei escolher a origem do dado no jump
+     exe : jge %S
+    
+  - (11/04/18) Rafa
+     O assembler tinha um bug que não suportava um label
+     como primeira instrução.
+    
