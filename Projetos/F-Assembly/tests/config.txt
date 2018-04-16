@@ -1,11 +1,11 @@
 # nome | quantidade de testes | us de execucao
 # us -> clock = /20
-#add 1 1000
-#sub 1 1000
-#max 2 1000
-#mov 1 1000
-#abs 2 1000
-#div  2 1000
-#mod 3 1000
-#factorial 2 10000
-#pow 2 80000
+add 1 1000
+sub 1 1000
+max 2 1000
+mov 1 1000
+abs 2 1000
+div  2 1000
+mod 3 1000
+factorial 2 10000
+pow 2 80000

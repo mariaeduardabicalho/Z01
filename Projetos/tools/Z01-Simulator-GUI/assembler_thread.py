@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# Eduardo Marossi & Rafael Corsi @ insper.edu.br
+# Dez/2017
+# Disciplina Elementos de Sistemas
+
 import os, sys, argparse, file_utils
 
 PATH_APP       = os.path.dirname(os.path.abspath(__file__))
@@ -21,7 +26,7 @@ class AssemblerTask:
         self.running = True
         if self.verbose:
             print("Starting assembler....")
-        os.system(f"{ASSEMBLER_EXEC} -i {self.rom_in} -o {self.rom_out}")
+        os.system("{} -i {} -o {}".format(self.assembler, self.rom_in, self.rom_out))
         self.stream_out = file_utils.file_to_stream(self.file_out, self.stream_out)
         if self.verbose:
             print("Ending assembler....")

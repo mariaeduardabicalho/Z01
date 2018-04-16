@@ -1,0 +1,1898 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/tst
+Eadd16
+Z1 w1517569629
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Add16.vhd
+Z5 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Add16.vhd
+l0
+L11
+VTX1JPo02b0mP8AGN>HE[X0
+!s100 SiSIIDRe2L<Y`4Mn=<Q<i1
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1523641404
+!i10b 1
+Z8 !s108 1523641404.000000
+Z9 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Add16.vhd|
+Z10 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Add16.vhd|
+!i113 1
+Z11 o-work z01
+Z12 tExplicit 1 CvgOpt 0
+Aarch
+R2
+R3
+DEx4 work 5 add16 0 22 TX1JPo02b0mP8AGN>HE[X0
+l30
+L19
+V1n=Tgj`EGP]8R4ZJ3<N7g3
+!s100 ?NY1?J2lUXVGQRXgO6c=F0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ealu
+R1
+R2
+R3
+R0
+Z13 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ALU.vhd
+Z14 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ALU.vhd
+l0
+L29
+VYk;P0T:X3IHjIL`Q<lAdV1
+!s100 ;H:E>8hji@:aE]F93AJU@0
+R6
+32
+R7
+!i10b 1
+R8
+Z15 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ALU.vhd|
+Z16 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ALU.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 3 alu 0 22 Yk;P0T:X3IHjIL`Q<lAdV1
+l95
+L44
+V;@fAz_R?Y_GKVe6?>TgZK1
+!s100 h8c8ADPMW>:z=9bnNlDRd0
+R6
+32
+R7
+!i10b 1
+R8
+R15
+R16
+!i113 1
+R11
+R12
+Eand16
+R1
+R2
+R3
+R0
+Z17 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/And16.vhd
+Z18 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/And16.vhd
+l0
+L8
+VL;bm<0OFY`R_LBSkPLX0?1
+!s100 _B22@4oL_LiJ_Ce7?VNdh3
+R6
+32
+R7
+!i10b 1
+R8
+Z19 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/And16.vhd|
+Z20 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/And16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 5 and16 0 22 L;bm<0OFY`R_LBSkPLX0?1
+l16
+L15
+V9[c?`eTj5GHUF^]h5UM^03
+!s100 PCYLLkd?GOl>WeLFBSFj[2
+R6
+32
+R7
+!i10b 1
+R8
+R19
+R20
+!i113 1
+R11
+R12
+Ebarrelshifter16
+R1
+Z21 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R2
+R3
+R0
+Z22 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/BarrelShifter16.vhd
+Z23 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/BarrelShifter16.vhd
+l0
+L9
+VEl[HSSL4H^Vh]7gjndYDP3
+!s100 2[kGYQjZ[X[B7:[b?]=ni0
+R6
+32
+R7
+!i10b 1
+R8
+Z24 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/BarrelShifter16.vhd|
+Z25 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/BarrelShifter16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R21
+R2
+R3
+DEx4 work 15 barrelshifter16 0 22 El[HSSL4H^Vh]7gjndYDP3
+l18
+L17
+Vc?]]b;Q7;<GFnY>Z>Hj;10
+!s100 P2jk8[e4@8EN6[RdQVZ1]3
+R6
+32
+R7
+!i10b 1
+R8
+R24
+R25
+!i113 1
+R11
+R12
+Ebarrelshifter8
+R1
+R21
+R2
+R3
+R0
+Z26 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/BarrelShifter8.vhd
+Z27 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/BarrelShifter8.vhd
+l0
+L9
+V0i@gRklc;0>ZOVNmo[91Q1
+!s100 e@1G]UM7J7S_eE_R5jTe]0
+R6
+32
+R7
+!i10b 1
+R8
+Z28 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/BarrelShifter8.vhd|
+Z29 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/BarrelShifter8.vhd|
+!i113 1
+R11
+R12
+Aarch
+R21
+R2
+R3
+DEx4 work 14 barrelshifter8 0 22 0i@gRklc;0>ZOVNmo[91Q1
+l18
+L17
+Vid]_ASY_?6ZSz5SSJBOWg1
+!s100 =S@10]?5Aj4akmdfN;KUH2
+R6
+32
+R7
+!i10b 1
+R8
+R28
+R29
+!i113 1
+R11
+R12
+Ebinarydigit
+R1
+R2
+R3
+R0
+Z30 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/BinaryDigit.vhd
+Z31 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/BinaryDigit.vhd
+l0
+L8
+VF_K<7`iMFD@ObOZNkTKJ`1
+!s100 n^<iU8FL6WS_@iLlidHO_3
+R6
+32
+Z32 !s110 1523641405
+!i10b 1
+R8
+Z33 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/BinaryDigit.vhd|
+Z34 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/BinaryDigit.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 11 binarydigit 0 22 F_K<7`iMFD@ObOZNkTKJ`1
+l41
+L18
+VRoElN7H42;@EQdE8Rf`LP0
+!s100 _@T7K:g5a;Na<;Rfg<?Gd2
+R6
+32
+R32
+!i10b 1
+R8
+R33
+R34
+!i113 1
+R11
+R12
+Ecomparador16
+R1
+R2
+R3
+R0
+Z35 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/comparador16.vhd
+Z36 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/comparador16.vhd
+l0
+L8
+Vb1o?KQiVDfJRGc5f=WaK[2
+!s100 HD:k]=26;BheSZMCC[cIo3
+R6
+32
+R32
+!i10b 1
+Z37 !s108 1523641405.000000
+Z38 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/comparador16.vhd|
+Z39 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/comparador16.vhd|
+!i113 1
+R11
+R12
+Astruccomp16
+R2
+R3
+DEx4 work 12 comparador16 0 22 b1o?KQiVDfJRGc5f=WaK[2
+l17
+L16
+VVCXdgk5mjh>bebGLAD=z30
+!s100 U5g:=lNL:A?;ie>]K7TEc2
+R6
+32
+R32
+!i10b 1
+R37
+R38
+R39
+!i113 1
+R11
+R12
+Ecomputador
+Z40 w1523046828
+R21
+R2
+R3
+R0
+Z41 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Computador.vhd
+Z42 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Computador.vhd
+l0
+L17
+Vf^VkUG72fK[n8[GZ0ioJQ1
+!s100 SPVEfiM?[gRod5>WS_dba2
+R6
+32
+R32
+!i10b 1
+R37
+Z43 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Computador.vhd|
+Z44 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Computador.vhd|
+!i113 1
+R11
+R12
+Alogic
+R21
+R2
+R3
+DEx4 work 10 computador 0 22 f^VkUG72fK[n8[GZ0ioJQ1
+l90
+L43
+VcjMG;IWJRo[=>HiEjMicK3
+!s100 mJho_UjmZPg98]:Sb6>R?2
+R6
+32
+R32
+!i10b 1
+R37
+R43
+R44
+!i113 1
+R11
+R12
+Ecomputador_tb
+Z45 w1522203121
+R21
+R2
+R3
+R0
+Z46 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Computador_tb.vhd
+Z47 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Computador_tb.vhd
+l0
+L17
+Vg^mDLi?8YgPTZJA7>0U]G2
+!s100 TNE09aYh8d4DH0B==1NGH3
+R6
+32
+R32
+!i10b 1
+R37
+Z48 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Computador_tb.vhd|
+Z49 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Computador_tb.vhd|
+!i113 1
+R11
+R12
+Artl
+R21
+R2
+R3
+DEx4 work 13 computador_tb 0 22 g^mDLi?8YgPTZJA7>0U]G2
+l49
+L20
+VjNZc33z6i=gjWL:ideYU43
+!s100 G5T=nXf9cb>Me5MQEmGo@0
+R6
+32
+R32
+!i10b 1
+R37
+R48
+R49
+!i113 1
+R11
+R12
+Econtrolunit
+R1
+R2
+R3
+R0
+Z50 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ControlUnit.vhd
+Z51 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ControlUnit.vhd
+l0
+L11
+VfXfZTnWoPFOUXhD_P@ale1
+!s100 [K>4ZGM[o;@QdbInFnZMG2
+R6
+32
+R32
+!i10b 1
+R37
+Z52 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ControlUnit.vhd|
+Z53 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ControlUnit.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 11 controlunit 0 22 fXfZTnWoPFOUXhD_P@ale1
+l24
+L23
+VNC5@_9WLz8]RE@8c;?iP@2
+!s100 hDQEDSA3Y9DAJEC^9YGJz2
+R6
+32
+R32
+!i10b 1
+R37
+R52
+R53
+!i113 1
+R11
+R12
+Ecpu
+R1
+R2
+R3
+R0
+Z54 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/CPU.vhd
+Z55 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/CPU.vhd
+l0
+L9
+VN1`?^Ad9gBk2kYhk]bW?;0
+!s100 ;C@5QBY1VUBMzkP=4e?I`0
+R6
+32
+R32
+!i10b 1
+R37
+Z56 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/CPU.vhd|
+Z57 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/CPU.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 3 cpu 0 22 N1`?^Ad9gBk2kYhk]bW?;0
+l105
+L22
+Vj;c9jXh<zOd=X3[@8mi>Q0
+!s100 lBYEhYDXQN`2KoZ`eE]i:3
+R6
+32
+R32
+!i10b 1
+R37
+R56
+R57
+!i113 1
+R11
+R12
+Edmux2way
+R1
+R2
+R3
+R0
+Z58 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/DMux2Way.vhd
+Z59 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/DMux2Way.vhd
+l0
+L8
+VA?U[MG<4nT<EaPO^GO_3]2
+!s100 UB80OAXHg;J3Y[9ma5ajI1
+R6
+32
+R32
+!i10b 1
+R37
+Z60 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/DMux2Way.vhd|
+Z61 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/DMux2Way.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 8 dmux2way 0 22 A?U[MG<4nT<EaPO^GO_3]2
+l17
+L16
+VhEWgcm]GK`3HJ>keD[J;e0
+!s100 <C]3^^O87AT3N?f;REAEG3
+R6
+32
+R32
+!i10b 1
+R37
+R60
+R61
+!i113 1
+R11
+R12
+Edmux4way
+R1
+R2
+R3
+R0
+Z62 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/DMux4Way.vhd
+Z63 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/DMux4Way.vhd
+l0
+L8
+VY?Xz@l[2Q6dgnYn2FhTPN3
+!s100 ZJUTPI>fKT<9ZW_aaj_^53
+R6
+32
+R32
+!i10b 1
+R37
+Z64 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/DMux4Way.vhd|
+Z65 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/DMux4Way.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 8 dmux4way 0 22 Y?Xz@l[2Q6dgnYn2FhTPN3
+l19
+L18
+Vn:kLE^]ILSU48N`lZXZ`j3
+!s100 nfCDAUfih]VDZM:L<P[P:1
+R6
+32
+R32
+!i10b 1
+R37
+R64
+R65
+!i113 1
+R11
+R12
+Edmux8way
+R1
+R2
+R3
+R0
+Z66 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/DMux8Way.vhd
+Z67 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/DMux8Way.vhd
+l0
+L8
+Vie54=]]89W@`RfmV]5SV_3
+!s100 8h@?5:W@5aN?bFLAShn?J3
+R6
+32
+R32
+!i10b 1
+R37
+Z68 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/DMux8Way.vhd|
+Z69 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/DMux8Way.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 8 dmux8way 0 22 ie54=]]89W@`RfmV]5SV_3
+l23
+L22
+V_NzzOA`7<AJImzSKL;c:h1
+!s100 PBNJzb]DRcCGUBL14iHb`2
+R6
+32
+R32
+!i10b 1
+R37
+R68
+R69
+!i113 1
+R11
+R12
+Edmux8way16
+R1
+R2
+R3
+R0
+Z70 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/DMux8Way16.vhd
+Z71 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/DMux8Way16.vhd
+l0
+L8
+Vmjf@0Sk=P3Bn0JNdznXo72
+!s100 JOa0=jJWk<bJKC17AK^M30
+R6
+32
+Z72 !s110 1523641406
+!i10b 1
+R37
+Z73 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/DMux8Way16.vhd|
+Z74 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/DMux8Way16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 10 dmux8way16 0 22 mjf@0Sk=P3Bn0JNdznXo72
+l24
+L23
+VFQgOL<BzN9ZUPOdOl^64N0
+!s100 RSVMBfH8HMgd2OL@UGDfQ1
+R6
+32
+R72
+!i10b 1
+R37
+R73
+R74
+!i113 1
+R11
+R12
+Eflipflopd
+R1
+R2
+R3
+R0
+Z75 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/FlipFlopD.vhd
+Z76 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/FlipFlopD.vhd
+l0
+L8
+V:MAf5`1aRXJKdQm6ZI`7;1
+!s100 SA:0:]R5E=XfTT6`I?h;E0
+R6
+32
+R72
+!i10b 1
+Z77 !s108 1523641406.000000
+Z78 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/FlipFlopD.vhd|
+Z79 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/FlipFlopD.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 9 flipflopd 0 22 :MAf5`1aRXJKdQm6ZI`7;1
+l20
+L19
+VaGfD^4=@hgLK6;ccI<6h@3
+!s100 ij8l?OlRhUO@dQFAe7YC`2
+R6
+32
+R72
+!i10b 1
+R77
+R78
+R79
+!i113 1
+R11
+R12
+Efulladder
+R1
+R2
+R3
+R0
+Z80 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/FullAdder.vhd
+Z81 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/FullAdder.vhd
+l0
+L10
+VJn>Bc1<[TnezOm]27@iQa3
+!s100 ^oFEXWUb;T^9LUJXBGnJH2
+R6
+32
+R72
+!i10b 1
+R77
+Z82 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/FullAdder.vhd|
+Z83 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/FullAdder.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 9 fulladder 0 22 Jn>Bc1<[TnezOm]27@iQa3
+l19
+L17
+Vi`L<H:4ERfKd15KYQGS5:0
+!s100 Wb1E?8cFG`V9Zc[]Ob_mM0
+R6
+32
+R72
+!i10b 1
+R77
+R82
+R83
+!i113 1
+R11
+R12
+Ehalfadder
+R1
+R2
+R3
+R0
+Z84 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/HalfAdder.vhd
+Z85 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/HalfAdder.vhd
+l0
+L10
+VHgU5`3OPbI`MYA2kmi8?:1
+!s100 h@?RhTGZ[QMJjM?>AnoBQ0
+R6
+32
+R72
+!i10b 1
+R77
+Z86 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/HalfAdder.vhd|
+Z87 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/HalfAdder.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 9 halfadder 0 22 HgU5`3OPbI`MYA2kmi8?:1
+l19
+L17
+Vl:lY7EVR>RM:TUd=DP[Rb1
+!s100 _Hh4o?9N1YQjTH5gJgEVm2
+R6
+32
+R72
+!i10b 1
+R77
+R86
+R87
+!i113 1
+R11
+R12
+Einc16
+R1
+R2
+R3
+R0
+Z88 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Inc16.vhd
+Z89 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Inc16.vhd
+l0
+L11
+V1eg]Hd^7Ajc?XXl55^DI^2
+!s100 zf5`@f[Vj[mSi<_bFTEQi3
+R6
+32
+R72
+!i10b 1
+R77
+Z90 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Inc16.vhd|
+Z91 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Inc16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 5 inc16 0 22 1eg]Hd^7Ajc?XXl55^DI^2
+l29
+L18
+VDCI7>b7HeIb4gh<h^h4T81
+!s100 jLGAhA<2CZ^NiRjQl10dG2
+R6
+32
+R72
+!i10b 1
+R77
+R90
+R91
+!i113 1
+R11
+R12
+Einversor16
+R1
+R2
+R3
+R0
+Z92 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/inversor16.vhd
+Z93 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/inversor16.vhd
+l0
+L8
+VTTc`2bffA5F@`UU]1oCYb0
+!s100 DO=@n^nGVg3J<NEg@^<i10
+R6
+32
+R72
+!i10b 1
+R77
+Z94 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/inversor16.vhd|
+Z95 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/inversor16.vhd|
+!i113 1
+R11
+R12
+Astrucnega16
+R2
+R3
+DEx4 work 10 inversor16 0 22 TTc`2bffA5F@`UU]1oCYb0
+l16
+L15
+VVlmMh6IoZAlV?Bl;gG7BH1
+!s100 _]0^oHRIclC]cKzPjX;bk2
+R6
+32
+R72
+!i10b 1
+R77
+R94
+R95
+!i113 1
+R11
+R12
+Ememoryio
+Z96 w1523639148
+R21
+R2
+R3
+R0
+Z97 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/MemoryIO.vhd
+Z98 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/MemoryIO.vhd
+l0
+L5
+VkCj[n0dKH?jZnTN8eUmmN0
+!s100 JYREWoJ[>a38G_OENH?f33
+R6
+32
+R72
+!i10b 1
+R77
+Z99 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/MemoryIO.vhd|
+Z100 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/MemoryIO.vhd|
+!i113 1
+R11
+R12
+Alogic
+R21
+R2
+R3
+DEx4 work 8 memoryio 0 22 kCj[n0dKH?jZnTN8eUmmN0
+l52
+L39
+VX37IFNEV=]3?H;2kJ9WMM2
+!s100 GJSi[WhoI;cLOT>KfVLV=3
+R6
+32
+R72
+!i10b 1
+R77
+R99
+R100
+!i113 1
+R11
+R12
+Emux16
+R1
+R2
+R3
+R0
+Z101 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux16.vhd
+Z102 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux16.vhd
+l0
+L8
+VhYeUdPE6cNKP[[g5ESPl_1
+!s100 =<4GzOnekeB1>3HZm?l:33
+R6
+32
+Z103 !s110 1523641407
+!i10b 1
+Z104 !s108 1523641407.000000
+Z105 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux16.vhd|
+Z106 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 5 mux16 0 22 hYeUdPE6cNKP[[g5ESPl_1
+l17
+L16
+V29V_4MijYUUL=aee32URm1
+!s100 cncLOP<9z8N;<L;lXcz7R2
+R6
+32
+R103
+!i10b 1
+R104
+R105
+R106
+!i113 1
+R11
+R12
+Emux2way
+R1
+R2
+R3
+R0
+Z107 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux2Way.vhd
+Z108 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux2Way.vhd
+l0
+L8
+VNz<>7Nf>@jSenV4XN8S>V1
+!s100 nMi?A[MKJJbLjHo4Z7zj=1
+R6
+32
+R72
+!i10b 1
+R77
+Z109 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux2Way.vhd|
+Z110 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux2Way.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 7 mux2way 0 22 Nz<>7Nf>@jSenV4XN8S>V1
+l20
+L16
+V2K@P=T3:10UX_B[gMF:2Y0
+!s100 <nO@lRMTJgRKR660MR^`02
+R6
+32
+R72
+!i10b 1
+R77
+R109
+R110
+!i113 1
+R11
+R12
+Emux4way
+R1
+R2
+R3
+R0
+Z111 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux4Way.vhd
+Z112 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux4Way.vhd
+l0
+L8
+Vo3z<UYE1UJo[fLbRa;lAI3
+!s100 =BCZ<:62[JRF;nRiGYdcm0
+R6
+32
+R103
+!i10b 1
+R77
+Z113 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux4Way.vhd|
+Z114 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux4Way.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 7 mux4way 0 22 o3z<UYE1UJo[fLbRa;lAI3
+l19
+L18
+VlYLhN`0_VmFG:;][ZFaaQ3
+!s100 [QQVHSTO]oN>6QnbiVhQ83
+R6
+32
+R103
+!i10b 1
+R77
+R113
+R114
+!i113 1
+R11
+R12
+Emux4way16
+R1
+R2
+R3
+R0
+Z115 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux4Way16.vhd
+Z116 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux4Way16.vhd
+l0
+L8
+V[Nj_j]XbUm7Eh_A^SMiB<0
+!s100 dEF_:?>`l2ljVXVAF@a230
+R6
+32
+R103
+!i10b 1
+R104
+Z117 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux4Way16.vhd|
+Z118 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux4Way16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 9 mux4way16 0 22 [Nj_j]XbUm7Eh_A^SMiB<0
+l19
+L18
+V`eTd]ZRjDS3ZL00Ym]`fO2
+!s100 3LQOgebTlZnjSfoM<TP`k2
+R6
+32
+R103
+!i10b 1
+R104
+R117
+R118
+!i113 1
+R11
+R12
+Emux8way
+R1
+R2
+R3
+R0
+Z119 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux8Way.vhd
+Z120 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux8Way.vhd
+l0
+L8
+V0hj9KcU9d=ga8dPDQ[<BL2
+!s100 FJS:i^ZZCf2@:;i0^>8<S1
+R6
+32
+R103
+!i10b 1
+R104
+Z121 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux8Way.vhd|
+Z122 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux8Way.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 7 mux8way 0 22 0hj9KcU9d=ga8dPDQ[<BL2
+l23
+L22
+V=<o;UCH_nT>PHg8WBSej^0
+!s100 dIImW8<>zLkg;;@C4?oh@3
+R6
+32
+R103
+!i10b 1
+R104
+R121
+R122
+!i113 1
+R11
+R12
+Emux8way16
+R1
+R2
+R3
+R0
+Z123 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux8Way16.vhd
+Z124 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux8Way16.vhd
+l0
+L8
+VUDC]ZiI]]E0C1C:5fNl1h0
+!s100 ]6aBc5_RnKgn26B_EGSf:0
+R6
+32
+R103
+!i10b 1
+R104
+Z125 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux8Way16.vhd|
+Z126 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Mux8Way16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 9 mux8way16 0 22 UDC]ZiI]]E0C1C:5fNl1h0
+l23
+L22
+V6FDi:=df882gejX16ThBa3
+!s100 QZW6O>Ui<7^H>@;[kjoic2
+R6
+32
+R103
+!i10b 1
+R104
+R125
+R126
+!i113 1
+R11
+R12
+Enand_vhdl
+R1
+R2
+R3
+R0
+Z127 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/nand_vhdl.vhd
+Z128 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/nand_vhdl.vhd
+l0
+L8
+V^`=[4?emzYW4OjH0EZ4M^1
+!s100 JY>NCQjbfSY[4UZ<fJ=XX2
+R6
+32
+R103
+!i10b 1
+R104
+Z129 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/nand_vhdl.vhd|
+Z130 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/nand_vhdl.vhd|
+!i113 1
+R11
+R12
+Amain
+R2
+R3
+DEx4 work 9 nand_vhdl 0 22 ^`=[4?emzYW4OjH0EZ4M^1
+l16
+L15
+V]6d]@Mc@`1i<1FacB6MhU2
+!s100 ?=4Q<dahmFOUheNOF@U3C3
+R6
+32
+R103
+!i10b 1
+R104
+R129
+R130
+!i113 1
+R11
+R12
+Enor8way
+R1
+R2
+R3
+R0
+Z131 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Nor8Way.vhd
+Z132 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Nor8Way.vhd
+l0
+L8
+Vo?:SI4WQ=ij0WU7knbL[a3
+!s100 C=BOn;G^jdCaUQLfN>WXR0
+R6
+32
+R103
+!i10b 1
+R104
+Z133 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Nor8Way.vhd|
+Z134 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Nor8Way.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 7 nor8way 0 22 o?:SI4WQ=ij0WU7knbL[a3
+l22
+L21
+V;8z;2oJ_FaRCRj;I>`K@e1
+!s100 bAWN@HKi2EDEn=T<M[hHY2
+R6
+32
+R103
+!i10b 1
+R104
+R133
+R134
+!i113 1
+R11
+R12
+Enot16
+R1
+R2
+R3
+R0
+Z135 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Not16.vhd
+Z136 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Not16.vhd
+l0
+L8
+Vk:jHS[S>iP_ne=U9bfdgY0
+!s100 ?CM>c5aKMkEZ[DI<jEzLR0
+R6
+32
+R103
+!i10b 1
+R104
+Z137 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Not16.vhd|
+Z138 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Not16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 5 not16 0 22 k:jHS[S>iP_ne=U9bfdgY0
+l15
+L14
+V_No4=g52z2LChRUGBKmd02
+!s100 ;JJHRTfJefah_dfC1MD490
+R6
+32
+R103
+!i10b 1
+R104
+R137
+R138
+!i113 1
+R11
+R12
+Eor16
+R1
+R2
+R3
+R0
+Z139 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Or16.vhd
+Z140 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Or16.vhd
+l0
+L8
+Vc_=Tzm9HozLBP^zVK^T9K2
+!s100 aC2VFRdg>S33ShJ^U6n@m3
+R6
+32
+Z141 !s110 1523641408
+!i10b 1
+Z142 !s108 1523641408.000000
+Z143 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Or16.vhd|
+Z144 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Or16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 4 or16 0 22 c_=Tzm9HozLBP^zVK^T9K2
+l16
+L15
+VgzWDL8WS_D?K^JY1GAoF30
+!s100 Zbj<mgBUOKLRJlWZUZYOG0
+R6
+32
+R141
+!i10b 1
+R142
+R143
+R144
+!i113 1
+R11
+R12
+Eor8way
+R1
+R2
+R3
+R0
+Z145 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Or8Way.vhd
+Z146 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Or8Way.vhd
+l0
+L8
+VVBC4XVUHfJi[5KWg@gcI90
+!s100 k7hgjf;1TB4>i_TRe;Wg<1
+R6
+32
+R103
+!i10b 1
+R104
+Z147 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Or8Way.vhd|
+Z148 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Or8Way.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 6 or8way 0 22 VBC4XVUHfJi[5KWg@gcI90
+l22
+L21
+V3j:z=1F49l8?@_1Nim7g42
+!s100 HE@fcdcShT97jn@3d6Uak1
+R6
+32
+R103
+!i10b 1
+R104
+R147
+R148
+!i113 1
+R11
+R12
+Epc
+Z149 w1523636533
+R21
+R2
+R3
+R0
+Z150 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/PC.vhd
+Z151 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/PC.vhd
+l0
+L16
+V<g3I`cTChMc8=afV0WhM10
+!s100 cP9RXYi;HhcECRc0dS5UT2
+R6
+32
+R141
+!i10b 1
+R142
+Z152 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/PC.vhd|
+Z153 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/PC.vhd|
+!i113 1
+R11
+R12
+Aarch
+R21
+R2
+R3
+DEx4 work 2 pc 0 22 <g3I`cTChMc8=afV0WhM10
+l28
+L27
+VgSL^JX;75EZG[_1nA1P261
+!s100 hHnd;e2kbkNVFF840cI?^1
+R6
+32
+R141
+!i10b 1
+R142
+R152
+R153
+!i113 1
+R11
+R12
+Eram16k
+Z154 w1523648682
+Z155 DPx9 altera_mf 20 altera_mf_components 0 22 :YRc5<ojH^WgP]^Vezi9c1
+R2
+R3
+Z156 d/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01/Projetos/tools/Z01-Simulator-rtl
+Z157 8./Modulos/dispositivos/RAM_fpga/RAM16K.vhd
+Z158 F./Modulos/dispositivos/RAM_fpga/RAM16K.vhd
+l0
+L45
+VKBL5>Ro7hBH5PI405F^?D2
+!s100 z;gX9;^C^]PK>DXWS[V?j0
+R6
+32
+Z159 !s110 1523718593
+!i10b 1
+Z160 !s108 1523718593.000000
+Z161 !s90 -work|z01|./Modulos/dispositivos/RAM_fpga/RAM16K.vhd|
+Z162 !s107 ./Modulos/dispositivos/RAM_fpga/RAM16K.vhd|
+!i113 1
+R11
+R12
+Asyn
+R155
+R2
+R3
+DEx4 work 6 ram16k 0 22 KBL5>Ro7hBH5PI405F^?D2
+l61
+L57
+VIFoak0gTkndjU4HCa07>32
+!s100 AK@@LK4D93Z0nUG5D7[E<1
+R6
+32
+R159
+!i10b 1
+R160
+R161
+R162
+!i113 1
+R11
+R12
+Eram4k
+R1
+R2
+R3
+R0
+Z163 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Ram4K.vhd
+Z164 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Ram4K.vhd
+l0
+L8
+Vd]GSH]?fJieZjHo7T8e>V3
+!s100 ESk?XNEfJCWi[LAlUVY:i3
+R6
+32
+R141
+!i10b 1
+R142
+Z165 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Ram4K.vhd|
+Z166 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Ram4K.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 5 ram4k 0 22 d]GSH]?fJieZjHo7T8e>V3
+l61
+L18
+V:5P;BcPbW[MloKRXJJ@A<3
+!s100 F5OZO<Yb[h5e9kk^O@lc:3
+R6
+32
+R141
+!i10b 1
+R142
+R165
+R166
+!i113 1
+R11
+R12
+Eram512
+R1
+R2
+R3
+R0
+Z167 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Ram512.vhd
+Z168 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Ram512.vhd
+l0
+L8
+V9Qf^C4bmZ4j?X9i0?_fbd3
+!s100 1@Ji=O6R2bCM?3<4JVEVe1
+R6
+32
+R141
+!i10b 1
+R142
+Z169 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Ram512.vhd|
+Z170 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Ram512.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 6 ram512 0 22 9Qf^C4bmZ4j?X9i0?_fbd3
+l61
+L18
+V2cC>ZeOR7GeGA^>C_feF93
+!s100 XzR1Ng9SLC63n9F^LAPDK2
+R6
+32
+R141
+!i10b 1
+R142
+R169
+R170
+!i113 1
+R11
+R12
+Eram64
+R1
+R2
+R3
+R0
+Z171 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Ram64.vhd
+Z172 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Ram64.vhd
+l0
+L8
+VRziCedSJRgLb2W:;TNl5O0
+!s100 gg_:9eMG?gXI@fHk9bKn=3
+R6
+32
+R141
+!i10b 1
+R142
+Z173 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Ram64.vhd|
+Z174 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Ram64.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 5 ram64 0 22 RziCedSJRgLb2W:;TNl5O0
+l61
+L18
+V?RcN@43D]6kPc_Te0LB?N3
+!s100 f`4K:a]iHJPzjUcERI`_C0
+R6
+32
+R141
+!i10b 1
+R142
+R173
+R174
+!i113 1
+R11
+R12
+Eram8
+R1
+R2
+R3
+R0
+Z175 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Ram8.vhd
+Z176 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Ram8.vhd
+l0
+L8
+VhLV1YUG2z]OHz@9KSNeP_2
+!s100 R5mZ`al9n>P1>n^5Jl6z_1
+R6
+32
+R141
+!i10b 1
+R142
+Z177 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Ram8.vhd|
+Z178 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Ram8.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 4 ram8 0 22 hLV1YUG2z]OHz@9KSNeP_2
+l60
+L18
+VMEgmVGTe[mXhonP`EBLQf0
+!s100 NkT;c5PbQim58:V<QOKZW2
+R6
+32
+R141
+!i10b 1
+R142
+R177
+R178
+!i113 1
+R11
+R12
+Eregister16
+R1
+R2
+R3
+R0
+Z179 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Register16.vhd
+Z180 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Register16.vhd
+l0
+L8
+VCeGQ;R:dm3SHJ93=Y8EB_2
+!s100 [Hf5z]6^joS_^S?DMghab1
+R6
+32
+Z181 !s110 1523641409
+!i10b 1
+Z182 !s108 1523641409.000000
+Z183 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Register16.vhd|
+Z184 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Register16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 10 register16 0 22 CeGQ;R:dm3SHJ93=Y8EB_2
+l30
+L18
+VGo8hl:kB`R2nB_5S0Vk5M0
+!s100 H0m`S>_`m[BSWi8[j5D`O2
+R6
+32
+R181
+!i10b 1
+R182
+R183
+R184
+!i113 1
+R11
+R12
+Eregister32
+R1
+R2
+R3
+R0
+Z185 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Register32.vhd
+Z186 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Register32.vhd
+l0
+L8
+VPXAiXc?30AV7gLi9_9G<l3
+!s100 []:^=AY8a3]ML1PkdZ@Ea3
+R6
+32
+R181
+!i10b 1
+R182
+Z187 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Register32.vhd|
+Z188 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Register32.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 10 register32 0 22 PXAiXc?30AV7gLi9_9G<l3
+l28
+L17
+VELIV6ei[[?Z[1UVO5ULmE1
+!s100 S^he`KSCS@0NKi;lDmhf02
+R6
+32
+R181
+!i10b 1
+R182
+R187
+R188
+!i113 1
+R11
+R12
+Eregister64
+R1
+R2
+R3
+R0
+Z189 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Register64.vhd
+Z190 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Register64.vhd
+l0
+L8
+V8`PECZMhM<k4zJ0OKl1zh0
+!s100 LCbS]1neA;d2ePolK?XW]3
+R6
+32
+R181
+!i10b 1
+R182
+Z191 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Register64.vhd|
+Z192 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Register64.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 10 register64 0 22 8`PECZMhM<k4zJ0OKl1zh0
+l28
+L17
+VjEnX_RhmW?A[m3Ki9me;Z0
+!s100 fVg<FjOc]0L:FQ:O6RJFG2
+R6
+32
+R181
+!i10b 1
+R182
+R191
+R192
+!i113 1
+R11
+R12
+Eregister8
+R1
+R2
+R3
+R0
+Z193 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Register8.vhd
+Z194 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Register8.vhd
+l0
+L8
+VBiPo@4UIPPnHbgM=OHMbN3
+!s100 RH;m?0bQIi^ohZMhS9XdS0
+R6
+32
+R141
+!i10b 1
+R142
+Z195 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Register8.vhd|
+Z196 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/Register8.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 9 register8 0 22 BiPo@4UIPPnHbgM=OHMbN3
+l28
+L17
+V5f2:Wb]2TNiGBmIISUJPE1
+!s100 [hh@dVFaIT?QBbf]lTB9j0
+R6
+32
+R141
+!i10b 1
+R142
+R195
+R196
+!i113 1
+R11
+R12
+Erom32k
+Z197 w1523648711
+R155
+R2
+R3
+R156
+Z198 8./Modulos/dispositivos/ROM/ROM32K.vhd
+Z199 F./Modulos/dispositivos/ROM/ROM32K.vhd
+l0
+L43
+VzOAIIE]WTk]@4lD?I:<F?2
+!s100 Y0Eb<EfiYKB=@5Y7bHG?J2
+R6
+32
+R159
+!i10b 1
+R160
+Z200 !s90 -work|z01|./Modulos/dispositivos/ROM/ROM32K.vhd|
+Z201 !s107 ./Modulos/dispositivos/ROM/ROM32K.vhd|
+!i113 1
+R11
+R12
+Asyn
+R155
+R2
+R3
+Z202 DEx4 work 6 rom32k 0 22 zOAIIE]WTk]@4lD?I:<F?2
+l57
+L53
+Z203 VOo;UU8bQPOid=LU9HIAd:3
+Z204 !s100 HJ7WIU6OX3JIG4hXd^iKe3
+R6
+32
+R159
+!i10b 1
+R160
+R200
+R201
+!i113 1
+R11
+R12
+Eshiftregisterpipo16
+R1
+R2
+R3
+R0
+Z205 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ShiftRegisterPIPO16.vhd
+Z206 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ShiftRegisterPIPO16.vhd
+l0
+L13
+V45:a:E]:[_Kn?YFVmO72_1
+!s100 5`PFhDP^5:4f9:IV5G@<>2
+R6
+32
+R181
+!i10b 1
+R182
+Z207 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ShiftRegisterPIPO16.vhd|
+Z208 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ShiftRegisterPIPO16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 19 shiftregisterpipo16 0 22 45:a:E]:[_Kn?YFVmO72_1
+l45
+L22
+VgIb7LKWVEoZb<haEgb3z21
+!s100 NGJ1il<zO4N6ccOhQT=k]1
+R6
+32
+R181
+!i10b 1
+R182
+R207
+R208
+!i113 1
+R11
+R12
+Eshiftregisterpiso16
+R1
+R2
+R3
+R0
+Z209 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ShiftRegisterPISO16.vhd
+Z210 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ShiftRegisterPISO16.vhd
+l0
+L14
+V;8VmS@Eckk^TjdFRT_bZz1
+!s100 WnU_<;IBa[YC?CEH85dm10
+R6
+32
+R181
+!i10b 1
+R182
+Z211 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ShiftRegisterPISO16.vhd|
+Z212 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ShiftRegisterPISO16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 19 shiftregisterpiso16 0 22 ;8VmS@Eckk^TjdFRT_bZz1
+l39
+L23
+V7`i>34T8W=HldhiY<iTSi3
+!s100 z?J2ODG^^ebcUjMnBNfOk3
+R6
+32
+R181
+!i10b 1
+R182
+R211
+R212
+!i113 1
+R11
+R12
+Eshiftregistersipo16
+R1
+R2
+R3
+R0
+Z213 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ShiftRegisterSIPO16.vhd
+Z214 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ShiftRegisterSIPO16.vhd
+l0
+L11
+Vj<DhAjBiQTLG[d>d@=OBk0
+!s100 CEoRC=QDN_?[lmDNo4eT<2
+R6
+32
+R181
+!i10b 1
+R182
+Z215 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ShiftRegisterSIPO16.vhd|
+Z216 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ShiftRegisterSIPO16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 19 shiftregistersipo16 0 22 j<DhAjBiQTLG[d>d@=OBk0
+l33
+L19
+VGX`bi]1k:JY5Z_TEoO[bi3
+!s100 nkTK5DbVKR8f`ceZ<ChcC0
+R6
+32
+R181
+!i10b 1
+R182
+R215
+R216
+!i113 1
+R11
+R12
+Eshiftregistersiso16
+R1
+R2
+R3
+R0
+Z217 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ShiftRegisterSISO16.vhd
+Z218 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ShiftRegisterSISO16.vhd
+l0
+L11
+Vffl_:0Qoe_a<G89C31]Rm2
+!s100 9@bkbdQXR<iiTM8jEgV]z1
+R6
+32
+Z219 !s110 1523641410
+!i10b 1
+R182
+Z220 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ShiftRegisterSISO16.vhd|
+Z221 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/ShiftRegisterSISO16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 19 shiftregistersiso16 0 22 ffl_:0Qoe_a<G89C31]Rm2
+l33
+L19
+VamWf7G`:mzZ9d7]5S;D_A0
+!s100 2HTD00GcNi>_9cJd9<I?40
+R6
+32
+R219
+!i10b 1
+R182
+R220
+R221
+!i113 1
+R11
+R12
+Ezerador16
+R1
+R2
+R3
+R0
+Z222 8/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/zerador16.vhd
+Z223 F/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/zerador16.vhd
+l0
+L8
+V3e;S<Cz_WM39cMJ:4R@:n0
+!s100 5[I:HNEI56WNfSm5f^c2U1
+R6
+32
+R219
+!i10b 1
+Z224 !s108 1523641410.000000
+Z225 !s90 -reportprogress|300|-work|z01|/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/zerador16.vhd|
+Z226 !s107 /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01-Privado/Projetos/tools/Modulos/zerador16.vhd|
+!i113 1
+R11
+R12
+Astruczero16
+R2
+R3
+DEx4 work 9 zerador16 0 22 3e;S<Cz_WM39cMJ:4R@:n0
+l17
+L15
+VONHE5eYVDLb3S<e@AcoU`1
+!s100 XY4EVDd<e16hDRO`>_9ja2
+R6
+32
+R219
+!i10b 1
+R224
+R225
+R226
+!i113 1
+R11
+R12
