@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# Eduardo Marossi & Rafael Corsi @ insper.edu.br
+# Dez/2017
+# Disciplina Elementos de Sistemas
+
 import os, sys, argparse, file_utils, subprocess
 from PyQt5.QtCore import QThread, QObject, pyqtSignal, pyqtSlot
 
@@ -28,7 +33,7 @@ class AssemblerTask(QObject):
         self.running = True
         if self.verbose:
             print("Starting assembler....")
-        retval = subprocess.call(f"{self.assembler} -i {self.file_in} -o {self.file_out}", shell=True)
+        retval = subprocess.call("{} -i {} -o {}".format(self.assembler, self.file_in, self.file_out), shell=True)
         if retval == 0:
             self.success = True
         self.stream_out = file_utils.file_to_stream(self.file_out, self.stream_out)

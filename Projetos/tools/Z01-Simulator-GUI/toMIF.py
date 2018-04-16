@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Rafael Corsi @ insper.edu.br
 # Dez/2017
 # Disciplina Elementos de Sistemas

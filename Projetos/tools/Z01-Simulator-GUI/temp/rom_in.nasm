@@ -1,5 +1,5 @@
-leaw $1, %A
-movw (%A),%S
+leaw $5, %A
+
 
 
 
