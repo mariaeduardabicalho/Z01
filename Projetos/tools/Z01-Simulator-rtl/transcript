@@ -3,7 +3,7 @@
 # 1
 # 1
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:37:48 on Apr 16,2018
+# Start time: 18:38:47 on Apr 16,2018
 # vcom -work z01 ./Modulos/dispositivos/RAM_fpga/RAM16K.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -11,10 +11,10 @@
 # -- Loading package altera_mf_components
 # -- Compiling entity RAM16K
 # -- Compiling architecture SYN of ram16k
-# End time: 11:37:48 on Apr 16,2018, Elapsed time: 0:00:00
+# End time: 18:38:47 on Apr 16,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:37:48 on Apr 16,2018
+# Start time: 18:38:47 on Apr 16,2018
 # vcom -work z01 ./Modulos/dispositivos/ROM/ROM32K.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -22,10 +22,10 @@
 # -- Loading package altera_mf_components
 # -- Compiling entity ROM32K
 # -- Compiling architecture SYN of rom32k
-# End time: 11:37:48 on Apr 16,2018, Elapsed time: 0:00:00
+# End time: 18:38:47 on Apr 16,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim z01.computador_tb 
-# Start time: 11:37:48 on Apr 16,2018
+# Start time: 18:38:47 on Apr 16,2018
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -93,5 +93,5 @@
 #    Time: 5 ns  Iteration: 1  Instance: /computador_tb/c1/RAM/altsyncram_component
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 5 ns  Iteration: 1  Instance: /computador_tb/c1/RAM/altsyncram_component
-# End time: 11:37:49 on Apr 16,2018, Elapsed time: 0:00:01
+# End time: 18:38:48 on Apr 16,2018, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 19
