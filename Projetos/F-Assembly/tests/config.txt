@@ -5,7 +5,8 @@ sub 1 1000
 max 2 1000
 mov 1 1000
 abs 2 1000
-div  2 1000
+div  2 80000
 mod 3 1000
 factorial 2 10000
 pow 2 80000
+#mult 2 10000
