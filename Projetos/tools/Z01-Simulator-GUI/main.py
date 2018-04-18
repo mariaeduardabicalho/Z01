@@ -522,7 +522,7 @@ class AppMain(Ui_MainWindow):
 
 if __name__ == "__main__":
     qapp = QApplication(sys.argv)
-    #qapp.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling, True)
+    ##qapp.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling, True)
     app = AppMain()
     app.show()
     sys.exit(qapp.exec_())

@@ -6,8 +6,13 @@
 
 import os
 import time
+import sys
 
-PATH_TOOLS_SCRIPT = os.path.dirname(os.path.abspath(__file__))+"/../../tools/scripts/"
+PATH_TOOLS_SCRIPT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../..', 'tools', 'scripts')
+sys.path.insert(0,PATH_TOOLS_SCRIPT)
+from writeSOF import writeSOF
+
+PATH_CDF = os.path.join(PATH_TOOLS_SCRIPT, '..', 'sof', 'DE0_CV_Default.cdf')
 
 def programSOF():
 
@@ -18,10 +23,7 @@ def programSOF():
         time.sleep(1)
         os.system("jtagconfig")
 
-    owd = os.getcwd()
-    os.chdir(PATH_TOOLS_SCRIPT)
-    os.system("./gravaFPGAcyclone5.sh")
-    os.chdir(owd)
+    writeSOF(PATH_CDF)
 
 if __name__ == "__main__":
     programSOF()
