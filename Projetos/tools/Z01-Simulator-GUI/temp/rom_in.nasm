@@ -33,14 +33,14 @@ leaw $2, %A
 subw (%A),%S,%D
 leaw $0, %A
 movw %D, (%A)
+leaw $TERMINA, %A
+jmp
+nop
 NRESTO:
 leaw $0, %A
 movw $0, (%A)
-
-
-
-
-
+TERMINA:
+nop
 
 
 
