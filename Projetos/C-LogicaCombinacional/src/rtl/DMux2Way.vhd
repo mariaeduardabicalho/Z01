@@ -8,6 +8,7 @@ entity DMux2Way is
 			q0:  out STD_LOGIC;
 			q1:  out STD_LOGIC);
 end entity;
+<<<<<<< HEAD
 
 architecture dmux2 of DMux2Way is
 
@@ -19,3 +20,5 @@ q1 <= a and sel;
 
 end dmux2;
 
+=======
+>>>>>>> 89d446458572602139e11343eb88068f566f4ddd
