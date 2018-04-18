@@ -10,10 +10,19 @@
 
 import os,sys
 import argparse
+import platform
 
-SIMULATOR = os.path.dirname(os.path.abspath(__file__))+"/../../tools/Z01-Simulator-GUI/"
+SIMULATOR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../..', 'tools','Z01-Simulator-GUI')
 
 if __name__ == "__main__":
     root = os.getcwd()
     os.chdir(SIMULATOR)
-    os.system('python main.py')
+
+    # tenta detectar a versão do python do sistema
+    # se python2 for a padrão, forca a execucao
+    # com python 3
+    pversion = platform.python_version()
+    if pversion is '3' :
+        os.system('python3 main.py')
+    else:
+        os.system('python3 main.py')

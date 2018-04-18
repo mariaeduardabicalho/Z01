@@ -171,6 +171,9 @@
           </item>
           <item>
            <widget class="QLabel" name="label_ALU">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="sizePolicy">
              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
               <horstretch>0</horstretch>
@@ -208,29 +211,29 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>22</height>
+     <height>30</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAjuda">
     <property name="title">
-     <string>Ajuda</string>
+     <string>A&amp;juda</string>
     </property>
     <addaction name="actionSobre"/>
    </widget>
    <widget class="QMenu" name="menuVisualizar">
     <property name="title">
-     <string>Visualizar</string>
+     <string>Vis&amp;ualizar</string>
     </property>
     <widget class="QMenu" name="menuRAM">
      <property name="title">
-      <string>RAM</string>
+      <string>RA&amp;M</string>
      </property>
      <addaction name="actionRAMBinario"/>
      <addaction name="actionRAMHexadecimal"/>
     </widget>
     <widget class="QMenu" name="menuROM">
      <property name="title">
-      <string>ROM</string>
+      <string>&amp;ROM</string>
      </property>
      <addaction name="separator"/>
      <addaction name="separator"/>
@@ -240,7 +243,7 @@
     </widget>
     <widget class="QMenu" name="menuRegistradores">
      <property name="title">
-      <string>Registradores</string>
+      <string>R&amp;egistradores</string>
      </property>
      <addaction name="separator"/>
      <addaction name="separator"/>
@@ -253,7 +256,7 @@
    </widget>
    <widget class="QMenu" name="menuArquivo">
     <property name="title">
-     <string>Arquivo</string>
+     <string>Ar&amp;quivo</string>
     </property>
     <property name="toolTipsVisible">
      <bool>true</bool>
@@ -266,7 +269,7 @@
    </widget>
    <widget class="QMenu" name="menuAcao">
     <property name="title">
-     <string>Ação</string>
+     <string>A&amp;ção</string>
     </property>
     <addaction name="actionProximo"/>
     <addaction name="actionExecutarFim"/>
@@ -275,7 +278,7 @@
    </widget>
    <widget class="QMenu" name="menuOpcoes">
     <property name="title">
-     <string>Opções</string>
+     <string>Opç&amp;ões</string>
     </property>
     <addaction name="actionConfiguracoes"/>
    </widget>
@@ -310,7 +313,7 @@
   </widget>
   <action name="actionSobre">
    <property name="text">
-    <string>Sobre</string>
+    <string>&amp;Sobre</string>
    </property>
   </action>
   <action name="actionRAMBinario">
@@ -318,7 +321,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Binario</string>
+    <string>&amp;Binario</string>
    </property>
   </action>
   <action name="actionAssembly">
@@ -331,7 +334,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Hexadecimal</string>
+    <string>&amp;Hexadecimal</string>
    </property>
   </action>
   <action name="actionROMBinario">
@@ -339,7 +342,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Binário</string>
+    <string>&amp;Binário</string>
    </property>
   </action>
   <action name="actionROMHexadecimal">
@@ -347,7 +350,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Hexadecimal</string>
+    <string>&amp;Hexadecimal</string>
    </property>
   </action>
   <action name="actionROMAssembly">
@@ -355,7 +358,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Assembly</string>
+    <string>&amp;Assembly</string>
    </property>
   </action>
   <action name="actionREGBinario">
@@ -363,7 +366,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Binário</string>
+    <string>&amp;Binário</string>
    </property>
   </action>
   <action name="actionREGHexadecimal">
@@ -371,12 +374,12 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Hexadecimal</string>
+    <string>&amp;Hexadecimal</string>
    </property>
   </action>
   <action name="actionSair">
    <property name="text">
-    <string>Sair</string>
+    <string>Sa&amp;ir</string>
    </property>
   </action>
   <action name="actionAbrir">
@@ -385,7 +388,7 @@
      <normaloff>theme/document-open.png</normaloff>theme/document-open.png</iconset>
    </property>
    <property name="text">
-    <string>Abrir</string>
+    <string>&amp;Abrir</string>
    </property>
   </action>
   <action name="actionNovo">
@@ -394,7 +397,7 @@
      <normaloff>theme/document-new.png</normaloff>theme/document-new.png</iconset>
    </property>
    <property name="text">
-    <string>Novo</string>
+    <string>&amp;Novo</string>
    </property>
    <property name="toolTip">
     <string>Novo Arquivo</string>
@@ -406,7 +409,7 @@
      <normaloff>theme/go-next.png</normaloff>theme/go-next.png</iconset>
    </property>
    <property name="text">
-    <string>Proximo</string>
+    <string>&amp;Proximo</string>
    </property>
    <property name="toolTip">
     <string>Próxima Instrução</string>
@@ -419,7 +422,7 @@
      <normalon>theme/go-jump.png</normalon>theme/go-jump.png</iconset>
    </property>
    <property name="text">
-    <string>Executar até o Fim</string>
+    <string>&amp;Executar até o Fim</string>
    </property>
    <property name="toolTip">
     <string>Executar até o final</string>
@@ -431,7 +434,7 @@
      <normaloff>theme/process-stop.png</normaloff>theme/process-stop.png</iconset>
    </property>
    <property name="text">
-    <string>Parar</string>
+    <string>Pa&amp;rar</string>
    </property>
    <property name="toolTip">
     <string>Parar execução</string>
@@ -443,7 +446,7 @@
      <normaloff>theme/go-first.png</normaloff>theme/go-first.png</iconset>
    </property>
    <property name="text">
-    <string>Voltar ao Início</string>
+    <string>&amp;Voltar ao Início</string>
    </property>
    <property name="toolTip">
     <string>Voltar ao Início</string>
@@ -456,7 +459,7 @@
     </iconset>
    </property>
    <property name="text">
-    <string>Salvar ROM</string>
+    <string>&amp;Salvar ROM</string>
    </property>
    <property name="toolTip">
     <string>Salvar ROM</string>
@@ -468,7 +471,7 @@
      <normaloff>theme/preferences-system.png</normaloff>theme/preferences-system.png</iconset>
    </property>
    <property name="text">
-    <string>Configurações</string>
+    <string>&amp;Configurações</string>
    </property>
    <property name="toolTip">
     <string>Configurações</string>

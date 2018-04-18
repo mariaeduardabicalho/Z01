@@ -47,9 +47,7 @@ class vhdlScript(object):
         # config
         self.cli = VUnitCLI()
         self.args = self.cli.parse_args()
-        self.args.gtkwave_fmt = 'vcd'
         self.args.num_threads = 4
-        #self.args.log_level = 'info'
         self.ui = VUnit.from_args(self.args)
         self.lib = self.ui.add_library("lib")
 
@@ -63,6 +61,9 @@ class vhdlScript(object):
         self.lib = lib
 
     def addSrc(self, pwd):
+        print("-----------------")
+        print(pwd)
+        print("-----------------")
         self.add_src_lib(pwd)
 
     def addTstConfigFile(self, tst):

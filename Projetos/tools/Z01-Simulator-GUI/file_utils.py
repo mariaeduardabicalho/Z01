@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# Eduardo Marossi & Rafael Corsi @ insper.edu.br
+# Dez/2017
+# Disciplina Elementos de Sistemas
+
 import os, shutil, codecs
 
 def stream_to_file(fsrc, filename):

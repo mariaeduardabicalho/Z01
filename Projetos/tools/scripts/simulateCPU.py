@@ -30,16 +30,16 @@ RAM_END_SIMU_FILE = "_end.mif"
 
 
 # Path to vsim  #
-PATH_VSIM = os.environ.get('VUNIT_MODELSIM_PATH') + "/"
+PATH_VSIM =  os.path.join(os.environ.get('VUNIT_MODELSIM_PATH'), "vsim")
 
 # Files used on this simulation
-PATH_WORK       = os.path.dirname(os.path.abspath(__file__))+"/../Z01-Simulator-rtl/"
-PATH_DO         = os.path.join(PATH_WORK, "do/sim.do")
-TEMP_IN_RAM_MIF = os.path.join(PATH_WORK, "in/tmpRAM.mif")
-TEMP_IN_ROM_MIF = os.path.join(PATH_WORK, "in/tmpROM.mif")
-OUT_RAM_MEM     = os.path.join(PATH_WORK, "out/RAM.mem")
-OUT_ROM_MEM     = os.path.join(PATH_WORK, "out/ROM.mem")
-OUT_SIM_LST     = os.path.join(PATH_WORK, "out/SIM.lst")
+PATH_WORK       = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "Z01-Simulator-rtl")
+PATH_DO         = os.path.join(PATH_WORK, "do", "sim.do")
+TEMP_IN_RAM_MIF = os.path.join(PATH_WORK, "tmpRAM.mif")
+TEMP_IN_ROM_MIF = os.path.join(PATH_WORK, "tmpROM.mif")
+OUT_RAM_MEM     = os.path.join(PATH_WORK, "out", "RAM.mem")
+OUT_ROM_MEM     = os.path.join(PATH_WORK, "out", "ROM.mem")
+OUT_SIM_LST     = os.path.join(PATH_WORK, "out", "SIM.lst")
 
 END = "\n"
 
@@ -137,12 +137,18 @@ def simulateCPU(ramIn, romIn, ramOut, time, debug, verbose):
 
     print(TEMP_IN_RAM_MIF)
 
+    print("wdkawkwadkdawkdkwadwkadwkadwkk")
+
     try:
-            shutil.rmtree(OUT_RAM_MEM)
-            shutil.rmtree(OUT_ROM_MEM)
-            shutil.rmtree(OUT_SIM_LST)
+            os.remove(OUT_RAM_MEM)
+            os.remove(OUT_ROM_MEM)
+            os.remove(OUT_SIM_LST)
+            print("removido")
     except:
+            print("simulateCPU: Falha em remove arquivos")
             pass
+
+    return(0)
 
     try:
         shutil.copyfile(ramIn, TEMP_IN_RAM_MIF)
@@ -162,10 +168,12 @@ def simulateCPU(ramIn, romIn, ramOut, time, debug, verbose):
     v = ""
 
     if platform.system() == "Windows":
+        if verbose is False:
             v = " > NUL "
     else:
-            if verbose is False:
-                    v = " &> /dev/null "
+        if verbose is False:
+            v = " &> /dev/null "
+
 
     c = ""
     if debug is False:
@@ -174,7 +182,8 @@ def simulateCPU(ramIn, romIn, ramOut, time, debug, verbose):
     # executa simulacao no modelsim
     owd = os.getcwd()
     os.chdir(PATH_WORK)
-    os.system(PATH_VSIM + "vsim" + c + " -do " + PATH_DO + v)
+
+    os.system(PATH_VSIM  + c + " -do " + PATH_DO + v)
     os.chdir(owd)
 
     shutil.copyfile(OUT_RAM_MEM, ramOut)

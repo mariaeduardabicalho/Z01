@@ -1,3 +1,7 @@
+# -*- coding: utf-8 -*-
+# Eduardo Marossi & Rafael Corsi @ insper.edu.br
+# Dez/2017
+# Disciplina Elementos de Sistemas
 import os, sys, file_utils, argparse, shutil
 
 sys.path.insert(0,"../scripts/")

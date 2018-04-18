@@ -1,4 +1,13 @@
+# -*- coding: utf-8 -*-
+# Eduardo Marossi & Rafael Corsi @ insper.edu.br
+# Dez/2017
+# Disciplina Elementos de Sistemas
 import sys, os, tempfile
+
+if sys.version_info[0] < 3:
+    print ("Precisa ser o Python 3")
+    exit();
+
 import asm_utils, file_utils
 import config_dialog
 
@@ -59,7 +68,7 @@ class AppMain(Ui_MainWindow):
         self.config_dialog_ui.setupUi(self.config_dialog)
         self.config_dialog_ui.assemblerLineEdit.setText("../jar/Z01-Assembler.jar")
 
-    def setup_clean_views(self, table, rows=100, caption="Dados"):
+    def setup_clean_views(self, table, rows=100, caption="Dados", line_header=None):
         model = QStandardItemModel(rows, 1, self.window)
         model.setHorizontalHeaderItem(0, QStandardItem(caption))
         table.setModel(model)
@@ -67,9 +76,12 @@ class AppMain(Ui_MainWindow):
             table.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
         for l in range(0, rows):
-            model.setHeaderData(l, QtCore.Qt.Vertical, l);
+            if line_header is None:
+                model.setHeaderData(l, QtCore.Qt.Vertical, l)
+            else:
+                model.setHeaderData(l, QtCore.Qt.Vertical, line_header(l))
         return model
-       
+
     def setup_actions(self):
         self.step_timer = QtCore.QTimer()
         self.step_timer.timeout.connect(self.on_proximo)
@@ -155,7 +167,7 @@ class AppMain(Ui_MainWindow):
         self.copy_file_to_model(temp, self.ramModel, asm_utils.bin_str_to_hex)
 
     def on_clear_ram(self):
-        self.ramModel = self.setup_clean_views(self.ramView, rows=self.RAM_VIEW_INITIAL_SIZE, caption="RAM")
+        self.ramModel = self.setup_clean_views(self.ramView, rows=self.RAM_VIEW_INITIAL_SIZE, caption="RAM", line_header=asm_utils.z01_ram_name)
         for i in range(0, self.RAM_VIEW_INITIAL_SIZE):
             self.ramModel.setItem(i, QStandardItem("0000000000000000"))
 
@@ -258,22 +270,32 @@ class AppMain(Ui_MainWindow):
         if self.last_step is not None:
             addr = int(step["s_regAout"], 2)
             index = self.ramModel.index(addr, 0)
+            last_pc_counter = int(self.last_step["pcout"], 2) - 1
+
             if int(step["writeM"]) == 0 and int(step["selM"]) == 1 and int(self.last_step["selM"]) == 0:
                self.ramView.setCurrentIndex(index)
 
             if int(step["writeM"]) == 1:
                self.ramView.setCurrentIndex(index)
                self.ramModel.itemFromIndex(index).setText(self.convert_to_format_ram(step["outM"]))
- 
+        else:
+            last_pc_counter = -1
+
         ## update ROM line
         pc_counter = int(step["pcout"], 2) - 1
+
         if pc_counter < 0:
             pc_counter = 0
+
+        if pc_counter != last_pc_counter + 1:
+            print("JUMP - Executando NOP")
+            pc_counter = last_pc_counter # Mantem
 
         if self.actionROMAssembly.isChecked():
             rom_line = asm_utils.z01_real_line(self.assembler_task.labels_pos, pc_counter)
         else:
             rom_line = pc_counter
+
         index = self.romModel.index(rom_line, 0)
         self.romView.setCurrentIndex(index)
         
@@ -360,7 +382,7 @@ class AppMain(Ui_MainWindow):
             print("Simulador está sendo executado...")
             return False
 
-        self.simulator_task = SimulatorTask("temp/", True, self.config_dialog_ui.simGUIBox.isChecked())
+        self.simulator_task = SimulatorTask("temp/", False, self.config_dialog_ui.simGUIBox.isChecked())
         rom_in              = tempfile.SpooledTemporaryFile(max_size=self.TEMP_MAX_RAM_USE, mode="w+")
         rom_out             = tempfile.SpooledTemporaryFile(max_size=self.TEMP_MAX_RAM_USE, mode="w+")
         lst_out             = tempfile.SpooledTemporaryFile(max_size=self.TEMP_MAX_RAM_USE, mode="w+")
@@ -420,7 +442,6 @@ class AppMain(Ui_MainWindow):
         print("SIM done!")
         self.changed = False
         self.lst_parser = LSTParser(self.simulator_task.lst_stream)
-        self.on_proximo()
 
     def load_converted_asm_bin(self):
         self.asm_thread.quit()
@@ -450,7 +471,7 @@ class AppMain(Ui_MainWindow):
             valid = False
 
         if not valid:
-           print(f"Invalid BIN Instruction: {item.text()}")
+           print("Invalid BIN Instruction: {}".format(item.text()))
 
         return valid
     
@@ -501,7 +522,7 @@ class AppMain(Ui_MainWindow):
 
 if __name__ == "__main__":
     qapp = QApplication(sys.argv)
-    qapp.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling, True)
+    #qapp.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling, True)
     app = AppMain()
     app.show()
     sys.exit(qapp.exec_())
