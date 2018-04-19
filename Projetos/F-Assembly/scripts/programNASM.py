@@ -10,13 +10,13 @@ import os
 import sys
 import argparse
 
-TOOLSPATH = os.path.dirname(os.path.abspath(__file__))+"/../../tools/"
+PATH_TOOLS_SCRIPT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../..', 'tools', 'scripts')
+sys.path.insert(0,PATH_TOOLS_SCRIPT)
 
-sys.path.insert(0,TOOLSPATH+"scripts/")
 from assembler import assembler
 from writeROM import writeROM
 
-jar = TOOLSPATH+"jar/Z01-Assembler.jar"
+jar = os.path.join(PATH_TOOLS_SCRIPT, '..', 'jar', 'Z01-Assembler.jar')
 
 def program(nasm):
 
@@ -32,7 +32,6 @@ def program(nasm):
 
     # program ROM
     writeROM(hack+".mif")
-
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()

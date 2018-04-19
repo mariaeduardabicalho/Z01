@@ -33,7 +33,7 @@ RAM_END_SIMU_FILE = "_end.mif"
 PATH_VSIM =  os.path.join(os.environ.get('VUNIT_MODELSIM_PATH'), "vsim")
 
 # Files used on this simulation
-PATH_WORK       = os.path.join(os.path.dirname(os.path.abspath(__file__)),"..","Z01-Simulator-rtl")
+PATH_WORK       = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "Z01-Simulator-rtl-2")
 PATH_DO         = os.path.join(PATH_WORK, "do", "sim.do")
 TEMP_IN_RAM_MIF = os.path.join(PATH_WORK, "tmpRAM.mif")
 TEMP_IN_ROM_MIF = os.path.join(PATH_WORK, "tmpROM.mif")
@@ -136,13 +136,6 @@ def simulateCPU(ramIn, romIn, ramOut, time, debug, verbose):
     ramOut = os.path.abspath(ramOut)
 
     print(TEMP_IN_RAM_MIF)
-
-    try:
-            shutil.rmtree(OUT_RAM_MEM)
-            shutil.rmtree(OUT_ROM_MEM)
-            shutil.rmtree(OUT_SIM_LST)
-    except:
-            pass
 
     try:
         shutil.copyfile(ramIn, TEMP_IN_RAM_MIF)
