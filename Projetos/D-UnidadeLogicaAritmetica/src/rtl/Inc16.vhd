@@ -15,7 +15,7 @@ entity Inc16 is
 	);
 end entity;
 
-architecture rtl of Inc16 is	
+architecture rtl of Inc16 is
 
 component Add16 is
 	port(

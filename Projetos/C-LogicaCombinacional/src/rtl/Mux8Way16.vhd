@@ -27,5 +27,4 @@ q <= a when sel = "000" else
 	f when sel = "101" else
 	g when sel = "110" else
 	h when sel = "111";
-
 end pep;
