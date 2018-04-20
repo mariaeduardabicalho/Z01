@@ -9,21 +9,21 @@ leaw $1, %A
 movw $1, (%A) ; guarda f em R1
 FAT:
 
-COMECO:
+COMECO: ; salva os dois valores a serem multiplicados, um em um registrador e outro em uma RAM
 leaw $1, %A
-movw (%A), %S 
+movw (%A), %S
 leaw $0, %A
 movw (%A), %D
 leaw $7, %A
 movw %D, (%A)
 leaw $ZERO, %A
 decw %S
-je %S
+je %S ;checa se um dos numeros é 0, se for ja salva 0 na ram 3
 nop
 je %D
 nop
 
-MEIO:
+MEIO: ; soma um dos valores o número de vezes do segundo valor
 nop
 leaw $7, %A
 movw (%A), %A
@@ -39,7 +39,7 @@ je %S
 nop
 
 
-ZERO:
+ZERO: ; salva 0 na ram
 leaw $3, %A
 leaw $0, (%A)
 nop
