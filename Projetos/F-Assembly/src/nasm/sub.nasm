@@ -5,6 +5,7 @@
 
 ; faz uma subtracao binaria do valor de :  RAM[1] - RAM[0] gravando em RAM[2].
 
+;sub
 ;passa valor 0 para A
 leaw $0, %A
 ;passa o valor de ram0 para S
