@@ -1,0 +1,8 @@
+# nome | quantidade de testes | us de execucao
+# us -> clock = /20
+sub 1 10000
+add 1 10000
+max 2 10000
+mov 1 10000
+abs 2 10000
+mult 1 10000

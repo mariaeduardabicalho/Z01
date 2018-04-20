@@ -27,19 +27,14 @@ TST_DIR = "tst/"
 RAM_INIT_FILE     = "_in.mif"
 RAM_END_FILE      = "_tst.mif"
 RAM_END_SIMU_FILE = "_end.mif"
-
+OUT_SIM_LST = ""
 
 # Path to vsim  #
 PATH_VSIM =  os.path.join(os.environ.get('VUNIT_MODELSIM_PATH'), "vsim")
 
 # Files used on this simulation
-PATH_WORK       = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "Z01-Simulator-rtl-2")
-PATH_DO         = os.path.join(PATH_WORK, "do", "sim.do")
-TEMP_IN_RAM_MIF = os.path.join(PATH_WORK, "tmpRAM.mif")
-TEMP_IN_ROM_MIF = os.path.join(PATH_WORK, "tmpROM.mif")
-OUT_RAM_MEM     = os.path.join(PATH_WORK, "out", "RAM.mem")
-OUT_ROM_MEM     = os.path.join(PATH_WORK, "out", "ROM.mem")
-OUT_SIM_LST     = os.path.join(PATH_WORK, "out", "SIM.lst")
+PATH_WORK       = os.path.join(os.path.dirname(os.path.abspath(__file__)),"..", "Z01-Simulator-rtl-2")
+
 
 END = "\n"
 
@@ -63,7 +58,7 @@ def rmFile(f):
 # e um caminho para o arquivo de programa (.mif)
 # e executa as simulações contidas no arquivo de
 # configuracao.
-def simulateFromTestDir(testDir, hackDir, gui, verbose):
+def simulateFromTestDir(testDir, hackDir, gui, verbose, rtlDir=PATH_WORK):
 
     configFile = testDir+CONFIG_FILE
 
@@ -115,7 +110,7 @@ def simulateFromTestDir(testDir, hackDir, gui, verbose):
                                     print(ramIn)
                                     print(mif)
                                     print(ramOut)
-                                simulateCPU(ramIn, mif, ramOut, sTime, gui, verbose)
+                                simulateCPU(ramIn, mif, ramOut, sTime, gui, verbose, rtlDir=rtlDir)
                                 toc = time.time()
                                 print(" ( {0:.2f} seconds)".format(toc-tic))
                         else:
@@ -128,14 +123,34 @@ def simulateFromTestDir(testDir, hackDir, gui, verbose):
 
 
 
-def simulateCPU(ramIn, romIn, ramOut, time, debug, verbose):
+def simulateCPU(ramIn, romIn, ramOut, time, debug, verbose, rtlDir=PATH_WORK):
+    global OUT_SIM_LST
+    rtlDir = os.path.abspath(rtlDir)
 
+    PATH_DO         = os.path.join(rtlDir, "do", "sim.do")
+    TEMP_IN_RAM_MIF = os.path.join(rtlDir, "tmpRAM.mif")
+    TEMP_IN_ROM_MIF = os.path.join(rtlDir, "tmpROM.mif")
+    OUT_RAM_MEM     = os.path.join(rtlDir, "out", "RAM.mem")
+    OUT_ROM_MEM     = os.path.join(rtlDir, "out", "ROM.mem")
+    # tosco, melhorar isso ! não pode ser global !
+    # mas o gui simulator usa, colocar como parametro ?
+    # ou criar uma classe
+    OUT_SIM_LST     = os.path.join(rtlDir, "out", "SIM.lst")
 
     ramIn = os.path.abspath(ramIn)
     romIn = os.path.abspath(romIn)
     ramOut = os.path.abspath(ramOut)
 
-    print(TEMP_IN_RAM_MIF)
+   # try:
+   #         os.remove(OUT_RAM_MEM)
+   #         os.remove(OUT_ROM_MEM)
+   #         os.remove(OUT_SIM_LST)
+   #         print("removido")
+   # except:
+   #         print("simulateCPU: Falha em remove arquivos")
+   #         pass
+
+   # return(0)
 
     try:
         shutil.copyfile(ramIn, TEMP_IN_RAM_MIF)
@@ -161,14 +176,13 @@ def simulateCPU(ramIn, romIn, ramOut, time, debug, verbose):
         if verbose is False:
             v = " &> /dev/null "
 
-
     c = ""
     if debug is False:
             c = " -c "
 
     # executa simulacao no modelsim
     owd = os.getcwd()
-    os.chdir(PATH_WORK)
+    os.chdir(rtlDir)
 
     os.system(PATH_VSIM  + c + " -do " + PATH_DO + v)
     os.chdir(owd)

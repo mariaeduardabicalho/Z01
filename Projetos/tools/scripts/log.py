@@ -28,8 +28,5 @@ def logTest(s):
     print(colored(s,cTest))
 
 def logError(s):
-        print(colored(s,cError))
+    print(colored(s,cError))
 
-if __name__ == "__main__":
-    logError("LogError")
-    logMsg("logMsg")
