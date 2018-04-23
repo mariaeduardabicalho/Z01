@@ -1,0 +1,177 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LEDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_CS_N",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_RESET_N",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_RS",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_WR_N",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_D[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_D[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_D[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_D[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_D[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_D[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_D[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_D[7]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_D[8]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_D[9]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_D[10]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_D[11]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_D[12]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_D[13]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_D[14]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_D[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RESET_N",
+					"strict" : false
+				},
+				{
+					"name" : "SW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[9]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

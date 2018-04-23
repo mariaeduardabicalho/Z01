@@ -14,13 +14,14 @@ TEMP_PATH      = PATH_APP + "/temp"
 class SimulatorTask(QObject):
     finished = pyqtSignal()
 
-    def __init__(self, temp_path="", verbose=False, debug=False):
+    def __init__(self, temp_path="", verbose=False, debug=False, rtl_dir=None):
         super().__init__()
         self.verbose = verbose
-        self.file_ram_out = temp_path + "ram_out.mif"
-        self.lst_vsim   = simulateCPU.OUT_SIM_LST
+        self.file_ram_out =  os.path.abspath(temp_path + "ram_out.mif")
+        self.lst_vsim   = simulateCPU.OUT_SIM_LST # tosco, melhorar isso !
         self.temp_path = temp_path
         self.debug = debug
+        self.rtl_dir = rtl_dir
 
     def setup(self, stream_rom_in, stream_ram_in, stream_lst_out, simulation_time):
         self.file_rom_in  = self._setup_file(stream_rom_in, self.temp_path + "/rom_in.mif")
@@ -41,7 +42,11 @@ class SimulatorTask(QObject):
     def run(self):
         if self.verbose:
             print("Starting simulator....")
-        simulateCPU.simulateCPU(self.file_ram_in, self.file_rom_in, self.file_ram_out, self.simulation_time, self.debug, self.verbose)
+        if self.rtl_dir is None:
+            simulateCPU.simulateCPU(self.file_ram_in, self.file_rom_in, self.file_ram_out, self.simulation_time, self.debug, self.verbose)
+        else:
+            simulateCPU.simulateCPU(self.file_ram_in, self.file_rom_in, self.file_ram_out, self.simulation_time, self.debug, self.verbose, self.rtl_dir)
+        self.lst_vsim   = simulateCPU.OUT_SIM_LST # tosco, melhorar isso
         file_utils.file_to_stream(self.lst_vsim, self.lst_stream)
         if self.verbose:
             print("Ending emulator....")

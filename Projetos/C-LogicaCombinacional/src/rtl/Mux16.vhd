@@ -10,10 +10,7 @@ entity Mux16 is
 end entity;
 
 architecture pep of Mux16 is
---begin
---process (a,b,sel) is
 begin
-q <= a when sel = '0' else
-     b when sel = '1';
---end process;
+q <= a when sel = '0';
+q <= b when sel = '1';
 end pep;
