@@ -22,6 +22,32 @@ entity ControlUnit is
 end entity;
 
 architecture arch of ControlUnit is
+
+signal b15 : std_logic;
 begin
+b15 <= instruction(15);
+
+-- Sinais de controle
+zx <= b15 and instruction(12);
+nx <= b15 and instruction(11);
+zy <= b15 and instruction(10);
+ny <= b15 and instruction(9);
+f <= b15 and instruction(8);
+no <= b15 and instruction(7);
+-- Definindo seletores dos mux
+muxALUI_A <= not b15;
+muxAM_ALU <= b15 and instruction(14);
+muxSD_ALU <= b15 and not instruction(13);
+-- Definindo instrucoes ao load
+loadA <= (b15 and instruction(6)) or (not instruction(15));
+loadS <= b15 and instruction(5);
+loadD <= b15 and instruction(4);
+loadM <= b15 and instruction(3);
+loadPC <= ((instruction(2) and ng) or 
+		(instruction(1) and zr) or 
+		(instruction(0) and (not zr) and (not ng))) and 
+		instruction(15);
+
+
 
 end architecture;
