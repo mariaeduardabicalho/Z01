@@ -11,6 +11,6 @@ end entity;
 
 architecture pep of Mux16 is
 begin
-q <= a when sel = '0' else
-     b;
+q <= a when sel = '0';
+q <= b when sel = '1';
 end pep;
