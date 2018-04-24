@@ -41,7 +41,7 @@
 # Project-Wide Assignments
 # ========================
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13
-set_global_assignment -name LAST_QUARTUS_VERSION "17.0.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "MON MAY  5 11:54:18 2014"
 set_global_assignment -name FLOW_ENABLE_RTL_VIEWER ON
 set_global_assignment -name SMART_RECOMPILE ON
@@ -264,7 +264,7 @@ set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
 # Analysis & Synthesis Assignments
 # ================================
 set_global_assignment -name FAMILY "Cyclone V"
-set_global_assignment -name TOP_LEVEL_ENTITY Computador
+set_global_assignment -name TOP_LEVEL_ENTITY CPU
 set_global_assignment -name OPTIMIZATION_TECHNIQUE SPEED
 set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS ON
 set_global_assignment -name PROJECT_IP_REGENERATION_POLICY ALWAYS_REGENERATE_IP
@@ -327,6 +327,55 @@ set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -
 
 # end ENTITY(TopLevel)
 # --------------------
+set_global_assignment -name QIP_FILE ../src/rtl/Dispositivos/PLL/PLL.qip
+set_global_assignment -name VHDL_FILE ../src/rtl/Dispositivos/Screen/FIFO/FIFO16x4096.vhd
+set_global_assignment -name VHDL_FILE ../src/rtl/Dispositivos/Screen/Screen.vhd
+set_global_assignment -name VHDL_FILE ../src/rtl/Dispositivos/Screen/ILI9341.vhd
+set_global_assignment -name VHDL_FILE ../src/rtl/Dispositivos/ROM/ROM32K.vhd
+set_global_assignment -name VHDL_FILE ../src/rtl/Dispositivos/RAM/RAM16K.vhd
+set_global_assignment -name VHDL_FILE ../src/rtl/Dispositivos/PLL/PLL.vhd
+set_global_assignment -name VHDL_FILE ../src/rtl/MemoryIO.vhd
+set_global_assignment -name VHDL_FILE ../src/rtl/CPU.vhd
+set_global_assignment -name VHDL_FILE ../src/rtl/ControlUnit.vhd
+set_global_assignment -name VHDL_FILE ../src/rtl/Computador.vhd
+set_global_assignment -name VHDL_FILE "../../E-LogicaSequencial/src/rtl/Register64.vhd"
+set_global_assignment -name VHDL_FILE "../../E-LogicaSequencial/src/rtl/Register32.vhd"
+set_global_assignment -name VHDL_FILE "../../E-LogicaSequencial/src/rtl/Register16.vhd"
+set_global_assignment -name VHDL_FILE "../../E-LogicaSequencial/src/rtl/Register8.vhd"
+set_global_assignment -name VHDL_FILE "../../E-LogicaSequencial/src/rtl/Ram512.vhd"
+set_global_assignment -name VHDL_FILE "../../E-LogicaSequencial/src/rtl/Ram64.vhd"
+set_global_assignment -name VHDL_FILE "../../E-LogicaSequencial/src/rtl/Ram8.vhd"
+set_global_assignment -name VHDL_FILE "../../E-LogicaSequencial/src/rtl/Ram4K.vhd"
+set_global_assignment -name VHDL_FILE "../../E-LogicaSequencial/src/rtl/PC.vhd"
+set_global_assignment -name VHDL_FILE "../../E-LogicaSequencial/src/rtl/FlipFlopD.vhd"
+set_global_assignment -name VHDL_FILE "../../E-LogicaSequencial/src/rtl/BinaryDigit.vhd"
+set_global_assignment -name VHDL_FILE "../../D-UnidadeLogicaAritmetica/src/rtl/zerador16.vhd"
+set_global_assignment -name VHDL_FILE "../../D-UnidadeLogicaAritmetica/src/rtl/inversor16.vhd"
+set_global_assignment -name VHDL_FILE "../../D-UnidadeLogicaAritmetica/src/rtl/Inc16.vhd"
+set_global_assignment -name VHDL_FILE "../../D-UnidadeLogicaAritmetica/src/rtl/HalfAdder.vhd"
+set_global_assignment -name VHDL_FILE "../../D-UnidadeLogicaAritmetica/src/rtl/FullAdder.vhd"
+set_global_assignment -name VHDL_FILE "../../D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd"
+set_global_assignment -name VHDL_FILE "../../D-UnidadeLogicaAritmetica/src/rtl/ALU.vhd"
+set_global_assignment -name VHDL_FILE "../../D-UnidadeLogicaAritmetica/src/rtl/Add16.vhd"
+set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Or16.vhd"
+set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Or8Way.vhd"
+set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Not16.vhd"
+set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Nor8Way.vhd"
+set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Nand.vhd"
+set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Mux16.vhd"
+set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Mux8Way16.vhd"
+set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Mux8Way.vhd"
+set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Mux4Way16.vhd"
+set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Mux4Way.vhd"
+set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Mux2Way.vhd"
+set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/DMux8Way16.vhd"
+set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/DMux8Way.vhd"
+set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/DMux4Way.vhd"
+set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/DMux2Way.vhd"
+set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/BarrelShifter16.vhd"
+set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/BarrelShifter8.vhd"
+set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/And16.vhd"
+set_global_assignment -name SDC_FILE DE0_CV_Default.sdc
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -536,53 +585,4 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[2]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[3]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS
-set_global_assignment -name QIP_FILE ../src/rtl/Dispositivos/PLL/PLL.qip
-set_global_assignment -name VHDL_FILE ../src/rtl/Dispositivos/Screen/FIFO/FIFO16x4096.vhd
-set_global_assignment -name VHDL_FILE ../src/rtl/Dispositivos/Screen/Screen.vhd
-set_global_assignment -name VHDL_FILE ../src/rtl/Dispositivos/Screen/ILI9341.vhd
-set_global_assignment -name VHDL_FILE ../src/rtl/Dispositivos/ROM/ROM32K.vhd
-set_global_assignment -name VHDL_FILE ../src/rtl/Dispositivos/RAM/RAM16K.vhd
-set_global_assignment -name VHDL_FILE ../src/rtl/Dispositivos/PLL/PLL.vhd
-set_global_assignment -name VHDL_FILE ../src/rtl/MemoryIO.vhd
-set_global_assignment -name VHDL_FILE ../src/rtl/CPU.vhd
-set_global_assignment -name VHDL_FILE ../src/rtl/ControlUnit.vhd
-set_global_assignment -name VHDL_FILE ../src/rtl/Computador.vhd
-set_global_assignment -name VHDL_FILE "../../E-LogicaSequencial/src/rtl/Register64.vhd"
-set_global_assignment -name VHDL_FILE "../../E-LogicaSequencial/src/rtl/Register32.vhd"
-set_global_assignment -name VHDL_FILE "../../E-LogicaSequencial/src/rtl/Register16.vhd"
-set_global_assignment -name VHDL_FILE "../../E-LogicaSequencial/src/rtl/Register8.vhd"
-set_global_assignment -name VHDL_FILE "../../E-LogicaSequencial/src/rtl/Ram512.vhd"
-set_global_assignment -name VHDL_FILE "../../E-LogicaSequencial/src/rtl/Ram64.vhd"
-set_global_assignment -name VHDL_FILE "../../E-LogicaSequencial/src/rtl/Ram8.vhd"
-set_global_assignment -name VHDL_FILE "../../E-LogicaSequencial/src/rtl/Ram4K.vhd"
-set_global_assignment -name VHDL_FILE "../../E-LogicaSequencial/src/rtl/PC.vhd"
-set_global_assignment -name VHDL_FILE "../../E-LogicaSequencial/src/rtl/FlipFlopD.vhd"
-set_global_assignment -name VHDL_FILE "../../E-LogicaSequencial/src/rtl/BinaryDigit.vhd"
-set_global_assignment -name VHDL_FILE "../../D-UnidadeLogicaAritmetica/src/rtl/zerador16.vhd"
-set_global_assignment -name VHDL_FILE "../../D-UnidadeLogicaAritmetica/src/rtl/inversor16.vhd"
-set_global_assignment -name VHDL_FILE "../../D-UnidadeLogicaAritmetica/src/rtl/Inc16.vhd"
-set_global_assignment -name VHDL_FILE "../../D-UnidadeLogicaAritmetica/src/rtl/HalfAdder.vhd"
-set_global_assignment -name VHDL_FILE "../../D-UnidadeLogicaAritmetica/src/rtl/FullAdder.vhd"
-set_global_assignment -name VHDL_FILE "../../D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd"
-set_global_assignment -name VHDL_FILE "../../D-UnidadeLogicaAritmetica/src/rtl/ALU.vhd"
-set_global_assignment -name VHDL_FILE "../../D-UnidadeLogicaAritmetica/src/rtl/Add16.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Or16.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Or8Way.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Not16.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Nor8Way.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Nand.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Mux16.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Mux8Way16.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Mux8Way.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Mux4Way16.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Mux4Way.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Mux2Way.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/DMux8Way16.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/DMux8Way.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/DMux4Way.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/DMux2Way.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/BarrelShifter16.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/BarrelShifter8.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/And16.vhd"
-set_global_assignment -name SDC_FILE DE0_CV_Default.sdc
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
