@@ -113,6 +113,7 @@ ARCHITECTURE logic OF Computador IS
   SIGNAL OUTPUT_RAM   : STD_LOGIC_VECTOR(15 downto 0);
   SIGNAL INSTRUCTION  : STD_LOGIC_VECTOR(15 downto 0);
   SIGNAL PC			      : STD_LOGIC_VECTOR(14 downto 0);
+  SIGNAL pcout		    : STD_LOGIC_VECTOR(14 downto 0);
 
 
 BEGIN
@@ -125,7 +126,8 @@ BEGIN
     locked   => PLL_LOCKED
      );
 
-  ROM32K : ROM32K PORT map(
+
+  ROM32KK : ROM32K PORT map(
     address => pcout,
     clock => CLK_SLOW,
     q => INSTRUCTION
@@ -142,7 +144,9 @@ BEGIN
 			  pcout  => PC
  );
 
-  MemoryIO : MemoryIO PORT map(
+
+  MAIN_MemoryIO : MemoryIO PORT map(
+
           CLK_SLOW => CLK_SLOW,
           CLK_FAST => CLK_FAST,
   			  RST     => RST_MEM,
