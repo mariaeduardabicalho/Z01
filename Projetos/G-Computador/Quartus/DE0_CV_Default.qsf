@@ -264,7 +264,7 @@ set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
 # Analysis & Synthesis Assignments
 # ================================
 set_global_assignment -name FAMILY "Cyclone V"
-set_global_assignment -name TOP_LEVEL_ENTITY CPU
+set_global_assignment -name TOP_LEVEL_ENTITY DE0_CV_Default
 set_global_assignment -name OPTIMIZATION_TECHNIQUE SPEED
 set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS ON
 set_global_assignment -name PROJECT_IP_REGENERATION_POLICY ALWAYS_REGENERATE_IP
@@ -368,7 +368,6 @@ set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Mux8W
 set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Mux4Way16.vhd"
 set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Mux4Way.vhd"
 set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/Mux2Way.vhd"
-set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/DMux8Way16.vhd"
 set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/DMux8Way.vhd"
 set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/DMux4Way.vhd"
 set_global_assignment -name VHDL_FILE "../../C-LogicaCombinacional/src/rtl/DMux2Way.vhd"

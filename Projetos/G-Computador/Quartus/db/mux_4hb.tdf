@@ -1,5 +1,5 @@
 --lpm_mux CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" DEVICE_FAMILY="Cyclone V" LPM_SIZE=2 LPM_WIDTH=16 LPM_WIDTHS=1 data result sel
---VERSION_BEGIN 17.0 cbx_lpm_mux 2017:04:19:09:17:27:SJ cbx_mgl 2017:04:19:10:26:36:SJ  VERSION_END
+--VERSION_BEGIN 17.1 cbx_lpm_mux 2017:10:25:18:06:53:SJ cbx_mgl 2017:10:25:18:08:29:SJ  VERSION_END
 
 
 -- Copyright (C) 2017  Intel Corporation. All rights reserved.
@@ -10,12 +10,11 @@
 --  associated documentation or information are expressly subject 
 --  to the terms and conditions of the Intel Program License 
 --  Subscription Agreement, the Intel Quartus Prime License Agreement,
---  the Intel MegaCore Function License Agreement, or other 
---  applicable license agreement, including, without limitation, 
---  that your use is for the sole purpose of programming logic 
---  devices manufactured by Intel and sold by Intel or its 
---  authorized distributors.  Please refer to the applicable 
---  agreement for further details.
+--  the Intel FPGA IP License Agreement, or other applicable license
+--  agreement, including, without limitation, that your use is for
+--  the sole purpose of programming logic devices manufactured by
+--  Intel and sold by Intel or its authorized distributors.  Please
+--  refer to the applicable agreement for further details.
 
 
 

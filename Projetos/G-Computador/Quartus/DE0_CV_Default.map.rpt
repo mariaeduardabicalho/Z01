@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE0_CV_Default
-Tue Apr 24 15:47:50 2018
+Tue Apr 24 22:42:46 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -10,21 +10,7 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Port Connectivity Checks: "PC:pcs|Register16:c1"
- 12. Port Connectivity Checks: "PC:pcs|Inc16:c2|Add16:fullader1"
- 13. Port Connectivity Checks: "PC:pcs"
- 14. Port Connectivity Checks: "ALU:ALUS|Add16:ad16|FullAdder:fulladder16"
- 15. Port Connectivity Checks: "ALU:ALUS|Add16:ad16|FullAdder:fullader1"
- 16. Port Connectivity Checks: "Register16:Aregister|Register8:r1|BinaryDigit:c1|FlipFlopD:c2"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -47,27 +33,22 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Apr 24 15:47:50 2018       ;
-; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
-; Revision Name                   ; DE0_CV_Default                              ;
-; Top-level Entity Name           ; CPU                                         ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 15                                          ;
-; Total pins                      ; 81                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Tue Apr 24 22:42:46 2018           ;
+; Quartus Prime Version       ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name               ; DE0_CV_Default                              ;
+; Top-level Entity Name       ; DE0_CV_Default                              ;
+; Family                      ; Cyclone V                                   ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -76,7 +57,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CEBA4F23C7        ;                    ;
-; Top-level entity name                                                           ; CPU                ; DE0_CV_Default     ;
+; Top-level entity name                                                           ; DE0_CV_Default     ; DE0_CV_Default     ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone IV GX      ;
 ; Use smart compilation                                                           ; On                 ; Off                ;
 ; Optimization Technique                                                          ; Speed              ; Balanced           ;
@@ -166,340 +147,11 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                            ;
-+----------------------------------------------------------+-----------------+-----------------------------+------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                         ; Used in Netlist ; File Type                   ; File Name with Absolute Path                                                                                                 ; Library ;
-+----------------------------------------------------------+-----------------+-----------------------------+------------------------------------------------------------------------------------------------------------------------------+---------+
-; ../src/rtl/Dispositivos/PLL/PLL.vhd                      ; yes             ; User Wizard-Generated File  ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/Dispositivos/PLL/PLL.vhd                 ;         ;
-; ../src/rtl/Dispositivos/Screen/FIFO/FIFO16x4096.vhd      ; yes             ; User Wizard-Generated File  ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/Dispositivos/Screen/FIFO/FIFO16x4096.vhd ;         ;
-; ../src/rtl/Dispositivos/Screen/Screen.vhd                ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/Dispositivos/Screen/Screen.vhd           ;         ;
-; ../src/rtl/Dispositivos/Screen/ILI9341.vhd               ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/Dispositivos/Screen/ILI9341.vhd          ;         ;
-; ../src/rtl/Dispositivos/ROM/ROM32K.vhd                   ; yes             ; User Wizard-Generated File  ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/Dispositivos/ROM/ROM32K.vhd              ;         ;
-; ../src/rtl/Dispositivos/RAM/RAM16K.vhd                   ; yes             ; User Wizard-Generated File  ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/Dispositivos/RAM/RAM16K.vhd              ;         ;
-; ../src/rtl/MemoryIO.vhd                                  ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/MemoryIO.vhd                             ;         ;
-; ../src/rtl/CPU.vhd                                       ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd                                  ;         ;
-; ../src/rtl/ControlUnit.vhd                               ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/ControlUnit.vhd                          ;         ;
-; ../src/rtl/Computador.vhd                                ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/Computador.vhd                           ;         ;
-; ../../E-LogicaSequencial/src/rtl/Register64.vhd          ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Register64.vhd                     ;         ;
-; ../../E-LogicaSequencial/src/rtl/Register32.vhd          ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Register32.vhd                     ;         ;
-; ../../E-LogicaSequencial/src/rtl/Register16.vhd          ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Register16.vhd                     ;         ;
-; ../../E-LogicaSequencial/src/rtl/Register8.vhd           ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Register8.vhd                      ;         ;
-; ../../E-LogicaSequencial/src/rtl/Ram512.vhd              ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Ram512.vhd                         ;         ;
-; ../../E-LogicaSequencial/src/rtl/Ram64.vhd               ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Ram64.vhd                          ;         ;
-; ../../E-LogicaSequencial/src/rtl/Ram8.vhd                ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Ram8.vhd                           ;         ;
-; ../../E-LogicaSequencial/src/rtl/Ram4K.vhd               ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Ram4K.vhd                          ;         ;
-; ../../E-LogicaSequencial/src/rtl/PC.vhd                  ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/PC.vhd                             ;         ;
-; ../../E-LogicaSequencial/src/rtl/FlipFlopD.vhd           ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/FlipFlopD.vhd                      ;         ;
-; ../../E-LogicaSequencial/src/rtl/BinaryDigit.vhd         ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/BinaryDigit.vhd                    ;         ;
-; ../../D-UnidadeLogicaAritmetica/src/rtl/zerador16.vhd    ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/zerador16.vhd               ;         ;
-; ../../D-UnidadeLogicaAritmetica/src/rtl/inversor16.vhd   ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/inversor16.vhd              ;         ;
-; ../../D-UnidadeLogicaAritmetica/src/rtl/Inc16.vhd        ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/Inc16.vhd                   ;         ;
-; ../../D-UnidadeLogicaAritmetica/src/rtl/HalfAdder.vhd    ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/HalfAdder.vhd               ;         ;
-; ../../D-UnidadeLogicaAritmetica/src/rtl/FullAdder.vhd    ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/FullAdder.vhd               ;         ;
-; ../../D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd            ;         ;
-; ../../D-UnidadeLogicaAritmetica/src/rtl/ALU.vhd          ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/ALU.vhd                     ;         ;
-; ../../D-UnidadeLogicaAritmetica/src/rtl/Add16.vhd        ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/Add16.vhd                   ;         ;
-; ../../C-LogicaCombinacional/src/rtl/Or16.vhd             ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Or16.vhd                        ;         ;
-; ../../C-LogicaCombinacional/src/rtl/Or8Way.vhd           ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Or8Way.vhd                      ;         ;
-; ../../C-LogicaCombinacional/src/rtl/Not16.vhd            ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Not16.vhd                       ;         ;
-; ../../C-LogicaCombinacional/src/rtl/Nor8Way.vhd          ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Nor8Way.vhd                     ;         ;
-; ../../C-LogicaCombinacional/src/rtl/Nand.vhd             ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Nand.vhd                        ;         ;
-; ../../C-LogicaCombinacional/src/rtl/Mux16.vhd            ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd                       ;         ;
-; ../../C-LogicaCombinacional/src/rtl/Mux8Way16.vhd        ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux8Way16.vhd                   ;         ;
-; ../../C-LogicaCombinacional/src/rtl/Mux8Way.vhd          ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux8Way.vhd                     ;         ;
-; ../../C-LogicaCombinacional/src/rtl/Mux4Way16.vhd        ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux4Way16.vhd                   ;         ;
-; ../../C-LogicaCombinacional/src/rtl/Mux4Way.vhd          ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux4Way.vhd                     ;         ;
-; ../../C-LogicaCombinacional/src/rtl/Mux2Way.vhd          ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux2Way.vhd                     ;         ;
-; ../../C-LogicaCombinacional/src/rtl/DMux8Way.vhd         ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/DMux8Way.vhd                    ;         ;
-; ../../C-LogicaCombinacional/src/rtl/DMux4Way.vhd         ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/DMux4Way.vhd                    ;         ;
-; ../../C-LogicaCombinacional/src/rtl/DMux2Way.vhd         ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/DMux2Way.vhd                    ;         ;
-; ../../C-LogicaCombinacional/src/rtl/BarrelShifter16.vhd  ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/BarrelShifter16.vhd             ;         ;
-; ../../C-LogicaCombinacional/src/rtl/BarrelShifter8.vhd   ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/BarrelShifter8.vhd              ;         ;
-; ../../C-LogicaCombinacional/src/rtl/And16.vhd            ; yes             ; User VHDL File              ; C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/And16.vhd                       ;         ;
-+----------------------------------------------------------+-----------------+-----------------------------+------------------------------------------------------------------------------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 19          ;
-;                                             ;             ;
-; Combinational ALUT usage for logic          ; 32          ;
-;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 5           ;
-;     -- 5 input functions                    ; 3           ;
-;     -- 4 input functions                    ; 3           ;
-;     -- <=3 input functions                  ; 21          ;
-;                                             ;             ;
-; Dedicated logic registers                   ; 15          ;
-;                                             ;             ;
-; I/O pins                                    ; 81          ;
-;                                             ;             ;
-; Total DSP Blocks                            ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; reset~input ;
-; Maximum fan-out                             ; 20          ;
-; Total fan-out                               ; 227         ;
-; Average fan-out                             ; 1.09        ;
-+---------------------------------------------+-------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                  ;
-+-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                      ; Entity Name ; Library Name ;
-+-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------+-------------+--------------+
-; |CPU                                ; 32 (0)              ; 15 (0)                    ; 0                 ; 0          ; 81   ; 0            ; |CPU                                                                     ; CPU         ; work         ;
-;    |PC:pcs|                         ; 32 (0)              ; 15 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs                                                              ; PC          ; work         ;
-;       |Inc16:c2|                    ; 16 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2                                                     ; Inc16       ; work         ;
-;          |Add16:fullader1|          ; 16 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1                                     ; Add16       ; work         ;
-;             |FullAdder:fulladder10| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder10               ; FullAdder   ; work         ;
-;                |HalfAdder:HA2|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder10|HalfAdder:HA2 ; HalfAdder   ; work         ;
-;             |FullAdder:fulladder11| ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder11               ; FullAdder   ; work         ;
-;                |HalfAdder:HA2|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder11|HalfAdder:HA2 ; HalfAdder   ; work         ;
-;             |FullAdder:fulladder12| ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder12               ; FullAdder   ; work         ;
-;                |HalfAdder:HA2|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder12|HalfAdder:HA2 ; HalfAdder   ; work         ;
-;             |FullAdder:fulladder13| ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder13               ; FullAdder   ; work         ;
-;                |HalfAdder:HA2|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder13|HalfAdder:HA2 ; HalfAdder   ; work         ;
-;             |FullAdder:fulladder14| ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder14               ; FullAdder   ; work         ;
-;                |HalfAdder:HA2|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder14|HalfAdder:HA2 ; HalfAdder   ; work         ;
-;             |FullAdder:fulladder15| ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder15               ; FullAdder   ; work         ;
-;                |HalfAdder:HA2|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder15|HalfAdder:HA2 ; HalfAdder   ; work         ;
-;             |FullAdder:fulladder2|  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder2                ; FullAdder   ; work         ;
-;                |HalfAdder:HA2|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder2|HalfAdder:HA2  ; HalfAdder   ; work         ;
-;             |FullAdder:fulladder3|  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder3                ; FullAdder   ; work         ;
-;                |HalfAdder:HA2|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder3|HalfAdder:HA2  ; HalfAdder   ; work         ;
-;             |FullAdder:fulladder4|  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder4                ; FullAdder   ; work         ;
-;                |HalfAdder:HA2|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder4|HalfAdder:HA2  ; HalfAdder   ; work         ;
-;             |FullAdder:fulladder5|  ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder5                ; FullAdder   ; work         ;
-;                |HalfAdder:HA2|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder5|HalfAdder:HA2  ; HalfAdder   ; work         ;
-;             |FullAdder:fulladder6|  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder6                ; FullAdder   ; work         ;
-;                |HalfAdder:HA2|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder6|HalfAdder:HA2  ; HalfAdder   ; work         ;
-;             |FullAdder:fulladder7|  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder7                ; FullAdder   ; work         ;
-;                |HalfAdder:HA2|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder7|HalfAdder:HA2  ; HalfAdder   ; work         ;
-;             |FullAdder:fulladder8|  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder8                ; FullAdder   ; work         ;
-;                |HalfAdder:HA2|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder8|HalfAdder:HA2  ; HalfAdder   ; work         ;
-;             |FullAdder:fulladder9|  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder9                ; FullAdder   ; work         ;
-;                |HalfAdder:HA2|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Inc16:c2|Add16:fullader1|FullAdder:fulladder9|HalfAdder:HA2  ; HalfAdder   ; work         ;
-;       |Mux16:c3|                    ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Mux16:c3                                                     ; Mux16       ; work         ;
-;       |Register16:c1|               ; 1 (0)               ; 15 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1                                                ; Register16  ; work         ;
-;          |Register8:r1|             ; 1 (0)               ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r1                                   ; Register8   ; work         ;
-;             |BinaryDigit:c1|        ; 1 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r1|BinaryDigit:c1                    ; BinaryDigit ; work         ;
-;                |FlipFlopD:c2|       ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r1|BinaryDigit:c1|FlipFlopD:c2       ; FlipFlopD   ; work         ;
-;             |BinaryDigit:c2|        ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r1|BinaryDigit:c2                    ; BinaryDigit ; work         ;
-;                |FlipFlopD:c2|       ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r1|BinaryDigit:c2|FlipFlopD:c2       ; FlipFlopD   ; work         ;
-;             |BinaryDigit:c3|        ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r1|BinaryDigit:c3                    ; BinaryDigit ; work         ;
-;                |FlipFlopD:c2|       ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r1|BinaryDigit:c3|FlipFlopD:c2       ; FlipFlopD   ; work         ;
-;             |BinaryDigit:c4|        ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r1|BinaryDigit:c4                    ; BinaryDigit ; work         ;
-;                |FlipFlopD:c2|       ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r1|BinaryDigit:c4|FlipFlopD:c2       ; FlipFlopD   ; work         ;
-;             |BinaryDigit:c5|        ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r1|BinaryDigit:c5                    ; BinaryDigit ; work         ;
-;                |FlipFlopD:c2|       ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r1|BinaryDigit:c5|FlipFlopD:c2       ; FlipFlopD   ; work         ;
-;             |BinaryDigit:c6|        ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r1|BinaryDigit:c6                    ; BinaryDigit ; work         ;
-;                |FlipFlopD:c2|       ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r1|BinaryDigit:c6|FlipFlopD:c2       ; FlipFlopD   ; work         ;
-;             |BinaryDigit:c7|        ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r1|BinaryDigit:c7                    ; BinaryDigit ; work         ;
-;                |FlipFlopD:c2|       ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r1|BinaryDigit:c7|FlipFlopD:c2       ; FlipFlopD   ; work         ;
-;             |BinaryDigit:c8|        ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r1|BinaryDigit:c8                    ; BinaryDigit ; work         ;
-;                |FlipFlopD:c2|       ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r1|BinaryDigit:c8|FlipFlopD:c2       ; FlipFlopD   ; work         ;
-;          |Register8:r2|             ; 0 (0)               ; 7 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r2                                   ; Register8   ; work         ;
-;             |BinaryDigit:c1|        ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r2|BinaryDigit:c1                    ; BinaryDigit ; work         ;
-;                |FlipFlopD:c2|       ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r2|BinaryDigit:c1|FlipFlopD:c2       ; FlipFlopD   ; work         ;
-;             |BinaryDigit:c2|        ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r2|BinaryDigit:c2                    ; BinaryDigit ; work         ;
-;                |FlipFlopD:c2|       ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r2|BinaryDigit:c2|FlipFlopD:c2       ; FlipFlopD   ; work         ;
-;             |BinaryDigit:c3|        ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r2|BinaryDigit:c3                    ; BinaryDigit ; work         ;
-;                |FlipFlopD:c2|       ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r2|BinaryDigit:c3|FlipFlopD:c2       ; FlipFlopD   ; work         ;
-;             |BinaryDigit:c4|        ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r2|BinaryDigit:c4                    ; BinaryDigit ; work         ;
-;                |FlipFlopD:c2|       ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r2|BinaryDigit:c4|FlipFlopD:c2       ; FlipFlopD   ; work         ;
-;             |BinaryDigit:c5|        ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r2|BinaryDigit:c5                    ; BinaryDigit ; work         ;
-;                |FlipFlopD:c2|       ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r2|BinaryDigit:c5|FlipFlopD:c2       ; FlipFlopD   ; work         ;
-;             |BinaryDigit:c6|        ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r2|BinaryDigit:c6                    ; BinaryDigit ; work         ;
-;                |FlipFlopD:c2|       ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r2|BinaryDigit:c6|FlipFlopD:c2       ; FlipFlopD   ; work         ;
-;             |BinaryDigit:c7|        ; 0 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r2|BinaryDigit:c7                    ; BinaryDigit ; work         ;
-;                |FlipFlopD:c2|       ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PC:pcs|Register16:c1|Register8:r2|BinaryDigit:c7|FlipFlopD:c2       ; FlipFlopD   ; work         ;
-+-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                            ;
-+-----------------------------------------------------------------+---------------------------------------------+
-; Register name                                                   ; Reason for Removal                          ;
-+-----------------------------------------------------------------+---------------------------------------------+
-; Register16:Dregister|Register8:r1|BinaryDigit:c1|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Sregister|Register8:r1|BinaryDigit:c1|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Dregister|Register8:r1|BinaryDigit:c2|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Sregister|Register8:r1|BinaryDigit:c2|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Dregister|Register8:r1|BinaryDigit:c3|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Sregister|Register8:r1|BinaryDigit:c3|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Dregister|Register8:r1|BinaryDigit:c4|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Sregister|Register8:r1|BinaryDigit:c4|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Dregister|Register8:r1|BinaryDigit:c5|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Sregister|Register8:r1|BinaryDigit:c5|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Dregister|Register8:r1|BinaryDigit:c6|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Sregister|Register8:r1|BinaryDigit:c6|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Dregister|Register8:r1|BinaryDigit:c7|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Sregister|Register8:r1|BinaryDigit:c7|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Dregister|Register8:r1|BinaryDigit:c8|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Sregister|Register8:r1|BinaryDigit:c8|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Dregister|Register8:r2|BinaryDigit:c1|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Sregister|Register8:r2|BinaryDigit:c1|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Dregister|Register8:r2|BinaryDigit:c2|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Sregister|Register8:r2|BinaryDigit:c2|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Dregister|Register8:r2|BinaryDigit:c3|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Sregister|Register8:r2|BinaryDigit:c3|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Dregister|Register8:r2|BinaryDigit:c4|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Sregister|Register8:r2|BinaryDigit:c4|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Dregister|Register8:r2|BinaryDigit:c5|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Sregister|Register8:r2|BinaryDigit:c5|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Dregister|Register8:r2|BinaryDigit:c6|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Sregister|Register8:r2|BinaryDigit:c6|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Dregister|Register8:r2|BinaryDigit:c7|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Sregister|Register8:r2|BinaryDigit:c7|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Dregister|Register8:r2|BinaryDigit:c8|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Sregister|Register8:r2|BinaryDigit:c8|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Aregister|Register8:r2|BinaryDigit:c8|FlipFlopD:c2|q ; Lost fanout                                 ;
-; Register16:Aregister|Register8:r1|BinaryDigit:c1|FlipFlopD:c2|q ; Stuck at GND due to stuck port clock_enable ;
-; Register16:Aregister|Register8:r1|BinaryDigit:c2|FlipFlopD:c2|q ; Stuck at GND due to stuck port clock_enable ;
-; Register16:Aregister|Register8:r1|BinaryDigit:c3|FlipFlopD:c2|q ; Stuck at GND due to stuck port clock_enable ;
-; Register16:Aregister|Register8:r1|BinaryDigit:c4|FlipFlopD:c2|q ; Stuck at GND due to stuck port clock_enable ;
-; Register16:Aregister|Register8:r1|BinaryDigit:c5|FlipFlopD:c2|q ; Stuck at GND due to stuck port clock_enable ;
-; Register16:Aregister|Register8:r1|BinaryDigit:c6|FlipFlopD:c2|q ; Stuck at GND due to stuck port clock_enable ;
-; Register16:Aregister|Register8:r1|BinaryDigit:c7|FlipFlopD:c2|q ; Stuck at GND due to stuck port clock_enable ;
-; Register16:Aregister|Register8:r1|BinaryDigit:c8|FlipFlopD:c2|q ; Stuck at GND due to stuck port clock_enable ;
-; Register16:Aregister|Register8:r2|BinaryDigit:c1|FlipFlopD:c2|q ; Stuck at GND due to stuck port clock_enable ;
-; Register16:Aregister|Register8:r2|BinaryDigit:c2|FlipFlopD:c2|q ; Stuck at GND due to stuck port clock_enable ;
-; Register16:Aregister|Register8:r2|BinaryDigit:c3|FlipFlopD:c2|q ; Stuck at GND due to stuck port clock_enable ;
-; Register16:Aregister|Register8:r2|BinaryDigit:c4|FlipFlopD:c2|q ; Stuck at GND due to stuck port clock_enable ;
-; Register16:Aregister|Register8:r2|BinaryDigit:c5|FlipFlopD:c2|q ; Stuck at GND due to stuck port clock_enable ;
-; Register16:Aregister|Register8:r2|BinaryDigit:c6|FlipFlopD:c2|q ; Stuck at GND due to stuck port clock_enable ;
-; Register16:Aregister|Register8:r2|BinaryDigit:c7|FlipFlopD:c2|q ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 48                          ;                                             ;
-+-----------------------------------------------------------------+---------------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 15    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; No         ; |CPU|ALU:ALUS|inversor16:if16|y[8] ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |CPU|PC:pcs|Mux16:c3|q[8]          ;
-; 6:1                ; 32 bits   ; 128 LEs       ; 0 LEs                ; 128 LEs                ; No         ; |CPU|ALU:ALUS|inversor16:iy16|y[1] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-
-
-+--------------------------------------------------+
-; Port Connectivity Checks: "PC:pcs|Register16:c1" ;
-+------+-------+----------+------------------------+
-; Port ; Type  ; Severity ; Details                ;
-+------+-------+----------+------------------------+
-; load ; Input ; Info     ; Stuck at VCC           ;
-+------+-------+----------+------------------------+
-
-
-+-------------------------------------------------------------+
-; Port Connectivity Checks: "PC:pcs|Inc16:c2|Add16:fullader1" ;
-+----------+-------+----------+-------------------------------+
-; Port     ; Type  ; Severity ; Details                       ;
-+----------+-------+----------+-------------------------------+
-; b[15..1] ; Input ; Info     ; Stuck at GND                  ;
-; b[0]     ; Input ; Info     ; Stuck at VCC                  ;
-+----------+-------+----------+-------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "PC:pcs"                                                                                   ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; increment  ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; output[15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:ALUS|Add16:ad16|FullAdder:fulladder16"                                           ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; vaium ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:ALUS|Add16:ad16|FullAdder:fullader1" ;
-+------+-------+----------+-------------------------------------------+
-; Port ; Type  ; Severity ; Details                                   ;
-+------+-------+----------+-------------------------------------------+
-; c    ; Input ; Info     ; Stuck at GND                              ;
-+------+-------+----------+-------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Register16:Aregister|Register8:r1|BinaryDigit:c1|FlipFlopD:c2" ;
-+--------+-------+----------+---------------------------------------------------------------+
-; Port   ; Type  ; Severity ; Details                                                       ;
-+--------+-------+----------+---------------------------------------------------------------+
-; clear  ; Input ; Info     ; Stuck at GND                                                  ;
-; preset ; Input ; Info     ; Stuck at GND                                                  ;
-+--------+-------+----------+---------------------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 15                          ;
-;     plain             ; 15                          ;
-; arriav_lcell_comb     ; 33                          ;
-;     normal            ; 33                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 17                          ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 3                           ;
-;         5 data inputs ; 3                           ;
-;         6 data inputs ; 5                           ;
-; boundary_port         ; 81                          ;
-;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.02                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:01     ;
-+----------------+--------------+
 
 
 +-------------------------------+
@@ -508,264 +160,155 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Apr 24 15:47:27 2018
+    Info: Processing started: Tue Apr 24 22:42:35 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_CV_Default -c DE0_CV_Default
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/g-computador/src/rtl/dispositivos/pll/pll.vhd
-    Info (12022): Found design unit 1: PLL-rtl File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/Dispositivos/PLL/PLL.vhd Line: 21
-    Info (12023): Found entity 1: PLL File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/Dispositivos/PLL/PLL.vhd Line: 11
-Info (12021): Found 1 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/g-computador/src/rtl/dispositivos/pll/pll/pll_0002.v
-    Info (12023): Found entity 1: PLL_0002 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/Dispositivos/PLL/PLL/PLL_0002.v Line: 2
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/g-computador/src/rtl/dispositivos/screen/fifo/fifo16x4096.vhd
-    Info (12022): Found design unit 1: fifo16x4096-SYN File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/Dispositivos/Screen/FIFO/FIFO16x4096.vhd Line: 58
-    Info (12023): Found entity 1: FIFO16x4096 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/Dispositivos/Screen/FIFO/FIFO16x4096.vhd Line: 43
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/g-computador/src/rtl/dispositivos/screen/screen.vhd
-    Info (12022): Found design unit 1: Screen-logic File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/Dispositivos/Screen/Screen.vhd Line: 31
-    Info (12023): Found entity 1: Screen File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/Dispositivos/Screen/Screen.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/g-computador/src/rtl/dispositivos/screen/ili9341.vhd
-    Info (12022): Found design unit 1: ILI9341-rtl File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/Dispositivos/Screen/ILI9341.vhd Line: 57
-    Info (12023): Found entity 1: ILI9341 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/Dispositivos/Screen/ILI9341.vhd Line: 29
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/g-computador/src/rtl/dispositivos/rom/rom32k.vhd
-    Info (12022): Found design unit 1: rom32k-SYN File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/Dispositivos/ROM/ROM32K.vhd Line: 53
-    Info (12023): Found entity 1: ROM32K File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/Dispositivos/ROM/ROM32K.vhd Line: 43
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/g-computador/src/rtl/dispositivos/ram/ram16k.vhd
-    Info (12022): Found design unit 1: ram16k-SYN File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/Dispositivos/RAM/RAM16K.vhd Line: 55
-    Info (12023): Found entity 1: RAM16K File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/Dispositivos/RAM/RAM16K.vhd Line: 43
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/g-computador/src/rtl/memoryio.vhd
-    Info (12022): Found design unit 1: MemoryIO-logic File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/MemoryIO.vhd Line: 37
-    Info (12023): Found entity 1: MemoryIO File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/MemoryIO.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/g-computador/src/rtl/cpu.vhd
-    Info (12022): Found design unit 1: CPU-arch File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 22
-    Info (12023): Found entity 1: CPU File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/g-computador/src/rtl/controlunit.vhd
-    Info (12022): Found design unit 1: ControlUnit-arch File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/ControlUnit.vhd Line: 24
-    Info (12023): Found entity 1: ControlUnit File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/ControlUnit.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/g-computador/src/rtl/computador.vhd
-    Info (12022): Found design unit 1: Computador-logic File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/Computador.vhd Line: 40
-    Info (12023): Found entity 1: Computador File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/Computador.vhd Line: 17
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/e-logicasequencial/src/rtl/register64.vhd
-    Info (12022): Found design unit 1: Register64-arch File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Register64.vhd Line: 17
-    Info (12023): Found entity 1: Register64 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Register64.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/e-logicasequencial/src/rtl/register32.vhd
-    Info (12022): Found design unit 1: Register32-arch File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Register32.vhd Line: 17
-    Info (12023): Found entity 1: Register32 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Register32.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/e-logicasequencial/src/rtl/register16.vhd
-    Info (12022): Found design unit 1: Register16-arch File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Register16.vhd Line: 17
-    Info (12023): Found entity 1: Register16 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Register16.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/e-logicasequencial/src/rtl/register8.vhd
-    Info (12022): Found design unit 1: Register8-arch File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Register8.vhd Line: 17
-    Info (12023): Found entity 1: Register8 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Register8.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/e-logicasequencial/src/rtl/ram512.vhd
-    Info (12022): Found design unit 1: Ram512-rtl File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Ram512.vhd Line: 18
-    Info (12023): Found entity 1: Ram512 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Ram512.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/e-logicasequencial/src/rtl/ram64.vhd
-    Info (12022): Found design unit 1: Ram64-rtl File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Ram64.vhd Line: 18
-    Info (12023): Found entity 1: Ram64 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Ram64.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/e-logicasequencial/src/rtl/ram8.vhd
-    Info (12022): Found design unit 1: Ram8-rtl File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Ram8.vhd Line: 18
-    Info (12023): Found entity 1: Ram8 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Ram8.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/e-logicasequencial/src/rtl/ram4k.vhd
-    Info (12022): Found design unit 1: Ram4k-rtl File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Ram4K.vhd Line: 18
-    Info (12023): Found entity 1: Ram4K File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Ram4K.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/e-logicasequencial/src/rtl/pc.vhd
-    Info (12022): Found design unit 1: PC-arch File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/PC.vhd Line: 32
-    Info (12023): Found entity 1: PC File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/PC.vhd Line: 21
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/e-logicasequencial/src/rtl/flipflopd.vhd
-    Info (12022): Found design unit 1: FlipFlopD-arch File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/FlipFlopD.vhd Line: 14
-    Info (12023): Found entity 1: FlipFlopD File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/FlipFlopD.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/e-logicasequencial/src/rtl/binarydigit.vhd
-    Info (12022): Found design unit 1: BinaryDigit-arch File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/BinaryDigit.vhd Line: 17
-    Info (12023): Found entity 1: BinaryDigit File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/BinaryDigit.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/d-unidadelogicaaritmetica/src/rtl/zerador16.vhd
-    Info (12022): Found design unit 1: zerador16-rtl File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/zerador16.vhd Line: 15
-    Info (12023): Found entity 1: zerador16 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/zerador16.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/d-unidadelogicaaritmetica/src/rtl/inversor16.vhd
-    Info (12022): Found design unit 1: inversor16-rtl File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/inversor16.vhd Line: 17
-    Info (12023): Found entity 1: inversor16 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/inversor16.vhd Line: 10
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/d-unidadelogicaaritmetica/src/rtl/inc16.vhd
-    Info (12022): Found design unit 1: Inc16-rtl File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/Inc16.vhd Line: 18
-    Info (12023): Found entity 1: Inc16 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/Inc16.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/d-unidadelogicaaritmetica/src/rtl/halfadder.vhd
-    Info (12022): Found design unit 1: HalfAdder-rtl File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/HalfAdder.vhd Line: 17
-    Info (12023): Found entity 1: HalfAdder File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/HalfAdder.vhd Line: 10
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/d-unidadelogicaaritmetica/src/rtl/fulladder.vhd
-    Info (12022): Found design unit 1: FullAdder-rtl File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/FullAdder.vhd Line: 17
-    Info (12023): Found entity 1: FullAdder File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/FullAdder.vhd Line: 10
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/d-unidadelogicaaritmetica/src/rtl/comparador16.vhd
-    Info (12022): Found design unit 1: comparador16-rtl File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd Line: 16
-    Info (12023): Found entity 1: comparador16 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/d-unidadelogicaaritmetica/src/rtl/alu.vhd
-    Info (12022): Found design unit 1: alu-rtl File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/ALU.vhd Line: 44
-    Info (12023): Found entity 1: ALU File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/ALU.vhd Line: 29
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/d-unidadelogicaaritmetica/src/rtl/add16.vhd
-    Info (12022): Found design unit 1: Add16-rtl File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/Add16.vhd Line: 19
-    Info (12023): Found entity 1: Add16 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/Add16.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/c-logicacombinacional/src/rtl/or16.vhd
-    Info (12022): Found design unit 1: Or16-rtl File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Or16.vhd Line: 11
-    Info (12023): Found entity 1: Or16 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Or16.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/c-logicacombinacional/src/rtl/or8way.vhd
-    Info (12022): Found design unit 1: Or8Way-rtl File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Or8Way.vhd Line: 17
-    Info (12023): Found entity 1: Or8Way File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Or8Way.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/c-logicacombinacional/src/rtl/not16.vhd
-    Info (12022): Found design unit 1: Not16-rtl File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Not16.vhd Line: 10
-    Info (12023): Found entity 1: Not16 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Not16.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/c-logicacombinacional/src/rtl/nor8way.vhd
-    Info (12022): Found design unit 1: Nor8Way-rtl File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Nor8Way.vhd Line: 17
-    Info (12023): Found entity 1: Nor8Way File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Nor8Way.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/c-logicacombinacional/src/rtl/nand.vhd
-    Info (12022): Found design unit 1: nand_z01-rtl File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Nand.vhd Line: 12
-    Info (12023): Found entity 1: nand_z01 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Nand.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/c-logicacombinacional/src/rtl/mux16.vhd
-    Info (12022): Found design unit 1: Mux16-pep File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 12
-    Info (12023): Found entity 1: Mux16 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/c-logicacombinacional/src/rtl/mux8way16.vhd
-    Info (12022): Found design unit 1: Mux8Way16-pep File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux8Way16.vhd Line: 18
-    Info (12023): Found entity 1: Mux8Way16 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux8Way16.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/c-logicacombinacional/src/rtl/mux8way.vhd
-    Info (12022): Found design unit 1: Mux8Way-Behavioral File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux8Way.vhd Line: 18
-    Info (12023): Found entity 1: Mux8Way File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux8Way.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/c-logicacombinacional/src/rtl/mux4way16.vhd
-    Info (12022): Found design unit 1: Mux4Way16-pep File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux4Way16.vhd Line: 13
-    Info (12023): Found entity 1: Mux4Way16 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux4Way16.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/c-logicacombinacional/src/rtl/mux4way.vhd
-    Info (12022): Found design unit 1: Mux4way-Behavioral File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux4Way.vhd Line: 10
-    Info (12023): Found entity 1: Mux4Way File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux4Way.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/c-logicacombinacional/src/rtl/mux2way.vhd
-    Info (12022): Found design unit 1: Mux2Way-Behavioral File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux2Way.vhd Line: 12
-    Info (12023): Found entity 1: Mux2Way File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux2Way.vhd Line: 4
-Warning (12019): Can't analyze file -- file ../../C-LogicaCombinacional/src/rtl/DMux8Way16.vhd is missing
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/c-logicacombinacional/src/rtl/dmux8way.vhd
-    Info (12022): Found design unit 1: DMux8Way-jor File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/DMux8Way.vhd Line: 18
-    Info (12023): Found entity 1: DMux8Way File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/DMux8Way.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/c-logicacombinacional/src/rtl/dmux4way.vhd
-    Info (12022): Found design unit 1: DMux4Way-rtl File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/DMux4Way.vhd Line: 15
-    Info (12023): Found entity 1: DMux4Way File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/DMux4Way.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/c-logicacombinacional/src/rtl/dmux2way.vhd
-    Info (12022): Found design unit 1: DMux2Way-dmux2 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/DMux2Way.vhd Line: 12
-    Info (12023): Found entity 1: DMux2Way File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/DMux2Way.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/c-logicacombinacional/src/rtl/barrelshifter16.vhd
-    Info (12022): Found design unit 1: BarrelShifter16-Barrel16 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/BarrelShifter16.vhd Line: 11
-    Info (12023): Found entity 1: BarrelShifter16 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/BarrelShifter16.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/c-logicacombinacional/src/rtl/barrelshifter8.vhd
-    Info (12022): Found design unit 1: BarrelShifter8-Barrel File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/BarrelShifter8.vhd Line: 11
-    Info (12023): Found entity 1: BarrelShifter8 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/BarrelShifter8.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/nicolas stegmann/documents/github/grupoa/z01/projetos/c-logicacombinacional/src/rtl/and16.vhd
-    Info (12022): Found design unit 1: And16-rtl File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/And16.vhd Line: 11
-    Info (12023): Found entity 1: And16 File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/C-LogicaCombinacional/src/rtl/And16.vhd Line: 4
-Info (12127): Elaborating entity "CPU" for the top level hierarchy
-Info (12128): Elaborating entity "Mux16" for hierarchy "Mux16:muxALUI" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 107
-Info (12128): Elaborating entity "Register16" for hierarchy "Register16:Aregister" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 128
-Info (12128): Elaborating entity "Register8" for hierarchy "Register16:Aregister|Register8:r1" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Register16.vhd Line: 28
-Info (12128): Elaborating entity "BinaryDigit" for hierarchy "Register16:Aregister|Register8:r1|BinaryDigit:c1" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/Register8.vhd Line: 27
-Info (12128): Elaborating entity "Mux2Way" for hierarchy "Register16:Aregister|Register8:r1|BinaryDigit:c1|Mux2Way:c1" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/BinaryDigit.vhd Line: 35
-Info (12128): Elaborating entity "FlipFlopD" for hierarchy "Register16:Aregister|Register8:r1|BinaryDigit:c1|FlipFlopD:c2" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/BinaryDigit.vhd Line: 36
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALUS" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 149
-Info (12128): Elaborating entity "zerador16" for hierarchy "ALU:ALUS|zerador16:zx16" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/ALU.vhd Line: 97
-Info (12128): Elaborating entity "inversor16" for hierarchy "ALU:ALUS|inversor16:ix16" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/ALU.vhd Line: 109
-Info (12128): Elaborating entity "And16" for hierarchy "ALU:ALUS|And16:an16" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/ALU.vhd Line: 121
-Info (12128): Elaborating entity "Add16" for hierarchy "ALU:ALUS|Add16:ad16" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/ALU.vhd Line: 127
-Info (12128): Elaborating entity "FullAdder" for hierarchy "ALU:ALUS|Add16:ad16|FullAdder:fullader1" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/Add16.vhd Line: 34
-Info (12128): Elaborating entity "HalfAdder" for hierarchy "ALU:ALUS|Add16:ad16|FullAdder:fullader1|HalfAdder:HA1" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/FullAdder.vhd Line: 29
-Info (12128): Elaborating entity "comparador16" for hierarchy "ALU:ALUS|comparador16:comp16" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/ALU.vhd Line: 147
-Info (12128): Elaborating entity "PC" for hierarchy "PC:pcs" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 163
-Warning (10492): VHDL Process Statement warning at PC.vhd(69): signal "load" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/PC.vhd Line: 69
-Info (12128): Elaborating entity "Inc16" for hierarchy "PC:pcs|Inc16:c2" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/E-LogicaSequencial/src/rtl/PC.vhd Line: 74
-Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:ControlUnitS" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 172
-Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(15): used implicit default value for signal "muxALUI_A" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/ControlUnit.vhd Line: 15
-Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(16): used implicit default value for signal "muxAM_ALU" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/ControlUnit.vhd Line: 16
-Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(17): used implicit default value for signal "muxSD_ALU" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/ControlUnit.vhd Line: 17
-Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(18): used implicit default value for signal "zx" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/ControlUnit.vhd Line: 18
-Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(18): used implicit default value for signal "nx" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/ControlUnit.vhd Line: 18
-Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(18): used implicit default value for signal "zy" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/ControlUnit.vhd Line: 18
-Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(18): used implicit default value for signal "ny" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/ControlUnit.vhd Line: 18
-Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(18): used implicit default value for signal "f" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/ControlUnit.vhd Line: 18
-Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(18): used implicit default value for signal "no" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/ControlUnit.vhd Line: 18
-Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(19): used implicit default value for signal "loadA" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/ControlUnit.vhd Line: 19
-Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(19): used implicit default value for signal "loadD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/ControlUnit.vhd Line: 19
-Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(19): used implicit default value for signal "loadS" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/ControlUnit.vhd Line: 19
-Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(19): used implicit default value for signal "loadM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/ControlUnit.vhd Line: 19
-Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(19): used implicit default value for signal "loadPC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/ControlUnit.vhd Line: 19
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "outM[0]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 15
-    Warning (13410): Pin "outM[1]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 15
-    Warning (13410): Pin "outM[2]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 15
-    Warning (13410): Pin "outM[3]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 15
-    Warning (13410): Pin "outM[4]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 15
-    Warning (13410): Pin "outM[5]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 15
-    Warning (13410): Pin "outM[6]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 15
-    Warning (13410): Pin "outM[7]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 15
-    Warning (13410): Pin "outM[8]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 15
-    Warning (13410): Pin "outM[9]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 15
-    Warning (13410): Pin "outM[10]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 15
-    Warning (13410): Pin "outM[11]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 15
-    Warning (13410): Pin "outM[12]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 15
-    Warning (13410): Pin "outM[13]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 15
-    Warning (13410): Pin "outM[14]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 15
-    Warning (13410): Pin "outM[15]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 15
-    Warning (13410): Pin "writeM" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 16
-    Warning (13410): Pin "addressM[0]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 17
-    Warning (13410): Pin "addressM[1]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 17
-    Warning (13410): Pin "addressM[2]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 17
-    Warning (13410): Pin "addressM[3]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 17
-    Warning (13410): Pin "addressM[4]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 17
-    Warning (13410): Pin "addressM[5]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 17
-    Warning (13410): Pin "addressM[6]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 17
-    Warning (13410): Pin "addressM[7]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 17
-    Warning (13410): Pin "addressM[8]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 17
-    Warning (13410): Pin "addressM[9]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 17
-    Warning (13410): Pin "addressM[10]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 17
-    Warning (13410): Pin "addressM[11]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 17
-    Warning (13410): Pin "addressM[12]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 17
-    Warning (13410): Pin "addressM[13]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 17
-    Warning (13410): Pin "addressM[14]" is stuck at GND File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 17
-Info (286030): Timing-Driven Synthesis is running
-Info (17049): 33 registers lost all their fanouts during netlist optimizations.
-Warning (20013): Ignored 13 assignments for entity "PLL" -- entity does not exist in design
-Warning (20013): Ignored 317 assignments for entity "PLL_0002" -- entity does not exist in design
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 32 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "inM[0]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 13
-    Warning (15610): No output dependent on input pin "inM[1]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 13
-    Warning (15610): No output dependent on input pin "inM[2]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 13
-    Warning (15610): No output dependent on input pin "inM[3]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 13
-    Warning (15610): No output dependent on input pin "inM[4]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 13
-    Warning (15610): No output dependent on input pin "inM[5]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 13
-    Warning (15610): No output dependent on input pin "inM[6]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 13
-    Warning (15610): No output dependent on input pin "inM[7]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 13
-    Warning (15610): No output dependent on input pin "inM[8]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 13
-    Warning (15610): No output dependent on input pin "inM[9]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 13
-    Warning (15610): No output dependent on input pin "inM[10]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 13
-    Warning (15610): No output dependent on input pin "inM[11]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 13
-    Warning (15610): No output dependent on input pin "inM[12]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 13
-    Warning (15610): No output dependent on input pin "inM[13]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 13
-    Warning (15610): No output dependent on input pin "inM[14]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 13
-    Warning (15610): No output dependent on input pin "inM[15]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 13
-    Warning (15610): No output dependent on input pin "instruction[15]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 14
-    Warning (15610): No output dependent on input pin "instruction[0]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 14
-    Warning (15610): No output dependent on input pin "instruction[1]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 14
-    Warning (15610): No output dependent on input pin "instruction[2]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 14
-    Warning (15610): No output dependent on input pin "instruction[3]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 14
-    Warning (15610): No output dependent on input pin "instruction[4]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 14
-    Warning (15610): No output dependent on input pin "instruction[5]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 14
-    Warning (15610): No output dependent on input pin "instruction[6]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 14
-    Warning (15610): No output dependent on input pin "instruction[7]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 14
-    Warning (15610): No output dependent on input pin "instruction[8]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 14
-    Warning (15610): No output dependent on input pin "instruction[9]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 14
-    Warning (15610): No output dependent on input pin "instruction[10]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 14
-    Warning (15610): No output dependent on input pin "instruction[11]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 14
-    Warning (15610): No output dependent on input pin "instruction[12]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 14
-    Warning (15610): No output dependent on input pin "instruction[13]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 14
-    Warning (15610): No output dependent on input pin "instruction[14]" File: C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 14
-Info (21057): Implemented 113 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 34 input pins
-    Info (21059): Implemented 47 output pins
-    Info (21061): Implemented 32 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 85 warnings
-    Info: Peak virtual memory: 746 megabytes
-    Info: Processing ended: Tue Apr 24 15:47:50 2018
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:34
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/g-computador/src/rtl/dispositivos/pll/pll.vhd
+    Info (12022): Found design unit 1: PLL-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/G-Computador/src/rtl/Dispositivos/PLL/PLL.vhd Line: 21
+    Info (12023): Found entity 1: PLL File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/G-Computador/src/rtl/Dispositivos/PLL/PLL.vhd Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/g-computador/src/rtl/dispositivos/pll/pll/pll_0002.v
+    Info (12023): Found entity 1: PLL_0002 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/G-Computador/src/rtl/Dispositivos/PLL/PLL/PLL_0002.v Line: 2
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/g-computador/src/rtl/dispositivos/screen/fifo/fifo16x4096.vhd
+    Info (12022): Found design unit 1: fifo16x4096-SYN File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/G-Computador/src/rtl/Dispositivos/Screen/FIFO/FIFO16x4096.vhd Line: 58
+    Info (12023): Found entity 1: FIFO16x4096 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/G-Computador/src/rtl/Dispositivos/Screen/FIFO/FIFO16x4096.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/g-computador/src/rtl/dispositivos/screen/screen.vhd
+    Info (12022): Found design unit 1: Screen-logic File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/G-Computador/src/rtl/Dispositivos/Screen/Screen.vhd Line: 31
+    Info (12023): Found entity 1: Screen File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/G-Computador/src/rtl/Dispositivos/Screen/Screen.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/g-computador/src/rtl/dispositivos/screen/ili9341.vhd
+    Info (12022): Found design unit 1: ILI9341-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/G-Computador/src/rtl/Dispositivos/Screen/ILI9341.vhd Line: 57
+    Info (12023): Found entity 1: ILI9341 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/G-Computador/src/rtl/Dispositivos/Screen/ILI9341.vhd Line: 29
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/g-computador/src/rtl/dispositivos/rom/rom32k.vhd
+    Info (12022): Found design unit 1: rom32k-SYN File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/G-Computador/src/rtl/Dispositivos/ROM/ROM32K.vhd Line: 53
+    Info (12023): Found entity 1: ROM32K File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/G-Computador/src/rtl/Dispositivos/ROM/ROM32K.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/g-computador/src/rtl/dispositivos/ram/ram16k.vhd
+    Info (12022): Found design unit 1: ram16k-SYN File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/G-Computador/src/rtl/Dispositivos/RAM/RAM16K.vhd Line: 55
+    Info (12023): Found entity 1: RAM16K File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/G-Computador/src/rtl/Dispositivos/RAM/RAM16K.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/g-computador/src/rtl/memoryio.vhd
+    Info (12022): Found design unit 1: MemoryIO-logic File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/G-Computador/src/rtl/MemoryIO.vhd Line: 37
+    Info (12023): Found entity 1: MemoryIO File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/G-Computador/src/rtl/MemoryIO.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/g-computador/src/rtl/cpu.vhd
+    Info (12022): Found design unit 1: CPU-arch File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 22
+    Info (12023): Found entity 1: CPU File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/G-Computador/src/rtl/CPU.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/g-computador/src/rtl/controlunit.vhd
+    Info (12022): Found design unit 1: ControlUnit-arch File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/G-Computador/src/rtl/ControlUnit.vhd Line: 24
+    Info (12023): Found entity 1: ControlUnit File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/G-Computador/src/rtl/ControlUnit.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/g-computador/src/rtl/computador.vhd
+    Info (12022): Found design unit 1: Computador-logic File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/G-Computador/src/rtl/Computador.vhd Line: 40
+    Info (12023): Found entity 1: Computador File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/G-Computador/src/rtl/Computador.vhd Line: 17
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/e-logicasequencial/src/rtl/register64.vhd
+    Info (12022): Found design unit 1: Register64-arch File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/E-LogicaSequencial/src/rtl/Register64.vhd Line: 17
+    Info (12023): Found entity 1: Register64 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/E-LogicaSequencial/src/rtl/Register64.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/e-logicasequencial/src/rtl/register32.vhd
+    Info (12022): Found design unit 1: Register32-arch File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/E-LogicaSequencial/src/rtl/Register32.vhd Line: 17
+    Info (12023): Found entity 1: Register32 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/E-LogicaSequencial/src/rtl/Register32.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/e-logicasequencial/src/rtl/register16.vhd
+    Info (12022): Found design unit 1: Register16-arch File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/E-LogicaSequencial/src/rtl/Register16.vhd Line: 17
+    Info (12023): Found entity 1: Register16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/E-LogicaSequencial/src/rtl/Register16.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/e-logicasequencial/src/rtl/register8.vhd
+    Info (12022): Found design unit 1: Register8-arch File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/E-LogicaSequencial/src/rtl/Register8.vhd Line: 17
+    Info (12023): Found entity 1: Register8 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/E-LogicaSequencial/src/rtl/Register8.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/e-logicasequencial/src/rtl/ram512.vhd
+    Info (12022): Found design unit 1: Ram512-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/E-LogicaSequencial/src/rtl/Ram512.vhd Line: 18
+    Info (12023): Found entity 1: Ram512 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/E-LogicaSequencial/src/rtl/Ram512.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/e-logicasequencial/src/rtl/ram64.vhd
+    Info (12022): Found design unit 1: Ram64-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/E-LogicaSequencial/src/rtl/Ram64.vhd Line: 18
+    Info (12023): Found entity 1: Ram64 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/E-LogicaSequencial/src/rtl/Ram64.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/e-logicasequencial/src/rtl/ram8.vhd
+    Info (12022): Found design unit 1: Ram8-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/E-LogicaSequencial/src/rtl/Ram8.vhd Line: 18
+    Info (12023): Found entity 1: Ram8 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/E-LogicaSequencial/src/rtl/Ram8.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/e-logicasequencial/src/rtl/ram4k.vhd
+    Info (12022): Found design unit 1: Ram4k-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/E-LogicaSequencial/src/rtl/Ram4K.vhd Line: 18
+    Info (12023): Found entity 1: Ram4K File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/E-LogicaSequencial/src/rtl/Ram4K.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/e-logicasequencial/src/rtl/pc.vhd
+    Info (12022): Found design unit 1: PC-arch File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/E-LogicaSequencial/src/rtl/PC.vhd Line: 32
+    Info (12023): Found entity 1: PC File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/E-LogicaSequencial/src/rtl/PC.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/e-logicasequencial/src/rtl/flipflopd.vhd
+    Info (12022): Found design unit 1: FlipFlopD-arch File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/E-LogicaSequencial/src/rtl/FlipFlopD.vhd Line: 14
+    Info (12023): Found entity 1: FlipFlopD File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/E-LogicaSequencial/src/rtl/FlipFlopD.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/e-logicasequencial/src/rtl/binarydigit.vhd
+    Info (12022): Found design unit 1: BinaryDigit-arch File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/E-LogicaSequencial/src/rtl/BinaryDigit.vhd Line: 17
+    Info (12023): Found entity 1: BinaryDigit File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/E-LogicaSequencial/src/rtl/BinaryDigit.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/d-unidadelogicaaritmetica/src/rtl/zerador16.vhd
+    Info (12022): Found design unit 1: zerador16-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/zerador16.vhd Line: 15
+    Info (12023): Found entity 1: zerador16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/zerador16.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/d-unidadelogicaaritmetica/src/rtl/inversor16.vhd
+    Info (12022): Found design unit 1: inversor16-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/inversor16.vhd Line: 17
+    Info (12023): Found entity 1: inversor16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/inversor16.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/d-unidadelogicaaritmetica/src/rtl/inc16.vhd
+    Info (12022): Found design unit 1: Inc16-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/Inc16.vhd Line: 18
+    Info (12023): Found entity 1: Inc16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/Inc16.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/d-unidadelogicaaritmetica/src/rtl/halfadder.vhd
+    Info (12022): Found design unit 1: HalfAdder-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/HalfAdder.vhd Line: 17
+    Info (12023): Found entity 1: HalfAdder File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/HalfAdder.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/d-unidadelogicaaritmetica/src/rtl/fulladder.vhd
+    Info (12022): Found design unit 1: FullAdder-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/FullAdder.vhd Line: 17
+    Info (12023): Found entity 1: FullAdder File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/FullAdder.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/d-unidadelogicaaritmetica/src/rtl/comparador16.vhd
+    Info (12022): Found design unit 1: comparador16-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd Line: 16
+    Info (12023): Found entity 1: comparador16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/d-unidadelogicaaritmetica/src/rtl/alu.vhd
+    Info (12022): Found design unit 1: alu-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/ALU.vhd Line: 44
+    Info (12023): Found entity 1: ALU File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/ALU.vhd Line: 29
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/d-unidadelogicaaritmetica/src/rtl/add16.vhd
+    Info (12022): Found design unit 1: Add16-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/Add16.vhd Line: 19
+    Info (12023): Found entity 1: Add16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/D-UnidadeLogicaAritmetica/src/rtl/Add16.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/c-logicacombinacional/src/rtl/or16.vhd
+    Info (12022): Found design unit 1: Or16-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/Or16.vhd Line: 11
+    Info (12023): Found entity 1: Or16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/Or16.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/c-logicacombinacional/src/rtl/or8way.vhd
+    Info (12022): Found design unit 1: Or8Way-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/Or8Way.vhd Line: 17
+    Info (12023): Found entity 1: Or8Way File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/Or8Way.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/c-logicacombinacional/src/rtl/not16.vhd
+    Info (12022): Found design unit 1: Not16-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/Not16.vhd Line: 10
+    Info (12023): Found entity 1: Not16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/Not16.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/c-logicacombinacional/src/rtl/nor8way.vhd
+    Info (12022): Found design unit 1: Nor8Way-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/Nor8Way.vhd Line: 17
+    Info (12023): Found entity 1: Nor8Way File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/Nor8Way.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/c-logicacombinacional/src/rtl/nand.vhd
+    Info (12022): Found design unit 1: nand_z01-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/Nand.vhd Line: 12
+    Info (12023): Found entity 1: nand_z01 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/Nand.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/c-logicacombinacional/src/rtl/mux16.vhd
+    Info (12022): Found design unit 1: Mux16-pep File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 12
+    Info (12023): Found entity 1: Mux16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux16.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/c-logicacombinacional/src/rtl/mux8way16.vhd
+    Info (12022): Found design unit 1: Mux8Way16-pep File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux8Way16.vhd Line: 18
+    Info (12023): Found entity 1: Mux8Way16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux8Way16.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/c-logicacombinacional/src/rtl/mux8way.vhd
+    Info (12022): Found design unit 1: Mux8Way-Behavioral File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux8Way.vhd Line: 18
+    Info (12023): Found entity 1: Mux8Way File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux8Way.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/c-logicacombinacional/src/rtl/mux4way16.vhd
+    Info (12022): Found design unit 1: Mux4Way16-pep File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux4Way16.vhd Line: 13
+    Info (12023): Found entity 1: Mux4Way16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux4Way16.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/c-logicacombinacional/src/rtl/mux4way.vhd
+    Info (12022): Found design unit 1: Mux4way-Behavioral File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux4Way.vhd Line: 10
+    Info (12023): Found entity 1: Mux4Way File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux4Way.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/c-logicacombinacional/src/rtl/mux2way.vhd
+    Info (12022): Found design unit 1: Mux2Way-Behavioral File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux2Way.vhd Line: 12
+    Info (12023): Found entity 1: Mux2Way File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/Mux2Way.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/c-logicacombinacional/src/rtl/dmux8way.vhd
+    Info (12022): Found design unit 1: DMux8Way-jor File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/DMux8Way.vhd Line: 18
+    Info (12023): Found entity 1: DMux8Way File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/DMux8Way.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/c-logicacombinacional/src/rtl/dmux4way.vhd
+    Info (12022): Found design unit 1: DMux4Way-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/DMux4Way.vhd Line: 15
+    Info (12023): Found entity 1: DMux4Way File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/DMux4Way.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/c-logicacombinacional/src/rtl/dmux2way.vhd
+    Info (12022): Found design unit 1: DMux2Way-dmux2 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/DMux2Way.vhd Line: 12
+    Info (12023): Found entity 1: DMux2Way File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/DMux2Way.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/c-logicacombinacional/src/rtl/barrelshifter16.vhd
+    Info (12022): Found design unit 1: BarrelShifter16-Barrel16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/BarrelShifter16.vhd Line: 11
+    Info (12023): Found entity 1: BarrelShifter16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/BarrelShifter16.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/c-logicacombinacional/src/rtl/barrelshifter8.vhd
+    Info (12022): Found design unit 1: BarrelShifter8-Barrel File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/BarrelShifter8.vhd Line: 11
+    Info (12023): Found entity 1: BarrelShifter8 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/BarrelShifter8.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/duda/documents/insper/3-semestre/elementos/projeto/z01/projetos/c-logicacombinacional/src/rtl/and16.vhd
+    Info (12022): Found design unit 1: And16-rtl File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/And16.vhd Line: 11
+    Info (12023): Found entity 1: And16 File: C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/C-LogicaCombinacional/src/rtl/And16.vhd Line: 4
+Error (12007): Top-level design entity "DE0_CV_Default" is undefined
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
+    Error: Peak virtual memory: 770 megabytes
+    Error: Processing ended: Tue Apr 24 22:42:47 2018
+    Error: Elapsed time: 00:00:12
+    Error: Total CPU time (on all processors): 00:00:25
 
 

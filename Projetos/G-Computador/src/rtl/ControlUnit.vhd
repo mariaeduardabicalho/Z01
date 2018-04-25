@@ -43,8 +43,8 @@ loadA <= (b15 and instruction(6)) or (not instruction(15));
 loadS <= b15 and instruction(5);
 loadD <= b15 and instruction(4);
 loadM <= b15 and instruction(3);
-loadPC <= ((instruction(2) and ng) or 
-		(instruction(1) and zr) or 
+loadPC <= ((instruction(2) and ng) or
+		(instruction(1) and zr) or
 		(instruction(0) and (not zr) and (not ng))) and 
 		instruction(15);
 
