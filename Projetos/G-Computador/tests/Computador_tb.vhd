@@ -64,8 +64,12 @@ begin
     LCD_RESET_N => open,
     LCD_RS      => open,
     LCD_WR_N    => open,
+<<<<<<< HEAD
     LCD_on      => open,
   
+=======
+    LCD_on      => open
+>>>>>>> upstream/master
     );
 
 end             rtl;
