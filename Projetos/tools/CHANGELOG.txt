@@ -1,21 +1,11 @@
 o Interface GUI
   - (13/04/18) Edu
-     Arrumado bug no qual instruções de JUMP pulam para a linha incorreta
-    
-  - (13/04/18) Edu
-     O Simulador agora não executa a primeira linha automaticamente
- 
-  - (13/04/18) Edu
-     Verifica se versão do Python executada é pelo menos Python 3
-
-  - (13/04/18) Edu
-     O Simulador agora não necessita de Python 3.6 (removido dependências f-string)
-
-  - (13/04/18) Edu
-     Incluido indicadores SP / LCL / THAT / ARG entre outros na RAM
-
-  - (13/04/18) Edu
-     Trocado imagem da ALU - pendente arrumar transparência
+     - Arrumado bug no qual instruções de JUMP pulam para a linha incorreta
+     - O Simulador agora não executa a primeira linha automaticamente
+     - Verifica se versão do Python executada é pelo menos Python 3
+     - O Simulador agora não necessita de Python 3.6 (removido dependências f-string)
+     - Incluido indicadores SP / LCL / THAT / ARG entre outros na RAM
+     - Trocado imagem da ALU - pendente arrumar transparência
 
 
 o Assembler

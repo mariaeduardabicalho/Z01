@@ -16,9 +16,6 @@ class LSTParser:
         self.go_begin()
 
     def fix_line(self, line):
-        # fix for duplicate sel
-        line = line.replace(" sel ", " selPC ", 1)
-        line = line.replace(" sel ", " selM ", 1)
         while line.find("  ") != -1:
             line = line.replace("  ", " ")
         return line.strip()

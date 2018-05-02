@@ -7,21 +7,24 @@ set StdNumNoWarnings 1
 set NumericStdNoWarnings 1
 
 ################################
-# Recompila memória (para adicionar estado inicial a elas)
+# Recompila todos os arquivod
 ################################
 # RAM16K
-vcom -work z01 ./Modulos/dispositivos/RAM_fpga/RAM16K.vhd
+vcom -work work Modulos/Dispositivos/RAM/RAM16K.vhd
 
 # ROM
-vcom -work z01 ./Modulos/dispositivos/ROM/ROM32K.vhd
+vcom -work work Modulos/Dispositivos/ROM/ROM32K.vhd
 
+#PLL
+#vcom -reportprogress 300 -work work Modulos/Dispositivos/PLL/*.vhd
+vcom -reportprogress 300 -work work Modulos/Dispositivos/PLL/PLL_sim/PLL.vho
 
 #################################
 # Carrega simulação no computador_tb
 #################################
 # carrega modulo
 
-vsim z01.computador_tb
+vsim work.computador_tb
 
 # carrega lista de sinais a serem exportados
 
@@ -36,7 +39,7 @@ add wave -position end sim:/computador_tb/c1/MAIN_CPU/*
 # Executa simulação
 ################################
 
-run 80000 ns
+run 1000 ns
 
 ################################
 # Exporta resultado (list)
@@ -51,8 +54,7 @@ write list ./out/SIM.lst
 mem save -o ./out/ROM.mem -f mti -data binary -addr decimal -startaddress 0 -endaddress 32767 -wordsperline 1 /computador_tb/c1/ROM/altsyncram_component/MEMORY/m_mem_data_a
 
 # RAM
-mem save -o ./out/RAM.mem -f mti -data binary -addr decimal -startaddress 0 -endaddress 32767 -wordsperline 1 /computador_tb/c1/RAM/altsyncram_component/MEMORY/m_mem_data_a
-
+mem save -o ./out/RAM.mem -f mti -data binary -addr decimal -startaddress 0 -endaddress 16383 -wordsperline 1 /computador_tb/c1/MEMORY_MAPED/RAM/altsyncram_component/MEMORY/m_mem_data_a
 ################################
 # Exit
 ################################

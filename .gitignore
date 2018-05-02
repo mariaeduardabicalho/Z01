@@ -1,6 +1,11 @@
 # simulador
+<<<<<<< HEAD
 Projetos/tools/Z01-Simulator-rtl-2/
 
+=======
+Projetos/tools/Z01-Simulator-rtl-2/transcript
+*_end.mif
+>>>>>>> upstream/master
 
 # VUNIT
 vunit_out/

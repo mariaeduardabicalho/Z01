@@ -43,6 +43,10 @@ before_script:
 
 script:
   - python Projetos/0-Infra/testeVHDL.py
+<<<<<<< HEAD
   - python Projetos/G-Computador/script/testeAssemblyMyCPU.py
   - python Projetos/G-Computador/script/testeControlUnit.py
+=======
+  - python Projetos/C-LogicaCombinacional/script/testeLogicaCombinacional.py
+>>>>>>> upstream/master
     
