@@ -21,7 +21,6 @@ public class SymbolTableTest {
     /**
      * Create the test case
      *
-     * @param testName name of the test case
      */
     public SymbolTableTest() {
         table = new SymbolTable();
@@ -91,9 +90,6 @@ public class SymbolTableTest {
 
             assertTrue("Testando se Tabela de Símbolos CONTÉM R15",table.contains("R15"));
             assertTrue("Verificando se R15 vale 15 na Tabela de Símbolos",table.getAddress("R15")==15);
-
-            assertTrue("Testando se Tabela de Símbolos CONTÉM KBD",table.contains("KBD"));
-            assertTrue("Verificando se KBD vale 24576 na Tabela de Símbolos",table.getAddress("KBD")==24576);
 
             assertTrue("Testando se Tabela de Símbolos CONTÉM SCREEN",table.contains("SCREEN"));
             assertTrue("Verificando se SCREEN vale 16384 na Tabela de Símbolos",table.getAddress("SCREEN")==16384);

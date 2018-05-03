@@ -23,7 +23,7 @@ public class Code {
     /**
      * Retorna o código binário do mnemônico para realizar uma operação de cálculo.
      * @param  mnemnonic vetor de mnemônicos "instrução" a ser analisada.
-     * @return Opcode (String de 7 bits) com código em linguagem de máquina para a instrução.
+     * @return Opcode (String de 8 bits) com código em linguagem de máquina para a instrução.
      */
     public static String comp(String[] mnemnonic) {
     	return null;
