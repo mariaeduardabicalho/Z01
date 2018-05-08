@@ -16,7 +16,7 @@ import java.io.File;
  */
 public class Parser {
     Scanner arquivo;
-    String currentCommand;
+    String Comando;
 
     /** Enumerator para os tipos de comandos do Assembler. */
     public enum CommandType {
@@ -51,12 +51,10 @@ public class Parser {
     public Boolean advance() {
     	if (arquivo.hasNextLine()){
     	    String linha = arquivo.nextLine();
-    	    linha = linha.trim();
-    	    if (linha.charAt(0) != ';'){
-                linha.replace("\t","");
-                linha =linha.replaceAll(" +", " ");
-    	        System.out.println(linha);
-                this.currentCommand = linha;
+    	    linha = linha.trim();//remover espaços em branco
+    	    if (!linha.startsWith(";")){
+                linha.replace("\n","");
+                this.Comando = linha;
             }
 
     	    return true;
@@ -71,8 +69,7 @@ public class Parser {
      * @return a instrução atual para ser analilisada
      */
     public String command() {
-        System.out.println(this.currentCommand);
-    	return this.currentCommand;
+    	return this.Comando;
     }
 
     /**
@@ -104,26 +101,26 @@ public class Parser {
      * @return somente o símbolo ou o valor número da instrução.
      */
     public String symbol(String command) {
-        String simb = "";
-        Integer inde = 0;
+        String symbol = "";
+        
         if(commandType(command) == CommandType.A_COMMAND){
-
-            for (int i = 0; i <command.length() ; i++) {
+        	
+            for (int i = 0; i < command.length() ; i++) {
+            	
                 if(command.charAt(i)=='$'){
-                    inde = i+1;
+                    String Comando_novo = command.substring(i+1);
+                    for (int e = 0; e < Comando_novo.length(); e++){
+                    	
+                    	if(Comando_novo.charAt(e)==' ' || Comando_novo.charAt(e) == ';' || Comando_novo.charAt(e) == ','){
+                    		break;
+                    	}
+                    	symbol += Comando_novo.charAt(e);
+                    }
+                    	
                 }
-            }
-            String newcom= command.substring(inde,command.length());
-            for (int i = 0; i <newcom.length() ; i++) {
-
-                if(newcom.charAt(i)==' ' || newcom.charAt(i) == ','){
-                    break;
-                }
-                simb+=newcom.charAt(i);
-
             }
         }
-    	return simb;
+    	return symbol;
     }
 
     /**
@@ -133,11 +130,11 @@ public class Parser {
      * @return o símbolo da instrução (sem os dois pontos).
      */
     public String label(String command) {
-        String simb = "";
+        String symbol = "";
         if (commandType(command) == CommandType.L_COMMAND) {
-            simb = command.substring(0,command.length()-1);
+            symbol = command.substring(0,-1);
         }
-    	return simb;
+    	return symbol;
     }
 
     /**
