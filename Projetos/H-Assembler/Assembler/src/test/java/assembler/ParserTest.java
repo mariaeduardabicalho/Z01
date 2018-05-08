@@ -25,11 +25,9 @@ public class ParserTest {
      */
     public ParserTest() {
         try {
-<<<<<<< HEAD
-            parser = new Parser("Assembler/src/test/resources/testEmpty.nasm");
-=======
+
             parser = new Parser("src/test/resources/testEmpty.nasm");
->>>>>>> upstream/master
+
         } catch(Exception e) {
             e.printStackTrace();
         }
@@ -156,11 +154,8 @@ public class ParserTest {
     public void testParser_advance() {
     	
     	try {
-<<<<<<< HEAD
-    		Parser parser_testEmpty = new Parser("Assembler/src/test/resources/testEmpty.nasm");
-=======
+
     		Parser parser_testEmpty = new Parser("src/test/resources/testEmpty.nasm");
->>>>>>> upstream/master
     		org.junit.Assume.assumeNotNull( parser_testEmpty.advance() );		// ignora test
         } catch(Exception e) { 
         	org.junit.Assume.assumeNoException(e);
@@ -168,11 +163,9 @@ public class ParserTest {
     	
         try {
     	
-<<<<<<< HEAD
-            Parser parser_testLeaw = new Parser("Assembler/src/test/resources/testLeaw.nasm");
-=======
+
             Parser parser_testLeaw = new Parser("src/test/resources/testLeaw.nasm");
->>>>>>> upstream/master
+
             assertTrue("Parser advance()",parser_testLeaw.advance());
             assertTrue("Parser leaw $0,%A",parser_testLeaw.command().equals("leaw $0,%A"));
             assertTrue("Parser advance()",parser_testLeaw.advance());
@@ -188,11 +181,9 @@ public class ParserTest {
             assertFalse("Parser advance()",parser_testLeaw.advance());
 
 
-<<<<<<< HEAD
-            Parser parser_testJump = new Parser("Assembler/src/test/resources/testJump.nasm");
-=======
+
             Parser parser_testJump = new Parser("src/test/resources/testJump.nasm");
->>>>>>> upstream/master
+
             assertTrue("Parser advance()",parser_testJump.advance());
             assertTrue("Parser jmp",parser_testJump.command().equals("jmp"));
             assertTrue("Parser advance()",parser_testJump.advance());
@@ -217,11 +208,9 @@ public class ParserTest {
             assertTrue("Parser jmp",parser_testJump.command().equals("jmp"));
             assertFalse("Parser advance()",parser_testJump.advance());
 
-<<<<<<< HEAD
-            Parser parser_testComp = new Parser("Assembler/src/test/resources/testComp.nasm");
-=======
+
             Parser parser_testComp = new Parser("src/test/resources/testComp.nasm");
->>>>>>> upstream/master
+
             assertTrue("Parser advance()",parser_testComp.advance());
             assertTrue("Parser movw %A,%D",parser_testComp.command().equals("movw %A,%D"));
             assertTrue("Parser advance()",parser_testComp.advance());
