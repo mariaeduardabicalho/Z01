@@ -45,6 +45,17 @@ public class Assemble {
      * Dependencia : Parser, SymbolTable
      */
     public void fillSymbolTable() throws FileNotFoundException, IOException {
+
+        Parser parser = new Parser(inputFile);  // abre o arquivo e aponta para o começo
+        int line = -1;
+        while (parser.advance()){
+
+            if (parser.commandType(parser.command()) == Parser.CommandType.L_COMMAND){
+                String tableAdd = parser.label(parser.command()); //criando a string do novo label
+                table.addEntry(tabelAdd, line+1); //adicionando essa string na tabela
+            }
+            line++
+        }
     }
 
     /**
@@ -57,7 +68,41 @@ public class Assemble {
     public void generateMachineCode() throws FileNotFoundException, IOException{
         Parser parser = new Parser(inputFile);  // abre o arquivo e aponta para o começo
 
-    }
+        while (parser.advance()){
+            String codigoBinario ="";
+            String instrucaoInicial ="0";
+
+            String instrucaoMaquina ="";
+
+            
+        if (parser.commandType(parser.command()) == Parser.CommandType.A_COMMAND){
+              if (table.contains(parser.symbol(parser.command()))){
+                  codigoBinario = Code.toBinary(String.valueOf(table.getAddress(parser.symbol(parser.command()))));
+                  instrucaoMaquina =codigoBinario+ instrucaoInicial;
+                  outHACK.write(instrucaoMaquina);
+                  outHACK.print(instrucaoMaquina);
+              }
+              else {
+                int x = 0;
+                while (!table.containsValue(x)){
+                  x++;
+                }
+                table.addEntry(parser.symbol(parser.command()), x);
+                codigoBinario = Code.toBinary(String.valueOf(x));
+                instrucaoMaquina =codigoBinario+ instrucaoInicial;
+                outHACK.write(instrucaoMaquina);
+                outHACK.print(instrucaoMaquina);
+              }
+
+        else if (parser.commandType(parser.command()) == Parser.CommandType.C_COMMAND){
+                instrucaoInicial = "1";
+                codigoBinario = Code.comp(parser.instruction(parser.command())) + Code.dest(parser.instruction(parser.command())) + Code.jump(parser.instruction(parse.command()));
+                instrucaoMaquina =codigoBinario instrucaoInicial;
+                outHACK.write(instrucaoMaquina);
+                outHACK.print(instrucaoMaquina);
+              }
+          }
+
 
     /**
      * Fecha arquivo de escrita
