@@ -1,6 +1,0 @@
-# nome | quantidade de testes | us de execucao
-# us -> clock = /20
-SimpleAdd 1 1000
-SimplePush 1 1000
-SimplePushAdd 1 1000
-SimpleSub 1 1000
