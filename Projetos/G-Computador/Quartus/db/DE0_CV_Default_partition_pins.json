@@ -4,327 +4,167 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "outM[0]",
+					"name" : "LEDR[0]",
 					"strict" : false
 				},
 				{
-					"name" : "outM[1]",
+					"name" : "LEDR[1]",
 					"strict" : false
 				},
 				{
-					"name" : "outM[2]",
+					"name" : "LEDR[2]",
 					"strict" : false
 				},
 				{
-					"name" : "outM[3]",
+					"name" : "LEDR[3]",
 					"strict" : false
 				},
 				{
-					"name" : "outM[4]",
+					"name" : "LEDR[4]",
 					"strict" : false
 				},
 				{
-					"name" : "outM[5]",
+					"name" : "LEDR[5]",
 					"strict" : false
 				},
 				{
-					"name" : "outM[6]",
+					"name" : "LEDR[6]",
 					"strict" : false
 				},
 				{
-					"name" : "outM[7]",
+					"name" : "LEDR[7]",
 					"strict" : false
 				},
 				{
-					"name" : "outM[8]",
+					"name" : "LEDR[8]",
 					"strict" : false
 				},
 				{
-					"name" : "outM[9]",
+					"name" : "LEDR[9]",
 					"strict" : false
 				},
 				{
-					"name" : "outM[10]",
+					"name" : "LCD_CS_N",
 					"strict" : false
 				},
 				{
-					"name" : "outM[11]",
+					"name" : "LCD_RESET_N",
 					"strict" : false
 				},
 				{
-					"name" : "outM[12]",
+					"name" : "LCD_RS",
 					"strict" : false
 				},
 				{
-					"name" : "outM[13]",
+					"name" : "LCD_WR_N",
 					"strict" : false
 				},
 				{
-					"name" : "outM[14]",
+					"name" : "LCD_D[0]",
 					"strict" : false
 				},
 				{
-					"name" : "outM[15]",
+					"name" : "LCD_D[1]",
 					"strict" : false
 				},
 				{
-					"name" : "writeM",
+					"name" : "LCD_D[2]",
 					"strict" : false
 				},
 				{
-					"name" : "addressM[0]",
+					"name" : "LCD_D[3]",
 					"strict" : false
 				},
 				{
-					"name" : "addressM[1]",
+					"name" : "LCD_D[4]",
 					"strict" : false
 				},
 				{
-					"name" : "addressM[2]",
+					"name" : "LCD_D[5]",
 					"strict" : false
 				},
 				{
-					"name" : "addressM[3]",
+					"name" : "LCD_D[6]",
 					"strict" : false
 				},
 				{
-					"name" : "addressM[4]",
+					"name" : "LCD_D[7]",
 					"strict" : false
 				},
 				{
-					"name" : "addressM[5]",
+					"name" : "LCD_D[8]",
 					"strict" : false
 				},
 				{
-					"name" : "addressM[6]",
+					"name" : "LCD_D[9]",
 					"strict" : false
 				},
 				{
-					"name" : "addressM[7]",
+					"name" : "LCD_D[10]",
 					"strict" : false
 				},
 				{
-					"name" : "addressM[8]",
+					"name" : "LCD_D[11]",
 					"strict" : false
 				},
 				{
-					"name" : "addressM[9]",
+					"name" : "LCD_D[12]",
 					"strict" : false
 				},
 				{
-					"name" : "addressM[10]",
+					"name" : "LCD_D[13]",
 					"strict" : false
 				},
 				{
-					"name" : "addressM[11]",
+					"name" : "LCD_D[14]",
 					"strict" : false
 				},
 				{
-					"name" : "addressM[12]",
+					"name" : "LCD_D[15]",
 					"strict" : false
 				},
 				{
-					"name" : "addressM[13]",
+					"name" : "SW[0]",
 					"strict" : false
 				},
 				{
-					"name" : "addressM[14]",
+					"name" : "SW[1]",
 					"strict" : false
 				},
 				{
-					"name" : "pcout[0]",
+					"name" : "SW[2]",
 					"strict" : false
 				},
 				{
-					"name" : "pcout[1]",
+					"name" : "SW[3]",
 					"strict" : false
 				},
 				{
-					"name" : "pcout[2]",
+					"name" : "SW[4]",
 					"strict" : false
 				},
 				{
-					"name" : "pcout[3]",
+					"name" : "SW[5]",
 					"strict" : false
 				},
 				{
-					"name" : "pcout[4]",
+					"name" : "SW[6]",
 					"strict" : false
 				},
 				{
-					"name" : "pcout[5]",
+					"name" : "SW[7]",
 					"strict" : false
 				},
 				{
-					"name" : "pcout[6]",
+					"name" : "SW[8]",
 					"strict" : false
 				},
 				{
-					"name" : "pcout[7]",
+					"name" : "SW[9]",
 					"strict" : false
 				},
 				{
-					"name" : "pcout[8]",
-					"strict" : false
-				},
-				{
-					"name" : "pcout[9]",
-					"strict" : false
-				},
-				{
-					"name" : "pcout[10]",
-					"strict" : false
-				},
-				{
-					"name" : "pcout[11]",
-					"strict" : false
-				},
-				{
-					"name" : "pcout[12]",
-					"strict" : false
-				},
-				{
-					"name" : "pcout[13]",
-					"strict" : false
-				},
-				{
-					"name" : "pcout[14]",
-					"strict" : false
-				},
-				{
-					"name" : "instruction[8]",
-					"strict" : false
-				},
-				{
-					"name" : "instruction[15]",
-					"strict" : false
-				},
-				{
-					"name" : "instruction[11]",
-					"strict" : false
-				},
-				{
-					"name" : "instruction[13]",
-					"strict" : false
-				},
-				{
-					"name" : "instruction[12]",
-					"strict" : false
-				},
-				{
-					"name" : "inM[0]",
-					"strict" : false
-				},
-				{
-					"name" : "instruction[9]",
-					"strict" : false
-				},
-				{
-					"name" : "instruction[14]",
-					"strict" : false
-				},
-				{
-					"name" : "instruction[10]",
-					"strict" : false
-				},
-				{
-					"name" : "instruction[7]",
-					"strict" : false
-				},
-				{
-					"name" : "inM[1]",
-					"strict" : false
-				},
-				{
-					"name" : "inM[2]",
-					"strict" : false
-				},
-				{
-					"name" : "inM[3]",
-					"strict" : false
-				},
-				{
-					"name" : "inM[4]",
-					"strict" : false
-				},
-				{
-					"name" : "inM[5]",
-					"strict" : false
-				},
-				{
-					"name" : "inM[6]",
-					"strict" : false
-				},
-				{
-					"name" : "inM[7]",
-					"strict" : false
-				},
-				{
-					"name" : "inM[8]",
-					"strict" : false
-				},
-				{
-					"name" : "inM[9]",
-					"strict" : false
-				},
-				{
-					"name" : "inM[10]",
-					"strict" : false
-				},
-				{
-					"name" : "inM[11]",
-					"strict" : false
-				},
-				{
-					"name" : "inM[12]",
-					"strict" : false
-				},
-				{
-					"name" : "inM[13]",
-					"strict" : false
-				},
-				{
-					"name" : "inM[14]",
-					"strict" : false
-				},
-				{
-					"name" : "inM[15]",
-					"strict" : false
-				},
-				{
-					"name" : "instruction[3]",
-					"strict" : false
-				},
-				{
-					"name" : "reset",
-					"strict" : false
-				},
-				{
-					"name" : "instruction[2]",
-					"strict" : false
-				},
-				{
-					"name" : "instruction[1]",
-					"strict" : false
-				},
-				{
-					"name" : "instruction[0]",
-					"strict" : false
-				},
-				{
-					"name" : "clock",
-					"strict" : false
-				},
-				{
-					"name" : "instruction[4]",
-					"strict" : false
-				},
-				{
-					"name" : "instruction[5]",
-					"strict" : false
-				},
-				{
-					"name" : "instruction[6]",
+					"name" : "RESET_N",
 					"strict" : false
 				}
 			]
