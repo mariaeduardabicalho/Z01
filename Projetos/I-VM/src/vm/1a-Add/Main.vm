@@ -12,3 +12,8 @@
 // ----------------------------------
 
 function Main.main 0
+
+push constant 123
+push constant 23
+add
+pop temp 0
