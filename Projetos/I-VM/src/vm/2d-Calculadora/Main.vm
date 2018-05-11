@@ -19,3 +19,7 @@
 //  ****************************************************
 
 function Main.main 0
+	push constant 3
+	push constant 3
+	call pow 2
+	pop temp 1
