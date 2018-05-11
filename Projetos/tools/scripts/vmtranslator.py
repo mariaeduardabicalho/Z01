@@ -17,15 +17,16 @@ TOOLSPATH = os.path.dirname(os.path.abspath(__file__))+"/../"
 
 jarD = TOOLSPATH+"jar/Z01-VMTranslator.jar"
 
-def callJava(jar, vm, nasm):
-    command = "java -jar " + jar + " " + vm + " -o " + nasm + " -n"
-   # print(command)
+def callJava(jar, vm, nasm, bootstrap):
+    command = "java -jar " + jar + " " + vm + " -o " + nasm
+    if not bootstrap:
+        command += " -n"
     proc = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
     err = proc.wait()
     return(err)
 
 
-def vmtranslator(vm, nasm, jar=jarD):
+def vmtranslator(bootstrap, vm, nasm, jar=jarD):
 
     pwd = os.path.dirname(os.path.abspath(__file__))
 
@@ -42,10 +43,11 @@ def vmtranslator(vm, nasm, jar=jarD):
                 else:
                     nNasm = nasm+filename[:-3]+".nasm"
                 nVM = vm+filename
-                print("Compiling {} to {}".format(os.path.basename(nVM), os.path.basename(nNasm)))
-                rtn = callJava(jar, nVM, nNasm)
-                if(rtn > 0):
-                    return(rtn)
+                if not os.path.basename(nVM).startswith('.'):
+                    print("Compiling {} to {}".format(os.path.basename(nVM), os.path.basename(nNasm)))
+                    rtn = callJava(jar, nVM, nNasm, bootstrap)
+                    if(rtn > 0):
+                        return(rtn)
         else:
             logError("output must be folder for folder input!")
     # é arquivo

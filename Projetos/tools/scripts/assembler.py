@@ -47,10 +47,11 @@ def assembler(jar, nasm, hack, mif):
                     nHack = hack+filename[:-5]+".hack"
                     nMif  = hack+filename[:-5]+".mif"
                     nNasm = nasm+filename
-                    print("Compiling {} to {}".format(os.path.basename(nNasm), os.path.basename(nHack)))
-                    callJava(jar, nNasm, nHack)
-                    if mif:
-                        toMIF(nHack, nMif)
+                    if not os.path.basename(nNasm).startswith('.'):
+                        print("Compiling {} to {}".format(os.path.basename(nNasm), os.path.basename(nHack)))
+                        callJava(jar, nNasm, nHack)
+                        if mif:
+                            toMIF(nHack, nMif)
         else:
             logError("output must be folder for folder input!")
     else:

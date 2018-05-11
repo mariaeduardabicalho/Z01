@@ -84,7 +84,7 @@ def simulateFromTestDir(testDir, hackDir, gui, verbose, rtlDir=PATH_WORK):
         return(1)
 
     for l in f:
-        if l.strip()[0] != '#':
+        if (l.strip()[0] != '#') or (not l.strip()):
             # pega parametros e atribui caminhos globais
             # par[0] : Nome do teste (subpasta)
             # par[1] : quantidade de testes a serem executados
@@ -174,7 +174,7 @@ def simulateCPU(ramIn, romIn, ramOut, time, debug, verbose, rtlDir=PATH_WORK):
             v = " > NUL "
     else:
         if verbose is False:
-            v = " &> /dev/null "
+            v = " > /dev/null "
 
     c = ""
     if debug is False:
