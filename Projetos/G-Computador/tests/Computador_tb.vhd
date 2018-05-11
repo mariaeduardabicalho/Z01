@@ -33,8 +33,8 @@ ARCHITECTURE rtl OF Computador_tb IS
     LCD_RESET_N  : OUT   STD_LOGIC;
     LCD_RS       : OUT   STD_LOGIC;	      -- (DCx) 0 : reg, 1: command
     LCD_WR_N     : OUT   STD_LOGIC;
-		LCD_ON       : OUT   STD_LOGIC;	-- liga e desliga o LCD
-
+    LCD_ON       : OUT   STD_LOGIC	-- liga e desliga o LCD
+	);
 
   end component;
 
@@ -64,12 +64,8 @@ begin
     LCD_RESET_N => open,
     LCD_RS      => open,
     LCD_WR_N    => open,
-<<<<<<< HEAD
-    LCD_on      => open,
-  
-=======
+
     LCD_on      => open
->>>>>>> upstream/master
     );
 
 end             rtl;

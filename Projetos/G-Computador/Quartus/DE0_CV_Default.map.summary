@@ -1,12 +1,17 @@
-Analysis & Synthesis Status : Failed - Tue Apr 24 22:42:46 2018
+Analysis & Synthesis Status : Successful - Wed May 09 16:29:01 2018
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : DE0_CV_Default
-Top-level Entity Name : DE0_CV_Default
+Top-level Entity Name : Computador
 Family : Cyclone V
-Logic utilization (in ALMs) : N/A until Partition Merge
-Total registers : N/A until Partition Merge
-Total pins : N/A until Partition Merge
-Total virtual pins : N/A until Partition Merge
-Total block memory bits : N/A until Partition Merge
-Total PLLs : N/A until Partition Merge
-Total DLLs : N/A until Partition Merge
+Logic utilization (in ALMs) : N/A
+Total registers : 511
+Total pins : 44
+Total virtual pins : 0
+Total block memory bits : 647,184
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1
+Total DLLs : 0

@@ -124,7 +124,7 @@ s2<= '1' when (address <= "011111111111111") else
 a1<= ADDRESS(13 downto 0);
 c1: DMux4Way port map(LOAD,s1,v0,v1,v2,vi);
 
-ram: RAM16K port map(a1,CLK_FAST,INPUT,v0,v3);
+RAM: RAM16K port map(a1,CLK_FAST,INPUT,v0,v3);
 
 f1 <= "000000" & SW;
 c2: Mux16 port map(f1, v3,s2,v4);

@@ -1,10 +1,10 @@
-# do {C:\Users\duda\Documents\Insper\3-semestre\elementos\Projeto\Z01\Projetos\G-Computador\Z01-Simulator-RTL\do\sim.do}
+# do {C:\Users\elijo\Desktop\projeto1\Z01\Projetos\G-Computador\Z01-Simulator-RTL\do\sim.do}
 # 1
 # 1
 # 1
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:44:15 on Apr 24,2018
+# Start time: 19:41:16 on May 09,2018
 # vcom -reportprogress 300 -work work ../../C-LogicaCombinacional/src/rtl/And16.vhd ../../C-LogicaCombinacional/src/rtl/BarrelShifter16.vhd ../../C-LogicaCombinacional/src/rtl/BarrelShifter8.vhd ../../C-LogicaCombinacional/src/rtl/DMux2Way.vhd ../../C-LogicaCombinacional/src/rtl/DMux4Way.vhd ../../C-LogicaCombinacional/src/rtl/DMux8Way.vhd ../../C-LogicaCombinacional/src/rtl/Mux16.vhd ../../C-LogicaCombinacional/src/rtl/Mux2Way.vhd ../../C-LogicaCombinacional/src/rtl/Mux4Way.vhd ../../C-LogicaCombinacional/src/rtl/Mux4Way16.vhd ../../C-LogicaCombinacional/src/rtl/Mux8Way.vhd ../../C-LogicaCombinacional/src/rtl/Mux8Way16.vhd ../../C-LogicaCombinacional/src/rtl/Nand.vhd ../../C-LogicaCombinacional/src/rtl/Nor8Way.vhd ../../C-LogicaCombinacional/src/rtl/Not16.vhd ../../C-LogicaCombinacional/src/rtl/Or16.vhd ../../C-LogicaCombinacional/src/rtl/Or8Way.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -43,10 +43,10 @@
 # -- Compiling architecture rtl of Or16
 # -- Compiling entity Or8Way
 # -- Compiling architecture rtl of Or8Way
-# End time: 21:44:15 on Apr 24,2018, Elapsed time: 0:00:00
+# End time: 19:41:16 on May 09,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:44:15 on Apr 24,2018
+# Start time: 19:41:16 on May 09,2018
 # vcom -reportprogress 300 -work work ../../E-LogicaSequencial/src/rtl/BinaryDigit.vhd ../../E-LogicaSequencial/src/rtl/FlipFlopD.vhd ../../E-LogicaSequencial/src/rtl/PC.vhd ../../E-LogicaSequencial/src/rtl/Ram4K.vhd ../../E-LogicaSequencial/src/rtl/Ram512.vhd ../../E-LogicaSequencial/src/rtl/Ram64.vhd ../../E-LogicaSequencial/src/rtl/Ram8.vhd ../../E-LogicaSequencial/src/rtl/Register16.vhd ../../E-LogicaSequencial/src/rtl/Register32.vhd ../../E-LogicaSequencial/src/rtl/Register64.vhd ../../E-LogicaSequencial/src/rtl/Register8.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -74,10 +74,10 @@
 # -- Compiling architecture arch of Register64
 # -- Compiling entity Register8
 # -- Compiling architecture arch of Register8
-# End time: 21:44:15 on Apr 24,2018, Elapsed time: 0:00:00
+# End time: 19:41:17 on May 09,2018, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:44:15 on Apr 24,2018
+# Start time: 19:41:17 on May 09,2018
 # vcom -reportprogress 300 -work work ../../D-UnidadeLogicaAritmetica/src/rtl/ALU.vhd ../../D-UnidadeLogicaAritmetica/src/rtl/Add16.vhd ../../D-UnidadeLogicaAritmetica/src/rtl/FullAdder.vhd ../../D-UnidadeLogicaAritmetica/src/rtl/HalfAdder.vhd ../../D-UnidadeLogicaAritmetica/src/rtl/Inc16.vhd ../../D-UnidadeLogicaAritmetica/src/rtl/comparador16.vhd ../../D-UnidadeLogicaAritmetica/src/rtl/inversor16.vhd ../../D-UnidadeLogicaAritmetica/src/rtl/zerador16.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -99,10 +99,10 @@
 # -- Compiling architecture rtl of inversor16
 # -- Compiling entity zerador16
 # -- Compiling architecture rtl of zerador16
-# End time: 21:44:16 on Apr 24,2018, Elapsed time: 0:00:01
+# End time: 19:41:17 on May 09,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:44:16 on Apr 24,2018
+# Start time: 19:41:17 on May 09,2018
 # vcom -reportprogress 300 -work work ../src/rtl/CPU.vhd ../src/rtl/Computador.vhd ../src/rtl/ControlUnit.vhd ../src/rtl/MemoryIO.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -112,96 +112,14 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Computador
 # -- Compiling architecture logic of Computador
-# -- Compiling entity ControlUnit
-# -- Compiling architecture arch of ControlUnit
-# -- Compiling entity MemoryIO
-# -- Compiling architecture logic of MemoryIO
-# End time: 21:44:16 on Apr 24,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:44:16 on Apr 24,2018
-# vcom -reportprogress 300 -work work ../src/rtl/Dispositivos/PLL/PLL_sim/PLL.vho 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package altera_lnsim_components
-# -- Compiling entity PLL
-# -- Compiling architecture RTL of PLL
-# End time: 21:44:16 on Apr 24,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:44:16 on Apr 24,2018
-# vcom -reportprogress 300 -work work ../src/rtl/Dispositivos/RAM/RAM16K.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package altera_mf_components
-# -- Compiling entity RAM16K
-# -- Compiling architecture SYN of ram16k
-# End time: 21:44:16 on Apr 24,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:44:16 on Apr 24,2018
-# vcom -reportprogress 300 -work work ../src/rtl/Dispositivos/ROM/ROM32K.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package altera_mf_components
-# -- Compiling entity ROM32K
-# -- Compiling architecture SYN of rom32k
-# End time: 21:44:16 on Apr 24,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:44:16 on Apr 24,2018
-# vcom -reportprogress 300 -work work ../src/rtl/Dispositivos/Screen/FIFO/FIFO16x4096.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity FIFO16x4096
-# -- Compiling architecture SYN of fifo16x4096
-# End time: 21:44:16 on Apr 24,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:44:16 on Apr 24,2018
-# vcom -reportprogress 300 -work work ../src/rtl/Dispositivos/Screen/Screen.vho 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling entity Screen
-# -- Compiling architecture logic of Screen
-# End time: 21:44:16 on Apr 24,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:44:16 on Apr 24,2018
-# vcom -reportprogress 300 -work work ../tests/Computador_tb.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity Computador_tb
-# -- Compiling architecture rtl of Computador_tb
-# ** Error: ../tests/Computador_tb.vhd(39): near "end": (vcom-1576) expecting IDENTIFIER.
-# ** Error: ../tests/Computador_tb.vhd(41): (vcom-1294) Declaration with designator "reset_n" already exists in this region.
-# ** =====> Prior declaration of "RESET_N" is at ../tests/Computador_tb.vhd(25).
-# ** Error: ../tests/Computador_tb.vhd(57): (vcom-1589) Cannot use name 'CLOCK_50' until the interface list is complete.
-# ** Error: ../tests/Computador_tb.vhd(59): (vcom-1589) Cannot use name 'LEDR' until the interface list is complete.
-# ** Error: ../tests/Computador_tb.vhd(60): (vcom-1589) Cannot use name 'SW' until the interface list is complete.
-# ** Error: ../tests/Computador_tb.vhd(61): (vcom-1589) Cannot use name 'LCD_CS_N' until the interface list is complete.
-# ** Error: ../tests/Computador_tb.vhd(62): (vcom-1589) Cannot use name 'LCD_D' until the interface list is complete.
-# ** Error: ../tests/Computador_tb.vhd(63): (vcom-1589) Cannot use name 'LCD_RD_N' until the interface list is complete.
-# ** Error: ../tests/Computador_tb.vhd(64): (vcom-1589) Cannot use name 'LCD_RESET_N' until the interface list is complete.
-# ** Error: ../tests/Computador_tb.vhd(65): (vcom-1589) Cannot use name 'LCD_RS' until the interface list is complete.
-# ** Error: ../tests/Computador_tb.vhd(66): (vcom-1589) Cannot use name 'LCD_WR_N' until the interface list is complete.
-# ** Error: ../tests/Computador_tb.vhd(67): (vcom-1589) Cannot use name 'LCD_ON' until the interface list is complete.
-# ** Error: ../tests/Computador_tb.vhd(69): near ")": syntax error
-# ** Error: ../tests/Computador_tb.vhd(71): VHDL Compiler exiting
-# End time: 21:44:16 on Apr 24,2018, Elapsed time: 0:00:00
-# Errors: 14, Warnings: 0
-# ** Error: C:/intelFPGA/17.1/modelsim_ase/win32aloem/vcom failed.
-# Error in macro C:/Users/duda/Documents/Insper/3-semestre/elementos/Projeto/Z01/Projetos/G-Computador/Z01-Simulator-RTL/do/load.do line 15
-# C:/intelFPGA/17.1/modelsim_ase/win32aloem/vcom failed.
+# ** Error: ../src/rtl/Computador.vhd(143): (vcom-1484) Unknown formal identifier "PC".
+# ** Error: ../src/rtl/Computador.vhd(178): VHDL Compiler exiting
+# End time: 19:41:17 on May 09,2018, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro C:/Users/elijo/Desktop/projeto1/Z01/Projetos/G-Computador/Z01-Simulator-RTL/do/load.do line 7
+# C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/vcom failed.
 #     while executing
-# "vcom -reportprogress 300 -work work ../tests/Computador_tb.vhd"
+# "vcom -reportprogress 300 -work work ../src/rtl/*.vhd"
+# Break key hit
+# Break key hit
