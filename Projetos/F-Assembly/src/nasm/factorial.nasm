@@ -28,7 +28,7 @@ nop
 leaw $7, %A
 movw (%A), %A
 addw %D, %A, %D
-leaw %3, %ASS
+leaw %3, %A
 movw %D, (%A)
 decw %S
 leaw %MEIO, %A
