@@ -2,17 +2,17 @@
 // faz a/b e retorna o resultado
 
 function divisao 2
-  push argument 0
-  pop local 0
-	push constant 0
-	pop local 1
+push argument 0
+pop local 0
+push constant 0
+pop local 1
 
 label WHILE
 	push argument 0
 	push argument 1
 	lt         // Se a < b vai para o loop
 	if-goto FINAL
-	push argument 0
+	push local 0
 	push argument 1
 	sub
 	pop local 0
@@ -26,3 +26,5 @@ label WHILE
 label FINAL
 	push local 0
 	return
+
+
