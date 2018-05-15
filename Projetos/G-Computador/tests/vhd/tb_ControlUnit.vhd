@@ -128,14 +128,16 @@ begin
     instruction <= '1' & "00" & "001100" & "0000" & "101";
     zr <= '0';  ng <= '0';
     wait until clk = '1';
-    assert(loadA  = '0' and loadD  = '0' and loadS = '0' and loadM  = '0' and  loadPC = '1')
+    assert(loadA  = '0' and loadD  = '0' and loadS = '0' and loadM  = '0' and  loadPC = '1' and
+           zx = '0' and nx = '0' and zy = '1' and ny = '1' and f = '0' and no = '0')
       report " **Falha** em jne %D" severity error;
 
     -- jne %D Falso
     instruction <= '0' & "00" & "001100" & "0000" & "101";
     zr <= '0';  ng <= '0';
     wait until clk = '1';
-    assert(loadA  = '1' and loadD  = '0' and loadS = '0' and loadM  = '0' and  loadPC = '0')
+    assert(loadA  = '1' and loadD  = '0' and loadS = '0' and loadM  = '0' and  loadPC = '0' and
+           zx = '0' and nx = '0' and zy = '1' and ny = '1' and f = '0' and no = '0')
       report " **Falha** em jne %D" severity error;
 
     -- jne %D : salta nao
