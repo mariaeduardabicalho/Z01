@@ -96,3 +96,32 @@ Estúdio para o projeto D
      - https://www.youtube.com/watch?v=lNW2d26S-gI
      - https://www.youtube.com/watch?v=CAw-cQUZO_g
 
+
+# Aula 9 - Lógica Sequencial 
+
+- Slides 
+     - https://github.com/Insper/Z01/blob/master/Aulas/09-Sequencial/09-Slides-LogicaSequencial.pdf
+- Handout
+     - https://github.com/Insper/Z01/blob/master/Aulas/09-Sequencial/09-Lista-LogicaSequencial.pdf
+- Vídeo 
+     - https://www.youtube.com/watch?v=lNW2d26S-gI
+     - https://www.youtube.com/watch?v=CAw-cQUZO_g
+
+# Assembly
+
+- Slides
+     - https://github.com/Insper/Z01/blob/master/Aulas/10-Assembly/10-Slides-Assembly.pdf
+- Lista 
+     - https://github.com/Insper/Z01/blob/master/Aulas/10-Assembly/10-Lista-Assembly.pdf
+- Vídeo 
+     - https://www.youtube.com/watch?v=xFBPHkaFIlk
+     
+# Assembly JUMP
+
+- Slides 
+    - https://github.com/Insper/Z01/blob/master/Projetos/F-Assembly/12-Perifericos-Jmp-Slides.pdf
+    
+# CPU
+
+- Slides 
+      - 
