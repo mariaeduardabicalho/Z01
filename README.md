@@ -47,7 +47,7 @@ Resumo Material Elementos de Sistemas :
 - Vídeo 
     - https://www.youtube.com/watch?v=zX36rn_lIl0
 
-# Aula 5 - Lógica Combinacional 
+# Combinacional 
 
 - Slides 
      - https://github.com/Insper/Z01/blob/master/Aulas/05-Logica-Combinacional/05-Slides-Logica-Combinacional.pdf
@@ -57,8 +57,6 @@ Resumo Material Elementos de Sistemas :
      - https://github.com/Insper/Z01/blob/master/Aulas/05-Logica-Combinacional/05-Lista-LogicaCombinacional.pdf
 - Vídeo 
      - https://www.youtube.com/watch?v=ImFt9YjEHHc
-- Bibliografia :
-    -
     
 # Dados Digitais 
 
