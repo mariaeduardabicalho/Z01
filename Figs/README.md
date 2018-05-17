@@ -36,7 +36,7 @@ Decodificador de endereços
 
 ---------
 
-Periféricos
+Mapa de memória
 
 ![Periféricos](g4158.png)
 
