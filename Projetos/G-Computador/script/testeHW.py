@@ -40,7 +40,9 @@ class tstControlUnit(object):
 
     def addSrc(self, work):
         work.addSrc(self.rtl)
-
+        work.addSrcFile(self.rtl+'Dispositivos/RAM/RAM16K.vho')
+        work.addSrcFile(self.rtl+'Dispositivos/Screen/Screen.vho')
+ 
     def addTst(self, work):
         work.addSrc(self.tst)
 
