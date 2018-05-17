@@ -30,7 +30,7 @@ def checkUnitTests(dirname):
                     return hasErrors
                 except IOError:
                     print('Error : Arquivo não encontrado: {}'.format(filename))
-                    return(1)
+                    return(True)
 
 
 def genJAR():

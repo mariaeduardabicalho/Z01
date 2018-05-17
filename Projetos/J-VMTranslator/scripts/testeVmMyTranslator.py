@@ -25,9 +25,10 @@ from genJAR import genJAR
 
 def testeVM(jarAssembler, jarVM, testDir, vmDir, nasmDir, hackDir, gui, verbose):
 
-
     # gera jar
-    genJAR()
+    if(genJAR()):
+        print("Erro no java")
+        exit(1)
 
     # translate vM
     translateVm(False, jarVM)
@@ -74,6 +75,6 @@ if __name__ == "__main__":
     hack = pwd+"/../bin/hack/"
 
     jarAssembler = TOOLSPATH+"jar/Z01-Assembler.jar"
-    jarVM = TOOLSPATH+"jar/Z01-VMTranslator.jar"
+    jarVM = pwd + "/../VMtranslator/Z01-VMTranslator.jar"
     testeVM(jarAssembler, jarVM, vmDir=vmDir, testDir=testDir, nasmDir=nasm, hackDir=hack, gui=gui, verbose=verbose)
 
