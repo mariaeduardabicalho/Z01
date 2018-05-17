@@ -1,7 +1,7 @@
 Resumo Material Elementos de Sistemas :
 
 
-# Aula 1 - Organização de Computadores
+# Organização de Computadores
 
 - Slides 
      - https://github.com/Insper/Z01/blob/master/Aulas/01-Organizacao-De-Computadores/01-Slides-OrganizacaoDeComputadores.pdf
@@ -12,7 +12,7 @@ Resumo Material Elementos de Sistemas :
 - Lista Ferramental
      - https://github.com/Insper/Z01/blob/master/Aulas/01-Organizacao-De-Computadores/01-Lista-Ferramental-OrganizacaoDeComputadores.pdf
 
-# Aula 2 - Lógica Combinacional
+#  Lógica Combinacional
 
 - Slides 
      - https://github.com/Insper/Z01/blob/master/Aulas/02-Logica-Booleana/02-Slides-AlgebraBooleana.pdf
@@ -25,7 +25,7 @@ Resumo Material Elementos de Sistemas :
 - Vídeo 
      - https://www.youtube.com/watch?v=YYIucfsQKl4
 
-# Aula 3 - Transistores
+# Transistores
 
 - Slides 
      - https://github.com/Insper/Z01/blob/master/Aulas/03-Transistores/03-Slides-Transitores.pdf
@@ -36,7 +36,7 @@ Resumo Material Elementos de Sistemas :
 - Vídeo 
      - https://www.youtube.com/watch?v=rRg9wdzlPvE
 
-# Aula 4 - Circuito Integrado 
+# Circuito Integrado 
 
 - Slides 
      - https://github.com/Insper/Z01/blob/master/Aulas/04-CI/04-Slides-CI.pdf
@@ -60,7 +60,7 @@ Resumo Material Elementos de Sistemas :
 - Bibliografia :
     -
     
-# Aula 6 - Dados Digitais 
+# Dados Digitais 
 
 - Slides 
      - https://github.com/Insper/Z01/blob/master/Aulas/06-Dados-Digitais/06-Slides-Dados-Digitais.pdf
@@ -71,7 +71,7 @@ Resumo Material Elementos de Sistemas :
 - Vídeo 
      - https://www.youtube.com/watch?v=dVixMB1uSYA
      
-# Aula 7 - Unidade Lógica Aritmética
+# Unidade Lógica Aritmética
 
 - Slides 
      - https://github.com/Insper/Z01/blob/master/Aulas/07-Unidade-Logica-Aritmetica/07-Slides-ULA.pdf
@@ -82,11 +82,8 @@ Resumo Material Elementos de Sistemas :
 - Vídeo 
      - https://www.youtube.com/watch?v=zRX3sOtjS10
 
-# Aula 8
-
-Estúdio para o projeto D
      
-# Aula 9 - Lógica Sequencial 
+# Lógica Sequencial 
 
 - Slides 
      - https://github.com/Insper/Z01/blob/master/Aulas/09-Sequencial/09-Slides-LogicaSequencial.pdf
@@ -97,7 +94,7 @@ Estúdio para o projeto D
      - https://www.youtube.com/watch?v=CAw-cQUZO_g
 
 
-# Aula 9 - Lógica Sequencial 
+# Lógica Sequencial 
 
 - Slides 
      - https://github.com/Insper/Z01/blob/master/Aulas/09-Sequencial/09-Slides-LogicaSequencial.pdf
