@@ -123,5 +123,33 @@ Estúdio para o projeto D
     
 # CPU
 
-- Slides 
-      - 
+- Video 
+     - https://www.youtube.com/watch?v=uVgqGkz106Q
+      
+# Assembler
+
+- Slides
+    - https://github.com/Insper/Z01/blob/master/Aulas/11%20-%20Assembler/Slides-Assembler.pdf
+    
+- Vídeo
+    - https://www.youtube.com/watch?v=xFBPHkaFIlk
+    
+# Máquina Virtual
+
+- Slides
+     - https://github.com/Insper/Z01/blob/master/Aulas/12%20-%20Maquina%20Virtual/aulaMaquinaVirtual.pdf
+- Handout
+      -  https://github.com/Insper/Z01/blob/master/Aulas/12%20-%20Maquina%20Virtual/handout_sun_aula17.pdf
+      - https://github.com/Insper/Z01/blob/master/Aulas/12%20-%20Maquina%20Virtual/lista_aula17_MaquinaVirtual.pdf
+- Vídeo
+      - https://www.youtube.com/watch?v=U9DRGBVp8Eg
+
+# Pilhas
+
+- Slides
+     - https://github.com/Insper/Z01/blob/master/Aulas/13%20-%20Pilhas/aulaPilhas.pdf
+- Handout
+     - https://github.com/Insper/Z01/blob/master/Aulas/13%20-%20Pilhas/handout_aula18.pdf
+     - https://github.com/Insper/Z01/blob/master/Aulas/13%20-%20Pilhas/lista_aula18_Pilhas.pdf
+- Vídeo
+     - https://www.youtube.com/watch?v=5N0rTGZHdwY
