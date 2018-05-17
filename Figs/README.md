@@ -30,13 +30,13 @@ ULA
 
 ---------
 
-Mapa de memória
+Decodificador de endereços 
 
 ![Memórias](layer1-0.png)
 
 ---------
 
-Periféricos
+Mapa de memória
 
 ![Periféricos](g4158.png)
 
