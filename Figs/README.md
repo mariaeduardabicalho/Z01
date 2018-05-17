@@ -30,7 +30,7 @@ ULA
 
 ---------
 
-Mapa de memória
+Decodificador de endereços 
 
 ![Memórias](layer1-0.png)
 
