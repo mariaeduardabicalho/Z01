@@ -24,3 +24,9 @@
 //  ****************************************************
 
 function Main.main 0
+    push constant 15
+    push constant 5
+    call div 2
+    pop temp 1
+    label end
+    goto end
