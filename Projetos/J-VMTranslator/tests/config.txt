@@ -1,11 +1,18 @@
 # nome | quantidade de testes | us de execucao
 # us -> clock = /20
 #--------------------
-# Entrega parte 1
-#  - funcoes aritmeticas
-#  - push/pop
-#  - parser
+# Projeto - Entrega
 #--------------------
+#SimplePopTemp 1 200
+#1a-Add 1 500
+#1b-Add 1 500
+#2a-Calculadora 1 500
+#2b-Calculadora 1 4000
+#2c-Calculadora 1 4000
+#2d-Calculadora 1 4000
+##--------------------
+## Exemplos
+##--------------------
 SimpleAdd 1 200
 SimpleNeg 1 200
 SimpleSub 1 200
@@ -14,21 +21,20 @@ SimpleGt 3 200
 SimpleLt 3 200
 SimpleAnd 1 200
 SimpleOr 1 200
-SimplePush 1 200
+SimplePushConst 1 200
+SimplePushTemp 1 200
+SimplePushLocal 1 200
+SimplePushArg 1 200
+SimplePushThis 1 200
+SimplePushThat 1 200
+SimplePopTemp 1 200
+SimplePopLocal 1 200
+SimplePopThat 1 200
+SimplePopThis 1 200
 SimplePushAdd 1 200
+SimplePopPointer 1 200
 StackTest 1 4000
-#--------------------
-# Entrega parte 2
-# call, funcoes, goto,
-# label
-#--------------------
 BasicLoop 1 4000
 SimpleFunction 1 500
 StaticsTest 1 5000
 Mult 1 1000
-1a-Add 1 500
-1b-Add 1 500
-2a-Calculadora 1 500
-2b-Calculadora 1 4000
-2c-Calculadora 1 4000
-2d-Calculadora 1 4000
