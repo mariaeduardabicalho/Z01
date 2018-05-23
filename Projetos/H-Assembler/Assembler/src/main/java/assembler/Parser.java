@@ -49,19 +49,19 @@ public class Parser {
      * @return Verdadeiro se ainda há instruções, Falso se as instruções terminaram.
      */
     public Boolean advance() {
-    	if (arquivo.hasNextLine()){
+    	while (arquivo.hasNextLine()){
     	    String linha = arquivo.nextLine();
     	    linha = linha.trim();//remover espaços em branco
-    	    if (!linha.startsWith(";")){
-                linha.replace("\n","");
+    	    if (!linha.startsWith(";") || !linha.isEmpty()){
+                linha.replace("\t","");
                 this.Comando = linha;
+                return true;
             }
 
-    	    return true;
         }
-        else {
-    	    return false;
-        }
+      
+	    return false;
+        
     }
 
     /**
