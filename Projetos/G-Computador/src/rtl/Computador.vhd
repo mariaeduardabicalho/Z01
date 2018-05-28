@@ -113,7 +113,7 @@ ARCHITECTURE logic OF Computador IS
   SIGNAL OUTPUT_RAM   : STD_LOGIC_VECTOR(15 downto 0);
   SIGNAL INSTRUCTION  : STD_LOGIC_VECTOR(15 downto 0);
   SIGNAL PC			      : STD_LOGIC_VECTOR(14 downto 0);
-  SIGNAL pcout		    : STD_LOGIC_VECTOR(14 downto 0);
+  
 
 
 BEGIN
@@ -140,7 +140,7 @@ BEGIN
 			  outM  => INPUT,
 			  writeM => LOAD,
 			  addressM => ADDRESS,
-			  PC => pcout
+			  pcout => PC 
  );
 
   MEMORY_MAPED : MemoryIO PORT map(
