@@ -60,8 +60,9 @@ signal s1, s2, v1, v2, v3: STD_LOGIC_VECTOR(15 downto 0);
 signal e1: STD_LOGIC;
 
 begin
+
 -- If para modoificar o selecionador do mux , e a segunda entrada para que funcione para o reset e para o input
-process (reset,input, v2) begin
+process (reset,input, v2, load) begin
   if reset = '1' then
     e1<= '1';
     v2<= "0000000000000000";
@@ -70,11 +71,14 @@ process (reset,input, v2) begin
     v2<= input;
   end if;
 end process;
+
 --utilizacao do incrementador
   c2: Inc16 port map(v1,s2);
+
 -- incrementar somente quando o increment tiver em 1
   v3 <= s2 when increment = '1' else
         v1;
+
 -- utilizacao do  registrador, recebe ou output do mux ou o do inc
   c1: Register16 port map(clock,v3,'1',s1);
 

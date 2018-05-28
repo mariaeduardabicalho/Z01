@@ -133,7 +133,20 @@ OUTPUT <= v4;
 ledd: Register16 port map(CLK_SLOW,INPUT,v2,v5);
 LED <= v5(9 downto 0);
 
- screennn: Screen port map(INPUT,v1,a1,CLK_FAST,CLK_SLOW,RST,LCD_INIT_OK,LCD_CS_N,LCD_D,LCD_RD_N,LCD_RS,LCD_RESET_N,LCD_WR_N);
+ screennn: Screen port map(
+      INPUT => INPUT,
+      LOAD  => v1,
+      ADDRESS => a1,
+      CLK_FAST => CLK_FAST,
+      CLK_SLOW => CLK_SLOW,
+      RST => RST,
+      LCD_INIT_OK=> LCD_INIT_OK,
+      LCD_CS_N =>LCD_CS_N,
+      LCD_D => LCD_D,
+      LCD_RD_N => LCD_RD_N,
+      LCD_RS => LCD_RS,
+      LCD_RESET_N => LCD_RESET_N,
+      LCD_WR_N => LCD_WR_N);
 
 
 END logic;
