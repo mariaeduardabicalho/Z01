@@ -1,0 +1,8 @@
+# vsim -c -do "C:\Users\Nicolas" Stegmann\Documents\GitHub\grupoa\Z01\Projetos\tools\Z01-Simulator-rtl-2\do\sim.do 
+# Start time: 17:35:31 on May 23,2018
+# ** Error: (vsim-3170) Could not find 'Stegmann\Documents\GitHub\grupoa\Z01\Projetos\tools\Z01-Simulator-rtl-2\do\sim.do'.
+#         Searched libraries:
+#             C:/Users/Nicolas Stegmann/Documents/GitHub/grupoa/Z01/Projetos/tools/Z01-Simulator-rtl-2/work
+# Error loading design
+# End time: 17:35:31 on May 23,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0

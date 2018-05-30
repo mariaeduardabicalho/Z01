@@ -42,4 +42,8 @@ leaw %3, %A
 movw %S, (%A)
 
 NOPE:
+<<<<<<< HEAD
 nop
+=======
+nop
+>>>>>>> a8721f3a03590bd7f257ca39a9a44294d543dd49

@@ -1,0 +1,16 @@
+# do sim.do
+# 1
+# 1
+# 1
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:27:03 on Feb 26,2018
+# vcom -work work ./Modulos/dispositivos/RAM_fpga/RAM16K.vhd 
+# ** Error: (vcom-66) Execution of vlib failed. Please check the error log for more details.
+# sh: /mnt/Dados/opt/altera/modelsim_ase/linuxpe/vlib: No such file or directory
+# End time: 11:27:03 on Feb 26,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: /mnt/Dados/opt/altera/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./sim.do line 13
+# /mnt/Dados/opt/altera/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -work work ./Modulos/dispositivos/RAM_fpga/RAM16K.vhd"
