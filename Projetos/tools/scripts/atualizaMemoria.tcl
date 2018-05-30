@@ -7,7 +7,7 @@ puts stdout ""
 
 set DEV_NAME "@1: 5CE(BA4|FA4) (0x02B050DD)"
 
-set MIF "C:/Users/elijo/Desktop/projeto1/Z01/Projetos/G-Computador/bin/hack/linha.mif"
+set MIF "C:/Users/duda/Documents/Insper/3-semestre/elementos/projeto/Z01/Projetos/G-Computador/bin/hack/testeSW.mif"
 
 set JTAG "USB-Blaster \[USB-0\]"
 

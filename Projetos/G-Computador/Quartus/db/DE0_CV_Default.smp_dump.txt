@@ -1,12 +1,12 @@
 
-State Machine - |Computador|MemoryIO:MAIN_MemoryIO|Screen:screennn|state
+State Machine - |Computador|MemoryIO:MEMORY_MAPED|Screen:screennn|state
 Name state.s_pxWrite state.s_pxUpdate state.s_load state.s_waitData 
 state.s_waitData 0 0 0 0 
 state.s_load 0 0 1 1 
 state.s_pxUpdate 0 1 0 1 
 state.s_pxWrite 1 0 0 1 
 
-State Machine - |Computador|MemoryIO:MAIN_MemoryIO|Screen:screennn|ILI9341:LCD|state
+State Machine - |Computador|MemoryIO:MEMORY_MAPED|Screen:screennn|ILI9341:LCD|state
 Name state.s15d state.s15 state.s14d state.s14 state.s13d state.s13 state.s12d state.s12 state.s11d state.s11 state.s10d state.s10 state.s9d state.s9 state.s8d state.s8 state.s7d state.s7 state.s6d state.s6 state.s5 state.s4 state.c3 state.c2 state.c1 state.s3m state.s3n state.s3 state.s2 state.s1 state.s0 
 state.s0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 state.s1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 

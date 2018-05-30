@@ -333,7 +333,6 @@ set_global_assignment -name VHDL_FILE ../src/rtl/Dispositivos/Screen/Screen.vhd
 set_global_assignment -name VHDL_FILE ../src/rtl/Dispositivos/Screen/ILI9341.vhd
 set_global_assignment -name VHDL_FILE ../src/rtl/Dispositivos/ROM/ROM32K.vhd
 set_global_assignment -name VHDL_FILE ../src/rtl/Dispositivos/RAM/RAM16K.vhd
-set_global_assignment -name VHDL_FILE ../src/rtl/Dispositivos/PLL/PLL.vhd
 set_global_assignment -name VHDL_FILE ../src/rtl/MemoryIO.vhd
 set_global_assignment -name VHDL_FILE ../src/rtl/CPU.vhd
 set_global_assignment -name VHDL_FILE ../src/rtl/ControlUnit.vhd
