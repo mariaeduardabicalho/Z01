@@ -1,7 +1,7 @@
 Resumo Material Elementos de Sistemas :
 
 
-# Aula 1 - Organização de Computadores
+# Organização de Computadores
 
 - Slides 
      - https://github.com/Insper/Z01/blob/master/Aulas/01-Organizacao-De-Computadores/01-Slides-OrganizacaoDeComputadores.pdf
@@ -12,7 +12,7 @@ Resumo Material Elementos de Sistemas :
 - Lista Ferramental
      - https://github.com/Insper/Z01/blob/master/Aulas/01-Organizacao-De-Computadores/01-Lista-Ferramental-OrganizacaoDeComputadores.pdf
 
-# Aula 2 - Lógica Combinacional
+#  Lógica Combinacional
 
 - Slides 
      - https://github.com/Insper/Z01/blob/master/Aulas/02-Logica-Booleana/02-Slides-AlgebraBooleana.pdf
@@ -25,7 +25,7 @@ Resumo Material Elementos de Sistemas :
 - Vídeo 
      - https://www.youtube.com/watch?v=YYIucfsQKl4
 
-# Aula 3 - Transistores
+# Transistores
 
 - Slides 
      - https://github.com/Insper/Z01/blob/master/Aulas/03-Transistores/03-Slides-Transitores.pdf
@@ -36,7 +36,7 @@ Resumo Material Elementos de Sistemas :
 - Vídeo 
      - https://www.youtube.com/watch?v=rRg9wdzlPvE
 
-# Aula 4 - Circuito Integrado 
+# Circuito Integrado 
 
 - Slides 
      - https://github.com/Insper/Z01/blob/master/Aulas/04-CI/04-Slides-CI.pdf
@@ -47,7 +47,7 @@ Resumo Material Elementos de Sistemas :
 - Vídeo 
     - https://www.youtube.com/watch?v=zX36rn_lIl0
 
-# Aula 5 - Lógica Combinacional 
+# Combinacional 
 
 - Slides 
      - https://github.com/Insper/Z01/blob/master/Aulas/05-Logica-Combinacional/05-Slides-Logica-Combinacional.pdf
@@ -57,10 +57,8 @@ Resumo Material Elementos de Sistemas :
      - https://github.com/Insper/Z01/blob/master/Aulas/05-Logica-Combinacional/05-Lista-LogicaCombinacional.pdf
 - Vídeo 
      - https://www.youtube.com/watch?v=ImFt9YjEHHc
-- Bibliografia :
-    -
     
-# Aula 6 - Dados Digitais 
+# Dados Digitais 
 
 - Slides 
      - https://github.com/Insper/Z01/blob/master/Aulas/06-Dados-Digitais/06-Slides-Dados-Digitais.pdf
@@ -71,7 +69,7 @@ Resumo Material Elementos de Sistemas :
 - Vídeo 
      - https://www.youtube.com/watch?v=dVixMB1uSYA
      
-# Aula 7 - Unidade Lógica Aritmética
+# Unidade Lógica Aritmética
 
 - Slides 
      - https://github.com/Insper/Z01/blob/master/Aulas/07-Unidade-Logica-Aritmetica/07-Slides-ULA.pdf
@@ -82,11 +80,8 @@ Resumo Material Elementos de Sistemas :
 - Vídeo 
      - https://www.youtube.com/watch?v=zRX3sOtjS10
 
-# Aula 8
-
-Estúdio para o projeto D
      
-# Aula 9 - Lógica Sequencial 
+# Lógica Sequencial 
 
 - Slides 
      - https://github.com/Insper/Z01/blob/master/Aulas/09-Sequencial/09-Slides-LogicaSequencial.pdf
@@ -96,3 +91,60 @@ Estúdio para o projeto D
      - https://www.youtube.com/watch?v=lNW2d26S-gI
      - https://www.youtube.com/watch?v=CAw-cQUZO_g
 
+
+# Lógica Sequencial 
+
+- Slides 
+     - https://github.com/Insper/Z01/blob/master/Aulas/09-Sequencial/09-Slides-LogicaSequencial.pdf
+- Handout
+     - https://github.com/Insper/Z01/blob/master/Aulas/09-Sequencial/09-Lista-LogicaSequencial.pdf
+- Vídeo 
+     - https://www.youtube.com/watch?v=lNW2d26S-gI
+     - https://www.youtube.com/watch?v=CAw-cQUZO_g
+
+# Assembly
+
+- Slides
+     - https://github.com/Insper/Z01/blob/master/Aulas/10-Assembly/10-Slides-Assembly.pdf
+- Lista 
+     - https://github.com/Insper/Z01/blob/master/Aulas/10-Assembly/10-Lista-Assembly.pdf
+- Vídeo 
+     - https://www.youtube.com/watch?v=xFBPHkaFIlk
+     
+# Assembly JUMP
+
+- Slides 
+    - https://github.com/Insper/Z01/blob/master/Projetos/F-Assembly/12-Perifericos-Jmp-Slides.pdf
+    
+# CPU
+
+- Video 
+     - https://www.youtube.com/watch?v=uVgqGkz106Q
+      
+# Assembler
+
+- Slides
+    - https://github.com/Insper/Z01/blob/master/Aulas/11%20-%20Assembler/Slides-Assembler.pdf
+    
+- Vídeo
+    - https://www.youtube.com/watch?v=xFBPHkaFIlk
+    
+# Máquina Virtual
+
+- Slides
+     - https://github.com/Insper/Z01/blob/master/Aulas/12%20-%20Maquina%20Virtual/aulaMaquinaVirtual.pdf
+- Handout
+      -  https://github.com/Insper/Z01/blob/master/Aulas/12%20-%20Maquina%20Virtual/handout_sun_aula17.pdf
+      - https://github.com/Insper/Z01/blob/master/Aulas/12%20-%20Maquina%20Virtual/lista_aula17_MaquinaVirtual.pdf
+- Vídeo
+      - https://www.youtube.com/watch?v=U9DRGBVp8Eg
+
+# Pilhas
+
+- Slides
+     - https://github.com/Insper/Z01/blob/master/Aulas/13%20-%20Pilhas/aulaPilhas.pdf
+- Handout
+     - https://github.com/Insper/Z01/blob/master/Aulas/13%20-%20Pilhas/handout_aula18.pdf
+     - https://github.com/Insper/Z01/blob/master/Aulas/13%20-%20Pilhas/lista_aula18_Pilhas.pdf
+- Vídeo
+     - https://www.youtube.com/watch?v=5N0rTGZHdwY
