@@ -47,17 +47,33 @@ public class Assemble {
     public void fillSymbolTable() throws FileNotFoundException, IOException {
 
         Parser parser = new Parser(inputFile);  // abre o arquivo e aponta para o começo
-        int line = -1;
-        while (parser.advance()){
+        
+        int ram = 16;
+        
+        int line = 0;
+        
+        while (parser.advance()){ //itinera sobre as linhas do arquivo para comandos do tipo L (labels)
 
-            if (parser.commandType(parser.command()) == Parser.CommandType.L_COMMAND){
-                String tableAdd = parser.label(parser.command()); //criando a string do novo label
-                table.addEntry(tabelAdd, line+1); //adicionando essa string na tabela
+            if (parser.commandType(parser.command()) == Parser.CommandType.L_COMMAND){  //checa se � do tipo L
+                String add_table = parser.label(parser.command()); //criando a string do novo label
+                table.addEntry(add_table, line); //adicionando essa string na tabela (linha)
             }
-            line++
+            
+            //se nao for do tipo L passa para a proxima linha
+            else{
+    			line = line + 1;
+    			}
+        }
+        
+        while (parser.advance()){  //itinera sobre as linhas do arquivo, dessa vez para comandos do tipo A (enderecos)
+            if (parser.commandType(parser.command()) == Parser.CommandType.A_COMMAND){  //checa se � do tipo A
+          	  if (!table.contains(parser.symbol(parser.command()))){ //se a tabela nao tiver o endereceo
+  					table.addEntry(parser.symbol(parser.command()), ram); //ela � adicionada a tabela (ram)
+  					ram ++;
+  				}
+            }
         }
     }
-
     /**
      * Segundo passo para a geração do código de máquina
      * Varre o código em busca de instruções do tipo A, C
@@ -69,39 +85,39 @@ public class Assemble {
         Parser parser = new Parser(inputFile);  // abre o arquivo e aponta para o começo
 
         while (parser.advance()){
-            String codigoBinario ="";
-            String instrucaoInicial ="0";
+            String binary_code ="";
+            String instructions ="0";
 
-            String instrucaoMaquina ="";
+            String machine_instruction ="";
+            String [] mnemnonic = parser.instruction(parser.command());
 
             
-        if (parser.commandType(parser.command()) == Parser.CommandType.A_COMMAND){
+        if (parser.commandType(parser.command()) == Parser.CommandType.A_COMMAND){  //considera instrucoes do tipo A
               if (table.contains(parser.symbol(parser.command()))){
-                  codigoBinario = Code.toBinary(String.valueOf(table.getAddress(parser.symbol(parser.command()))));
-                  instrucaoMaquina =codigoBinario+ instrucaoInicial;
-                  outHACK.write(instrucaoMaquina);
-                  outHACK.print(instrucaoMaquina);
+                  binary_code = Code.toBinary(String.valueOf(table.getAddress(parser.symbol(parser.command()))));  //gera o binario para a maquina
+                  machine_instruction =binary_code+ instructions;
+                  //outHACK.write(machine_instruction);
+                  //outHACK.print(machine_instruction);
               }
               else {
-                int x = 0;
-                while (!table.containsValue(x)){
-                  x++;
-                }
-                table.addEntry(parser.symbol(parser.command()), x);
-                codigoBinario = Code.toBinary(String.valueOf(x));
-                instrucaoMaquina =codigoBinario+ instrucaoInicial;
-                outHACK.write(instrucaoMaquina);
-                outHACK.print(instrucaoMaquina);
+            	  //machine_instruction =binary_code+ instruction;
+            	  machine_instruction = instructions + (Code.toBinary(parser.symbol(parser.command())));;
+            	  
               }
+              outHACK.write(machine_instruction);  //salva o codigo de maquina
+       
+              }
+        else if (parser.commandType(parser.command()) == Parser.CommandType.C_COMMAND){//considera instrucoes do tipo C
+        	binary_code = Code.dest(mnemnonic)+ Code.jump(mnemnonic)+Code.comp(mnemnonic);
+        	String x = "1";
+        	machine_instruction =binary_code+ instructions;
+            outHACK.write(machine_instruction);
+            //outHACK.print(machine_instruction);
+        }
+        }
+             
 
-        else if (parser.commandType(parser.command()) == Parser.CommandType.C_COMMAND){
-                instrucaoInicial = "1";
-                codigoBinario = Code.comp(parser.instruction(parser.command())) + Code.dest(parser.instruction(parser.command())) + Code.jump(parser.instruction(parse.command()));
-                instrucaoMaquina =codigoBinario instrucaoInicial;
-                outHACK.write(instrucaoMaquina);
-                outHACK.print(instrucaoMaquina);
               }
-          }
 
 
     /**
