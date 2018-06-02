@@ -16,7 +16,7 @@ import java.io.File;
  */
 public class Parser {
     Scanner arquivo;
-    String Comando;
+    String Comando = "";
 
     /** Enumerator para os tipos de comandos do Assembler. */
     public enum CommandType {
@@ -52,10 +52,15 @@ public class Parser {
     	if (arquivo.hasNextLine()){
     	    String linha = arquivo.nextLine();
     	    linha = linha.trim();//remover espaços em branco
-    	    if (!linha.startsWith(";")){
-                linha.replace("\n","");
+    	    while (linha.startsWith(";") || linha.isEmpty()){
+        	    linha = arquivo.nextLine();
+                linha.replace("\t","");
                 this.Comando = linha;
             }
+//    	    linha = arquivo.nextLine();
+//    	    if (!linha.startsWith(";")) {
+//    	    	this.Comando = linha;
+//    	    }
 
     	    return true;
         }
