@@ -32,3 +32,5 @@ Mult 1 1000
 2b-Calculadora 1 4000
 2c-Calculadora 1 4000
 2d-Calculadora 1 4000
+SimpleGoto 1 200
+SimpleIfGoto 1 200
