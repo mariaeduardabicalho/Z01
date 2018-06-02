@@ -49,6 +49,13 @@ public class Parser {
      * @return Verdadeiro se ainda há instruções, Falso se as instruções terminaram.
      */
     public Boolean advance() throws IOException {
+    	if (fileReader.readLine() != null) {
+    		currentCommand = fileReader.readLine();
+    		return true;
+    	}
+    	else{
+    		return false;
+    	}
     }
 
     /**

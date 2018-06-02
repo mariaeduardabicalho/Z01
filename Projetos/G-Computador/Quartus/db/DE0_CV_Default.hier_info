@@ -3,47 +3,47 @@ CLOCK_50 => PLL:PLL_inst.refclk
 RESET_N => RST_CPU.IN1
 RESET_N => RST_MEM.IN1
 RESET_N => PLL:PLL_inst.rst
-LEDR[0] <= MemoryIO:MAIN_MemoryIO.LED[0]
-LEDR[1] <= MemoryIO:MAIN_MemoryIO.LED[1]
-LEDR[2] <= MemoryIO:MAIN_MemoryIO.LED[2]
-LEDR[3] <= MemoryIO:MAIN_MemoryIO.LED[3]
-LEDR[4] <= MemoryIO:MAIN_MemoryIO.LED[4]
-LEDR[5] <= MemoryIO:MAIN_MemoryIO.LED[5]
-LEDR[6] <= MemoryIO:MAIN_MemoryIO.LED[6]
-LEDR[7] <= MemoryIO:MAIN_MemoryIO.LED[7]
-LEDR[8] <= MemoryIO:MAIN_MemoryIO.LED[8]
-LEDR[9] <= MemoryIO:MAIN_MemoryIO.LED[9]
-SW[0] => MemoryIO:MAIN_MemoryIO.SW[0]
-SW[1] => MemoryIO:MAIN_MemoryIO.SW[1]
-SW[2] => MemoryIO:MAIN_MemoryIO.SW[2]
-SW[3] => MemoryIO:MAIN_MemoryIO.SW[3]
-SW[4] => MemoryIO:MAIN_MemoryIO.SW[4]
-SW[5] => MemoryIO:MAIN_MemoryIO.SW[5]
-SW[6] => MemoryIO:MAIN_MemoryIO.SW[6]
-SW[7] => MemoryIO:MAIN_MemoryIO.SW[7]
-SW[8] => MemoryIO:MAIN_MemoryIO.SW[8]
-SW[9] => MemoryIO:MAIN_MemoryIO.SW[9]
-LCD_CS_N <= MemoryIO:MAIN_MemoryIO.LCD_CS_N
-LCD_D[0] <> MemoryIO:MAIN_MemoryIO.LCD_D[0]
-LCD_D[1] <> MemoryIO:MAIN_MemoryIO.LCD_D[1]
-LCD_D[2] <> MemoryIO:MAIN_MemoryIO.LCD_D[2]
-LCD_D[3] <> MemoryIO:MAIN_MemoryIO.LCD_D[3]
-LCD_D[4] <> MemoryIO:MAIN_MemoryIO.LCD_D[4]
-LCD_D[5] <> MemoryIO:MAIN_MemoryIO.LCD_D[5]
-LCD_D[6] <> MemoryIO:MAIN_MemoryIO.LCD_D[6]
-LCD_D[7] <> MemoryIO:MAIN_MemoryIO.LCD_D[7]
-LCD_D[8] <> MemoryIO:MAIN_MemoryIO.LCD_D[8]
-LCD_D[9] <> MemoryIO:MAIN_MemoryIO.LCD_D[9]
-LCD_D[10] <> MemoryIO:MAIN_MemoryIO.LCD_D[10]
-LCD_D[11] <> MemoryIO:MAIN_MemoryIO.LCD_D[11]
-LCD_D[12] <> MemoryIO:MAIN_MemoryIO.LCD_D[12]
-LCD_D[13] <> MemoryIO:MAIN_MemoryIO.LCD_D[13]
-LCD_D[14] <> MemoryIO:MAIN_MemoryIO.LCD_D[14]
-LCD_D[15] <> MemoryIO:MAIN_MemoryIO.LCD_D[15]
-LCD_RD_N <= MemoryIO:MAIN_MemoryIO.LCD_RD_N
-LCD_RESET_N <= MemoryIO:MAIN_MemoryIO.LCD_RESET_N
-LCD_RS <= MemoryIO:MAIN_MemoryIO.LCD_RS
-LCD_WR_N <= MemoryIO:MAIN_MemoryIO.LCD_WR_N
+LEDR[0] <= MemoryIO:MEMORY_MAPED.LED[0]
+LEDR[1] <= MemoryIO:MEMORY_MAPED.LED[1]
+LEDR[2] <= MemoryIO:MEMORY_MAPED.LED[2]
+LEDR[3] <= MemoryIO:MEMORY_MAPED.LED[3]
+LEDR[4] <= MemoryIO:MEMORY_MAPED.LED[4]
+LEDR[5] <= MemoryIO:MEMORY_MAPED.LED[5]
+LEDR[6] <= MemoryIO:MEMORY_MAPED.LED[6]
+LEDR[7] <= MemoryIO:MEMORY_MAPED.LED[7]
+LEDR[8] <= MemoryIO:MEMORY_MAPED.LED[8]
+LEDR[9] <= MemoryIO:MEMORY_MAPED.LED[9]
+SW[0] => MemoryIO:MEMORY_MAPED.SW[0]
+SW[1] => MemoryIO:MEMORY_MAPED.SW[1]
+SW[2] => MemoryIO:MEMORY_MAPED.SW[2]
+SW[3] => MemoryIO:MEMORY_MAPED.SW[3]
+SW[4] => MemoryIO:MEMORY_MAPED.SW[4]
+SW[5] => MemoryIO:MEMORY_MAPED.SW[5]
+SW[6] => MemoryIO:MEMORY_MAPED.SW[6]
+SW[7] => MemoryIO:MEMORY_MAPED.SW[7]
+SW[8] => MemoryIO:MEMORY_MAPED.SW[8]
+SW[9] => MemoryIO:MEMORY_MAPED.SW[9]
+LCD_CS_N <= MemoryIO:MEMORY_MAPED.LCD_CS_N
+LCD_D[0] <> MemoryIO:MEMORY_MAPED.LCD_D[0]
+LCD_D[1] <> MemoryIO:MEMORY_MAPED.LCD_D[1]
+LCD_D[2] <> MemoryIO:MEMORY_MAPED.LCD_D[2]
+LCD_D[3] <> MemoryIO:MEMORY_MAPED.LCD_D[3]
+LCD_D[4] <> MemoryIO:MEMORY_MAPED.LCD_D[4]
+LCD_D[5] <> MemoryIO:MEMORY_MAPED.LCD_D[5]
+LCD_D[6] <> MemoryIO:MEMORY_MAPED.LCD_D[6]
+LCD_D[7] <> MemoryIO:MEMORY_MAPED.LCD_D[7]
+LCD_D[8] <> MemoryIO:MEMORY_MAPED.LCD_D[8]
+LCD_D[9] <> MemoryIO:MEMORY_MAPED.LCD_D[9]
+LCD_D[10] <> MemoryIO:MEMORY_MAPED.LCD_D[10]
+LCD_D[11] <> MemoryIO:MEMORY_MAPED.LCD_D[11]
+LCD_D[12] <> MemoryIO:MEMORY_MAPED.LCD_D[12]
+LCD_D[13] <> MemoryIO:MEMORY_MAPED.LCD_D[13]
+LCD_D[14] <> MemoryIO:MEMORY_MAPED.LCD_D[14]
+LCD_D[15] <> MemoryIO:MEMORY_MAPED.LCD_D[15]
+LCD_RD_N <= MemoryIO:MEMORY_MAPED.LCD_RD_N
+LCD_RESET_N <= MemoryIO:MEMORY_MAPED.LCD_RESET_N
+LCD_RS <= MemoryIO:MEMORY_MAPED.LCD_RS
+LCD_WR_N <= MemoryIO:MEMORY_MAPED.LCD_WR_N
 LCD_ON <= <VCC>
 
 
@@ -239,7 +239,7 @@ cascade_out[1] <= <GND>
 zdbfbclk <> <GND>
 
 
-|Computador|ROM32K:ROM32KK
+|Computador|ROM32K:ROM
 address[0] => altsyncram:altsyncram_component.address_a[0]
 address[1] => altsyncram:altsyncram_component.address_a[1]
 address[2] => altsyncram:altsyncram_component.address_a[2]
@@ -274,7 +274,7 @@ q[14] <= altsyncram:altsyncram_component.q_a[14]
 q[15] <= altsyncram:altsyncram_component.q_a[15]
 
 
-|Computador|ROM32K:ROM32KK|altsyncram:altsyncram_component
+|Computador|ROM32K:ROM|altsyncram:altsyncram_component
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -296,25 +296,25 @@ data_a[13] => ~NO_FANOUT~
 data_a[14] => ~NO_FANOUT~
 data_a[15] => ~NO_FANOUT~
 data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_9p54:auto_generated.address_a[0]
-address_a[1] => altsyncram_9p54:auto_generated.address_a[1]
-address_a[2] => altsyncram_9p54:auto_generated.address_a[2]
-address_a[3] => altsyncram_9p54:auto_generated.address_a[3]
-address_a[4] => altsyncram_9p54:auto_generated.address_a[4]
-address_a[5] => altsyncram_9p54:auto_generated.address_a[5]
-address_a[6] => altsyncram_9p54:auto_generated.address_a[6]
-address_a[7] => altsyncram_9p54:auto_generated.address_a[7]
-address_a[8] => altsyncram_9p54:auto_generated.address_a[8]
-address_a[9] => altsyncram_9p54:auto_generated.address_a[9]
-address_a[10] => altsyncram_9p54:auto_generated.address_a[10]
-address_a[11] => altsyncram_9p54:auto_generated.address_a[11]
-address_a[12] => altsyncram_9p54:auto_generated.address_a[12]
-address_a[13] => altsyncram_9p54:auto_generated.address_a[13]
-address_a[14] => altsyncram_9p54:auto_generated.address_a[14]
+address_a[0] => altsyncram_m844:auto_generated.address_a[0]
+address_a[1] => altsyncram_m844:auto_generated.address_a[1]
+address_a[2] => altsyncram_m844:auto_generated.address_a[2]
+address_a[3] => altsyncram_m844:auto_generated.address_a[3]
+address_a[4] => altsyncram_m844:auto_generated.address_a[4]
+address_a[5] => altsyncram_m844:auto_generated.address_a[5]
+address_a[6] => altsyncram_m844:auto_generated.address_a[6]
+address_a[7] => altsyncram_m844:auto_generated.address_a[7]
+address_a[8] => altsyncram_m844:auto_generated.address_a[8]
+address_a[9] => altsyncram_m844:auto_generated.address_a[9]
+address_a[10] => altsyncram_m844:auto_generated.address_a[10]
+address_a[11] => altsyncram_m844:auto_generated.address_a[11]
+address_a[12] => altsyncram_m844:auto_generated.address_a[12]
+address_a[13] => altsyncram_m844:auto_generated.address_a[13]
+address_a[14] => altsyncram_m844:auto_generated.address_a[14]
 address_b[0] => ~NO_FANOUT~
 addressstall_a => ~NO_FANOUT~
 addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_9p54:auto_generated.clock0
+clock0 => altsyncram_m844:auto_generated.clock0
 clock1 => ~NO_FANOUT~
 clocken0 => ~NO_FANOUT~
 clocken1 => ~NO_FANOUT~
@@ -324,64 +324,64 @@ aclr0 => ~NO_FANOUT~
 aclr1 => ~NO_FANOUT~
 byteena_a[0] => ~NO_FANOUT~
 byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_9p54:auto_generated.q_a[0]
-q_a[1] <= altsyncram_9p54:auto_generated.q_a[1]
-q_a[2] <= altsyncram_9p54:auto_generated.q_a[2]
-q_a[3] <= altsyncram_9p54:auto_generated.q_a[3]
-q_a[4] <= altsyncram_9p54:auto_generated.q_a[4]
-q_a[5] <= altsyncram_9p54:auto_generated.q_a[5]
-q_a[6] <= altsyncram_9p54:auto_generated.q_a[6]
-q_a[7] <= altsyncram_9p54:auto_generated.q_a[7]
-q_a[8] <= altsyncram_9p54:auto_generated.q_a[8]
-q_a[9] <= altsyncram_9p54:auto_generated.q_a[9]
-q_a[10] <= altsyncram_9p54:auto_generated.q_a[10]
-q_a[11] <= altsyncram_9p54:auto_generated.q_a[11]
-q_a[12] <= altsyncram_9p54:auto_generated.q_a[12]
-q_a[13] <= altsyncram_9p54:auto_generated.q_a[13]
-q_a[14] <= altsyncram_9p54:auto_generated.q_a[14]
-q_a[15] <= altsyncram_9p54:auto_generated.q_a[15]
+q_a[0] <= altsyncram_m844:auto_generated.q_a[0]
+q_a[1] <= altsyncram_m844:auto_generated.q_a[1]
+q_a[2] <= altsyncram_m844:auto_generated.q_a[2]
+q_a[3] <= altsyncram_m844:auto_generated.q_a[3]
+q_a[4] <= altsyncram_m844:auto_generated.q_a[4]
+q_a[5] <= altsyncram_m844:auto_generated.q_a[5]
+q_a[6] <= altsyncram_m844:auto_generated.q_a[6]
+q_a[7] <= altsyncram_m844:auto_generated.q_a[7]
+q_a[8] <= altsyncram_m844:auto_generated.q_a[8]
+q_a[9] <= altsyncram_m844:auto_generated.q_a[9]
+q_a[10] <= altsyncram_m844:auto_generated.q_a[10]
+q_a[11] <= altsyncram_m844:auto_generated.q_a[11]
+q_a[12] <= altsyncram_m844:auto_generated.q_a[12]
+q_a[13] <= altsyncram_m844:auto_generated.q_a[13]
+q_a[14] <= altsyncram_m844:auto_generated.q_a[14]
+q_a[15] <= altsyncram_m844:auto_generated.q_a[15]
 q_b[0] <= <GND>
 eccstatus[0] <= <GND>
 eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|Computador|ROM32K:ROM32KK|altsyncram:altsyncram_component|altsyncram_9p54:auto_generated
-address_a[0] => altsyncram_7g63:altsyncram1.address_a[0]
-address_a[1] => altsyncram_7g63:altsyncram1.address_a[1]
-address_a[2] => altsyncram_7g63:altsyncram1.address_a[2]
-address_a[3] => altsyncram_7g63:altsyncram1.address_a[3]
-address_a[4] => altsyncram_7g63:altsyncram1.address_a[4]
-address_a[5] => altsyncram_7g63:altsyncram1.address_a[5]
-address_a[6] => altsyncram_7g63:altsyncram1.address_a[6]
-address_a[7] => altsyncram_7g63:altsyncram1.address_a[7]
-address_a[8] => altsyncram_7g63:altsyncram1.address_a[8]
-address_a[9] => altsyncram_7g63:altsyncram1.address_a[9]
-address_a[10] => altsyncram_7g63:altsyncram1.address_a[10]
-address_a[11] => altsyncram_7g63:altsyncram1.address_a[11]
-address_a[12] => altsyncram_7g63:altsyncram1.address_a[12]
-address_a[13] => altsyncram_7g63:altsyncram1.address_a[13]
-address_a[14] => altsyncram_7g63:altsyncram1.address_a[14]
-clock0 => altsyncram_7g63:altsyncram1.clock0
-q_a[0] <= altsyncram_7g63:altsyncram1.q_a[0]
-q_a[1] <= altsyncram_7g63:altsyncram1.q_a[1]
-q_a[2] <= altsyncram_7g63:altsyncram1.q_a[2]
-q_a[3] <= altsyncram_7g63:altsyncram1.q_a[3]
-q_a[4] <= altsyncram_7g63:altsyncram1.q_a[4]
-q_a[5] <= altsyncram_7g63:altsyncram1.q_a[5]
-q_a[6] <= altsyncram_7g63:altsyncram1.q_a[6]
-q_a[7] <= altsyncram_7g63:altsyncram1.q_a[7]
-q_a[8] <= altsyncram_7g63:altsyncram1.q_a[8]
-q_a[9] <= altsyncram_7g63:altsyncram1.q_a[9]
-q_a[10] <= altsyncram_7g63:altsyncram1.q_a[10]
-q_a[11] <= altsyncram_7g63:altsyncram1.q_a[11]
-q_a[12] <= altsyncram_7g63:altsyncram1.q_a[12]
-q_a[13] <= altsyncram_7g63:altsyncram1.q_a[13]
-q_a[14] <= altsyncram_7g63:altsyncram1.q_a[14]
-q_a[15] <= altsyncram_7g63:altsyncram1.q_a[15]
+|Computador|ROM32K:ROM|altsyncram:altsyncram_component|altsyncram_m844:auto_generated
+address_a[0] => altsyncram_kv43:altsyncram1.address_a[0]
+address_a[1] => altsyncram_kv43:altsyncram1.address_a[1]
+address_a[2] => altsyncram_kv43:altsyncram1.address_a[2]
+address_a[3] => altsyncram_kv43:altsyncram1.address_a[3]
+address_a[4] => altsyncram_kv43:altsyncram1.address_a[4]
+address_a[5] => altsyncram_kv43:altsyncram1.address_a[5]
+address_a[6] => altsyncram_kv43:altsyncram1.address_a[6]
+address_a[7] => altsyncram_kv43:altsyncram1.address_a[7]
+address_a[8] => altsyncram_kv43:altsyncram1.address_a[8]
+address_a[9] => altsyncram_kv43:altsyncram1.address_a[9]
+address_a[10] => altsyncram_kv43:altsyncram1.address_a[10]
+address_a[11] => altsyncram_kv43:altsyncram1.address_a[11]
+address_a[12] => altsyncram_kv43:altsyncram1.address_a[12]
+address_a[13] => altsyncram_kv43:altsyncram1.address_a[13]
+address_a[14] => altsyncram_kv43:altsyncram1.address_a[14]
+clock0 => altsyncram_kv43:altsyncram1.clock0
+q_a[0] <= altsyncram_kv43:altsyncram1.q_a[0]
+q_a[1] <= altsyncram_kv43:altsyncram1.q_a[1]
+q_a[2] <= altsyncram_kv43:altsyncram1.q_a[2]
+q_a[3] <= altsyncram_kv43:altsyncram1.q_a[3]
+q_a[4] <= altsyncram_kv43:altsyncram1.q_a[4]
+q_a[5] <= altsyncram_kv43:altsyncram1.q_a[5]
+q_a[6] <= altsyncram_kv43:altsyncram1.q_a[6]
+q_a[7] <= altsyncram_kv43:altsyncram1.q_a[7]
+q_a[8] <= altsyncram_kv43:altsyncram1.q_a[8]
+q_a[9] <= altsyncram_kv43:altsyncram1.q_a[9]
+q_a[10] <= altsyncram_kv43:altsyncram1.q_a[10]
+q_a[11] <= altsyncram_kv43:altsyncram1.q_a[11]
+q_a[12] <= altsyncram_kv43:altsyncram1.q_a[12]
+q_a[13] <= altsyncram_kv43:altsyncram1.q_a[13]
+q_a[14] <= altsyncram_kv43:altsyncram1.q_a[14]
+q_a[15] <= altsyncram_kv43:altsyncram1.q_a[15]
 
 
-|Computador|ROM32K:ROM32KK|altsyncram:altsyncram_component|altsyncram_9p54:auto_generated|altsyncram_7g63:altsyncram1
+|Computador|ROM32K:ROM|altsyncram:altsyncram_component|altsyncram_m844:auto_generated|altsyncram_kv43:altsyncram1
 address_a[0] => ram_block3a0.PORTAADDR
 address_a[0] => ram_block3a1.PORTAADDR
 address_a[0] => ram_block3a2.PORTAADDR
@@ -1409,7 +1409,7 @@ q_b[15] <= mux_6hb:mux7.result[15]
 wren_b => decode_7la:decode5.enable
 
 
-|Computador|ROM32K:ROM32KK|altsyncram:altsyncram_component|altsyncram_9p54:auto_generated|altsyncram_7g63:altsyncram1|decode_7la:decode4
+|Computador|ROM32K:ROM|altsyncram:altsyncram_component|altsyncram_m844:auto_generated|altsyncram_kv43:altsyncram1|decode_7la:decode4
 data[0] => w_anode647w[1].IN0
 data[0] => w_anode660w[1].IN1
 data[0] => w_anode668w[1].IN0
@@ -1427,7 +1427,7 @@ eq[1] <= w_anode660w[2].DB_MAX_OUTPUT_PORT_TYPE
 eq[2] <= w_anode668w[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|ROM32K:ROM32KK|altsyncram:altsyncram_component|altsyncram_9p54:auto_generated|altsyncram_7g63:altsyncram1|decode_7la:decode5
+|Computador|ROM32K:ROM|altsyncram:altsyncram_component|altsyncram_m844:auto_generated|altsyncram_kv43:altsyncram1|decode_7la:decode5
 data[0] => w_anode647w[1].IN0
 data[0] => w_anode660w[1].IN1
 data[0] => w_anode668w[1].IN0
@@ -1445,7 +1445,7 @@ eq[1] <= w_anode660w[2].DB_MAX_OUTPUT_PORT_TYPE
 eq[2] <= w_anode668w[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|ROM32K:ROM32KK|altsyncram:altsyncram_component|altsyncram_9p54:auto_generated|altsyncram_7g63:altsyncram1|decode_01a:rden_decode_a
+|Computador|ROM32K:ROM|altsyncram:altsyncram_component|altsyncram_m844:auto_generated|altsyncram_kv43:altsyncram1|decode_01a:rden_decode_a
 data[0] => w_anode685w[1].IN0
 data[0] => w_anode699w[1].IN1
 data[0] => w_anode708w[1].IN0
@@ -1459,7 +1459,7 @@ eq[1] <= w_anode699w[2].DB_MAX_OUTPUT_PORT_TYPE
 eq[2] <= w_anode708w[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|ROM32K:ROM32KK|altsyncram:altsyncram_component|altsyncram_9p54:auto_generated|altsyncram_7g63:altsyncram1|decode_01a:rden_decode_b
+|Computador|ROM32K:ROM|altsyncram:altsyncram_component|altsyncram_m844:auto_generated|altsyncram_kv43:altsyncram1|decode_01a:rden_decode_b
 data[0] => w_anode685w[1].IN0
 data[0] => w_anode699w[1].IN1
 data[0] => w_anode708w[1].IN0
@@ -1473,7 +1473,7 @@ eq[1] <= w_anode699w[2].DB_MAX_OUTPUT_PORT_TYPE
 eq[2] <= w_anode708w[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|ROM32K:ROM32KK|altsyncram:altsyncram_component|altsyncram_9p54:auto_generated|altsyncram_7g63:altsyncram1|mux_6hb:mux6
+|Computador|ROM32K:ROM|altsyncram:altsyncram_component|altsyncram_m844:auto_generated|altsyncram_kv43:altsyncram1|mux_6hb:mux6
 data[0] => data0_wire[0].IN0
 data[1] => data0_wire[1].IN0
 data[2] => data0_wire[2].IN0
@@ -1574,7 +1574,7 @@ sel[1] => data2_wire[0].IN1
 sel[1] => _.IN0
 
 
-|Computador|ROM32K:ROM32KK|altsyncram:altsyncram_component|altsyncram_9p54:auto_generated|altsyncram_7g63:altsyncram1|mux_6hb:mux7
+|Computador|ROM32K:ROM|altsyncram:altsyncram_component|altsyncram_m844:auto_generated|altsyncram_kv43:altsyncram1|mux_6hb:mux7
 data[0] => data0_wire[0].IN0
 data[1] => data0_wire[1].IN0
 data[2] => data0_wire[2].IN0
@@ -1675,7 +1675,7 @@ sel[1] => data2_wire[0].IN1
 sel[1] => _.IN0
 
 
-|Computador|ROM32K:ROM32KK|altsyncram:altsyncram_component|altsyncram_9p54:auto_generated|sld_mod_ram_rom:mgl_prim2
+|Computador|ROM32K:ROM|altsyncram:altsyncram_component|altsyncram_m844:auto_generated|sld_mod_ram_rom:mgl_prim2
 tck_usr <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_tck
 address[0] <= ram_rom_addr_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 address[1] <= ram_rom_addr_reg[1].DB_MAX_OUTPUT_PORT_TYPE
@@ -1766,7 +1766,7 @@ ir_out[7] <= sld_jtag_endpoint_adapter:jtag_signal_adapter.ir_out[7]
 tdo <= sld_jtag_endpoint_adapter:jtag_signal_adapter.tdo
 
 
-|Computador|ROM32K:ROM32KK|altsyncram:altsyncram_component|altsyncram_9p54:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter
+|Computador|ROM32K:ROM|altsyncram:altsyncram_component|altsyncram_m844:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter
 raw_tck => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tck
 raw_tms => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tms
 tdi => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.tdi
@@ -1849,7 +1849,7 @@ adapted_ir_out[6] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_im
 adapted_ir_out[7] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_ir_out[7]
 
 
-|Computador|ROM32K:ROM32KK|altsyncram:altsyncram_component|altsyncram_9p54:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
+|Computador|ROM32K:ROM|altsyncram:altsyncram_component|altsyncram_m844:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
 raw_tck => adapted_tck.DATAIN
 raw_tms => adapted_tms.DATAIN
 tdi => adapted_tdi.DATAIN
@@ -1932,7 +1932,7 @@ adapted_ir_out[6] => ir_out[6].DATAIN
 adapted_ir_out[7] => ir_out[7].DATAIN
 
 
-|Computador|ROM32K:ROM32KK|altsyncram:altsyncram_component|altsyncram_9p54:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr
+|Computador|ROM32K:ROM|altsyncram:altsyncram_component|altsyncram_m844:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr
 ROM_DATA[0] => Mux3.IN131
 ROM_DATA[1] => Mux2.IN131
 ROM_DATA[2] => Mux1.IN131
@@ -5925,146 +5925,146 @@ loadM <= loadM.DB_MAX_OUTPUT_PORT_TYPE
 loadPC <= loadPC.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO
+|Computador|MemoryIO:MEMORY_MAPED
 CLK_SLOW => Register16:ledd.clock
 CLK_SLOW => Screen:screennn.CLK_SLOW
-CLK_FAST => RAM16K:ram.clock
+CLK_FAST => RAM16K:RAM.clock
 CLK_FAST => Screen:screennn.CLK_FAST
 RST => Screen:screennn.RST
 ADDRESS[0] => LessThan0.IN30
 ADDRESS[0] => LessThan1.IN30
 ADDRESS[0] => LessThan2.IN30
-ADDRESS[0] => RAM16K:ram.address[0]
+ADDRESS[0] => RAM16K:RAM.address[0]
 ADDRESS[0] => Screen:screennn.ADDRESS[0]
 ADDRESS[0] => Equal0.IN14
 ADDRESS[1] => LessThan0.IN29
 ADDRESS[1] => LessThan1.IN29
 ADDRESS[1] => LessThan2.IN29
-ADDRESS[1] => RAM16K:ram.address[1]
+ADDRESS[1] => RAM16K:RAM.address[1]
 ADDRESS[1] => Screen:screennn.ADDRESS[1]
 ADDRESS[1] => Equal0.IN13
 ADDRESS[2] => LessThan0.IN28
 ADDRESS[2] => LessThan1.IN28
 ADDRESS[2] => LessThan2.IN28
-ADDRESS[2] => RAM16K:ram.address[2]
+ADDRESS[2] => RAM16K:RAM.address[2]
 ADDRESS[2] => Screen:screennn.ADDRESS[2]
 ADDRESS[2] => Equal0.IN12
 ADDRESS[3] => LessThan0.IN27
 ADDRESS[3] => LessThan1.IN27
 ADDRESS[3] => LessThan2.IN27
-ADDRESS[3] => RAM16K:ram.address[3]
+ADDRESS[3] => RAM16K:RAM.address[3]
 ADDRESS[3] => Screen:screennn.ADDRESS[3]
 ADDRESS[3] => Equal0.IN11
 ADDRESS[4] => LessThan0.IN26
 ADDRESS[4] => LessThan1.IN26
 ADDRESS[4] => LessThan2.IN26
-ADDRESS[4] => RAM16K:ram.address[4]
+ADDRESS[4] => RAM16K:RAM.address[4]
 ADDRESS[4] => Screen:screennn.ADDRESS[4]
 ADDRESS[4] => Equal0.IN10
 ADDRESS[5] => LessThan0.IN25
 ADDRESS[5] => LessThan1.IN25
 ADDRESS[5] => LessThan2.IN25
-ADDRESS[5] => RAM16K:ram.address[5]
+ADDRESS[5] => RAM16K:RAM.address[5]
 ADDRESS[5] => Screen:screennn.ADDRESS[5]
 ADDRESS[5] => Equal0.IN9
 ADDRESS[6] => LessThan0.IN24
 ADDRESS[6] => LessThan1.IN24
 ADDRESS[6] => LessThan2.IN24
-ADDRESS[6] => RAM16K:ram.address[6]
+ADDRESS[6] => RAM16K:RAM.address[6]
 ADDRESS[6] => Screen:screennn.ADDRESS[6]
 ADDRESS[6] => Equal0.IN4
 ADDRESS[7] => LessThan0.IN23
 ADDRESS[7] => LessThan1.IN23
 ADDRESS[7] => LessThan2.IN23
-ADDRESS[7] => RAM16K:ram.address[7]
+ADDRESS[7] => RAM16K:RAM.address[7]
 ADDRESS[7] => Screen:screennn.ADDRESS[7]
 ADDRESS[7] => Equal0.IN3
 ADDRESS[8] => LessThan0.IN22
 ADDRESS[8] => LessThan1.IN22
 ADDRESS[8] => LessThan2.IN22
-ADDRESS[8] => RAM16K:ram.address[8]
+ADDRESS[8] => RAM16K:RAM.address[8]
 ADDRESS[8] => Screen:screennn.ADDRESS[8]
 ADDRESS[8] => Equal0.IN8
 ADDRESS[9] => LessThan0.IN21
 ADDRESS[9] => LessThan1.IN21
 ADDRESS[9] => LessThan2.IN21
-ADDRESS[9] => RAM16K:ram.address[9]
+ADDRESS[9] => RAM16K:RAM.address[9]
 ADDRESS[9] => Screen:screennn.ADDRESS[9]
 ADDRESS[9] => Equal0.IN2
 ADDRESS[10] => LessThan0.IN20
 ADDRESS[10] => LessThan1.IN20
 ADDRESS[10] => LessThan2.IN20
-ADDRESS[10] => RAM16K:ram.address[10]
+ADDRESS[10] => RAM16K:RAM.address[10]
 ADDRESS[10] => Screen:screennn.ADDRESS[10]
 ADDRESS[10] => Equal0.IN7
 ADDRESS[11] => LessThan0.IN19
 ADDRESS[11] => LessThan1.IN19
 ADDRESS[11] => LessThan2.IN19
-ADDRESS[11] => RAM16K:ram.address[11]
+ADDRESS[11] => RAM16K:RAM.address[11]
 ADDRESS[11] => Screen:screennn.ADDRESS[11]
 ADDRESS[11] => Equal0.IN6
 ADDRESS[12] => LessThan0.IN18
 ADDRESS[12] => LessThan1.IN18
 ADDRESS[12] => LessThan2.IN18
-ADDRESS[12] => RAM16K:ram.address[12]
+ADDRESS[12] => RAM16K:RAM.address[12]
 ADDRESS[12] => Screen:screennn.ADDRESS[12]
 ADDRESS[12] => Equal0.IN1
 ADDRESS[13] => LessThan0.IN17
 ADDRESS[13] => LessThan1.IN17
 ADDRESS[13] => LessThan2.IN17
-ADDRESS[13] => RAM16K:ram.address[13]
+ADDRESS[13] => RAM16K:RAM.address[13]
 ADDRESS[13] => Screen:screennn.ADDRESS[13]
 ADDRESS[13] => Equal0.IN5
 ADDRESS[14] => LessThan0.IN16
 ADDRESS[14] => LessThan1.IN16
 ADDRESS[14] => LessThan2.IN16
 ADDRESS[14] => Equal0.IN0
-INPUT[0] => RAM16K:ram.data[0]
+INPUT[0] => RAM16K:RAM.data[0]
 INPUT[0] => Register16:ledd.input[0]
 INPUT[0] => Screen:screennn.INPUT[0]
-INPUT[1] => RAM16K:ram.data[1]
+INPUT[1] => RAM16K:RAM.data[1]
 INPUT[1] => Register16:ledd.input[1]
 INPUT[1] => Screen:screennn.INPUT[1]
-INPUT[2] => RAM16K:ram.data[2]
+INPUT[2] => RAM16K:RAM.data[2]
 INPUT[2] => Register16:ledd.input[2]
 INPUT[2] => Screen:screennn.INPUT[2]
-INPUT[3] => RAM16K:ram.data[3]
+INPUT[3] => RAM16K:RAM.data[3]
 INPUT[3] => Register16:ledd.input[3]
 INPUT[3] => Screen:screennn.INPUT[3]
-INPUT[4] => RAM16K:ram.data[4]
+INPUT[4] => RAM16K:RAM.data[4]
 INPUT[4] => Register16:ledd.input[4]
 INPUT[4] => Screen:screennn.INPUT[4]
-INPUT[5] => RAM16K:ram.data[5]
+INPUT[5] => RAM16K:RAM.data[5]
 INPUT[5] => Register16:ledd.input[5]
 INPUT[5] => Screen:screennn.INPUT[5]
-INPUT[6] => RAM16K:ram.data[6]
+INPUT[6] => RAM16K:RAM.data[6]
 INPUT[6] => Register16:ledd.input[6]
 INPUT[6] => Screen:screennn.INPUT[6]
-INPUT[7] => RAM16K:ram.data[7]
+INPUT[7] => RAM16K:RAM.data[7]
 INPUT[7] => Register16:ledd.input[7]
 INPUT[7] => Screen:screennn.INPUT[7]
-INPUT[8] => RAM16K:ram.data[8]
+INPUT[8] => RAM16K:RAM.data[8]
 INPUT[8] => Register16:ledd.input[8]
 INPUT[8] => Screen:screennn.INPUT[8]
-INPUT[9] => RAM16K:ram.data[9]
+INPUT[9] => RAM16K:RAM.data[9]
 INPUT[9] => Register16:ledd.input[9]
 INPUT[9] => Screen:screennn.INPUT[9]
-INPUT[10] => RAM16K:ram.data[10]
+INPUT[10] => RAM16K:RAM.data[10]
 INPUT[10] => Register16:ledd.input[10]
 INPUT[10] => Screen:screennn.INPUT[10]
-INPUT[11] => RAM16K:ram.data[11]
+INPUT[11] => RAM16K:RAM.data[11]
 INPUT[11] => Register16:ledd.input[11]
 INPUT[11] => Screen:screennn.INPUT[11]
-INPUT[12] => RAM16K:ram.data[12]
+INPUT[12] => RAM16K:RAM.data[12]
 INPUT[12] => Register16:ledd.input[12]
 INPUT[12] => Screen:screennn.INPUT[12]
-INPUT[13] => RAM16K:ram.data[13]
+INPUT[13] => RAM16K:RAM.data[13]
 INPUT[13] => Register16:ledd.input[13]
 INPUT[13] => Screen:screennn.INPUT[13]
-INPUT[14] => RAM16K:ram.data[14]
+INPUT[14] => RAM16K:RAM.data[14]
 INPUT[14] => Register16:ledd.input[14]
 INPUT[14] => Screen:screennn.INPUT[14]
-INPUT[15] => RAM16K:ram.data[15]
+INPUT[15] => RAM16K:RAM.data[15]
 INPUT[15] => Register16:ledd.input[15]
 INPUT[15] => Screen:screennn.INPUT[15]
 LOAD => DMux4Way:c1.a
@@ -6102,8 +6102,8 @@ LCD_D[13] <> Screen:screennn.LCD_D[13]
 LCD_D[14] <> Screen:screennn.LCD_D[14]
 LCD_D[15] <> Screen:screennn.LCD_D[15]
 LCD_RD_N <= Screen:screennn.LCD_RD_N
-LCD_RESET_N <= Screen:screennn.LCD_RS
-LCD_RS <= Screen:screennn.LCD_RESET_N
+LCD_RESET_N <= Screen:screennn.LCD_RESET_N
+LCD_RS <= Screen:screennn.LCD_RS
 LCD_WR_N <= Screen:screennn.LCD_WR_N
 LCD_ON <= <VCC>
 LCD_INIT_OK <= Screen:screennn.LCD_INIT_OK
@@ -6129,7 +6129,7 @@ LED[8] <= Register16:ledd.output[8]
 LED[9] <= Register16:ledd.output[9]
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|DMux4Way:c1
+|Computador|MemoryIO:MEMORY_MAPED|DMux4Way:c1
 a => q0.IN1
 a => q1.IN1
 a => q2.IN1
@@ -6148,7 +6148,7 @@ q2 <= q2.DB_MAX_OUTPUT_PORT_TYPE
 q3 <= q3.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|RAM16K:ram
+|Computador|MemoryIO:MEMORY_MAPED|RAM16K:RAM
 address[0] => altsyncram:altsyncram_component.address_a[0]
 address[1] => altsyncram:altsyncram_component.address_a[1]
 address[2] => altsyncram:altsyncram_component.address_a[2]
@@ -6199,46 +6199,46 @@ q[14] <= altsyncram:altsyncram_component.q_a[14]
 q[15] <= altsyncram:altsyncram_component.q_a[15]
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|RAM16K:ram|altsyncram:altsyncram_component
-wren_a => altsyncram_i224:auto_generated.wren_a
+|Computador|MemoryIO:MEMORY_MAPED|RAM16K:RAM|altsyncram:altsyncram_component
+wren_a => altsyncram_fn14:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
 rden_b => ~NO_FANOUT~
-data_a[0] => altsyncram_i224:auto_generated.data_a[0]
-data_a[1] => altsyncram_i224:auto_generated.data_a[1]
-data_a[2] => altsyncram_i224:auto_generated.data_a[2]
-data_a[3] => altsyncram_i224:auto_generated.data_a[3]
-data_a[4] => altsyncram_i224:auto_generated.data_a[4]
-data_a[5] => altsyncram_i224:auto_generated.data_a[5]
-data_a[6] => altsyncram_i224:auto_generated.data_a[6]
-data_a[7] => altsyncram_i224:auto_generated.data_a[7]
-data_a[8] => altsyncram_i224:auto_generated.data_a[8]
-data_a[9] => altsyncram_i224:auto_generated.data_a[9]
-data_a[10] => altsyncram_i224:auto_generated.data_a[10]
-data_a[11] => altsyncram_i224:auto_generated.data_a[11]
-data_a[12] => altsyncram_i224:auto_generated.data_a[12]
-data_a[13] => altsyncram_i224:auto_generated.data_a[13]
-data_a[14] => altsyncram_i224:auto_generated.data_a[14]
-data_a[15] => altsyncram_i224:auto_generated.data_a[15]
+data_a[0] => altsyncram_fn14:auto_generated.data_a[0]
+data_a[1] => altsyncram_fn14:auto_generated.data_a[1]
+data_a[2] => altsyncram_fn14:auto_generated.data_a[2]
+data_a[3] => altsyncram_fn14:auto_generated.data_a[3]
+data_a[4] => altsyncram_fn14:auto_generated.data_a[4]
+data_a[5] => altsyncram_fn14:auto_generated.data_a[5]
+data_a[6] => altsyncram_fn14:auto_generated.data_a[6]
+data_a[7] => altsyncram_fn14:auto_generated.data_a[7]
+data_a[8] => altsyncram_fn14:auto_generated.data_a[8]
+data_a[9] => altsyncram_fn14:auto_generated.data_a[9]
+data_a[10] => altsyncram_fn14:auto_generated.data_a[10]
+data_a[11] => altsyncram_fn14:auto_generated.data_a[11]
+data_a[12] => altsyncram_fn14:auto_generated.data_a[12]
+data_a[13] => altsyncram_fn14:auto_generated.data_a[13]
+data_a[14] => altsyncram_fn14:auto_generated.data_a[14]
+data_a[15] => altsyncram_fn14:auto_generated.data_a[15]
 data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_i224:auto_generated.address_a[0]
-address_a[1] => altsyncram_i224:auto_generated.address_a[1]
-address_a[2] => altsyncram_i224:auto_generated.address_a[2]
-address_a[3] => altsyncram_i224:auto_generated.address_a[3]
-address_a[4] => altsyncram_i224:auto_generated.address_a[4]
-address_a[5] => altsyncram_i224:auto_generated.address_a[5]
-address_a[6] => altsyncram_i224:auto_generated.address_a[6]
-address_a[7] => altsyncram_i224:auto_generated.address_a[7]
-address_a[8] => altsyncram_i224:auto_generated.address_a[8]
-address_a[9] => altsyncram_i224:auto_generated.address_a[9]
-address_a[10] => altsyncram_i224:auto_generated.address_a[10]
-address_a[11] => altsyncram_i224:auto_generated.address_a[11]
-address_a[12] => altsyncram_i224:auto_generated.address_a[12]
-address_a[13] => altsyncram_i224:auto_generated.address_a[13]
+address_a[0] => altsyncram_fn14:auto_generated.address_a[0]
+address_a[1] => altsyncram_fn14:auto_generated.address_a[1]
+address_a[2] => altsyncram_fn14:auto_generated.address_a[2]
+address_a[3] => altsyncram_fn14:auto_generated.address_a[3]
+address_a[4] => altsyncram_fn14:auto_generated.address_a[4]
+address_a[5] => altsyncram_fn14:auto_generated.address_a[5]
+address_a[6] => altsyncram_fn14:auto_generated.address_a[6]
+address_a[7] => altsyncram_fn14:auto_generated.address_a[7]
+address_a[8] => altsyncram_fn14:auto_generated.address_a[8]
+address_a[9] => altsyncram_fn14:auto_generated.address_a[9]
+address_a[10] => altsyncram_fn14:auto_generated.address_a[10]
+address_a[11] => altsyncram_fn14:auto_generated.address_a[11]
+address_a[12] => altsyncram_fn14:auto_generated.address_a[12]
+address_a[13] => altsyncram_fn14:auto_generated.address_a[13]
 address_b[0] => ~NO_FANOUT~
 addressstall_a => ~NO_FANOUT~
 addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_i224:auto_generated.clock0
+clock0 => altsyncram_fn14:auto_generated.clock0
 clock1 => ~NO_FANOUT~
 clocken0 => ~NO_FANOUT~
 clocken1 => ~NO_FANOUT~
@@ -6248,29 +6248,29 @@ aclr0 => ~NO_FANOUT~
 aclr1 => ~NO_FANOUT~
 byteena_a[0] => ~NO_FANOUT~
 byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_i224:auto_generated.q_a[0]
-q_a[1] <= altsyncram_i224:auto_generated.q_a[1]
-q_a[2] <= altsyncram_i224:auto_generated.q_a[2]
-q_a[3] <= altsyncram_i224:auto_generated.q_a[3]
-q_a[4] <= altsyncram_i224:auto_generated.q_a[4]
-q_a[5] <= altsyncram_i224:auto_generated.q_a[5]
-q_a[6] <= altsyncram_i224:auto_generated.q_a[6]
-q_a[7] <= altsyncram_i224:auto_generated.q_a[7]
-q_a[8] <= altsyncram_i224:auto_generated.q_a[8]
-q_a[9] <= altsyncram_i224:auto_generated.q_a[9]
-q_a[10] <= altsyncram_i224:auto_generated.q_a[10]
-q_a[11] <= altsyncram_i224:auto_generated.q_a[11]
-q_a[12] <= altsyncram_i224:auto_generated.q_a[12]
-q_a[13] <= altsyncram_i224:auto_generated.q_a[13]
-q_a[14] <= altsyncram_i224:auto_generated.q_a[14]
-q_a[15] <= altsyncram_i224:auto_generated.q_a[15]
+q_a[0] <= altsyncram_fn14:auto_generated.q_a[0]
+q_a[1] <= altsyncram_fn14:auto_generated.q_a[1]
+q_a[2] <= altsyncram_fn14:auto_generated.q_a[2]
+q_a[3] <= altsyncram_fn14:auto_generated.q_a[3]
+q_a[4] <= altsyncram_fn14:auto_generated.q_a[4]
+q_a[5] <= altsyncram_fn14:auto_generated.q_a[5]
+q_a[6] <= altsyncram_fn14:auto_generated.q_a[6]
+q_a[7] <= altsyncram_fn14:auto_generated.q_a[7]
+q_a[8] <= altsyncram_fn14:auto_generated.q_a[8]
+q_a[9] <= altsyncram_fn14:auto_generated.q_a[9]
+q_a[10] <= altsyncram_fn14:auto_generated.q_a[10]
+q_a[11] <= altsyncram_fn14:auto_generated.q_a[11]
+q_a[12] <= altsyncram_fn14:auto_generated.q_a[12]
+q_a[13] <= altsyncram_fn14:auto_generated.q_a[13]
+q_a[14] <= altsyncram_fn14:auto_generated.q_a[14]
+q_a[15] <= altsyncram_fn14:auto_generated.q_a[15]
 q_b[0] <= <GND>
 eccstatus[0] <= <GND>
 eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|RAM16K:ram|altsyncram:altsyncram_component|altsyncram_i224:auto_generated
+|Computador|MemoryIO:MEMORY_MAPED|RAM16K:RAM|altsyncram:altsyncram_component|altsyncram_fn14:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -6775,7 +6775,7 @@ q_a[15] <= mux_4hb:mux2.result[15]
 wren_a => decode_5la:decode3.enable
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|RAM16K:ram|altsyncram:altsyncram_component|altsyncram_i224:auto_generated|decode_5la:decode3
+|Computador|MemoryIO:MEMORY_MAPED|RAM16K:RAM|altsyncram:altsyncram_component|altsyncram_fn14:auto_generated|decode_5la:decode3
 data[0] => eq_node[1].IN0
 data[0] => eq_node[0].IN0
 enable => eq_node[1].IN1
@@ -6784,14 +6784,14 @@ eq[0] <= eq_node[0].DB_MAX_OUTPUT_PORT_TYPE
 eq[1] <= eq_node[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|RAM16K:ram|altsyncram:altsyncram_component|altsyncram_i224:auto_generated|decode_u0a:rden_decode
+|Computador|MemoryIO:MEMORY_MAPED|RAM16K:RAM|altsyncram:altsyncram_component|altsyncram_fn14:auto_generated|decode_u0a:rden_decode
 data[0] => eq_node[1].IN0
 data[0] => eq_node[0].IN0
 eq[0] <= eq_node[0].DB_MAX_OUTPUT_PORT_TYPE
 eq[1] <= eq_node[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|RAM16K:ram|altsyncram:altsyncram_component|altsyncram_i224:auto_generated|mux_4hb:mux2
+|Computador|MemoryIO:MEMORY_MAPED|RAM16K:RAM|altsyncram:altsyncram_component|altsyncram_fn14:auto_generated|mux_4hb:mux2
 data[0] => l1_w0_n0_mux_dataout.IN1
 data[1] => l1_w1_n0_mux_dataout.IN1
 data[2] => l1_w2_n0_mux_dataout.IN1
@@ -6874,7 +6874,7 @@ sel[0] => l1_w9_n0_mux_dataout.IN0
 sel[0] => _.IN0
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Mux16:c2
+|Computador|MemoryIO:MEMORY_MAPED|Mux16:c2
 a[0] => q.DATAB
 a[1] => q.DATAB
 a[2] => q.DATAB
@@ -6941,7 +6941,7 @@ q[14] <= q.DB_MAX_OUTPUT_PORT_TYPE
 q[15] <= q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd
 clock => Register8:r1.clock
 clock => Register8:r2.clock
 input[0] => Register8:r1.input[0]
@@ -6980,7 +6980,7 @@ output[14] <= Register8:r2.output[6]
 output[15] <= Register8:r2.output[7]
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1
 clock => BinaryDigit:c1.clock
 clock => BinaryDigit:c2.clock
 clock => BinaryDigit:c3.clock
@@ -7015,21 +7015,21 @@ output[6] <= BinaryDigit:c7.output
 output[7] <= BinaryDigit:c8.output
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c1
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c1
 clock => FlipFlopD:c2.clock
 input => Mux2Way:c1.b
 load => Mux2Way:c1.sel
 output <= FlipFlopD:c2.q
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c1|Mux2Way:c1
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c1|Mux2Way:c1
 a => q.DATAB
 b => q.DATAA
 sel => q.OUTPUTSELECT
 q <= q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c1|FlipFlopD:c2
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c1|FlipFlopD:c2
 clock => q~reg0.CLK
 d => q~reg0.DATAIN
 clear => q~reg0.ACLR
@@ -7038,21 +7038,21 @@ preset => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c2
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c2
 clock => FlipFlopD:c2.clock
 input => Mux2Way:c1.b
 load => Mux2Way:c1.sel
 output <= FlipFlopD:c2.q
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c2|Mux2Way:c1
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c2|Mux2Way:c1
 a => q.DATAB
 b => q.DATAA
 sel => q.OUTPUTSELECT
 q <= q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c2|FlipFlopD:c2
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c2|FlipFlopD:c2
 clock => q~reg0.CLK
 d => q~reg0.DATAIN
 clear => q~reg0.ACLR
@@ -7061,21 +7061,21 @@ preset => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c3
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c3
 clock => FlipFlopD:c2.clock
 input => Mux2Way:c1.b
 load => Mux2Way:c1.sel
 output <= FlipFlopD:c2.q
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c3|Mux2Way:c1
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c3|Mux2Way:c1
 a => q.DATAB
 b => q.DATAA
 sel => q.OUTPUTSELECT
 q <= q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c3|FlipFlopD:c2
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c3|FlipFlopD:c2
 clock => q~reg0.CLK
 d => q~reg0.DATAIN
 clear => q~reg0.ACLR
@@ -7084,21 +7084,21 @@ preset => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c4
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c4
 clock => FlipFlopD:c2.clock
 input => Mux2Way:c1.b
 load => Mux2Way:c1.sel
 output <= FlipFlopD:c2.q
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c4|Mux2Way:c1
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c4|Mux2Way:c1
 a => q.DATAB
 b => q.DATAA
 sel => q.OUTPUTSELECT
 q <= q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c4|FlipFlopD:c2
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c4|FlipFlopD:c2
 clock => q~reg0.CLK
 d => q~reg0.DATAIN
 clear => q~reg0.ACLR
@@ -7107,21 +7107,21 @@ preset => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c5
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c5
 clock => FlipFlopD:c2.clock
 input => Mux2Way:c1.b
 load => Mux2Way:c1.sel
 output <= FlipFlopD:c2.q
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c5|Mux2Way:c1
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c5|Mux2Way:c1
 a => q.DATAB
 b => q.DATAA
 sel => q.OUTPUTSELECT
 q <= q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c5|FlipFlopD:c2
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c5|FlipFlopD:c2
 clock => q~reg0.CLK
 d => q~reg0.DATAIN
 clear => q~reg0.ACLR
@@ -7130,21 +7130,21 @@ preset => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c6
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c6
 clock => FlipFlopD:c2.clock
 input => Mux2Way:c1.b
 load => Mux2Way:c1.sel
 output <= FlipFlopD:c2.q
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c6|Mux2Way:c1
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c6|Mux2Way:c1
 a => q.DATAB
 b => q.DATAA
 sel => q.OUTPUTSELECT
 q <= q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c6|FlipFlopD:c2
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c6|FlipFlopD:c2
 clock => q~reg0.CLK
 d => q~reg0.DATAIN
 clear => q~reg0.ACLR
@@ -7153,21 +7153,21 @@ preset => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c7
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c7
 clock => FlipFlopD:c2.clock
 input => Mux2Way:c1.b
 load => Mux2Way:c1.sel
 output <= FlipFlopD:c2.q
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c7|Mux2Way:c1
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c7|Mux2Way:c1
 a => q.DATAB
 b => q.DATAA
 sel => q.OUTPUTSELECT
 q <= q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c7|FlipFlopD:c2
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c7|FlipFlopD:c2
 clock => q~reg0.CLK
 d => q~reg0.DATAIN
 clear => q~reg0.ACLR
@@ -7176,21 +7176,21 @@ preset => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c8
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c8
 clock => FlipFlopD:c2.clock
 input => Mux2Way:c1.b
 load => Mux2Way:c1.sel
 output <= FlipFlopD:c2.q
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c8|Mux2Way:c1
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c8|Mux2Way:c1
 a => q.DATAB
 b => q.DATAA
 sel => q.OUTPUTSELECT
 q <= q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r1|BinaryDigit:c8|FlipFlopD:c2
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r1|BinaryDigit:c8|FlipFlopD:c2
 clock => q~reg0.CLK
 d => q~reg0.DATAIN
 clear => q~reg0.ACLR
@@ -7199,7 +7199,7 @@ preset => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2
 clock => BinaryDigit:c1.clock
 clock => BinaryDigit:c2.clock
 clock => BinaryDigit:c3.clock
@@ -7234,21 +7234,21 @@ output[6] <= BinaryDigit:c7.output
 output[7] <= BinaryDigit:c8.output
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c1
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c1
 clock => FlipFlopD:c2.clock
 input => Mux2Way:c1.b
 load => Mux2Way:c1.sel
 output <= FlipFlopD:c2.q
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c1|Mux2Way:c1
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c1|Mux2Way:c1
 a => q.DATAB
 b => q.DATAA
 sel => q.OUTPUTSELECT
 q <= q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c1|FlipFlopD:c2
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c1|FlipFlopD:c2
 clock => q~reg0.CLK
 d => q~reg0.DATAIN
 clear => q~reg0.ACLR
@@ -7257,21 +7257,21 @@ preset => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c2
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c2
 clock => FlipFlopD:c2.clock
 input => Mux2Way:c1.b
 load => Mux2Way:c1.sel
 output <= FlipFlopD:c2.q
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c2|Mux2Way:c1
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c2|Mux2Way:c1
 a => q.DATAB
 b => q.DATAA
 sel => q.OUTPUTSELECT
 q <= q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c2|FlipFlopD:c2
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c2|FlipFlopD:c2
 clock => q~reg0.CLK
 d => q~reg0.DATAIN
 clear => q~reg0.ACLR
@@ -7280,21 +7280,21 @@ preset => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c3
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c3
 clock => FlipFlopD:c2.clock
 input => Mux2Way:c1.b
 load => Mux2Way:c1.sel
 output <= FlipFlopD:c2.q
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c3|Mux2Way:c1
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c3|Mux2Way:c1
 a => q.DATAB
 b => q.DATAA
 sel => q.OUTPUTSELECT
 q <= q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c3|FlipFlopD:c2
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c3|FlipFlopD:c2
 clock => q~reg0.CLK
 d => q~reg0.DATAIN
 clear => q~reg0.ACLR
@@ -7303,21 +7303,21 @@ preset => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c4
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c4
 clock => FlipFlopD:c2.clock
 input => Mux2Way:c1.b
 load => Mux2Way:c1.sel
 output <= FlipFlopD:c2.q
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c4|Mux2Way:c1
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c4|Mux2Way:c1
 a => q.DATAB
 b => q.DATAA
 sel => q.OUTPUTSELECT
 q <= q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c4|FlipFlopD:c2
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c4|FlipFlopD:c2
 clock => q~reg0.CLK
 d => q~reg0.DATAIN
 clear => q~reg0.ACLR
@@ -7326,21 +7326,21 @@ preset => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c5
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c5
 clock => FlipFlopD:c2.clock
 input => Mux2Way:c1.b
 load => Mux2Way:c1.sel
 output <= FlipFlopD:c2.q
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c5|Mux2Way:c1
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c5|Mux2Way:c1
 a => q.DATAB
 b => q.DATAA
 sel => q.OUTPUTSELECT
 q <= q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c5|FlipFlopD:c2
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c5|FlipFlopD:c2
 clock => q~reg0.CLK
 d => q~reg0.DATAIN
 clear => q~reg0.ACLR
@@ -7349,21 +7349,21 @@ preset => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c6
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c6
 clock => FlipFlopD:c2.clock
 input => Mux2Way:c1.b
 load => Mux2Way:c1.sel
 output <= FlipFlopD:c2.q
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c6|Mux2Way:c1
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c6|Mux2Way:c1
 a => q.DATAB
 b => q.DATAA
 sel => q.OUTPUTSELECT
 q <= q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c6|FlipFlopD:c2
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c6|FlipFlopD:c2
 clock => q~reg0.CLK
 d => q~reg0.DATAIN
 clear => q~reg0.ACLR
@@ -7372,21 +7372,21 @@ preset => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c7
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c7
 clock => FlipFlopD:c2.clock
 input => Mux2Way:c1.b
 load => Mux2Way:c1.sel
 output <= FlipFlopD:c2.q
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c7|Mux2Way:c1
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c7|Mux2Way:c1
 a => q.DATAB
 b => q.DATAA
 sel => q.OUTPUTSELECT
 q <= q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c7|FlipFlopD:c2
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c7|FlipFlopD:c2
 clock => q~reg0.CLK
 d => q~reg0.DATAIN
 clear => q~reg0.ACLR
@@ -7395,21 +7395,21 @@ preset => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c8
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c8
 clock => FlipFlopD:c2.clock
 input => Mux2Way:c1.b
 load => Mux2Way:c1.sel
 output <= FlipFlopD:c2.q
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c8|Mux2Way:c1
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c8|Mux2Way:c1
 a => q.DATAB
 b => q.DATAA
 sel => q.OUTPUTSELECT
 q <= q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Register16:ledd|Register8:r2|BinaryDigit:c8|FlipFlopD:c2
+|Computador|MemoryIO:MEMORY_MAPED|Register16:ledd|Register8:r2|BinaryDigit:c8|FlipFlopD:c2
 clock => q~reg0.CLK
 d => q~reg0.DATAIN
 clear => q~reg0.ACLR
@@ -7418,7 +7418,7 @@ preset => q.IN1
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Screen:screennn
+|Computador|MemoryIO:MEMORY_MAPED|Screen:screennn
 INPUT[0] => FIFO16x4096:FIFO16x4096_inst.data[16]
 INPUT[1] => FIFO16x4096:FIFO16x4096_inst.data[17]
 INPUT[2] => FIFO16x4096:FIFO16x4096_inst.data[18]
@@ -7647,7 +7647,7 @@ LCD_RS <= ILI9341:LCD.LCD_RS
 LCD_WR_N <= ILI9341:LCD.LCD_WR_N
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Screen:screennn|ILI9341:LCD
+|Computador|MemoryIO:MEMORY_MAPED|Screen:screennn|ILI9341:LCD
 CLK => counter[0].CLK
 CLK => counter[1].CLK
 CLK => counter[2].CLK
@@ -7973,7 +7973,7 @@ LCD_RS <= LCD_RS~reg0.DB_MAX_OUTPUT_PORT_TYPE
 LCD_WR_N <= LCD_WR_N~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Screen:screennn|FIFO16x4096:FIFO16x4096_inst
+|Computador|MemoryIO:MEMORY_MAPED|Screen:screennn|FIFO16x4096:FIFO16x4096_inst
 data[0] => dcfifo:dcfifo_component.data[0]
 data[1] => dcfifo:dcfifo_component.data[1]
 data[2] => dcfifo:dcfifo_component.data[2]
@@ -8046,7 +8046,7 @@ rdempty <= dcfifo:dcfifo_component.rdempty
 wrfull <= dcfifo:dcfifo_component.wrfull
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Screen:screennn|FIFO16x4096:FIFO16x4096_inst|dcfifo:dcfifo_component
+|Computador|MemoryIO:MEMORY_MAPED|Screen:screennn|FIFO16x4096:FIFO16x4096_inst|dcfifo:dcfifo_component
 data[0] => dcfifo_qol1:auto_generated.data[0]
 data[1] => dcfifo_qol1:auto_generated.data[1]
 data[2] => dcfifo_qol1:auto_generated.data[2]
@@ -8148,7 +8148,7 @@ wrusedw[10] <= <GND>
 wrusedw[11] <= <GND>
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Screen:screennn|FIFO16x4096:FIFO16x4096_inst|dcfifo:dcfifo_component|dcfifo_qol1:auto_generated
+|Computador|MemoryIO:MEMORY_MAPED|Screen:screennn|FIFO16x4096:FIFO16x4096_inst|dcfifo:dcfifo_component|dcfifo_qol1:auto_generated
 data[0] => altsyncram_4la1:fifo_ram.data_a[0]
 data[1] => altsyncram_4la1:fifo_ram.data_a[1]
 data[2] => altsyncram_4la1:fifo_ram.data_a[2]
@@ -8264,7 +8264,7 @@ wrfull <= int_wrfull.DB_MAX_OUTPUT_PORT_TYPE
 wrreq => valid_wrreq.IN0
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Screen:screennn|FIFO16x4096:FIFO16x4096_inst|dcfifo:dcfifo_component|dcfifo_qol1:auto_generated|a_graycounter_oh6:rdptr_g1p
+|Computador|MemoryIO:MEMORY_MAPED|Screen:screennn|FIFO16x4096:FIFO16x4096_inst|dcfifo:dcfifo_component|dcfifo_qol1:auto_generated|a_graycounter_oh6:rdptr_g1p
 clock => counter5a0.CLK
 clock => counter5a1.CLK
 clock => counter5a2.CLK
@@ -8309,7 +8309,7 @@ q[11] <= counter5a11.DB_MAX_OUTPUT_PORT_TYPE
 q[12] <= counter5a12.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Screen:screennn|FIFO16x4096:FIFO16x4096_inst|dcfifo:dcfifo_component|dcfifo_qol1:auto_generated|a_graycounter_kvb:wrptr_g1p
+|Computador|MemoryIO:MEMORY_MAPED|Screen:screennn|FIFO16x4096:FIFO16x4096_inst|dcfifo:dcfifo_component|dcfifo_qol1:auto_generated|a_graycounter_kvb:wrptr_g1p
 clock => counter8a0.CLK
 clock => counter8a1.CLK
 clock => counter8a2.CLK
@@ -8354,7 +8354,7 @@ q[11] <= counter8a11.DB_MAX_OUTPUT_PORT_TYPE
 q[12] <= counter8a12.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Screen:screennn|FIFO16x4096:FIFO16x4096_inst|dcfifo:dcfifo_component|dcfifo_qol1:auto_generated|altsyncram_4la1:fifo_ram
+|Computador|MemoryIO:MEMORY_MAPED|Screen:screennn|FIFO16x4096:FIFO16x4096_inst|dcfifo:dcfifo_component|dcfifo_qol1:auto_generated|altsyncram_4la1:fifo_ram
 address_a[0] => ram_block11a0.PORTAADDR
 address_a[0] => ram_block11a1.PORTAADDR
 address_a[0] => ram_block11a2.PORTAADDR
@@ -9381,7 +9381,7 @@ wren_a => ram_block11a31.PORTAWE
 wren_a => ram_block11a31.ENA0
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Screen:screennn|FIFO16x4096:FIFO16x4096_inst|dcfifo:dcfifo_component|dcfifo_qol1:auto_generated|alt_synch_pipe_sal:rs_dgwp
+|Computador|MemoryIO:MEMORY_MAPED|Screen:screennn|FIFO16x4096:FIFO16x4096_inst|dcfifo:dcfifo_component|dcfifo_qol1:auto_generated|alt_synch_pipe_sal:rs_dgwp
 clock => dffpipe_d09:dffpipe12.clock
 d[0] => dffpipe_d09:dffpipe12.d[0]
 d[1] => dffpipe_d09:dffpipe12.d[1]
@@ -9411,7 +9411,7 @@ q[11] <= dffpipe_d09:dffpipe12.q[11]
 q[12] <= dffpipe_d09:dffpipe12.q[12]
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Screen:screennn|FIFO16x4096:FIFO16x4096_inst|dcfifo:dcfifo_component|dcfifo_qol1:auto_generated|alt_synch_pipe_sal:rs_dgwp|dffpipe_d09:dffpipe12
+|Computador|MemoryIO:MEMORY_MAPED|Screen:screennn|FIFO16x4096:FIFO16x4096_inst|dcfifo:dcfifo_component|dcfifo_qol1:auto_generated|alt_synch_pipe_sal:rs_dgwp|dffpipe_d09:dffpipe12
 clock => dffe13a[12].CLK
 clock => dffe13a[11].CLK
 clock => dffe13a[10].CLK
@@ -9466,7 +9466,7 @@ q[11] <= dffe14a[11].DB_MAX_OUTPUT_PORT_TYPE
 q[12] <= dffe14a[12].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Screen:screennn|FIFO16x4096:FIFO16x4096_inst|dcfifo:dcfifo_component|dcfifo_qol1:auto_generated|alt_synch_pipe_tal:ws_dgrp
+|Computador|MemoryIO:MEMORY_MAPED|Screen:screennn|FIFO16x4096:FIFO16x4096_inst|dcfifo:dcfifo_component|dcfifo_qol1:auto_generated|alt_synch_pipe_tal:ws_dgrp
 clock => dffpipe_e09:dffpipe15.clock
 d[0] => dffpipe_e09:dffpipe15.d[0]
 d[1] => dffpipe_e09:dffpipe15.d[1]
@@ -9496,7 +9496,7 @@ q[11] <= dffpipe_e09:dffpipe15.q[11]
 q[12] <= dffpipe_e09:dffpipe15.q[12]
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Screen:screennn|FIFO16x4096:FIFO16x4096_inst|dcfifo:dcfifo_component|dcfifo_qol1:auto_generated|alt_synch_pipe_tal:ws_dgrp|dffpipe_e09:dffpipe15
+|Computador|MemoryIO:MEMORY_MAPED|Screen:screennn|FIFO16x4096:FIFO16x4096_inst|dcfifo:dcfifo_component|dcfifo_qol1:auto_generated|alt_synch_pipe_tal:ws_dgrp|dffpipe_e09:dffpipe15
 clock => dffe16a[12].CLK
 clock => dffe16a[11].CLK
 clock => dffe16a[10].CLK
@@ -9551,7 +9551,7 @@ q[11] <= dffe17a[11].DB_MAX_OUTPUT_PORT_TYPE
 q[12] <= dffe17a[12].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Screen:screennn|FIFO16x4096:FIFO16x4096_inst|dcfifo:dcfifo_component|dcfifo_qol1:auto_generated|cmpr_c06:rdempty_eq_comp
+|Computador|MemoryIO:MEMORY_MAPED|Screen:screennn|FIFO16x4096:FIFO16x4096_inst|dcfifo:dcfifo_component|dcfifo_qol1:auto_generated|cmpr_c06:rdempty_eq_comp
 aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => data_wire[2].IN0
 dataa[1] => data_wire[2].IN0
@@ -9581,7 +9581,7 @@ datab[11] => data_wire[7].IN1
 datab[12] => data_wire[8].IN1
 
 
-|Computador|MemoryIO:MAIN_MemoryIO|Screen:screennn|FIFO16x4096:FIFO16x4096_inst|dcfifo:dcfifo_component|dcfifo_qol1:auto_generated|cmpr_c06:wrfull_eq_comp
+|Computador|MemoryIO:MEMORY_MAPED|Screen:screennn|FIFO16x4096:FIFO16x4096_inst|dcfifo:dcfifo_component|dcfifo_qol1:auto_generated|cmpr_c06:wrfull_eq_comp
 aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => data_wire[2].IN0
 dataa[1] => data_wire[2].IN0

@@ -92,10 +92,6 @@ SIGNAL state : State_Type;    -- Create a signal that uses
 
 BEGIN
 
-<<<<<<< HEAD
-
-LCD_INIT_OK  <= '1';
-=======
 process
 begin
   LCD_INIT_OK  <= '0';
@@ -113,6 +109,5 @@ begin
       end IF;
   end if;
 end process;
->>>>>>> upstream/master
 
 END logic;

@@ -49,24 +49,37 @@ public class Parser {
      * @return Verdadeiro se ainda há instruções, Falso se as instruções terminaram.
      */
     public Boolean advance() {
-    	if (arquivo.hasNextLine()){
+    	while (arquivo.hasNextLine()){
     	    String linha = arquivo.nextLine();
     	    linha = linha.trim();//remover espaços em branco
+<<<<<<< HEAD
     	    while (linha.startsWith(";") || linha.isEmpty()){
         	    linha = arquivo.nextLine();
                 linha.replace("\t","");
                 this.Comando = linha;
+=======
+    	    
+    	    if (!linha.startsWith(";") && !linha.isEmpty()){
+                linha.replace("\t","");
+                for (int i = 0; i<linha.length(); i++){
+                	if(linha.charAt(i) == ';') {
+                		linha = linha.substring(0, i);
+                		linha = linha.trim();
+                	}
+                }
+                Comando = linha;
+                return true;
+>>>>>>> 0e6f92b90f64b8547cffe6c582f1716cf8e5076e
             }
 //    	    linha = arquivo.nextLine();
 //    	    if (!linha.startsWith(";")) {
 //    	    	this.Comando = linha;
 //    	    }
 
-    	    return true;
         }
-        else {
-    	    return false;
-        }
+      
+	    return false;
+        
     }
 
     /**
@@ -74,7 +87,7 @@ public class Parser {
      * @return a instrução atual para ser analilisada
      */
     public String command() {
-    	return this.Comando;
+    	return Comando;
     }
 
     /**
