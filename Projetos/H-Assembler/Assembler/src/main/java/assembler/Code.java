@@ -23,17 +23,18 @@ public class Code {
     	// JMP %D
     	// [JMP, %D]
     	String codigo;
+        int size = mnemnonic.length;
     	
-    	if (mnemnonic[-1] == "%A"){
+    	if (mnemnonic[(size-1)] == "%A"){
     		codigo= "1000";
     	}
-    	if (mnemnonic[-1] == "%D"){
+    	if (mnemnonic[(size-1)] == "%D"){
     		codigo= "0010";
     	}
-    	if (mnemnonic[-1] == "%S"){
+    	if (mnemnonic[(size-1)] == "%S"){
     		codigo= "0100";
     	}
-    	if (mnemnonic[-1] == "(%A)"){
+    	if (mnemnonic[(size-1)] == "(%A)"){
     		codigo= "0001";
     	}
     	else{

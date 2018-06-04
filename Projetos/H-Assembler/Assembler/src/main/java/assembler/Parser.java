@@ -52,12 +52,7 @@ public class Parser {
     	while (arquivo.hasNextLine()){
     	    String linha = arquivo.nextLine();
     	    linha = linha.trim();//remover espaços em branco
-<<<<<<< HEAD
-    	    while (linha.startsWith(";") || linha.isEmpty()){
-        	    linha = arquivo.nextLine();
-                linha.replace("\t","");
-                this.Comando = linha;
-=======
+
     	    
     	    if (!linha.startsWith(";") && !linha.isEmpty()){
                 linha.replace("\t","");
@@ -69,7 +64,6 @@ public class Parser {
                 }
                 Comando = linha;
                 return true;
->>>>>>> 0e6f92b90f64b8547cffe6c582f1716cf8e5076e
             }
 //    	    linha = arquivo.nextLine();
 //    	    if (!linha.startsWith(";")) {
@@ -150,7 +144,7 @@ public class Parser {
     public String label(String command) {
         String symbol = "";
         if (commandType(command) == CommandType.L_COMMAND) {
-            symbol = command.substring(0,-1);
+            symbol = command.substring(0,command.length()-1);
         }
     	return symbol;
     }
