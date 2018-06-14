@@ -1,8 +1,8 @@
-; InicializaÃ§Ã£o para VM
+; Inicialização para VM
 leaw $Main.main, %A
 jmp
 nop
-; 0 - Declarando funÃ§Ã£o Main.main
+; 0 - Declarando função Main.main
 Main.main:
 ; 1 - PUSH constant 14
 leaw $14,%A
@@ -35,7 +35,16 @@ leaw $SP,%A
 subw (%A),$1,%A
 addw (%A),%D,%D
 movw %D,(%A)
-; 4 - PUSH constant 123
+; 4 - POP temp 1
+leaw $SP,%A
+movw (%A),%D
+decw %D
+movw %D,(%A)
+movw (%A),%A
+movw (%A),%D
+leaw $6,%A
+movw %D,(%A)
+; 5 - PUSH constant 123
 leaw $123,%A
 movw %A,%D
 leaw $SP,%A
@@ -45,7 +54,7 @@ leaw $SP,%A
 movw (%A),%D
 incw %D
 movw %D,(%A)
-; 5 - PUSH constant 1
+; 6 - PUSH constant 1
 leaw $1,%A
 movw %A,%D
 leaw $SP,%A
@@ -54,17 +63,6 @@ movw %D,(%A)
 leaw $SP,%A
 movw (%A),%D
 incw %D
-movw %D,(%A)
-; 6 - SUB
-leaw $SP,%A
-movw (%A),%D
-decw %D
-movw %D,(%A)
-movw (%A),%A
-movw (%A),%D
-leaw $SP,%A
-subw (%A),$1,%A
-subw (%A),%D,%D
 movw %D,(%A)
 ; 7 - SUB
 leaw $SP,%A
@@ -77,7 +75,47 @@ leaw $SP,%A
 subw (%A),$1,%A
 subw (%A),%D,%D
 movw %D,(%A)
-; 8 - POP temp 0
+; 8 - POP temp 2
+leaw $SP,%A
+movw (%A),%D
+decw %D
+movw %D,(%A)
+movw (%A),%A
+movw (%A),%D
+leaw $7,%A
+movw %D,(%A)
+; 9 - PUSH temp 1
+leaw $6,%A
+movw (%A),%D
+leaw $SP,%A
+movw (%A),%A
+movw %D,(%A)
+leaw $SP,%A
+movw (%A),%D
+incw %D
+movw %D,(%A)
+; 10 - PUSH temp 2
+leaw $7,%A
+movw (%A),%D
+leaw $SP,%A
+movw (%A),%A
+movw %D,(%A)
+leaw $SP,%A
+movw (%A),%D
+incw %D
+movw %D,(%A)
+; 11 - SUB
+leaw $SP,%A
+movw (%A),%D
+decw %D
+movw %D,(%A)
+movw (%A),%A
+movw (%A),%D
+leaw $SP,%A
+subw (%A),$1,%A
+subw (%A),%D,%D
+movw %D,(%A)
+; 12 - POP temp 0
 leaw $SP,%A
 movw (%A),%D
 decw %D

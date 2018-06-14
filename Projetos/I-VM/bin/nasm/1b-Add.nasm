@@ -1,8 +1,8 @@
-; InicializaÃ§Ã£o para VM
+; Inicialização para VM
 leaw $Main.main, %A
 jmp
 nop
-; 0 - Declarando funÃ§Ã£o Main.main
+; 0 - Declarando função Main.main
 Main.main:
 ; 1 - PUSH constant 5
 leaw $5,%A

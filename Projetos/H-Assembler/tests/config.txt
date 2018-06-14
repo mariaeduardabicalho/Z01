@@ -8,5 +8,5 @@ abs 2 1000
 div 2 10000
 mod 2 1000
 factorial 2 10000
-pow 2 100000
+pow 2 10000
 mult 1 10000

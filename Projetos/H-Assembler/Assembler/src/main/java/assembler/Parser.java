@@ -16,7 +16,7 @@ import java.io.File;
  */
 public class Parser {
     Scanner arquivo;
-    String Comando;
+    String Comando = "";
 
     /** Enumerator para os tipos de comandos do Assembler. */
     public enum CommandType {
@@ -52,11 +52,23 @@ public class Parser {
     	while (arquivo.hasNextLine()){
     	    String linha = arquivo.nextLine();
     	    linha = linha.trim();//remover espaços em branco
-    	    if (!linha.startsWith(";") || !linha.isEmpty()){
+
+    	    
+    	    if (!linha.startsWith(";") && !linha.isEmpty()){
                 linha.replace("\t","");
-                this.Comando = linha;
+                for (int i = 0; i<linha.length(); i++){
+                	if(linha.charAt(i) == ';') {
+                		linha = linha.substring(0, i);
+                		linha = linha.trim();
+                	}
+                }
+                Comando = linha;
                 return true;
             }
+//    	    linha = arquivo.nextLine();
+//    	    if (!linha.startsWith(";")) {
+//    	    	this.Comando = linha;
+//    	    }
 
         }
       
@@ -69,7 +81,7 @@ public class Parser {
      * @return a instrução atual para ser analilisada
      */
     public String command() {
-    	return this.Comando;
+    	return Comando;
     }
 
     /**
@@ -132,7 +144,7 @@ public class Parser {
     public String label(String command) {
         String symbol = "";
         if (commandType(command) == CommandType.L_COMMAND) {
-            symbol = command.substring(0,-1);
+            symbol = command.substring(0,command.length()-1);
         }
     	return symbol;
     }
