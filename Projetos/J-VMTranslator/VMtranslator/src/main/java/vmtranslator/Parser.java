@@ -10,6 +10,7 @@
 package vmtranslator;
 
 import java.io.*;
+import java.util.LinkedList;
 
 /**
  * Encapsula o código de leitura. Carrega as instruções na linguagem de máquina virtual a pilha,
@@ -74,6 +75,38 @@ public class Parser {
      * @return o tipo da instrução.
      */
     public CommandType commandType(String command) {
+    	String[] comandos = {"add","sub","neg","eq","gt","lt","and","or","not"};
+    	if(command.startsWith("push")) {
+    		return (CommandType.C_PUSH);
+    	}
+    	if(command.startsWith("pop")) {
+    		return(CommandType.C_POP);
+    	}
+    	for (int i = 0; i< comandos.length;i++) {
+    		if (command.startsWith(comandos[i])){
+    			return(CommandType.C_ARITHMETIC);
+    		}
+    	}
+    	if(command.startsWith("call")) {
+    		return(CommandType.C_CALL);
+    	}
+    	if(command.startsWith("function")) {
+    		return(CommandType.C_FUNCTION);
+    	}
+    	if(command.startsWith("goto")) {
+    		return(CommandType.C_GOTO);
+    	}
+    	if(command.startsWith("if")) {
+    		return(CommandType.C_IF);
+    	}
+    	if(command.startsWith("label")) {
+    		return(CommandType.C_LABEL);
+    	}
+    	if(command.startsWith("return")) {
+    		return(CommandType.C_RETURN);
+    	}
+		return null;
+    	
     }
 
 
@@ -85,8 +118,26 @@ public class Parser {
      * @return somente o símbolo ou o valor número da instrução.
      */
     public String arg1(String command) {
+    	String argumento = "";
+    	if (commandType(command) != CommandType.C_RETURN) {
+	    	CommandType[] comandos = {CommandType.C_PUSH,CommandType.C_POP,CommandType.C_ARITHMETIC,CommandType.C_CALL,CommandType.C_FUNCTION,CommandType.C_GOTO,CommandType.C_IF,CommandType.C_LABEL};
+	    	String[] argumentos;
+	    	
+			argumentos = command.split(" ");
+			for (int i = 0; i<comandos.length; i++) {
+				if (commandType(command) == comandos[i]) {
+					if (commandType(command) == CommandType.C_ARITHMETIC){
+						argumento = argumentos[0];
+					}
+					else {
+						argumento = argumentos[1];	
+					}
+					
+				}
+			}
+	    }
+    	return argumento;
     }
-
     /**
      * Retorna o segundo argumento de um comando push ou pop passada no argumento.
      * Deve ser chamado somente quando commandType() é C_PUSH, C_POP, C_FUNCTION, ou C_CALL.
@@ -94,6 +145,20 @@ public class Parser {
      * @return o símbolo da instrução (sem os dois pontos).
      */
     public Integer arg2(String command) {
+    	
+    	int argumento = 0;
+    	CommandType[] comandos = {CommandType.C_PUSH,CommandType.C_POP,CommandType.C_CALL,CommandType.C_FUNCTION};
+    	String[] argumentos;
+    	
+		argumentos = command.split(" ");
+		for (int i = 0; i<comandos.length; i++) {
+			if (commandType(command) == comandos[i]) {
+				argumento = Integer.parseInt(argumentos[2]);	
+			}
+		}
+    
+	return argumento;
+    	
     }
 
     // fecha o arquivo de leitura
