@@ -7,30 +7,36 @@ leaw $SP, %A
 movw (%A), %A
 decw %A
 ; 2 - EQ
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %S
-decw %A
-movw (%A), %D
-subw %D, %S, %D
-movw %A, %S
-leaw $TRUE, %A
+subw (%A),%S,%D
+leaw $eqlabelt, %A
 je %D
 nop
-leaw $0, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+incw %A
+leaw $0, (%A)
 movw %A, %D
-movw %S, %A
+leaw $SP,%A
 movw %D, (%A)
-leaw $END, %A
-jmp
+leaw $eqlabelf, %A
+jmp 
 nop
-TRUE:
-leaw $0, %A
+eqlabelt
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+incw %A
+leaw $-1, (%A)
 movw %A, %D
-movw %S, %A
-neg %D
+leaw $SP,%A
 movw %D, (%A)
-END:
+eqlabelf
 ; 3 - PUSH constant 17
 leaw $SP, %A
 movw (%A), %A
@@ -40,30 +46,36 @@ leaw $SP, %A
 movw (%A), %A
 decw %A
 ; 5 - EQ
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %S
-decw %A
-movw (%A), %D
-subw %D, %S, %D
-movw %A, %S
-leaw $TRUE, %A
+subw (%A),%S,%D
+leaw $eqlabelt, %A
 je %D
 nop
-leaw $0, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+incw %A
+leaw $0, (%A)
 movw %A, %D
-movw %S, %A
+leaw $SP,%A
 movw %D, (%A)
-leaw $END, %A
-jmp
+leaw $eqlabelf, %A
+jmp 
 nop
-TRUE:
-leaw $0, %A
+eqlabelt
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+incw %A
+leaw $-1, (%A)
 movw %A, %D
-movw %S, %A
-neg %D
+leaw $SP,%A
 movw %D, (%A)
-END:
+eqlabelf
 ; 6 - PUSH constant 16
 leaw $SP, %A
 movw (%A), %A
@@ -73,30 +85,36 @@ leaw $SP, %A
 movw (%A), %A
 decw %A
 ; 8 - EQ
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %S
-decw %A
-movw (%A), %D
-subw %D, %S, %D
-movw %A, %S
-leaw $TRUE, %A
+subw (%A),%S,%D
+leaw $eqlabelt, %A
 je %D
 nop
-leaw $0, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+incw %A
+leaw $0, (%A)
 movw %A, %D
-movw %S, %A
+leaw $SP,%A
 movw %D, (%A)
-leaw $END, %A
-jmp
+leaw $eqlabelf, %A
+jmp 
 nop
-TRUE:
-leaw $0, %A
+eqlabelt
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+incw %A
+leaw $-1, (%A)
 movw %A, %D
-movw %S, %A
-neg %D
+leaw $SP,%A
 movw %D, (%A)
-END:
+eqlabelf
 ; 9 - PUSH constant 892
 leaw $SP, %A
 movw (%A), %A
@@ -106,30 +124,36 @@ leaw $SP, %A
 movw (%A), %A
 decw %A
 ; 11 - LT
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %S
-decw %A
-movw (%A), %D
-subw %D, %S, %D
-movw %A, %S
-leaw $TRUE, %A
+subw (%A),%S,%D
+leaw $ltlabelt, %A
 jl %D
 nop
-leaw $0, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+incw %A
+leaw $0, (%A)
 movw %A, %D
-movw %S, %A
+leaw $SP,%A
 movw %D, (%A)
-leaw $END, %A
-jmp
+leaw $ltlabelf, %A
+jmp 
 nop
-TRUE:
-leaw $0, %A
+ltlabelt
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+incw %A
+leaw $-1, (%A)
 movw %A, %D
-movw %S, %A
-neg %D
+leaw $SP,%A
 movw %D, (%A)
-END:
+ltlabelf
 ; 12 - PUSH constant 891
 leaw $SP, %A
 movw (%A), %A
@@ -139,30 +163,36 @@ leaw $SP, %A
 movw (%A), %A
 decw %A
 ; 14 - LT
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %S
-decw %A
-movw (%A), %D
-subw %D, %S, %D
-movw %A, %S
-leaw $TRUE, %A
+subw (%A),%S,%D
+leaw $ltlabelt, %A
 jl %D
 nop
-leaw $0, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+incw %A
+leaw $0, (%A)
 movw %A, %D
-movw %S, %A
+leaw $SP,%A
 movw %D, (%A)
-leaw $END, %A
-jmp
+leaw $ltlabelf, %A
+jmp 
 nop
-TRUE:
-leaw $0, %A
+ltlabelt
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+incw %A
+leaw $-1, (%A)
 movw %A, %D
-movw %S, %A
-neg %D
+leaw $SP,%A
 movw %D, (%A)
-END:
+ltlabelf
 ; 15 - PUSH constant 891
 leaw $SP, %A
 movw (%A), %A
@@ -172,30 +202,36 @@ leaw $SP, %A
 movw (%A), %A
 decw %A
 ; 17 - LT
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %S
-decw %A
-movw (%A), %D
-subw %D, %S, %D
-movw %A, %S
-leaw $TRUE, %A
+subw (%A),%S,%D
+leaw $ltlabelt, %A
 jl %D
 nop
-leaw $0, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+incw %A
+leaw $0, (%A)
 movw %A, %D
-movw %S, %A
+leaw $SP,%A
 movw %D, (%A)
-leaw $END, %A
-jmp
+leaw $ltlabelf, %A
+jmp 
 nop
-TRUE:
-leaw $0, %A
+ltlabelt
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+incw %A
+leaw $-1, (%A)
 movw %A, %D
-movw %S, %A
-neg %D
+leaw $SP,%A
 movw %D, (%A)
-END:
+ltlabelf
 ; 18 - PUSH constant 32767
 leaw $SP, %A
 movw (%A), %A
@@ -205,30 +241,36 @@ leaw $SP, %A
 movw (%A), %A
 decw %A
 ; 20 - GT
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %S
-decw %A
-movw (%A), %D
-subw %D, %S, %D
-movw %A, %S
-leaw $TRUE, %A
+subw (%A),%S,%D
+leaw $gtlabelt, %A
 jg %D
 nop
-leaw $0, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+incw %A
+leaw $0, (%A)
 movw %A, %D
-movw %S, %A
+leaw $SP,%A
 movw %D, (%A)
-leaw $END, %A
-jmp
+leaw $gtlabelf, %A
+jmp 
 nop
-TRUE:
-leaw $0, %A
+gtlabelt
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+incw %A
+leaw $-1, (%A)
 movw %A, %D
-movw %S, %A
-neg %D
+leaw $SP,%A
 movw %D, (%A)
-END:
+eqlabelf
 ; 21 - PUSH constant 32766
 leaw $SP, %A
 movw (%A), %A
@@ -238,30 +280,36 @@ leaw $SP, %A
 movw (%A), %A
 decw %A
 ; 23 - GT
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %S
-decw %A
-movw (%A), %D
-subw %D, %S, %D
-movw %A, %S
-leaw $TRUE, %A
+subw (%A),%S,%D
+leaw $gtlabelt, %A
 jg %D
 nop
-leaw $0, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+incw %A
+leaw $0, (%A)
 movw %A, %D
-movw %S, %A
+leaw $SP,%A
 movw %D, (%A)
-leaw $END, %A
-jmp
+leaw $gtlabelf, %A
+jmp 
 nop
-TRUE:
-leaw $0, %A
+gtlabelt
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+incw %A
+leaw $-1, (%A)
 movw %A, %D
-movw %S, %A
-neg %D
+leaw $SP,%A
 movw %D, (%A)
-END:
+eqlabelf
 ; 24 - PUSH constant 32766
 leaw $SP, %A
 movw (%A), %A
@@ -271,30 +319,36 @@ leaw $SP, %A
 movw (%A), %A
 decw %A
 ; 26 - GT
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %S
-decw %A
-movw (%A), %D
-subw %D, %S, %D
-movw %A, %S
-leaw $TRUE, %A
+subw (%A),%S,%D
+leaw $gtlabelt, %A
 jg %D
 nop
-leaw $0, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+incw %A
+leaw $0, (%A)
 movw %A, %D
-movw %S, %A
+leaw $SP,%A
 movw %D, (%A)
-leaw $END, %A
-jmp
+leaw $gtlabelf, %A
+jmp 
 nop
-TRUE:
-leaw $0, %A
+gtlabelt
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+incw %A
+leaw $-1, (%A)
 movw %A, %D
-movw %S, %A
-neg %D
+leaw $SP,%A
 movw %D, (%A)
-END:
+eqlabelf
 ; 27 - PUSH constant 57
 leaw $SP, %A
 movw (%A), %A
@@ -308,50 +362,69 @@ leaw $SP, %A
 movw (%A), %A
 decw %A
 ; 30 - ADD
-leaw $SP, %A
-movw (%A), %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %D
-decw %A
-movw (%A), %S
-addw %S, %D, (%A)
+addw (%A),%S,%D
+movw %D, (%A)
+movw %A, %D
+leaw $SP,%A
+movw %D,(%A)
 ; 31 - PUSH constant 112
 leaw $SP, %A
 movw (%A), %A
 decw %A
 ; 32 - SUB
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %D
-decw %A
-movw (%A), %S
-subw %D, %S, (%A)
+subw (%A),%S,%D
+movw %D, (%A)
+movw %A, %D
+leaw $SP,%A
+movw %D, (%A)
 ; 33 - NEG
-leaw $SP, %A
-decw %A
-movw (%A), %S
-negw %S
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
+neg %S
 movw %S, (%A)
 ; 34 - AND
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %S
-decw %A
-andw (%A), %S, (%A)
+andw (%A), %S, %D
+movw %D, (%A)
+movw %A, %D
+leaw $SP,%A
+movw %D, (%A)
 ; 35 - PUSH constant 82
 leaw $SP, %A
 movw (%A), %A
 decw %A
 ; 36 - OR
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %S
-decw %A
-orw (%A), %S, (%A)
-; 37 - NEG
-leaw $SP, %A
-decw %A
-movw (%A), %S
+orw (%A), %S, %D
+movw %D, (%A)
+movw %A, %D
+leaw $SP,%A
+movw %D, (%A)
+; 37 - NOT
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 notw %S
 movw %S, (%A)
 ; End

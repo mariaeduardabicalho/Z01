@@ -127,45 +127,62 @@ decw %A
 ; 15 - PUSH local 0
 ; 16 - PUSH that 5
 ; 17 - ADD
-leaw $SP, %A
-movw (%A), %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %D
-decw %A
-movw (%A), %S
-addw %S, %D, (%A)
+addw (%A),%S,%D
+movw %D, (%A)
+movw %A, %D
+leaw $SP,%A
+movw %D,(%A)
 ; 18 - PUSH argument 1
 ; 19 - SUB
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %D
-decw %A
-movw (%A), %S
-subw %D, %S, (%A)
+subw (%A),%S,%D
+movw %D, (%A)
+movw %A, %D
+leaw $SP,%A
+movw %D, (%A)
 ; 20 - PUSH this 6
 ; 21 - PUSH this 6
 ; 22 - ADD
-leaw $SP, %A
-movw (%A), %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %D
-decw %A
-movw (%A), %S
-addw %S, %D, (%A)
+addw (%A),%S,%D
+movw %D, (%A)
+movw %A, %D
+leaw $SP,%A
+movw %D,(%A)
 ; 23 - SUB
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %D
-decw %A
-movw (%A), %S
-subw %D, %S, (%A)
+subw (%A),%S,%D
+movw %D, (%A)
+movw %A, %D
+leaw $SP,%A
+movw %D, (%A)
 ; 24 - PUSH temp 6
 ; 25 - ADD
-leaw $SP, %A
-movw (%A), %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %D
-decw %A
-movw (%A), %S
-addw %S, %D, (%A)
+addw (%A),%S,%D
+movw %D, (%A)
+movw %A, %D
+leaw $SP,%A
+movw %D,(%A)
 ; End

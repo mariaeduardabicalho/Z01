@@ -11,13 +11,16 @@ leaw $SP, %A
 movw (%A), %A
 decw %A
 ; 3 - ADD
-leaw $SP, %A
-movw (%A), %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %D
-decw %A
-movw (%A), %S
-addw %S, %D, (%A)
+addw (%A),%S,%D
+movw %D, (%A)
+movw %A, %D
+leaw $SP,%A
+movw %D,(%A)
 ; 4 - POP temp 1
 ; 5 - PUSH constant 123
 leaw $SP, %A
@@ -28,21 +31,29 @@ leaw $SP, %A
 movw (%A), %A
 decw %A
 ; 7 - SUB
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %D
-decw %A
-movw (%A), %S
-subw %D, %S, (%A)
+subw (%A),%S,%D
+movw %D, (%A)
+movw %A, %D
+leaw $SP,%A
+movw %D, (%A)
 ; 8 - POP temp 2
 ; 9 - PUSH temp 1
 ; 10 - PUSH temp 2
 ; 11 - SUB
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %D
-decw %A
-movw (%A), %S
-subw %D, %S, (%A)
+subw (%A),%S,%D
+movw %D, (%A)
+movw %A, %D
+leaw $SP,%A
+movw %D, (%A)
 ; 12 - POP temp 0
 ; End

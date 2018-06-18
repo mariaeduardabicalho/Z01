@@ -1,8 +1,12 @@
 ; 0 - SUB
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %D
-decw %A
-movw (%A), %S
-subw %D, %S, (%A)
+subw (%A),%S,%D
+movw %D, (%A)
+movw %A, %D
+leaw $SP,%A
+movw %D, (%A)
 ; End

@@ -1,26 +1,32 @@
 ; 0 - LT
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %S
-decw %A
-movw (%A), %D
-subw %D, %S, %D
-movw %A, %S
-leaw $TRUE, %A
+subw (%A),%S,%D
+leaw $ltlabelt, %A
 jl %D
 nop
-leaw $0, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+incw %A
+leaw $0, (%A)
 movw %A, %D
-movw %S, %A
+leaw $SP,%A
 movw %D, (%A)
-leaw $END, %A
-jmp
+leaw $ltlabelf, %A
+jmp 
 nop
-TRUE:
-leaw $0, %A
+ltlabelt
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+incw %A
+leaw $-1, (%A)
 movw %A, %D
-movw %S, %A
-neg %D
+leaw $SP,%A
 movw %D, (%A)
-END:
+ltlabelf
 ; End

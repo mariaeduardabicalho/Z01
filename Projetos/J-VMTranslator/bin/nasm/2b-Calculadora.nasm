@@ -11,13 +11,16 @@ leaw $SP, %A
 movw (%A), %A
 decw %A
 ; 3 - ADD
-leaw $SP, %A
-movw (%A), %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %D
-decw %A
-movw (%A), %S
-addw %S, %D, (%A)
+addw (%A),%S,%D
+movw %D, (%A)
+movw %A, %D
+leaw $SP,%A
+movw %D,(%A)
 ; 4 - POP temp 0
 ; 5 - PUSH constant 8
 leaw $SP, %A
@@ -28,12 +31,16 @@ leaw $SP, %A
 movw (%A), %A
 decw %A
 ; 7 - SUB
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %D
-decw %A
-movw (%A), %S
-subw %D, %S, (%A)
+subw (%A),%S,%D
+movw %D, (%A)
+movw %A, %D
+leaw $SP,%A
+movw %D, (%A)
 ; 8 - POP temp 2
 ; 9 - PUSH temp 0
 ; 10 - PUSH temp 2
@@ -81,40 +88,49 @@ movw (%A), %A
 decw %A
 ; 19 - PUSH local 1
 ; 20 - EQ
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %S
-decw %A
-movw (%A), %D
-subw %D, %S, %D
-movw %A, %S
-leaw $TRUE, %A
+subw (%A),%S,%D
+leaw $eqlabelt, %A
 je %D
 nop
-leaw $0, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+incw %A
+leaw $0, (%A)
 movw %A, %D
-movw %S, %A
+leaw $SP,%A
 movw %D, (%A)
-leaw $END, %A
-jmp
+leaw $eqlabelf, %A
+jmp 
 nop
-TRUE:
-leaw $0, %A
+eqlabelt
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+incw %A
+leaw $-1, (%A)
 movw %A, %D
-movw %S, %A
-neg %D
+leaw $SP,%A
 movw %D, (%A)
-END:
+eqlabelf
 ; 22 - PUSH local 0
 ; 23 - PUSH argument 0
 ; 24 - ADD
-leaw $SP, %A
-movw (%A), %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %D
-decw %A
-movw (%A), %S
-addw %S, %D, (%A)
+addw (%A),%S,%D
+movw %D, (%A)
+movw %A, %D
+leaw $SP,%A
+movw %D,(%A)
 ; 25 - POP local 0
 leaw $SP, %A
 movw (%A), %A
@@ -137,12 +153,16 @@ leaw $SP, %A
 movw (%A), %A
 decw %A
 ; 28 - SUB
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %D
-decw %A
-movw (%A), %S
-subw %D, %S, (%A)
+subw (%A),%S,%D
+movw %D, (%A)
+movw %A, %D
+leaw $SP,%A
+movw %D, (%A)
 ; 29 - POP local 1
 leaw $SP, %A
 movw (%A), %A

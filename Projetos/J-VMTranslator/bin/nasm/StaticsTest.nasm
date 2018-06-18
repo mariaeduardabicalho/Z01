@@ -13,12 +13,16 @@ decw %A
 ; 8 - PUSH static 0
 ; 9 - PUSH static 1
 ; 10 - SUB
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %D
-decw %A
-movw (%A), %S
-subw %D, %S, (%A)
+subw (%A),%S,%D
+movw %D, (%A)
+movw %A, %D
+leaw $SP,%A
+movw %D, (%A)
 ; 13 - PUSH argument 0
 ; 14 - POP static 0
 ; 15 - PUSH argument 1
@@ -30,12 +34,16 @@ decw %A
 ; 20 - PUSH static 0
 ; 21 - PUSH static 1
 ; 22 - SUB
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %D
-decw %A
-movw (%A), %S
-subw %D, %S, (%A)
+subw (%A),%S,%D
+movw %D, (%A)
+movw %A, %D
+leaw $SP,%A
+movw %D, (%A)
 ; 25 - PUSH constant 6
 leaw $SP, %A
 movw (%A), %A

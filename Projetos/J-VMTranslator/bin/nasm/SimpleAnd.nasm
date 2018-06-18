@@ -1,7 +1,12 @@
 ; 0 - AND
-leaw $SP, %A
+leaw $SP,%A
+movw (%A),%S
+movw %S,%A
+movw (%A),%S
 decw %A
-movw (%A), %S
-decw %A
-andw (%A), %S, (%A)
+andw (%A), %S, %D
+movw %D, (%A)
+movw %A, %D
+leaw $SP,%A
+movw %D, (%A)
 ; End
