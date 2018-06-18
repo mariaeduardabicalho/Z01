@@ -136,6 +136,13 @@ public class Code {
             commands.add(String.format("; %d - PUSH %s %d", lineCode++ ,segment, index));
 
             if (segment.equals("constant")) {
+            	commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
+
+				commands.add("movw (%A), %A"); //move o valor apontado pelo SP para o reg A
+				commands.add("decw %A"); //subtrai 1 do valor apontado pelo SP para pegar o ultimo valor da pilha
+				
+				
+
 
             } else if (segment.equals("local")) {
 

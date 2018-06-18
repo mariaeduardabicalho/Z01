@@ -49,13 +49,23 @@ public class Parser {
      * @return Verdadeiro se ainda há instruções, Falso se as instruções terminaram.
      */
     public Boolean advance() throws IOException {
-    	if (fileReader.readLine() != null) {
+    	while (fileReader.readLine() != null){
     		currentCommand = fileReader.readLine();
-    		return true;
-    	}
-    	else{
-    		return false;
-    	}
+    	    currentCommand = currentCommand.trim();//remover espaços em branco
+
+    	    
+    	    if (!currentCommand.startsWith(";") && !currentCommand.isEmpty()){
+    	    	currentCommand.replace("\t","");
+                for (int i = 0; i<currentCommand.length(); i++){
+                	if(currentCommand.charAt(i) == ';') {
+                		currentCommand = currentCommand.substring(0, i);
+                		currentCommand = currentCommand.trim();
+                	}
+                }
+                return true;
+            }
+        }
+    	 return false;
     }
 
     /**
@@ -78,31 +88,32 @@ public class Parser {
     	if(command.startsWith("push")) {
     		return (CommandType.C_PUSH);
     	}
-    	if(command.startsWith("pop")) {
+    	else if(command.startsWith("pop")) {
     		return(CommandType.C_POP);
+    	}
+
+    	else if(command.startsWith("call")) {
+    		return(CommandType.C_CALL);
+    	}
+    	else if(command.startsWith("function")) {
+    		return(CommandType.C_FUNCTION);
+    	}
+    	else if(command.startsWith("goto")) {
+    		return(CommandType.C_GOTO);
+    	}
+    	else if(command.startsWith("if")) {
+    		return(CommandType.C_IF);
+    	}
+    	else if(command.startsWith("label")) {
+    		return(CommandType.C_LABEL);
+    	}
+    	else if(command.startsWith("return")) {
+    		return(CommandType.C_RETURN);
     	}
     	for (int i = 0; i< comandos.length;i++) {
     		if (command.startsWith(comandos[i])){
     			return(CommandType.C_ARITHMETIC);
     		}
-    	}
-    	if(command.startsWith("call")) {
-    		return(CommandType.C_CALL);
-    	}
-    	if(command.startsWith("function")) {
-    		return(CommandType.C_FUNCTION);
-    	}
-    	if(command.startsWith("goto")) {
-    		return(CommandType.C_GOTO);
-    	}
-    	if(command.startsWith("if")) {
-    		return(CommandType.C_IF);
-    	}
-    	if(command.startsWith("label")) {
-    		return(CommandType.C_LABEL);
-    	}
-    	if(command.startsWith("return")) {
-    		return(CommandType.C_RETURN);
     	}
 		return null;
     	
@@ -156,7 +167,7 @@ public class Parser {
 			}
 		}
     
-	return argumento;
+		return argumento;
     	
     }
 
