@@ -26,12 +26,12 @@ public class Parser {
         C_ARITHMETIC,      // comandos aritméticos
         C_PUSH,            // comandos de push
         C_POP,             // comandos de pop
-        C_LABEL,           // label
-        C_GOTO,            // comando goto
-        C_IF,              // comando if-goto
-        C_FUNCTION,        // declaracao de funcao
-        C_RETURN,          // retorno de funcao
-        C_CALL             // chamada de funcao
+        C_LABEL,           //
+        C_GOTO,            //
+        C_IF,              //
+        C_FUNCTION,        //
+        C_RETURN,          //
+        C_CALL             //
     }
 
     /**
@@ -49,13 +49,15 @@ public class Parser {
      * @return Verdadeiro se ainda há instruções, Falso se as instruções terminaram.
      */
     public Boolean advance() throws IOException {
-    	if (fileReader.readLine() != null) {
-    		currentCommand = fileReader.readLine();
-    		return true;
-    	}
-    	else{
-    		return false;
-    	}
+        while(true){
+            String currentLine = fileReader.readLine();
+            if (currentLine == null)
+                return false;  // caso não haja mais comandos
+            currentCommand = currentLine.replaceAll("//.*$", "").trim();
+            if (currentCommand.equals(""))
+                continue;
+            return true;   // caso um comando seja encontrado
+        }
     }
 
     /**
@@ -74,6 +76,25 @@ public class Parser {
      * @return o tipo da instrução.
      */
     public CommandType commandType(String command) {
+        if (command.startsWith("push")) {
+            return CommandType.C_PUSH;  // comandos de PUSH
+        } else if (command.startsWith("pop")) {
+            return CommandType.C_POP;  //  comandos de POP
+        } else if (command.startsWith("label")) {
+            return CommandType.C_LABEL;  //  comandos de label
+        } else if (command.startsWith("goto")) {
+            return CommandType.C_GOTO;  //  comandos de goto
+        } else if (command.startsWith("if-goto")) {
+            return CommandType.C_IF;  //  comandos de if-goto
+        } else if (command.startsWith("function")) {
+            return CommandType.C_FUNCTION;  //  comandos de function
+        } else if (command.startsWith("return")) {
+            return CommandType.C_RETURN;  //  comandos de return
+        } else if (command.startsWith("call")) {
+            return CommandType.C_CALL;  //  comandos de call
+        } else {
+            return CommandType.C_ARITHMETIC;  // C_ARITHMETIC for add, sub, etc...
+        }
     }
 
 
@@ -85,6 +106,12 @@ public class Parser {
      * @return somente o símbolo ou o valor número da instrução.
      */
     public String arg1(String command) {
+        if(commandType(command) == Parser.CommandType.C_ARITHMETIC) {
+            return(command);
+        } else {
+            String[] array = command.split(" ");
+            return array[1].replaceAll("\\s+","");
+        }
     }
 
     /**
@@ -94,6 +121,8 @@ public class Parser {
      * @return o símbolo da instrução (sem os dois pontos).
      */
     public Integer arg2(String command) {
+        String[] array = command.split(" ");
+        return Integer.valueOf(array[2]);
     }
 
     // fecha o arquivo de leitura

@@ -7,6 +7,11 @@
 
 leaw $1, %A
 movw $1, (%A) ; guarda f em R1
+leaw $0, %A
+movw (%A), %S
+leaw $5, %A
+movw %S,(%A)
+
 FAT:
 ; Multiplica o valor de RAM[1] com RAM[0] salvando em RAM[3]
 
@@ -16,7 +21,10 @@ FAT:
 =======
 >>>>>>> a8721f3a03590bd7f257ca39a9a44294d543dd49
 ;Carrega os dois valores a serem multiplicados nos registradores S e D e verifica se algum deles e zero
+leaw $5, %A
+movw (%A), %S
 leaw $0, %A
+movw %S, (%A)
 movw (%A), %S
 leaw $1, %A
 movw (%A), %D
@@ -77,7 +85,7 @@ leaw $3, %A
 movw (%A), %S
 leaw $1, %A
 movw %S, (%A) ;Atualiza f
-leaw $0, %A
+leaw $5, %A
 
 decw (%A) ; n-1
 movw (%A), %D
