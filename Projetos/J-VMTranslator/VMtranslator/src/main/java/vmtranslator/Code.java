@@ -35,40 +35,312 @@ public class Code {
      * Grava no arquivo de saida as instruções em Assembly para executar o comando aritmético.
      * @param  command comando aritmético a ser analisado.
      */
+    protected String getSaltString() {
+        String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+        StringBuilder salt = new StringBuilder();
+        Random rnd = new Random();
+        while (salt.length() < 18) { // length of the random string.
+            int index = (int) (rnd.nextFloat() * SALTCHARS.length());
+            salt.append(SALTCHARS.charAt(index));
+        }
+        String saltStr = salt.toString();
+        return saltStr;
+        
+    }
+    
+    String eqlabelt = getSaltString();
+    String eqlabelf = getSaltString();
+    String gtlabelt = getSaltString();
+    String gtlabelf = getSaltString();
+    String ltlabelt = getSaltString();
+    String ltlabelf = getSaltString();
+    
+    
     public void writeArithmetic(String command) {
 
         if ( command.equals("")) {
             Error.error("Instrução invalida");
         }
-
+ 
         List<String> commands = new ArrayList<String>();
 
         if(command.equals("add")) {
             commands.add(String.format("; %d - ADD", lineCode++));
-
+            
+            // gurda a ram que o sp ta apontando em A e oq essa ram ta apontando em S
+            commands.add("leaw $SP,%A"); // SP = 0
+            commands.add("movw (%A),%S");
+            commands.add("movw %S,%A");
+            commands.add("movw (%A),%S");
+           //guarda o que esta acima da ram do sp em A 
+            commands.add("decw %A");
+            // Faz a soma
+            commands.add("addw (%A),%S,%D");
+            // depois guarda na ram acima o que deu na soma  
+            commands.add("movw %D, (%A)");
+            commands.add("movw %A, %D");
+            // muda o SP para apontar para essa ram
+            commands.add("leaw $SP,%A"); // SP = 0
+            commands.add("movw %D,(%A)"); // S = RAM[0] -> SP 
+          
+     
+            System.out.println("soma realizada");
+ 
         } else if (command.equals("sub")) {
             commands.add(String.format("; %d - SUB", lineCode++));
+            // gurda a ram que o sp ta apontando em A e oq essa ram ESta guardando em S
+            commands.add("leaw $SP,%A");
+            commands.add("movw (%A),%S");
+            commands.add("movw %S,%A");
+            commands.add("movw (%A),%S");
+            //guarda o que esta acima da ram do sp em A 
+            commands.add("decw %A");
+            // Faz a subtracao
+            commands.add("subw (%A),%S,%D");
+            commands.add("movw %D, (%A)");
+            //passa a ram que a esta guardando para D para passar a ram para o SP
+            commands.add("movw %A, %D");
+            commands.add("leaw $SP,%A");
+            commands.add("movw %D, (%A)");
+            
+            System.out.println("subtacao realizada");
+            
 
         } else if (command.equals("neg")) {
             commands.add(String.format("; %d - NEG", lineCode++));
+            
+            // gurda a ram que o sp ta apontando em A e oq essa ram esta guardando em S
+            commands.add("leaw $SP,%A");
+            commands.add("movw (%A),%S");
+            commands.add("movw %S,%A");
+            commands.add("movw (%A),%S");
+            //Faz a negacao
+            commands.add("neg %S");
+            // Move para a ram que A esta apontando
+            commands.add("movw %S, (%A)");
+            
+            System.out.println("negacao realizada");
 
         } else if (command.equals("eq")) {
             commands.add(String.format("; %d - EQ", lineCode++));
+            
+            // gurda a ram que o sp ta apontando em A e oq essa ram ESta guardando em S
+            commands.add("leaw $SP,%A");
+            commands.add("movw (%A),%S");
+            commands.add("movw %S,%A");
+            commands.add("movw (%A),%S");
+            //guarda o que esta acima da ram do sp em A 
+            commands.add("decw %A");
+            // Faz a subtracao
+            commands.add("subw (%A),%S,%D");
+            commands.add("leaw $eqlabelt, %A");
+            // Vai para o if se o resultado da sub for igual a zero
+            commands.add("je %D");
+            commands.add("nop");
+           
+            // se n, adciona 0 na pilha
+            //coloca na ram depois que o SP aponta 
+            commands.add("leaw $SP,%A");
+            commands.add("movw (%A),%S");
+            commands.add("movw %S,%A");
+            commands.add("incw %A");
+            commands.add("leaw $0, (%A)");
+            // e muda o SP para apontar para ela
+            commands.add("movw %A, %D");
+            commands.add("leaw $SP,%A");
+            commands.add("movw %D, (%A)");
+            commands.add("leaw $eqlabelf, %A");
+            commands.add("jmp ");
+            commands.add("nop");
+            
+            
+            //cria o label 
+            commands.add("eqlabelt");
+            // se sim, adciona 0 na pilha
+            //coloca na ram depois que o SP aponta 
+            commands.add("leaw $SP,%A");
+            commands.add("movw (%A),%S");
+            commands.add("movw %S,%A");
+            commands.add("incw %A");
+            commands.add("leaw $-1, (%A)");
+            // e muda o SP para apontar para ela
+            commands.add("movw %A, %D");
+            commands.add("leaw $SP,%A");
+            commands.add("movw %D, (%A)");
+            
+            commands.add("eqlabelf");
+            
+            
+            System.out.println("eq realizado");
+            
+            
+            
+            
 
         } else if (command.equals("gt")) {
             commands.add(String.format("; %d - GT", lineCode++));
+         // gurda a ram que o sp ta apontando em A e oq essa ram ESta guardando em S
+            commands.add("leaw $SP,%A");
+            commands.add("movw (%A),%S");
+            commands.add("movw %S,%A");
+            commands.add("movw (%A),%S");
+            //guarda o que esta acima da ram do sp em A 
+            commands.add("decw %A");
+            // Faz a subtracao
+            commands.add("subw (%A),%S,%D");
+            commands.add("leaw $gtlabelt, %A");
+            // Vai para o if se o resultado da sub for igual a zero
+            commands.add("jg %D");
+            commands.add("nop");
+            
+         // se n, adciona 0 na pilha
+            //coloca na ram depois que o SP aponta 
+            commands.add("leaw $SP,%A");
+            commands.add("movw (%A),%S");
+            commands.add("movw %S,%A");
+            commands.add("incw %A");
+            commands.add("leaw $0, (%A)");
+            // e muda o SP para apontar para ela
+            commands.add("movw %A, %D");
+            commands.add("leaw $SP,%A");
+            commands.add("movw %D, (%A)");
+            commands.add("leaw $gtlabelf, %A");
+            commands.add("jmp ");
+            commands.add("nop");
+            
+            
+            //cria o label 
+            commands.add("gtlabelt");
+            // se sim, adciona 0 na pilha
+            //coloca na ram depois que o SP aponta 
+            commands.add("leaw $SP,%A");
+            commands.add("movw (%A),%S");
+            commands.add("movw %S,%A");
+            commands.add("incw %A");
+            commands.add("leaw $-1, (%A)");
+            // e muda o SP para apontar para ela
+            commands.add("movw %A, %D");
+            commands.add("leaw $SP,%A");
+            commands.add("movw %D, (%A)");
+            
+            commands.add("eqlabelf");
+            
+            System.out.println("gt realizado");
+            
+            
+            
+            
+            
+            
+            
 
         } else if (command.equals("lt")) {
             commands.add(String.format("; %d - LT", lineCode++));
+            
+         // gurda a ram que o sp ta apontando em A e oq essa ram ESta guardando em S
+            commands.add("leaw $SP,%A");
+            commands.add("movw (%A),%S");
+            commands.add("movw %S,%A");
+            commands.add("movw (%A),%S");
+            //guarda o que esta acima da ram do sp em A 
+            commands.add("decw %A");
+            // Faz a subtracao
+            commands.add("subw (%A),%S,%D");
+            commands.add("leaw $ltlabelt, %A");
+            // Vai para o if se o resultado da sub for igual a zero
+            commands.add("jl %D");
+            commands.add("nop");
+            
+         // se n, adciona 0 na pilha
+            //coloca na ram depois que o SP aponta 
+            commands.add("leaw $SP,%A");
+            commands.add("movw (%A),%S");
+            commands.add("movw %S,%A");
+            commands.add("incw %A");
+            commands.add("leaw $0, (%A)");
+            // e muda o SP para apontar para ela
+            commands.add("movw %A, %D");
+            commands.add("leaw $SP,%A");
+            commands.add("movw %D, (%A)");
+            commands.add("leaw $ltlabelf, %A");
+            commands.add("jmp ");
+            commands.add("nop");
+            
+            
+            //cria o label 
+            commands.add("ltlabelt");
+            // se sim, adciona 0 na pilha
+            //coloca na ram depois que o SP aponta 
+            commands.add("leaw $SP,%A");
+            commands.add("movw (%A),%S");
+            commands.add("movw %S,%A");
+            commands.add("incw %A");
+            commands.add("leaw $-1, (%A)");
+            // e muda o SP para apontar para ela
+            commands.add("movw %A, %D");
+            commands.add("leaw $SP,%A");
+            commands.add("movw %D, (%A)");
+            
+            commands.add("ltlabelf");
+            
+            System.out.println("lt realizado");
 
         } else if (command.equals("and")) {
             commands.add(String.format("; %d - AND", lineCode++));
+            
+            // gurda a ram que o sp ta apontando em A e oq essa ram ESta guardando em S
+            commands.add("leaw $SP,%A");
+            commands.add("movw (%A),%S");
+            commands.add("movw %S,%A");
+            commands.add("movw (%A),%S");
+            //guarda o que esta acima da ram do sp em A 
+            commands.add("decw %A");
+            // faz o and 
+            commands.add("andw (%A), %S, %D");
+            commands.add("movw %D, (%A)");
+            //passa a ram que a esta guardando para D para passar a ram para o SP
+            commands.add("movw %A, %D");
+            commands.add("leaw $SP,%A");
+            commands.add("movw %D, (%A)");
+            
+            System.out.println("and  realizado");
+            
+            
+            
 
         } else if (command.equals("or")) {
             commands.add(String.format("; %d - OR", lineCode++));
+            
+
+            // gurda a ram que o sp ta apontando em A e oq essa ram ESta guardando em S
+            commands.add("leaw $SP,%A");
+            commands.add("movw (%A),%S");
+            commands.add("movw %S,%A");
+            commands.add("movw (%A),%S");
+            //guarda o que esta acima da ram do sp em A 
+            commands.add("decw %A");
+            // faz o and 
+            commands.add("orw (%A), %S, %D");
+            commands.add("movw %D, (%A)");
+            //passa a ram que a esta guardando para D para passar a ram para o SP
+            commands.add("movw %A, %D");
+            commands.add("leaw $SP,%A");
+            commands.add("movw %D, (%A)");
+            
+            System.out.println("and  realizado");
 
         } else if (command.equals("not")) {
             commands.add(String.format("; %d - NOT", lineCode++));
+            
+         // gurda a ram que o sp ta apontando em A e oq essa ram esta guardando em S
+            commands.add("leaw $SP,%A");
+            commands.add("movw (%A),%S");
+            commands.add("movw %S,%A");
+            commands.add("movw (%A),%S");
+            //Faz o not
+            commands.add("notw %S");
+            // Move para a ram que A esta apontando
+            commands.add("movw %S, (%A)");
 
         }
 
