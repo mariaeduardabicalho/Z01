@@ -15,8 +15,8 @@ import java.io.File;
  * Além disso, remove todos os espaços em branco e comentários.
  */
 public class Parser {
-    Scanner arquivo;
-    String Comando = "";
+    Scanner stdin;
+    String currentCommand;
 
     /** Enumerator para os tipos de comandos do Assembler. */
     public enum CommandType {
@@ -34,9 +34,9 @@ public class Parser {
 
         try{
             File data = new File(file);
-            this.arquivo = new Scanner(data);
+            this.stdin = new Scanner(data);
         } catch (FileNotFoundException e){
-            System.out.println("File not found");
+            System.out.println("File not found - Error");
             e.printStackTrace();
         }
 
@@ -49,39 +49,38 @@ public class Parser {
      * @return Verdadeiro se ainda há instruções, Falso se as instruções terminaram.
      */
     public Boolean advance() {
-    	while (arquivo.hasNextLine()){
-    	    String linha = arquivo.nextLine();
-    	    linha = linha.trim();//remover espaços em branco
+        while(stdin.hasNextLine()){
+            String tmp = stdin.nextLine();
 
-    	    
-    	    if (!linha.startsWith(";") && !linha.isEmpty()){
-                linha.replace("\t","");
-                for (int i = 0; i<linha.length(); i++){
-                	if(linha.charAt(i) == ';') {
-                		linha = linha.substring(0, i);
-                		linha = linha.trim();
-                	}
+            tmp = tmp.trim();
+
+            if (!tmp.isEmpty() && tmp.charAt(0) != ';'  ) {
+                tmp.replace("\t", "");
+                tmp = tmp.replaceAll(" +", " ");
+                int ind = tmp.length();
+                for (int i = 0; i <tmp.length() ; i++) {
+                    if (tmp.charAt(i) == ';'){
+                        ind = i-1;
+
+                    }
+
                 }
-                Comando = linha;
+                this.currentCommand = tmp.substring(0,(ind));
                 return true;
             }
-//    	    linha = arquivo.nextLine();
-//    	    if (!linha.startsWith(";")) {
-//    	    	this.Comando = linha;
-//    	    }
 
         }
-      
-	    return false;
-        
+        return false;
     }
+
 
     /**
      * Retorna o comando "intrução" atual (sem o avanço)
      * @return a instrução atual para ser analilisada
      */
     public String command() {
-    	return Comando;
+    	return this.currentCommand;
+
     }
 
     /**
@@ -113,23 +112,26 @@ public class Parser {
      * @return somente o símbolo ou o valor número da instrução.
      */
     public String symbol(String command) {
-        String symbol = "";
-        
+        String simb = "";
+        Integer inde = 0;
         if(commandType(command) == CommandType.A_COMMAND){
-        	
-            for (int i = 0; i < command.length() ; i++) {
+
+            for (int i = 0; i <command.length() ; i++) {
                 if(command.charAt(i)=='$'){
-                    String Comando_novo = command.substring(i+1);
-                    for (int e = 0; e < Comando_novo.length(); e++){
-                    	if(Comando_novo.charAt(e)==' ' || Comando_novo.charAt(e) == ';' || Comando_novo.charAt(e) == ','){
-                    		break;
-                    	}
-                    	symbol += Comando_novo.substring(e);
-                    }
+                    inde = i+1;
                 }
             }
+            String newcom= command.substring(inde,command.length());
+            for (int i = 0; i <newcom.length() ; i++) {
+
+                if(newcom.charAt(i)==' ' || newcom.charAt(i) == ','){
+                    break;
+                }
+                simb+=newcom.charAt(i);
+
+            }
         }
-    	return symbol;
+        return simb;
     }
 
     /**
@@ -139,11 +141,11 @@ public class Parser {
      * @return o símbolo da instrução (sem os dois pontos).
      */
     public String label(String command) {
-        String symbol = "";
+        String simb = "";
         if (commandType(command) == CommandType.L_COMMAND) {
-            symbol = command.substring(0,command.length()-1);
+            simb = command.substring(0,command.length()-1);
         }
-    	return symbol;
+        return simb;
     }
 
     /**
