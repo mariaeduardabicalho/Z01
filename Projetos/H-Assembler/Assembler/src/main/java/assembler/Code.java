@@ -326,27 +326,17 @@ public class Code {
      * @codigo= Valor em bin√°rio (String de 15 bits) representado com 0s e 1s.
      */
     public static String toBinary(String symbol) {
-    	String codigo= null;
-    	int symbolInt = Integer.parseInt(symbol);
-    	String b=Integer.toBinaryString(symbolInt);
-    	System.out.println(b);
-    	if (b.length() !=15){
-    		System.out.println("entrrou");
-    		String a = "0";
-    		int n = 15 - b.length();
-    		for (int i = 0; i < n-1; i++) {
-    			a = a.concat("0");
-    		}
-    		System.out.println(a);
-    		a= a.concat(b);
-    		System.out.println(a);
-    		
-    	}
-    	else{
-    		codigo= b;
-    	}
-    	return codigo;
+        	
+        	int valor = Integer.parseInt(symbol); 	/* Converte a string symbol para um inteiro */
+        	String binario = Integer.toBinaryString(valor); /* FunÁ„o toBinaryString transforma o valor inteiro para binario */
+        	int tamanho_binario = binario.length(); /* Inteiro com o tamanho da string binario */
+        	if (tamanho_binario < 15) { 			/* Condicional que verifica se o tamanho do binario È menor que 15 */
+        		for (int i = 0; i < (15-tamanho_binario); i++) {
+        			binario = "0" + binario; 		/* Completa o binario com os valores de 0 atÈ ficar com 15 caracteres */
+        		}
+        	}
+        	return binario;
+        }
     	 	
     }
 
-}

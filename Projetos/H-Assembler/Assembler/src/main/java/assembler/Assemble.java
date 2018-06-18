@@ -100,8 +100,10 @@ public class Assemble {
                   //outHACK.print(machine_instruction);
               }
               else {
+            	  
             	  //machine_instruction =binary_code+ instruction;
-            	  machine_instruction = instructions + (Code.toBinary(parser.symbol(parser.command())));;
+            	  String RESULT = parser.symbol(parser.command());
+            	  machine_instruction = instructions + (Code.toBinary(RESULT));;
             	  
               }
               outHACK.write(machine_instruction);  //salva o codigo de maquina
