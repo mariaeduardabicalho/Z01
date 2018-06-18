@@ -98,6 +98,22 @@ public class Code {
             if (segment.equals("constant")) {
                 Error.error("Não faz sentido POP com constant");
             } else if (segment.equals("local")) {
+            	commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
+
+				commands.add("movw (%A), %A"); //move o valor apontado pelo SP para o reg A
+				commands.add("decw %A"); //subtrai 1 do valor apontado pelo SP para pegar o ultimo valor da pilha
+
+            	commands.add("movw (%A), %D"); //move o ultimo valor da pilha para o reg D
+                commands.add("movw %A, %S"); //move o valor apontado pelo sp menos 1 para o reg S
+                commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
+                commands.add("movw %S, (%A)"); //aponta o SP para a pilha acima     
+                commands.add("leaw $"+index.toString()+", %A");
+                commands.add("movw %A, %S");
+                commands.add("leaw $LCL, %A");
+                commands.add("movw (%A), %A");
+                commands.add("addw %S, %A, %A");
+                commands.add("movw %D, (%A)");
+
 
             } else if (segment.equals("argument")) {
 
