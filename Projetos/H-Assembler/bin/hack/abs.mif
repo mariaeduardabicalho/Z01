@@ -5,11 +5,10 @@
 -- to be used on ALTERA FPGAs
 
 WIDTH=16;
-DEPTH=1;
+DEPTH=0;
 
 ADDRESS_RADIX=UNS;
 DATA_RADIX=BIN;
 
 CONTENT BEGIN
-       0 : 0nullnullnullnull0null0nullnullnull0nullnullnull00nullnullnullnull0null0nullnullnull0nullnullnull0nullnullnull00nullnullnullnull0nullnullnull0;
 END;

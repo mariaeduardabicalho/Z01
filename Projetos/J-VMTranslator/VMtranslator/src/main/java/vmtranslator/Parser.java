@@ -78,14 +78,10 @@ public class Parser {
     	if(command.startsWith("push")) {
     		return (CommandType.C_PUSH);
     	}
-    	if(command.startsWith("pop")) {
+    	else if(command.startsWith("pop")) {
     		return(CommandType.C_POP);
     	}
-    	for (int i = 0; i< comandos.length;i++) {
-    		if (command.startsWith(comandos[i])){
-    			return(CommandType.C_ARITHMETIC);
-    		}
-    	}
+
     	if(command.startsWith("call")) {
     		return(CommandType.C_CALL);
     	}
@@ -103,6 +99,11 @@ public class Parser {
     	}
     	if(command.startsWith("return")) {
     		return(CommandType.C_RETURN);
+    	}
+    	for (int i = 0; i< comandos.length;i++) {
+    		if (command.startsWith(comandos[i])){
+    			return(CommandType.C_ARITHMETIC);
+    		}
     	}
 		return null;
     	
