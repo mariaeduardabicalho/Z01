@@ -118,17 +118,14 @@ public class Parser {
         if(commandType(command) == CommandType.A_COMMAND){
         	
             for (int i = 0; i < command.length() ; i++) {
-            	
                 if(command.charAt(i)=='$'){
                     String Comando_novo = command.substring(i+1);
                     for (int e = 0; e < Comando_novo.length(); e++){
-                    	
                     	if(Comando_novo.charAt(e)==' ' || Comando_novo.charAt(e) == ';' || Comando_novo.charAt(e) == ','){
                     		break;
                     	}
-                    	symbol += Comando_novo.charAt(e);
+                    	symbol += Comando_novo.substring(i+1,e);
                     }
-                    	
                 }
             }
         }
