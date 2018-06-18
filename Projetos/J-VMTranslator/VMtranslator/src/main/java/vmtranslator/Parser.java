@@ -49,13 +49,23 @@ public class Parser {
      * @return Verdadeiro se ainda há instruções, Falso se as instruções terminaram.
      */
     public Boolean advance() throws IOException {
-    	if (fileReader.readLine() != null) {
+    	while (fileReader.readLine() != null){
     		currentCommand = fileReader.readLine();
-    		return true;
-    	}
-    	else{
-    		return false;
-    	}
+    	    currentCommand = currentCommand.trim();//remover espaços em branco
+
+    	    
+    	    if (!currentCommand.startsWith(";") && !currentCommand.isEmpty()){
+    	    	currentCommand.replace("\t","");
+                for (int i = 0; i<currentCommand.length(); i++){
+                	if(currentCommand.charAt(i) == ';') {
+                		currentCommand = currentCommand.substring(0, i);
+                		currentCommand = currentCommand.trim();
+                	}
+                }
+                return true;
+            }
+        }
+    	 return false;
     }
 
     /**
@@ -82,22 +92,22 @@ public class Parser {
     		return(CommandType.C_POP);
     	}
 
-    	if(command.startsWith("call")) {
+    	else if(command.startsWith("call")) {
     		return(CommandType.C_CALL);
     	}
-    	if(command.startsWith("function")) {
+    	else if(command.startsWith("function")) {
     		return(CommandType.C_FUNCTION);
     	}
-    	if(command.startsWith("goto")) {
+    	else if(command.startsWith("goto")) {
     		return(CommandType.C_GOTO);
     	}
-    	if(command.startsWith("if")) {
+    	else if(command.startsWith("if")) {
     		return(CommandType.C_IF);
     	}
-    	if(command.startsWith("label")) {
+    	else if(command.startsWith("label")) {
     		return(CommandType.C_LABEL);
     	}
-    	if(command.startsWith("return")) {
+    	else if(command.startsWith("return")) {
     		return(CommandType.C_RETURN);
     	}
     	for (int i = 0; i< comandos.length;i++) {
@@ -157,7 +167,7 @@ public class Parser {
 			}
 		}
     
-	return argumento;
+		return argumento;
     	
     }
 

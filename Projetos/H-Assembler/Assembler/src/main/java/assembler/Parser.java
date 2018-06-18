@@ -124,7 +124,7 @@ public class Parser {
                     	if(Comando_novo.charAt(e)==' ' || Comando_novo.charAt(e) == ';' || Comando_novo.charAt(e) == ','){
                     		break;
                     	}
-                    	symbol += Comando_novo.substring(i+1,e);
+                    	symbol += Comando_novo.substring(e);
                     }
                 }
             }
