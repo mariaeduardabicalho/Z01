@@ -11,116 +11,125 @@ package assembler;
 
 import java.io.*;
 import java.util.*;
+import assembler.Parser.CommandType;
 
 /**
- * Faz a gera√ß√£o do c√≥digo gerenciando os demais m√≥dulos
+ * Faz a geraÁ„o do cÛdigo gerenciando os demais mÛdulos
  */
 public class Assemble {
     private String inputFile;              // arquivo de entrada nasm
-    File hackFile = null;                  // arquivo de sa√≠da hack
-    private PrintWriter outHACK = null;    // grava saida do c√≥digo de m√°quina em Hack
-    boolean debug;                         // flag que especifica se mensagens de debug s√£o impressas
-    private SymbolTable table;             // tabela de s√≠mbolos (vari√°veis e marcadores)
+    File hackFile = null;                  // arquivo de saÌda hack
+    private PrintWriter outHACK = null;    // grava saida do cÛdigo de m·quina em Hack
+    boolean debug;                         // flag que especifica se mensagens de debug s„o impressas
+    private SymbolTable table;             // tabela de sÌmbolos (vari·veis e marcadores)
 
     /**
-     * Retorna o c√≥digo bin√°rio do mnem√¥nico para realizar uma opera√ß√£o de c√°lculo.
-     * @param  mnemnonic vetor de mnem√¥nicos "instru√ß√£o" a ser analisada.
-     * @return Opcode (String de 7 bits) com c√≥digo em linguagem de m√°quina para a instru√ß√£o.
+     * Retorna o cÛdigo bin·rio do mnemÙnico para realizar uma operaÁ„o de c·lculo.
+     * @param  mnemnonic vetor de mnemÙnicos "instruÁ„o" a ser analisada.
+     * @return Opcode (String de 7 bits) com cÛdigo em linguagem de m·quina para a instruÁ„o.
      */
     public Assemble(String inFile, String outFileHack, boolean debug) throws IOException {
         this.debug = debug;
         inputFile  = inFile;
-        hackFile   = new File(outFileHack);                      // Cria arquivo de sa√≠da .hack
-        outHACK    = new PrintWriter(new FileWriter(hackFile));  // Cria sa√≠da do print para
+        hackFile   = new File(outFileHack);                      // Cria arquivo de saÌda .hack
+        outHACK    = new PrintWriter(new FileWriter(hackFile));  // Cria saÌda do print para
                                                                  // o arquivo hackfile
         table      = new SymbolTable();                          // Cria e inicializa a tabela de simbolos
-
+        
+       
     }
 
     /**
-     * primeiro passo para a constru√ß√£o da tabela de s√≠mbolos de marcadores (labels)
-     * varre o c√≥digo em busca de S√≠mbolos novos Labels e Endere√ßos de mem√≥rias
-     * e atualiza a tabela de s√≠mbolos com os endere√ßos.
+     * primeiro passo para a construÁ„o da tabela de sÌmbolos de marcadores (labels)
+     * varre o cÛdigo em busca de SÌmbolos novos Labels e EndereÁos de memÛrias
+     * e atualiza a tabela de sÌmbolos com os endereÁos.
      *
      * Dependencia : Parser, SymbolTable
      */
     public void fillSymbolTable() throws FileNotFoundException, IOException {
+    	Parser parser = new Parser(inputFile);
+    	int currentLine = 0;
+    	int currentRam = 16;
+    	while(parser.advance()){
 
-        Parser parser = new Parser(inputFile);  // abre o arquivo e aponta para o come√ßo
-        
-        int ram = 16;
-        
-        int line = 0;
-        
-        while (parser.advance()){ //itinera sobre as linhas do arquivo para comandos do tipo L (labels)
+    		if(parser.commandType(parser.command()) == CommandType.L_COMMAND ){
 
-            if (parser.commandType(parser.command()) == Parser.CommandType.L_COMMAND){  //checa se È do tipo L
-                String add_table = parser.label(parser.command()); //criando a string do novo label
-                table.addEntry(add_table, line); //adicionando essa string na tabela (linha)
-            }
-            
-            //se nao for do tipo L passa para a proxima linha
-            else{
-    			line = line + 1;
+    			String lbl = parser.label(parser.command());
+    			if (!table.contains(lbl)){
+    				table.addEntry(lbl, currentLine);
+
     			}
-        }
-        
-        while (parser.advance()){  //itinera sobre as linhas do arquivo, dessa vez para comandos do tipo A (enderecos)
-            if (parser.commandType(parser.command()) == Parser.CommandType.A_COMMAND){  //checa se È do tipo A
-          	  if (!table.contains(parser.symbol(parser.command()))){ //se a tabela nao tiver o endereceo
-  					table.addEntry(parser.symbol(parser.command()), ram); //ela È adicionada a tabela (ram)
-  					ram ++;
-  				}
-            }
-        }
+    		} 
+
+			if (parser.commandType(parser.command()) == CommandType.A_COMMAND || parser.commandType(parser.command()) == CommandType.C_COMMAND){
+    			currentLine++;
+
+			}
+    	}
+
+    	parser = new Parser(inputFile);
+		while(parser.advance()){
+
+			if(parser.commandType(parser.command()) == CommandType.A_COMMAND ){
+				String symb = parser.symbol(parser.command());
+
+				if((int) symb.charAt(0) < 48 || (int) symb.charAt(0) > 57){ //Root checking if number
+
+					if (!table.contains(symb)){
+						table.addEntry(symb, currentRam );
+						currentRam ++;
+					}
+				}
+			}
+		}
     }
+    
+    
     /**
-     * Segundo passo para a gera√ß√£o do c√≥digo de m√°quina
-     * Varre o c√≥digo em busca de instru√ß√µes do tipo A, C
-     * gerando a linguagem de m√°quina a partir do parse das instru√ß√µes.
+     * Segundo passo para a geraÁ„o do cÛdigo de m·quina
+     * Varre o cÛdigo em busca de instruÁıes do tipo A, C
+     * gerando a linguagem de m·quina a partir do parse das instruÁıes.
      *
      * Dependencias : Parser, Code
      */
     public void generateMachineCode() throws FileNotFoundException, IOException{
-        Parser parser = new Parser(inputFile);  // abre o arquivo e aponta para o come√ßo
+        Parser parser = new Parser(inputFile);  // abre o arquivo e aponta para o comeÁo
+        Code code1 = new Code();
+        String machineCode = "";
+        while(parser.advance()){
+        	//String symb = parser.command();
+        	machineCode = "";
+        	String[] mnemnonic = parser.instruction(parser.command());
+        	String symb = parser.symbol(parser.command());
+        	if (parser.commandType(parser.command()) == CommandType.A_COMMAND){
 
-        while (parser.advance()){
-            String binary_code ="";
-            String instructions ="0";
+        		if ((int) symb.charAt(0) < 48 || (int) symb.charAt(0) > 57){
+ 
+        			
+        			String var =String.valueOf(table.getAddress(symb));
 
-            String machine_instruction ="";
-            String [] mnemnonic = parser.instruction(parser.command());
+        			
+        			
+        			machineCode = "0" + code1.toBinary(var);
+        		} else {
+        			machineCode = "0" + code1.toBinary(symb);	
+        		}
+        		outHACK.println(machineCode);
+        		
+        	} else if(parser.commandType(parser.command()) == CommandType.C_COMMAND) {
+			
+			for (int i=0; i <mnemnonic.length; i++){
 
-            
-        if (parser.commandType(parser.command()) == Parser.CommandType.A_COMMAND){  //considera instrucoes do tipo A
-              if (table.contains(parser.symbol(parser.command()))){
-                  binary_code = Code.toBinary(String.valueOf(table.getAddress(parser.symbol(parser.command()))));  //gera o binario para a maquina
-                  machine_instruction =binary_code+ instructions;
-                  //outHACK.write(machine_instruction);
-                  //outHACK.print(machine_instruction);
-              }
-              else {
-            	  
-            	  //machine_instruction =binary_code+ instruction;
-            	  String RESULT = parser.symbol(parser.command());
-            	  machine_instruction = instructions + (Code.toBinary(RESULT));;
-            	  
-              }
-              outHACK.write(machine_instruction);  //salva o codigo de maquina
-       
-              }
-        else if (parser.commandType(parser.command()) == Parser.CommandType.C_COMMAND){//considera instrucoes do tipo C
-        	binary_code = Code.dest(mnemnonic)+ Code.jump(mnemnonic)+Code.comp(mnemnonic);
-        	String x = "1";
-        	machine_instruction =binary_code+ instructions;
-            outHACK.write(machine_instruction);
-            //outHACK.print(machine_instruction);
+			}
+
+        		machineCode = "1"+ code1.comp(mnemnonic)+code1.dest(mnemnonic)+code1.jump(mnemnonic);
+        		outHACK.println(machineCode);
+
+        	}
+        	        	 
         }
-        }
-             
-
-              }
-
+        //return machineCode;
+    }
 
     /**
      * Fecha arquivo de escrita
@@ -145,3 +154,4 @@ public class Assemble {
     }
 
 }
+

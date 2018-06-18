@@ -1,138 +1,164 @@
 /**
  * Curso: Elementos de Sistemas
  * Arquivo: Parser.java
- * Created by Luciano Soares <lpsoares@insper.edu.br> 
- * Date: 04/02/2017
  */
 
 package assembler;
 
-import java.io.*;
 
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import java.io.File;
 /**
- * Encapsula o c√≥digo de leitura. Carrega as instru√ß√µes na linguagem assembly,
- * analisa, e oferece acesso as partes da instru√ß√£o  (campos e s√≠mbolos).
- * Al√©m disso, remove todos os espa√ßos em branco e coment√°rios.
+ * Encapsula o cÛdigo de leitura. Carrega as instruÁıes na linguagem assembly,
+ * analisa, e oferece acesso as partes da instruÁ„o  (campos e sÌmbolos).
+ * AlÈm disso, remove todos os espaÁos em branco e coment·rios.
  */
 public class Parser {
-
-    public String currentCommand = "";  // comando atual
-    public String inputFile;		    // arquivo de leitura
-    public int lineNumber = 0;			// linha atual do arquivo (nao do codigo gerado)
-    public String currentLine;			// linha de codigo atual
-    boolean simulator;                  // Testa se √© para simulador e descarta limita√ß√µes do hardware do Z0
-    private BufferedReader fileReader;  // leitor de arquivo
+    Scanner stdin;
+    String currentCommand;
 
     /** Enumerator para os tipos de comandos do Assembler. */
     public enum CommandType {
         A_COMMAND,      // comandos LEA, que armazenam no registrador A
         C_COMMAND,      // comandos de calculos
-        L_COMMAND       // comandos de Label (s√≠mbolos)
-    }
-
-    /** 
-     * Abre o arquivo de entrada NASM e se prepara para analis√°-lo.
-     * @param file arquivo NASM que ser√° feito o parser.
-     */
-    public Parser(String file) throws FileNotFoundException {
-        this.inputFile = file;
-        this.fileReader = new BufferedReader(new FileReader(file));
-        this.lineNumber = 0;
-        this.simulator = false;
+        L_COMMAND       // comandos de Label (sÌmbolos)
     }
 
     /**
-     * Carrega uma instru√ß√£o e avan√ßa seu apontador interno para o pr√≥xima
-     * linha do arquivo de entrada. Caso n√£o haja mais linhas no arquivo de
-     * entrada o m√©todo retorna "Falso", sen√£o retorna "Verdadeiro".
-     * @return Verdadeiro se ainda h√° instru√ß√µes, Falso se as instru√ß√µes terminaram.
+     * Abre o arquivo de entrada NASM e se prepara para analis·-lo.
+     * @param file arquivo NASM que ser· feito o parser.
      */
-    public Boolean advance() throws IOException {
-        while(true){
-            currentLine = fileReader.readLine();
-            lineNumber++;
-            if (currentLine == null)
-                return false;  // caso n√£o haja mais comandos
-            currentCommand = currentLine.replaceAll(";.*$", "").trim();
-            if (currentCommand.equals(""))
-                continue;
-            return true;   // caso um comando seja encontrado
+    public Parser(String file) {
+
+
+        try{
+            File data = new File(file);
+            this.stdin = new Scanner(data);
+        } catch (FileNotFoundException e){
+            System.out.println("File not found - Error");
+            e.printStackTrace();
         }
+
     }
 
     /**
-     * Retorna o comando "intru√ß√£o" atual (sem o avan√ßo)
-     * @return a instru√ß√£o atual para ser analilisada
+     * Carrega uma instruÁ„o e avanÁa seu apontador interno para o prÛxima
+     * linha do arquivo de entrada. Caso n„o haja mais linhas no arquivo de
+     * entrada o mÈtodo retorna "Falso", sen„o retorna "Verdadeiro".
+     * @return Verdadeiro se ainda h· instruÁıes, Falso se as instruÁıes terminaram.
+     */
+    public Boolean advance() {
+        while(stdin.hasNextLine()){
+            String tmp = stdin.nextLine();
+
+            tmp = tmp.trim();
+
+            if (!tmp.isEmpty() && tmp.charAt(0) != ';'  ) {
+                tmp.replace("\t", "");
+                tmp = tmp.replaceAll(" +", " ");
+                int ind = tmp.length();
+                for (int i = 0; i <tmp.length() ; i++) {
+                    if (tmp.charAt(i) == ';'){
+                        ind = i-1;
+
+                    }
+
+                }
+                this.currentCommand = tmp.substring(0,(ind));
+                return true;
+            }
+
+        }
+        return false;
+    }
+
+
+    /**
+     * Retorna o comando "intruÁ„o" atual (sem o avanÁo)
+     * @return a instruÁ„o atual para ser analilisada
      */
     public String command() {
-      return currentCommand;
+    	return this.currentCommand;
+
     }
 
     /**
-     * Retorna o tipo da instru√ß√£o passada no argumento:
+     * Retorna o tipo da instruÁ„o passada no argumento:
      *  A_COMMAND para leaw, por exemplo leaw $1,%A
-     *  L_COMMAND para labels, por exemplo Xyz: , onde Xyz √© um s√≠mbolo.
+     *  L_COMMAND para labels, por exemplo Xyz: , onde Xyz È um sÌmbolo.
      *  C_COMMAND para todos os outros comandos
-     * @param  command instru√ß√£o a ser analisada.
-     * @return o tipo da instru√ß√£o.
+     * @param  command instruÁ„o a ser analisada.
+     * @return o tipo da instruÁ„o.
      */
     public CommandType commandType(String command) {
-        if (command.startsWith("lea")) {
-            return CommandType.A_COMMAND;  // A_COMMAND for lea xxx
-        } else if (command.endsWith(":")) {
-            return CommandType.L_COMMAND;  // L_COMMAND for a label, xxx:
-        } else {
-            return CommandType.C_COMMAND;  // C_COMMAND for mov, etc...
+        if(command.endsWith(":")){
+            return CommandType.L_COMMAND;
         }
+        else if (command.startsWith("leaw")){
+            return CommandType.A_COMMAND;
+
+        }
+        else {
+            return CommandType.C_COMMAND;
+        }
+
     }
 
     /**
-     * Retorna o s√≠mbolo ou valor num√©rico da instru√ß√£o passada no argumento.
-     * Deve ser chamado somente quando commandType() √© A_COMMAND.
-     * @param  command instru√ß√£o a ser analisada.
-     * @return somente o s√≠mbolo ou o valor n√∫mero da instru√ß√£o.
+     * Retorna o sÌmbolo ou valor numÈrico da instruÁ„o passada no argumento.
+     * Deve ser chamado somente quando commandType() È A_COMMAND.
+     * @param  command instruÁ„o a ser analisada.
+     * @return somente o sÌmbolo ou o valor n˙mero da instruÁ„o.
      */
-    public String symbol(String command)  {
-        String[] array = command.split("[ ,]+");
-        return array[1].substring(1);
+    public String symbol(String command) {
+        String simb = "";
+        Integer inde = 0;
+        if(commandType(command) == CommandType.A_COMMAND){
+
+            for (int i = 0; i <command.length() ; i++) {
+                if(command.charAt(i)=='$'){
+                    inde = i+1;
+                }
+            }
+            String newcom= command.substring(inde,command.length());
+            for (int i = 0; i <newcom.length() ; i++) {
+
+                if(newcom.charAt(i)==' ' || newcom.charAt(i) == ','){
+                    break;
+                }
+                simb+=newcom.charAt(i);
+
+            }
+        }
+        return simb;
     }
 
     /**
-     * Retorna o s√≠mbolo da instru√ß√£o passada no argumento.
-     * Deve ser chamado somente quando commandType() √© L_COMMAND.
-     * @param  command instru√ß√£o a ser analisada.
-     * @return o s√≠mbolo da instru√ß√£o (sem os dois pontos).
+     * Retorna o sÌmbolo da instruÁ„o passada no argumento.
+     * Deve ser chamado somente quando commandType() È L_COMMAND.
+     * @param  command instruÁ„o a ser analisada.
+     * @return o sÌmbolo da instruÁ„o (sem os dois pontos).
      */
     public String label(String command) {
-        if (command.endsWith(":")) {
-            return command.replace(":", "");
+        String simb = "";
+        if (commandType(command) == CommandType.L_COMMAND) {
+            simb = command.substring(0,command.length()-1);
         }
-        return command ;
+        return simb;
     }
 
     /**
-     * Separa os mnem√¥nicos da instru√ß√£o fornecida em tokens em um vetor de Strings.
-     * Deve ser chamado somente quando CommandType () √© C_COMMAND.
-     * @param  command instru√ß√£o a ser analisada.
-     * @return um vetor de string contento os tokens da instru√ß√£o (as partes do comando).
+     * Separa os mnemÙnicos da instruÁ„o fornecida em tokens em um vetor de Strings.
+     * Deve ser chamado somente quando CommandType () È C_COMMAND.
+     * @param  command instruÁ„o a ser analisada.
+     * @return um vetor de string contento os tokens da instruÁ„o (as partes do comando).
      */
     public String[] instruction(String command) {
-        return command.split("[ ,]+");
-    }
-
-    // fecha o arquivo de leitura
-    public void close() throws IOException {
-        fileReader.close();
-    }
-
-    // Em caso de simula√ß√£o, vai permitir certas opera√ß√µes
-    public void setSimulator(boolean testSimulator) {
-      this.simulator = testSimulator;
-    }
-    
-    // Pega o valor da flag de simulador
-    public boolean getSimulator() {
-      return this.simulator;
+        String[] instructions = new String[3];
+        command = command.replace(',',' ');
+        instructions=command.split(" ");
+        return instructions;
     }
 
 }
