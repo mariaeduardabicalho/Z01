@@ -10,7 +10,6 @@
 package vmtranslator;
 
 import java.io.*;
-import java.util.LinkedList;
 
 /**
  * Encapsula o código de leitura. Carrega as instruções na linguagem de máquina virtual a pilha,
