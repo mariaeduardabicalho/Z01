@@ -4,9 +4,9 @@ movw (%A),%S
 movw %S,%A
 movw (%A),%S
 decw %A
-andw (%A), %S, %D
-movw %D, (%A)
-movw %A, %D
+andw (%A),%S,%D
+movw %A,%S
+incw %S
 leaw $SP,%A
-movw %D, (%A)
+movw %S,(%A)
 ; End

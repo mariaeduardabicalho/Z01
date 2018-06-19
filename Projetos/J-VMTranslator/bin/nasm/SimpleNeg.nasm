@@ -1,8 +1,8 @@
 ; 0 - NEG
 leaw $SP,%A
+movw (%A),%A
+decw %A
 movw (%A),%S
-movw %S,%A
-movw (%A),%S
-neg %S
+negw %S
 movw %S, (%A)
 ; End

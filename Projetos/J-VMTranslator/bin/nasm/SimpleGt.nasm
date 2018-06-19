@@ -5,28 +5,36 @@ movw %S,%A
 movw (%A),%S
 decw %A
 subw (%A),%S,%D
-leaw $gtlabelt, %A
+leaw $YZFRZEPLEUK5L8LKX7, %A
 jg %D
 nop
-leaw $SP,%A
-movw (%A),%S
-movw %S,%A
 incw %A
-leaw $0, (%A)
 movw %A, %D
+leaw $0,%A
+movw %A, %S
 leaw $SP,%A
-movw %D, (%A)
-leaw $gtlabelf, %A
+movw (%A),%A
+decw %A
+decw %A
+movw %S,(%A)
+incw %A
+leaw $SP,%A
+movw %D,(%A)
+leaw $BYX6QFJCHYQ4XR7QQ7, %A
 jmp 
 nop
-gtlabelt
-leaw $SP,%A
-movw (%A),%S
-movw %S,%A
+YZFRZEPLEUK5L8LKX7
 incw %A
-leaw $-1, (%A)
 movw %A, %D
+leaw $-1,%A
+movw %A, %S
 leaw $SP,%A
-movw %D, (%A)
-eqlabelf
+movw (%A),%A
+decw %A
+decw %A
+movw %S,(%A)
+incw %A
+leaw $SP,%A
+movw %D,(%A)
+BYX6QFJCHYQ4XR7QQ7
 ; End

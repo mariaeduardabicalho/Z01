@@ -70,14 +70,17 @@ public class Code {
             commands.add("leaw $SP,%A"); // SP = 0
             commands.add("movw (%A),%S");
             commands.add("movw %S,%A");
+            commands.add("decw %A");
             commands.add("movw (%A),%S");
            //guarda o que esta acima da ram do sp em A 
             commands.add("decw %A");
             // Faz a soma
             commands.add("addw (%A),%S,%D");
             // depois guarda na ram acima o que deu na soma  
-            commands.add("movw %D, (%A)");
-            commands.add("movw %A, %D");
+            commands.add("movw %D,(%A)");
+            commands.add("incw %A");
+            commands.add("movw %A,%D");
+            
             // muda o SP para apontar para essa ram
             commands.add("leaw $SP,%A"); // SP = 0
             commands.add("movw %D,(%A)"); // S = RAM[0] -> SP 
@@ -88,9 +91,10 @@ public class Code {
         } else if (command.equals("sub")) {
             commands.add(String.format("; %d - SUB", lineCode++));
             // gurda a ram que o sp ta apontando em A e oq essa ram ESta guardando em S
-            commands.add("leaw $SP,%A");
+            commands.add("leaw $SP,%A"); // SP = 0
             commands.add("movw (%A),%S");
             commands.add("movw %S,%A");
+            commands.add("decw %A");
             commands.add("movw (%A),%S");
             //guarda o que esta acima da ram do sp em A 
             commands.add("decw %A");
@@ -98,6 +102,7 @@ public class Code {
             commands.add("subw (%A),%S,%D");
             commands.add("movw %D, (%A)");
             //passa a ram que a esta guardando para D para passar a ram para o SP
+            commands.add("incw %A");
             commands.add("movw %A, %D");
             commands.add("leaw $SP,%A");
             commands.add("movw %D, (%A)");
@@ -106,78 +111,93 @@ public class Code {
             
 
         } else if (command.equals("neg")) {
-            commands.add(String.format("; %d - NEG", lineCode++));
+        	commands.add(String.format("; %d - NEG", lineCode++));
             
             // gurda a ram que o sp ta apontando em A e oq essa ram esta guardando em S
             commands.add("leaw $SP,%A");
-            commands.add("movw (%A),%S");
-            commands.add("movw %S,%A");
+            commands.add("movw (%A),%A");
+            commands.add("decw %A");
             commands.add("movw (%A),%S");
             //Faz a negacao
-            commands.add("neg %S");
+            commands.add("negw %S");
             // Move para a ram que A esta apontando
             commands.add("movw %S, (%A)");
+            
             
             System.out.println("negacao realizada");
 
         } else if (command.equals("eq")) {
             commands.add(String.format("; %d - EQ", lineCode++));
             
+            String eqlabelt = getSaltString();
+            String eqlabelf = getSaltString();
+            
             // gurda a ram que o sp ta apontando em A e oq essa ram ESta guardando em S
             commands.add("leaw $SP,%A");
             commands.add("movw (%A),%S");
             commands.add("movw %S,%A");
+            commands.add("decw %A");
             commands.add("movw (%A),%S");
-            //guarda o que esta acima da ram do sp em A 
+            //guarda o que esta a cima da ram do sp em A 
             commands.add("decw %A");
             // Faz a subtracao
             commands.add("subw (%A),%S,%D");
-            commands.add("leaw $eqlabelt, %A");
+            commands.add("leaw $"+eqlabelt+", %A");
             // Vai para o if se o resultado da sub for igual a zero
             commands.add("je %D");
             commands.add("nop");
            
-            // se n, adciona 0 na pilha
+            // se nao, adciona 0 na pilha
             //coloca na ram depois que o SP aponta 
-            commands.add("leaw $SP,%A");
-            commands.add("movw (%A),%S");
-            commands.add("movw %S,%A");
             commands.add("incw %A");
-            commands.add("leaw $0, (%A)");
-            // e muda o SP para apontar para ela
             commands.add("movw %A, %D");
+            commands.add("leaw $0,%A");
+            commands.add("movw %A, %S");
+          
             commands.add("leaw $SP,%A");
-            commands.add("movw %D, (%A)");
-            commands.add("leaw $eqlabelf, %A");
+            commands.add("movw (%A),%A");
+            commands.add("decw %A");
+            commands.add("decw %A");
+            commands.add("movw %S,(%A)");
+            commands.add("incw %A");
+            commands.add("leaw $SP,%A");
+            commands.add("movw %D,(%A)");
+            commands.add("leaw $ "+eqlabelf+", %A");
             commands.add("jmp ");
             commands.add("nop");
             
             
             //cria o label 
-            commands.add("eqlabelt");
-            // se sim, adciona 0 na pilha
+            commands.add(eqlabelt);
+            // se sim, adciona -1 na pilha
             //coloca na ram depois que o SP aponta 
-            commands.add("leaw $SP,%A");
-            commands.add("movw (%A),%S");
-            commands.add("movw %S,%A");
+           // e muda o SP para apontar para ela
             commands.add("incw %A");
-            commands.add("leaw $-1, (%A)");
-            // e muda o SP para apontar para ela
             commands.add("movw %A, %D");
+            commands.add("leaw $-1,%A");
+            commands.add("movw %A, %S");
+          
             commands.add("leaw $SP,%A");
-            commands.add("movw %D, (%A)");
+            commands.add("movw (%A),%A");
+            commands.add("decw %A");
+            commands.add("decw %A");
+            commands.add("movw %S,(%A)");
+            commands.add("incw %A");
+            commands.add("leaw $SP,%A");
+            commands.add("movw %D,(%A)");
             
-            commands.add("eqlabelf");
+            commands.add(eqlabelf);
             
             
             System.out.println("eq realizado");
             
             
             
-            
 
         } else if (command.equals("gt")) {
             commands.add(String.format("; %d - GT", lineCode++));
+            String gtlabelt = getSaltString();
+            String gtlabelf = getSaltString();
          // gurda a ram que o sp ta apontando em A e oq essa ram ESta guardando em S
             commands.add("leaw $SP,%A");
             commands.add("movw (%A),%S");
@@ -187,45 +207,52 @@ public class Code {
             commands.add("decw %A");
             // Faz a subtracao
             commands.add("subw (%A),%S,%D");
-            commands.add("leaw $gtlabelt, %A");
-            // Vai para o if se o resultado da sub for igual a zero
+            commands.add("leaw $"+gtlabelt+", %A");
+            // Vai para o if se o resultado 
             commands.add("jg %D");
             commands.add("nop");
             
          // se n, adciona 0 na pilha
             //coloca na ram depois que o SP aponta 
-            commands.add("leaw $SP,%A");
-            commands.add("movw (%A),%S");
-            commands.add("movw %S,%A");
             commands.add("incw %A");
-            commands.add("leaw $0, (%A)");
-            // e muda o SP para apontar para ela
             commands.add("movw %A, %D");
+            commands.add("leaw $0,%A");
+            commands.add("movw %A, %S");
+          
             commands.add("leaw $SP,%A");
-            commands.add("movw %D, (%A)");
-            commands.add("leaw $gtlabelf, %A");
+            commands.add("movw (%A),%A");
+            commands.add("decw %A");
+            commands.add("decw %A");
+            commands.add("movw %S,(%A)");
+            commands.add("incw %A");
+            commands.add("leaw $SP,%A");
+            commands.add("movw %D,(%A)");
+            commands.add("leaw $"+gtlabelf+", %A");
             commands.add("jmp ");
             commands.add("nop");
             
             
             //cria o label 
-            commands.add("gtlabelt");
+            commands.add(gtlabelt);
             // se sim, adciona 0 na pilha
             //coloca na ram depois que o SP aponta 
-            commands.add("leaw $SP,%A");
-            commands.add("movw (%A),%S");
-            commands.add("movw %S,%A");
             commands.add("incw %A");
-            commands.add("leaw $-1, (%A)");
-            // e muda o SP para apontar para ela
             commands.add("movw %A, %D");
+            commands.add("leaw $-1,%A");
+            commands.add("movw %A, %S");
+          
             commands.add("leaw $SP,%A");
-            commands.add("movw %D, (%A)");
+            commands.add("movw (%A),%A");
+            commands.add("decw %A");
+            commands.add("decw %A");
+            commands.add("movw %S,(%A)");
+            commands.add("incw %A");
+            commands.add("leaw $SP,%A");
+            commands.add("movw %D,(%A)");
             
-            commands.add("eqlabelf");
+            commands.add(gtlabelf);
             
             System.out.println("gt realizado");
-            
             
             
             
@@ -236,6 +263,9 @@ public class Code {
         } else if (command.equals("lt")) {
             commands.add(String.format("; %d - LT", lineCode++));
             
+            String ltlabelt = getSaltString();
+            String ltlabelf = getSaltString();
+            
          // gurda a ram que o sp ta apontando em A e oq essa ram ESta guardando em S
             commands.add("leaw $SP,%A");
             commands.add("movw (%A),%S");
@@ -245,42 +275,50 @@ public class Code {
             commands.add("decw %A");
             // Faz a subtracao
             commands.add("subw (%A),%S,%D");
-            commands.add("leaw $ltlabelt, %A");
+            commands.add("leaw $"+ltlabelt+", %A");
             // Vai para o if se o resultado da sub for igual a zero
             commands.add("jl %D");
             commands.add("nop");
             
          // se n, adciona 0 na pilha
             //coloca na ram depois que o SP aponta 
-            commands.add("leaw $SP,%A");
-            commands.add("movw (%A),%S");
-            commands.add("movw %S,%A");
             commands.add("incw %A");
-            commands.add("leaw $0, (%A)");
-            // e muda o SP para apontar para ela
             commands.add("movw %A, %D");
+            commands.add("leaw $0,%A");
+            commands.add("movw %A, %S");
+          
             commands.add("leaw $SP,%A");
-            commands.add("movw %D, (%A)");
-            commands.add("leaw $ltlabelf, %A");
+            commands.add("movw (%A),%A");
+            commands.add("decw %A");
+            commands.add("decw %A");
+            commands.add("movw %S,(%A)");
+            commands.add("incw %A");
+            commands.add("leaw $SP,%A");
+            commands.add("movw %D,(%A)");
+            commands.add("leaw $"+ltlabelf+", %A");
             commands.add("jmp ");
             commands.add("nop");
             
             
             //cria o label 
-            commands.add("ltlabelt");
+            commands.add(ltlabelt);
             // se sim, adciona 0 na pilha
             //coloca na ram depois que o SP aponta 
-            commands.add("leaw $SP,%A");
-            commands.add("movw (%A),%S");
-            commands.add("movw %S,%A");
             commands.add("incw %A");
-            commands.add("leaw $-1, (%A)");
-            // e muda o SP para apontar para ela
             commands.add("movw %A, %D");
+            commands.add("leaw $-1,%A");
+            commands.add("movw %A, %S");
+          
             commands.add("leaw $SP,%A");
-            commands.add("movw %D, (%A)");
+            commands.add("movw (%A),%A");
+            commands.add("decw %A");
+            commands.add("decw %A");
+            commands.add("movw %S,(%A)");
+            commands.add("incw %A");
+            commands.add("leaw $SP,%A");
+            commands.add("movw %D,(%A)");
             
-            commands.add("ltlabelf");
+            commands.add(ltlabelf);
             
             System.out.println("lt realizado");
 
@@ -295,12 +333,12 @@ public class Code {
             //guarda o que esta acima da ram do sp em A 
             commands.add("decw %A");
             // faz o and 
-            commands.add("andw (%A), %S, %D");
-            commands.add("movw %D, (%A)");
+            commands.add("andw (%A),%S,%D");
+            commands.add("movw %A,%S");
             //passa a ram que a esta guardando para D para passar a ram para o SP
-            commands.add("movw %A, %D");
+            commands.add("incw %S");
             commands.add("leaw $SP,%A");
-            commands.add("movw %D, (%A)");
+            commands.add("movw %S,(%A)");
             
             System.out.println("and  realizado");
             
@@ -311,6 +349,7 @@ public class Code {
             commands.add(String.format("; %d - OR", lineCode++));
             
 
+
             // gurda a ram que o sp ta apontando em A e oq essa ram ESta guardando em S
             commands.add("leaw $SP,%A");
             commands.add("movw (%A),%S");
@@ -318,26 +357,27 @@ public class Code {
             commands.add("movw (%A),%S");
             //guarda o que esta acima da ram do sp em A 
             commands.add("decw %A");
-            // faz o and 
-            commands.add("orw (%A), %S, %D");
-            commands.add("movw %D, (%A)");
+            // faz o or 
+            commands.add("orw (%A),%S,%D");
+            commands.add("movw %A, %S");
             //passa a ram que a esta guardando para D para passar a ram para o SP
-            commands.add("movw %A, %D");
+            commands.add("incw %S");
             commands.add("leaw $SP,%A");
-            commands.add("movw %D, (%A)");
+            commands.add("movw %S,(%A)");
             
-            System.out.println("and  realizado");
-
+            System.out.println("or realizado");
+            
         } else if (command.equals("not")) {
             commands.add(String.format("; %d - NOT", lineCode++));
             
-         // gurda a ram que o sp ta apontando em A e oq essa ram esta guardando em S
-            commands.add("leaw $SP,%A");
-            commands.add("movw (%A),%S");
-            commands.add("movw %S,%A");
-            commands.add("movw (%A),%S");
+         // guarda a ram que o sp ta apontando em A e oq essa ram esta guardando em A
+            commands.add("leaw $SP, %A"); 
+            commands.add("movw (%A), %S");
+            commands.add("decw %S");
+            commands.add("movw %S, %A");
+            commands.add("movw (%A), %S");
             //Faz o not
-            commands.add("notw %S");
+            commands.add("notw, %S");
             // Move para a ram que A esta apontando
             commands.add("movw %S, (%A)");
 
@@ -548,64 +588,173 @@ public class Code {
 
 
             if (segment.equals("constant")) {
-            	commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
-
-				commands.add("movw (%A), %A"); //move o valor apontado pelo SP para o reg A
-				commands.add("decw %A"); //subtrai 1 do valor apontado pelo SP para pegar o ultimo valor da pilha
+                commands.add("leaw $"+index+", %A"); //pega o index
+                commands.add("movw %A, %S");  //move o index para o reg S
+                commands.add("leaw $SP, %A");  //passa o valor do sp para o reg A
+                commands.add("movw (%A), %D"); //passa o endereco apontado pelo sp para o reg D
+                commands.add("movw %D, %A");
+                commands.add("movw %S, (%A)"); //passa o numero desejado para a pilha
+                
+                
+                commands.add("leaw $SP, %A");  //passa o valor do sp para o reg A
+                commands.add("movw (%A), %A"); //passa o endereco apontado pelo sp para o reg A
+                commands.add("incw %A"); //aumenta um no endereco
+                commands.add("movw %A, %S"); //move esse endereco para o reg S
+                commands.add("leaw $SP, %A");  //passa o valor do sp para o reg A
+                commands.add("movw %S, (%A)"); //passa o endereco somado para o sp
 
 			} else if (segment.equals("local")) {
-				commands.add("leaw $LCL, %A"); //passa o valor do local para o reg A
-				commands.add("movw (%A), %S"); //move o valor apontado pelo Local para o reg S
-				commands.add("leaw $"+index+", %A"); //pega o index
-				commands.add("addw %S, %A, %A"); //soma o valor do local 0 com o valor do index
-				commands.add("movw (%A), %D"); //move o valor armazenado em index para o reg D
+			    commands.add("leaw $"+index+", %A"); //pega o index
+                commands.add("movw %A, %S");  //move o index para o reg S
+                commands.add("leaw $LCL, %A");  //passa o valor do Local para o reg A
+                commands.add("movw (%A), %D"); //passa o endereco apontado pelo sp para o reg D
+                commands.add("movw %D, %A");  //passa o endereco apontado pelo sp para o reg A
+                
+                commands.add("addw %S, %A, %A"); //soma o index com o endereco apontado pelo local
+                commands.add("movw (%A), %S");  //passa o que ta no endereco somado para o reg S
+                
+                commands.add("leaw $SP, %A");  //passa o valor do sp para o reg A
+                commands.add("movw (%A), %A");  //passa o endereco apontado pelo sp para o reg A
+                commands.add("movw %S, (%A)"); //move o que esta no endereco somado para o endereco apontado pelo sp
+                commands.add("incw %A"); //aumenta um no endereco
+                commands.add("movw %A, %S");//move esse endereco para o reg S
+                commands.add("leaw $SP, %A");//passa o valor do sp para o reg A
+                commands.add("movw %S, (%A)");//passa o endereco somado para o sp
 
-				commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
-				commands.add("movw %D, (%A)"); //move o valor em D para o endereço do SP
-				commands.add("addw %A"); //adiciona 1 do valor apontado pelo SP
 
 			} else if (segment.equals("argument")) {
-				commands.add("leaw $ARG, %A"); //passa o valor do ARGUMENT para o reg A
-				commands.add("movw (%A), %S"); //move o valor apontado pelo Local para o reg S
-				commands.add("leaw $"+index+", %A"); //pega o index
-				commands.add("addw %S, %A, %A"); //soma o valor do argument 0 com o valor do index
-				commands.add("movw (%A), %D"); //move o valor armazenado em index para o reg D
-
-				commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
-				commands.add("movw %D, (%A)"); //move o valor em D para o endereço do SP
-				commands.add("addw %A"); //adiciona 1 do valor apontado pelo SP
+			    commands.add("leaw $"+index+", %A"); //pega o index
+                commands.add("movw %A, %S");  //move o index para o reg S
+                commands.add("leaw $ARG, %A");  //passa o valor do argument para o reg A
+                commands.add("movw (%A), %D"); //passa o endereco apontado pelo sp para o reg D
+                commands.add("movw %D, %A");  //passa o endereco apontado pelo sp para o reg A
+                
+                commands.add("addw %S, %A, %A"); //soma o index com o endereco apontado pelo arg
+                commands.add("movw (%A), %S");  //passa o que ta no endereco somado para o reg S
+                
+                commands.add("leaw $SP, %A");  //passa o valor do sp para o reg A
+                commands.add("movw (%A), %A");  //passa o endereco apontado pelo sp para o reg A
+                commands.add("movw %S, (%A)"); //move o que esta no endereco somado para o endereco apontado pelo sp
+                commands.add("incw %A"); //aumenta um no endereco
+                commands.add("movw %A, %S");//move esse endereco para o reg S
+                commands.add("leaw $SP, %A");//passa o valor do sp para o reg A
+                commands.add("movw %S, (%A)");//passa o endereco somado para o sp
 
 			} else if (segment.equals("this")) {
-				commands.add("leaw $THIS, %A"); //passa o valor do THIS para o reg A
-				commands.add("movw (%A), %S"); //move o valor apontado pelo Local para o reg S
-				commands.add("leaw $"+index+", %A"); //pega o index
-				commands.add("addw %S, %A, %A"); //soma o valor do this 0 com o valor do index
-				commands.add("movw (%A), %D"); //move o valor armazenado em index para o reg D
-
-				commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
-				commands.add("movw %D, (%A)"); //move o valor em D para o endereço do SP
-				commands.add("addw %A"); //adiciona 1 do valor apontado pelo SP
+			    commands.add("leaw $"+index+", %A"); //pega o index
+                commands.add("movw %A, %S");  //move o index para o reg S
+                commands.add("leaw $THIS, %A");  //passa o valor do this para o reg A
+                commands.add("movw (%A), %D"); //passa o endereco apontado pelo sp para o reg D
+                commands.add("movw %D, %A");  //passa o endereco apontado pelo sp para o reg A
+                
+                commands.add("addw %S, %A, %A"); //soma o index com o endereco apontado pelo this
+                commands.add("movw (%A), %S");  //passa o que ta no endereco somado para o reg S
+                
+                commands.add("leaw $SP, %A");  //passa o valor do sp para o reg A
+                commands.add("movw (%A), %A");  //passa o endereco apontado pelo sp para o reg A
+                commands.add("movw %S, (%A)"); //move o que esta no endereco somado para o endereco apontado pelo sp
+                commands.add("incw %A"); //aumenta um no endereco
+                commands.add("movw %A, %S");//move esse endereco para o reg S
+                commands.add("leaw $SP, %A");//passa o valor do sp para o reg A
+                commands.add("movw %S, (%A)");//passa o endereco somado para o sp
 
 			} else if (segment.equals("that")) {
-				commands.add("leaw $THAT, %A"); //passa o valor do THAT para o reg A
-				commands.add("movw (%A), %S"); //move o valor apontado pelo Local para o reg S
-				commands.add("leaw $"+index+", %A"); //pega o index
-				commands.add("addw %S, %A, %A"); //soma o valor do that 0 com o valor do index
-				commands.add("movw (%A), %D"); //move o valor armazenado em index para o reg D
-
-				commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
-				commands.add("movw %D, (%A)"); //move o valor em D para o endereço do SP
-				commands.add("addw %A"); //adiciona 1 do valor apontado pelo SP
+			    commands.add("leaw $"+index+", %A"); //pega o index
+                commands.add("movw %A, %S");  //move o index para o reg S
+                commands.add("leaw $THAT, %A");  //passa o valor do that para o reg A
+                commands.add("movw (%A), %D"); //passa o endereco apontado pelo sp para o reg D
+                commands.add("movw %D, %A");  //passa o endereco apontado pelo sp para o reg A
+                
+                commands.add("addw %S, %A, %A"); //soma o index com o endereco apontado pelo that
+                commands.add("movw (%A), %S");  //passa o que ta no endereco somado para o reg S
+                
+                commands.add("leaw $SP, %A");  //passa o valor do sp para o reg A
+                commands.add("movw (%A), %A");  //passa o endereco apontado pelo sp para o reg A
+                commands.add("movw %S, (%A)"); //move o que esta no endereco somado para o endereco apontado pelo sp
+                commands.add("incw %A"); //aumenta um no endereco
+                commands.add("movw %A, %S");//move esse endereco para o reg S
+                commands.add("leaw $SP, %A");//passa o valor do sp para o reg A
+                commands.add("movw %S, (%A)");//passa o endereco somado para o sp
 				
 
 			} else if (segment.equals("static")) {
+			
+		    commands.add("leaw $"+index+", %A"); //pega o index
+            commands.add("movw %A, %S");  //move o index para o reg S
+            commands.add("leaw $" + filename+ "-" + index.toString() +" ,%A");
+            commands.add("movw (%A), %D"); //passa o endereco apontado pelo sp para o reg D
+            commands.add("movw %D, %A");  //passa o endereco apontado pelo sp para o reg A
+            
+            commands.add("addw %S, %A, %A"); //soma o index com o endereco apontado pelo that
+            commands.add("movw (%A), %S");  //passa o que ta no endereco somado para o reg S
+            
+            commands.add("leaw $SP, %A");  //passa o valor do sp para o reg A
+            commands.add("movw (%A), %A");  //passa o endereco apontado pelo sp para o reg A
+            commands.add("movw %S, (%A)"); //move o que esta no endereco somado para o endereco apontado pelo sp
+            commands.add("incw %A"); //aumenta um no endereco
+            commands.add("movw %A, %S");//move esse endereco para o reg S
+            commands.add("leaw $SP, %A");//passa o valor do sp para o reg A
+            commands.add("movw %S, (%A)");//passa o endereco somado para o sp
+			
+			
 
 			} else if (segment.equals("temp")) {
+				
+			    commands.add("leaw $"+index+", %A"); //pega o index
+	            commands.add("movw %A, %S");  //move o index para o reg S
+	            commands.add("leaw $5 ,%A");
+	            
+	            commands.add("addw %S, %A, %A"); //soma o index com o endereco apontado pelo that
+	            commands.add("movw (%A), %S");  //passa o que ta no endereco somado para o reg S
+	            
+	            commands.add("leaw $SP, %A");  //passa o valor do sp para o reg A
+	            commands.add("movw (%A), %A");  //passa o endereco apontado pelo sp para o reg A
+	            commands.add("movw %S, (%A)"); //move o que esta no endereco somado para o endereco apontado pelo sp
+	            commands.add("incw %A"); //aumenta um no endereco
+	            commands.add("movw %A, %S");//move esse endereco para o reg S
+	            commands.add("leaw $SP, %A");//passa o valor do sp para o reg A
+	            commands.add("movw %S, (%A)");//passa o endereco somado para o sp
+	            
+	            
+
+				
 
 			} else if (segment.equals("pointer")) {
 				if(index==0) {
+				    commands.add("leaw $"+index+", %A"); //pega o index
+		            commands.add("movw %A, %S");  //move o index para o reg S
+		            commands.add("leaw $THIS ,%A");
+		            commands.add("movw (%A), %D"); //passa o endereco apontado pelo sp para o reg D
+		            commands.add("movw %D, %A");  //passa o endereco apontado pelo sp para o reg A
+		            
+		            commands.add("addw %S, %A, %A"); //soma o index com o endereco apontado pelo that
+		            commands.add("movw (%A), %S");  //passa o que ta no endereco somado para o reg S
+		            
+		            commands.add("leaw $SP, %A");  //passa o valor do sp para o reg A
+		            commands.add("movw (%A), %A");  //passa o endereco apontado pelo sp para o reg A
+		            commands.add("movw %S, (%A)"); //move o que esta no endereco somado para o endereco apontado pelo sp
+		            commands.add("incw %A"); //aumenta um no endereco
+		            commands.add("movw %A, %S");//move esse endereco para o reg S
+		            commands.add("leaw $SP, %A");//passa o valor do sp para o reg A
+		            commands.add("movw %S, (%A)");//passa o endereco somado para o sp
 
 				} else {
+				    commands.add("leaw $"+index+", %A"); //pega o index
+		            commands.add("movw %A, %S");  //move o index para o reg S
+		            commands.add("leaw $THAT ,%A");
+		            commands.add("movw (%A), %D"); //passa o endereco apontado pelo sp para o reg D
+		            commands.add("movw %D, %A");  //passa o endereco apontado pelo sp para o reg A
+		            
+		            commands.add("addw %S, %A, %A"); //soma o index com o endereco apontado pelo that
+		            commands.add("movw (%A), %S");  //passa o que ta no endereco somado para o reg S
+		            
+		            commands.add("leaw $SP, %A");  //passa o valor do sp para o reg A
+		            commands.add("movw (%A), %A");  //passa o endereco apontado pelo sp para o reg A
+		            commands.add("movw %S, (%A)"); //move o que esta no endereco somado para o endereco apontado pelo sp
+		            commands.add("incw %A"); //aumenta um no endereco
+		            commands.add("movw %A, %S");//move esse endereco para o reg S
+		            commands.add("leaw $SP, %A");//passa o valor do sp para o reg A
+		            commands.add("movw %S, (%A)");//passa o endereco somado para o sp
 
 				}
 			}

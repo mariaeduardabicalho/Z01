@@ -48,36 +48,36 @@ public class Assemble {
      */
     public void fillSymbolTable() throws FileNotFoundException, IOException {
     	Parser parser = new Parser(inputFile);
-    	int currentLine = 0;
-    	int currentRam = 16;
+    	int line = 0; //linmha atual
+    	int ram = 16; //ram atual
+    	
+    	
+    	
     	while(parser.advance()){
-
-    		if(parser.commandType(parser.command()) == CommandType.L_COMMAND ){
+    		if(parser.commandType(parser.command()) == CommandType.L_COMMAND ){ //tipo L
 
     			String lbl = parser.label(parser.command());
     			if (!table.contains(lbl)){
-    				table.addEntry(lbl, currentLine);
-
+    				table.addEntry(lbl, line); //add na tabela na linha atual
     			}
     		} 
-
 			if (parser.commandType(parser.command()) == CommandType.A_COMMAND || parser.commandType(parser.command()) == CommandType.C_COMMAND){
-    			currentLine++;
-
+    			//tipo A ou C
+				line++; //passa pra prox linha
 			}
     	}
-
     	parser = new Parser(inputFile);
 		while(parser.advance()){
+			if(parser.commandType(parser.command()) == CommandType.A_COMMAND ){ //tipo A
+				
+				String s = parser.symbol(parser.command());
 
-			if(parser.commandType(parser.command()) == CommandType.A_COMMAND ){
-				String symb = parser.symbol(parser.command());
-
-				if((int) symb.charAt(0) < 48 || (int) symb.charAt(0) > 57){ //Root checking if number
-
-					if (!table.contains(symb)){
-						table.addEntry(symb, currentRam );
-						currentRam ++;
+				
+				//if((int) s.charAt(0) < 57 || (int) s.charAt(0) > 50){
+				if((int) s.charAt(0) < 48 || (int) s.charAt(0) > 57){
+					if (!table.contains(s)){ //se nao tem na tabela
+						table.addEntry(s, ram ); // bota na tabela na ram atual
+						ram ++; //prox ram
 					}
 				}
 			}
@@ -93,49 +93,36 @@ public class Assemble {
      * Dependencias : Parser, Code
      */
     public void generateMachineCode() throws FileNotFoundException, IOException{
-        Parser parser = new Parser(inputFile);  // abre o arquivo e aponta para o começo
-        Code code1 = new Code();
-        String machineCode = "";
+        Parser parser = new Parser(inputFile);  // abre e aponta pro comeco do inputfile
+        Code code = new Code();
+        String mCode = "";
         while(parser.advance()){
-        	//String symb = parser.command();
-        	machineCode = "";
 
-        	String[] mnemnonic = parser.instruction(parser.command());
-        	if (parser.commandType(parser.command()) == CommandType.A_COMMAND){
-        		String symb = parser.symbol(parser.command());
-        		if ((int) symb.charAt(0) < 48 || (int) symb.charAt(0) > 57){
- 
-        			
-        			String var =String.valueOf(table.getAddress(symb));
-
-        			
-        			
-        			machineCode = "0" + code1.toBinary(var);
+        	mCode = "";
+        	String[] mnemnonic = parser.instruction(parser.command()); //mnemonicos
+        	if (parser.commandType(parser.command()) == CommandType.A_COMMAND){ //tipo A
+        		String s = parser.symbol(parser.command());
+        		if ((int) s.charAt(0) < 48 || (int) s.charAt(0) > 57){ // d
+        			String v = String.valueOf(table.getAddress(s));
+        			mCode = "0" + code.toBinary(v);
         		} else {
-        			machineCode = "0" + code1.toBinary(symb);	
+        			mCode = "0" + code.toBinary(s);	
         		}
-        		outHACK.println(machineCode);
-        		
+        		outHACK.println(mCode);
         	} else if(parser.commandType(parser.command()) == CommandType.C_COMMAND) {
-			
 			for (int i=0; i <mnemnonic.length; i++){
-
 			}
-			if(code1.jump(mnemnonic).equals("000")){
-				machineCode = "1"+ code1.comp(mnemnonic)+code1.dest(mnemnonic)+code1.jump(mnemnonic);
-        		outHACK.println(machineCode);
+			if(code.jump(mnemnonic).equals("000")){
+				mCode = "1"+ code.comp(mnemnonic)+code.dest(mnemnonic)+code.jump(mnemnonic);
+        		outHACK.println(mCode);
 			}
 			else{
-        		machineCode = "1"+ code1.comp(mnemnonic)+"0000"+code1.jump(mnemnonic);
-        		outHACK.println(machineCode);
+        		mCode = "1"+ code.comp(mnemnonic)+"0000"+code.jump(mnemnonic);
+        		outHACK.println(mCode);
 			}
-
-
-
-        	}
-        	        	 
         }
-        //return machineCode;
+        	        	 
+       }
     }
 
     /**
