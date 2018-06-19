@@ -99,10 +99,10 @@ public class Assemble {
         while(parser.advance()){
         	//String symb = parser.command();
         	machineCode = "";
-        	String[] mnemnonic = parser.instruction(parser.command());
-        	String symb = parser.symbol(parser.command());
-        	if (parser.commandType(parser.command()) == CommandType.A_COMMAND){
 
+        	String[] mnemnonic = parser.instruction(parser.command());
+        	if (parser.commandType(parser.command()) == CommandType.A_COMMAND){
+        		String symb = parser.symbol(parser.command());
         		if ((int) symb.charAt(0) < 48 || (int) symb.charAt(0) > 57){
  
         			
@@ -121,9 +121,16 @@ public class Assemble {
 			for (int i=0; i <mnemnonic.length; i++){
 
 			}
-
-        		machineCode = "1"+ code1.comp(mnemnonic)+code1.dest(mnemnonic)+code1.jump(mnemnonic);
+			if(code1.jump(mnemnonic).equals("000")){
+				machineCode = "1"+ code1.comp(mnemnonic)+code1.dest(mnemnonic)+code1.jump(mnemnonic);
         		outHACK.println(machineCode);
+			}
+			else{
+        		machineCode = "1"+ code1.comp(mnemnonic)+"0000"+code1.jump(mnemnonic);
+        		outHACK.println(machineCode);
+			}
+
+
 
         	}
         	        	 

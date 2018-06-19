@@ -3,11 +3,39 @@ leaw $SP, %A
 movw (%A), %A
 decw %A
 ; 1 - POP pointer 0
+leaw $SP, %A
+movw (%A), %A
+decw %A
+movw (%A), %D
+movw %A, %S
+leaw $SP, %A
+leaw $THIS, %A
+movw %D, (%A)
+leaw $SP, %A
+movw (%A), %A
+decw %A
+movw %A, %S
+leaw $SP, %A
+movw %S, (%A)
 ; 2 - PUSH constant 3040
 leaw $SP, %A
 movw (%A), %A
 decw %A
 ; 3 - POP pointer 1
+leaw $SP, %A
+movw (%A), %A
+decw %A
+movw (%A), %D
+movw %A, %S
+leaw $SP, %A
+leaw $THAT, %A
+movw %D, (%A)
+leaw $SP, %A
+movw (%A), %A
+decw %A
+movw %A, %S
+leaw $SP, %A
+movw %S, (%A)
 ; 4 - PUSH constant 32
 leaw $SP, %A
 movw (%A), %A
@@ -51,16 +79,17 @@ movw %S, (%A)
 ; 8 - PUSH pointer 0
 ; 9 - PUSH pointer 1
 ; 10 - ADD
-leaw $SP,%A
-movw (%A),%S
-movw %S,%A
-movw (%A),%S
+leaw $SP, %A
+movw (%A), %A
 decw %A
-addw (%A),%S,%D
-movw %D, (%A)
+movw (%A), %D
+decw %A
+addw %D, (%A), %S
+movw %S, (%A)
+incw %A
 movw %A, %D
-leaw $SP,%A
-movw %D,(%A)
+leaw $SP, %A
+movw %D, (%A)
 ; 11 - PUSH this 2
 ; 12 - SUB
 leaw $SP,%A
@@ -75,14 +104,15 @@ leaw $SP,%A
 movw %D, (%A)
 ; 13 - PUSH that 6
 ; 14 - ADD
-leaw $SP,%A
-movw (%A),%S
-movw %S,%A
-movw (%A),%S
+leaw $SP, %A
+movw (%A), %A
 decw %A
-addw (%A),%S,%D
-movw %D, (%A)
+movw (%A), %D
+decw %A
+addw %D, (%A), %S
+movw %S, (%A)
+incw %A
 movw %A, %D
-leaw $SP,%A
-movw %D,(%A)
+leaw $SP, %A
+movw %D, (%A)
 ; End
