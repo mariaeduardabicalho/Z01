@@ -46,6 +46,23 @@ leaw $SP, %A
 movw (%A), %A
 decw %A
 ; 6 - POP temp 0
+leaw $SP, %A
+movw (%A), %A
+decw %A
+movw (%A), %D
+movw %A, %S
+leaw $SP, %A
+leaw $0, %A
+movw %A, %S
+leaw $5, %A
+addw %S, %A, %A
+movw %D, (%A)
+leaw $SP, %A
+movw (%A), %A
+decw %A
+movw %A, %S
+leaw $SP, %A
+movw %S, (%A)
 ; 7 - PUSH constant 15
 leaw $SP, %A
 movw (%A), %A
@@ -90,4 +107,21 @@ leaw $SP, %A
 movw (%A), %A
 decw %A
 ; 12 - POP temp 1
+leaw $SP, %A
+movw (%A), %A
+decw %A
+movw (%A), %D
+movw %A, %S
+leaw $SP, %A
+leaw $1, %A
+movw %A, %S
+leaw $5, %A
+addw %S, %A, %A
+movw %D, (%A)
+leaw $SP, %A
+movw (%A), %A
+decw %A
+movw %A, %S
+leaw $SP, %A
+movw %S, (%A)
 ; End

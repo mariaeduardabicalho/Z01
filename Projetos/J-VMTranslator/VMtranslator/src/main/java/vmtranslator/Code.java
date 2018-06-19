@@ -457,13 +457,89 @@ public class Code {
 				//acabou de mudar o SP para 'retirar' o ultimo elemento da pilha
 
 			} else if (segment.equals("static")) {
+				commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
+				commands.add("movw (%A), %A"); //move o valor apontado pelo SP para o reg A
+				commands.add("decw %A"); //subtrai 1 do valor apontado pelo SP para pegar o ultimo valor da pilha
+				commands.add("movw (%A), %D"); //move o ultimo valor da pilha para o reg D
+				//acabou de pegar o ultimo valor da pilha e armazenar no reg D
+
+				commands.add("leaw $LCL, %A"); //passa o valor do local para o reg A
+				commands.add("movw (%A), %S"); //move o valor apontado pelo local para o reg S
+				commands.add("leaw $"+filename + "-" +  index+", %A"); //pega o index
+				commands.add("addw %S, %A, %A"); //soma o valor do local 0 com o valor do index
+				commands.add("movw %D, (%A)"); //move o ultimo valor da pilha armzenado em D para o endereco
+
+				commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
+				commands.add("movw (%A), %A"); //move o valor apontado pelo SP para o reg A
+				commands.add("decw %A"); //subtrai 1 do valor apontado pelo SP para pegar o ultimo valor da pilha
+				commands.add("movw %A, %S"); //move o valor apontado pelo sp menos 1 para o reg S
+				commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
+				commands.add("movw %S, (%A)"); //aponta o SP para uma pilha a menos  
+				//acabou de mudar o SP para 'retirar' o ultimo elemento da pilha
 
 			} else if (segment.equals("temp")) {
+				commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
+				commands.add("movw (%A), %A"); //move o valor apontado pelo SP para o reg A
+				commands.add("decw %A"); //subtrai 1 do valor apontado pelo SP para pegar o ultimo valor da pilha
+				commands.add("movw (%A), %D"); //move o ultimo valor da pilha para o reg D
+				commands.add("movw %A, %S"); //passa o endereco do ultimo valor da pilha para o reg S
+				//acabou de pegar o ultimo valor da pilha e armazenar no reg D
+
+				commands.add("leaw $SP, %A"); //passa o valor do sp para o reg A
+				commands.add("leaw $"+index+", %A");  //pega o index
+				commands.add("movw %A, %S"); //move o valor apontado pelo local para o reg S
+				commands.add("leaw $5, %A"); //pega o index
+				commands.add("addw %S, %A, %A"); //soma o valor do local 0 com o valor do index
+				commands.add("movw %D, (%A)"); //move o ultimo valor da pilha armzenado em D para o endereco
+
+				commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
+				commands.add("movw (%A), %A"); //move o valor apontado pelo SP para o reg A
+				commands.add("decw %A"); //subtrai 1 do valor apontado pelo SP para pegar o ultimo valor da pilha
+				commands.add("movw %A, %S"); //move o valor apontado pelo sp menos 1 para o reg S
+				commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
+				commands.add("movw %S, (%A)"); //aponta o SP para uma pilha a menos  
+				//acabou de mudar o SP para 'retirar' o ultimo elemento da pilha
 
 			} else if (segment.equals("pointer")) {
 				if(index==0) {
+					commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
+					commands.add("movw (%A), %A"); //move o valor apontado pelo SP para o reg A
+					commands.add("decw %A"); //subtrai 1 do valor apontado pelo SP para pegar o ultimo valor da pilha
+					commands.add("movw (%A), %D"); //move o ultimo valor da pilha para o reg D
+					commands.add("movw %A, %S"); //passa o endereco do ultimo valor da pilha para o reg S
+					//acabou de pegar o ultimo valor da pilha e armazenar no reg D
+
+					commands.add("leaw $SP, %A"); //passa o valor do sp para o reg A
+					commands.add("leaw $THIS, %A");  //pega o this
+					commands.add("movw %D, (%A)"); //move o ultimo valor da pilha armzenado em D para o endereco
+
+					commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
+					commands.add("movw (%A), %A"); //move o valor apontado pelo SP para o reg A
+					commands.add("decw %A"); //subtrai 1 do valor apontado pelo SP para pegar o ultimo valor da pilha
+					commands.add("movw %A, %S"); //move o valor apontado pelo sp menos 1 para o reg S
+					commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
+					commands.add("movw %S, (%A)"); //aponta o SP para uma pilha a menos  
+					//acabou de mudar o SP para 'retirar' o ultimo elemento da pilha
 
 				} else {
+					commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
+					commands.add("movw (%A), %A"); //move o valor apontado pelo SP para o reg A
+					commands.add("decw %A"); //subtrai 1 do valor apontado pelo SP para pegar o ultimo valor da pilha
+					commands.add("movw (%A), %D"); //move o ultimo valor da pilha para o reg D
+					commands.add("movw %A, %S"); //passa o endereco do ultimo valor da pilha para o reg S
+					//acabou de pegar o ultimo valor da pilha e armazenar no reg D
+
+					commands.add("leaw $SP, %A"); //passa o valor do sp para o reg A
+					commands.add("leaw $THAT, %A");  //pega o that
+					commands.add("movw %D, (%A)"); //move o ultimo valor da pilha armzenado em D para o endereco
+
+					commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
+					commands.add("movw (%A), %A"); //move o valor apontado pelo SP para o reg A
+					commands.add("decw %A"); //subtrai 1 do valor apontado pelo SP para pegar o ultimo valor da pilha
+					commands.add("movw %A, %S"); //move o valor apontado pelo sp menos 1 para o reg S
+					commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
+					commands.add("movw %S, (%A)"); //aponta o SP para uma pilha a menos  
+					//acabou de mudar o SP para 'retirar' o ultimo elemento da pilha
 
 				}
 			}

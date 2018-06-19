@@ -8,12 +8,12 @@
 #--------------------
 SimpleAdd 1 200
 SimpleNeg 1 200
-SimpleSub 1 200
-SimpleEq 3 200
-SimpleGt 3 200
-SimpleLt 3 200
-SimpleAnd 1 200
-SimpleOr 1 200
+#SimpleSub 1 200
+#SimpleEq 3 200
+#SimpleGt 3 200
+#SimpleLt 3 200
+#SimpleAnd 1 200
+#SimpleOr 1 200
 #SimplePushConst 1 200
 #SimplePushTemp 1 200
 #SimplePushLocal 1 200
@@ -25,7 +25,7 @@ SimplePopLocal 1 200
 SimplePopThat 1 200
 SimplePopThis 1 200
 #SimplePushAdd 1 200
-#SimplePopPointer 1 200
+SimplePopPointer 1 200
 #StackTest 1 4000
 ##--------------------
 ## Entrega parte 2
