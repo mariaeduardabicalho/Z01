@@ -15,6 +15,11 @@ movw %S,(%A)
 FAT:
 ; Multiplica o valor de RAM[1] com RAM[0] salvando em RAM[3]
 
+<<<<<<< HEAD
+; Multiplica o valor de RAM[1] com RAM[0] salvando em RAM[3]
+
+=======
+>>>>>>> a8721f3a03590bd7f257ca39a9a44294d543dd49
 ;Carrega os dois valores a serem multiplicados nos registradores S e D e verifica se algum deles e zero
 leaw $5, %A
 movw (%A), %S
@@ -39,6 +44,17 @@ leaw $0, %A
 addw (%A), %S, %S
 leaw %LOOPING, %A
 jmp
+<<<<<<< HEAD
+nop
+
+ZERO:
+leaw $0, %A
+movw %A, %D
+leaw $3, %A
+movw %D, (%A)
+leaw $NOPE, %A
+jmp
+=======
 nop
 
 ZERO:
@@ -55,9 +71,14 @@ leaw %3, %A
 movw %S, (%A)
 
 NOPE:
+>>>>>>> a8721f3a03590bd7f257ca39a9a44294d543dd49
 nop
 
 FIM:
+leaw %3, %A
+movw %S, (%A)
+
+NOPE:
 nop
 
 leaw $3, %A

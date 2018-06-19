@@ -554,12 +554,49 @@ public class Code {
 				commands.add("decw %A"); //subtrai 1 do valor apontado pelo SP para pegar o ultimo valor da pilha
 
 			} else if (segment.equals("local")) {
+				commands.add("leaw $LCL, %A"); //passa o valor do local para o reg A
+				commands.add("movw (%A), %S"); //move o valor apontado pelo Local para o reg S
+				commands.add("leaw $"+index+", %A"); //pega o index
+				commands.add("addw %S, %A, %A"); //soma o valor do local 0 com o valor do index
+				commands.add("movw (%A), %D"); //move o valor armazenado em index para o reg D
+
+				commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
+				commands.add("movw %D, (%A)"); //move o valor em D para o endereço do SP
+				commands.add("addw %A"); //adiciona 1 do valor apontado pelo SP
 
 			} else if (segment.equals("argument")) {
+				commands.add("leaw $ARG, %A"); //passa o valor do ARGUMENT para o reg A
+				commands.add("movw (%A), %S"); //move o valor apontado pelo Local para o reg S
+				commands.add("leaw $"+index+", %A"); //pega o index
+				commands.add("addw %S, %A, %A"); //soma o valor do argument 0 com o valor do index
+				commands.add("movw (%A), %D"); //move o valor armazenado em index para o reg D
+
+				commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
+				commands.add("movw %D, (%A)"); //move o valor em D para o endereço do SP
+				commands.add("addw %A"); //adiciona 1 do valor apontado pelo SP
 
 			} else if (segment.equals("this")) {
+				commands.add("leaw $THIS, %A"); //passa o valor do THIS para o reg A
+				commands.add("movw (%A), %S"); //move o valor apontado pelo Local para o reg S
+				commands.add("leaw $"+index+", %A"); //pega o index
+				commands.add("addw %S, %A, %A"); //soma o valor do this 0 com o valor do index
+				commands.add("movw (%A), %D"); //move o valor armazenado em index para o reg D
+
+				commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
+				commands.add("movw %D, (%A)"); //move o valor em D para o endereço do SP
+				commands.add("addw %A"); //adiciona 1 do valor apontado pelo SP
 
 			} else if (segment.equals("that")) {
+				commands.add("leaw $THAT, %A"); //passa o valor do THAT para o reg A
+				commands.add("movw (%A), %S"); //move o valor apontado pelo Local para o reg S
+				commands.add("leaw $"+index+", %A"); //pega o index
+				commands.add("addw %S, %A, %A"); //soma o valor do that 0 com o valor do index
+				commands.add("movw (%A), %D"); //move o valor armazenado em index para o reg D
+
+				commands.add("leaw $SP, %A"); //passa o valor do stack pointer (0) para o reg A
+				commands.add("movw %D, (%A)"); //move o valor em D para o endereço do SP
+				commands.add("addw %A"); //adiciona 1 do valor apontado pelo SP
+				
 
 			} else if (segment.equals("static")) {
 
