@@ -1,32 +1,35 @@
 ; 0 - GT
 leaw $SP,%A
-movw (%A),%S
-movw %S,%A
+movw (%A),%A
+decw %A
 movw (%A),%S
 decw %A
-subw (%A),%S,%D
-leaw $gtlabelt, %A
-jg %D
+movw (%A),%A
+subw %A, %S, %S
+leaw $lbl18c6a28f82c9f6612117,%A
+jg %S
 nop
-leaw $SP,%A
-movw (%A),%S
-movw %S,%A
-incw %A
-leaw $0, (%A)
-movw %A, %D
-leaw $SP,%A
-movw %D, (%A)
-leaw $gtlabelf, %A
-jmp 
+leaw $0,%A
+movw %A,%D
+leaw $lbl97ddc1479c140f6cc1da,%A
+jmp
 nop
-gtlabelt
+lbl18c6a28f82c9f6612117:
+leaw $1,%A
+negw %A
+movw %A,%D
+leaw $lbl97ddc1479c140f6cc1da,%A
+jmp
+nop
+lbl97ddc1479c140f6cc1da:
 leaw $SP,%A
-movw (%A),%S
-movw %S,%A
-incw %A
-leaw $-1, (%A)
-movw %A, %D
+movw (%A),%A
+decw %A
+decw %A
+movw %D,(%A)
 leaw $SP,%A
-movw %D, (%A)
-eqlabelf
+movw (%A), %D
+decw %D
+leaw $SP,%A
+movw %D,(%A)
 ; End

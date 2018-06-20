@@ -1,32 +1,35 @@
 ; 0 - LT
 leaw $SP,%A
-movw (%A),%S
-movw %S,%A
+movw (%A),%A
+decw %A
 movw (%A),%S
 decw %A
-subw (%A),%S,%D
-leaw $ltlabelt, %A
-jl %D
+movw (%A),%A
+subw %A, %S, %S
+leaw $lblcc4dd00afeaf2256317f,%A
+jl %S
 nop
-leaw $SP,%A
-movw (%A),%S
-movw %S,%A
-incw %A
-leaw $0, (%A)
-movw %A, %D
-leaw $SP,%A
-movw %D, (%A)
-leaw $ltlabelf, %A
-jmp 
+leaw $0,%A
+movw %A,%D
+leaw $lbla314838ed9fea77a76a1,%A
+jmp
 nop
-ltlabelt
+lblcc4dd00afeaf2256317f:
+leaw $1,%A
+negw %A
+movw %A,%D
+leaw $lbla314838ed9fea77a76a1,%A
+jmp
+nop
+lbla314838ed9fea77a76a1:
 leaw $SP,%A
-movw (%A),%S
-movw %S,%A
-incw %A
-leaw $-1, (%A)
-movw %A, %D
+movw (%A),%A
+decw %A
+decw %A
+movw %D,(%A)
 leaw $SP,%A
-movw %D, (%A)
-ltlabelf
+movw (%A), %D
+decw %D
+leaw $SP,%A
+movw %D,(%A)
 ; End

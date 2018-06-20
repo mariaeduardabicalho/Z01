@@ -1,32 +1,34 @@
-; 0 - EQ
 leaw $SP,%A
-movw (%A),%S
-movw %S,%A
+movw (%A),%A
+decw %A
 movw (%A),%S
 decw %A
-subw (%A),%S,%D
-leaw $eqlabelt, %A
-je %D
+movw (%A),%A
+subw %S, %A, %S
+leaw $lbl980c116bc2e720fbaa5b,%A
+je %S
 nop
-leaw $SP,%A
-movw (%A),%S
-movw %S,%A
-incw %A
-leaw $0, (%A)
-movw %A, %D
-leaw $SP,%A
-movw %D, (%A)
-leaw $eqlabelf, %A
-jmp 
+leaw $0,%A
+movw %A,%D
+leaw $lbl8d05bdf414195a908183,%A
+jmp
 nop
-eqlabelt
+lbl980c116bc2e720fbaa5b:
+leaw $1,%A
+negw %A
+movw %A,%D
+leaw $lbl8d05bdf414195a908183,%A
+jmp
+nop
+lbl8d05bdf414195a908183:
 leaw $SP,%A
-movw (%A),%S
-movw %S,%A
-incw %A
-leaw $-1, (%A)
-movw %A, %D
+movw (%A),%A
+decw %A
+decw %A
+movw %D,(%A)
 leaw $SP,%A
-movw %D, (%A)
-eqlabelf
+movw (%A), %D
+decw %D
+leaw $SP,%A
+movw %D,(%A)
 ; End

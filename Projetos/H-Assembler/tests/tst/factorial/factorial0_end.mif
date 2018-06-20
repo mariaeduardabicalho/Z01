@@ -1,12 +1,12 @@
 // memory data file (do not edit the following line - required for mem load use)
 // instance=/computador_tb/c1/MEMORY_MAPED/RAM/altsyncram_component/MEMORY/m_mem_data_a
 // format=mti addressradix=d dataradix=b version=1.0 wordsperline=1
-    0: 1111111111111101
-    1: 0000000000000000
+    0: 1111111111111010
+    1: 1111111111111101
     2: 0000000000000000
-    3: 0000000000000000
+    3: 1111111111111101
     4: 0000000000000000
-    5: 1111111111111101
+    5: 1111111111111010
     6: 0000000000000000
     7: 0000000000000000
     8: 0000000000000000
