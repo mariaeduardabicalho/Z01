@@ -86,47 +86,40 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 6 - EQ
 leaw $SP,%A
-movw (%A),%S
-movw %S,%A
+movw (%A),%A
 decw %A
 movw (%A),%S
 decw %A
-subw (%A),%S,%D
-leaw $RCYDCAM4X53S80BRQX, %A
-je %D
+movw (%A),%A
+subw %S, %A, %S
+leaw $lbl9c9d342b12504ab776be,%A
+je %S
 nop
-incw %A
-movw %A, %D
 leaw $0,%A
-movw %A, %S
-leaw $SP,%A
-movw (%A),%A
-decw %A
-decw %A
-movw %S,(%A)
-incw %A
-leaw $SP,%A
-movw %D,(%A)
-leaw $ 39GQGCFOXJ06I326BK, %A
-jmp 
+movw %A,%D
+leaw $lbl65964758049a2e3b7297,%A
+jmp
 nop
-RCYDCAM4X53S80BRQX
-incw %A
-movw %A, %D
-leaw $-1,%A
-movw %A, %S
+lbl9c9d342b12504ab776be:
+leaw $1,%A
+negw %A
+movw %A,%D
+leaw $lbl65964758049a2e3b7297,%A
+jmp
+nop
+lbl65964758049a2e3b7297:
 leaw $SP,%A
 movw (%A),%A
 decw %A
 decw %A
-movw %S,(%A)
-incw %A
+movw %D,(%A)
+leaw $SP,%A
+movw (%A), %D
+decw %D
 leaw $SP,%A
 movw %D,(%A)
-39GQGCFOXJ06I326BK
-; 8 - PUSH temp 0
+; 7 - PUSH temp 0
 leaw $0, %A
 movw %A, %S
 leaw $5 ,%A
@@ -139,7 +132,7 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 9 - PUSH constant 1
+; 8 - PUSH constant 1
 leaw $1, %A
 movw %A, %S
 leaw $SP, %A
@@ -152,7 +145,7 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 10 - ADD
+; 9 - ADD
 leaw $SP,%A
 movw (%A),%S
 movw %S,%A
@@ -165,7 +158,7 @@ incw %A
 movw %A,%D
 leaw $SP,%A
 movw %D,(%A)
-; 11 - POP temp 0
+; 10 - POP temp 0
 leaw $SP, %A
 movw (%A), %A
 decw %A
@@ -183,6 +176,19 @@ decw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
+; 11 - PUSH temp 1
+leaw $1, %A
+movw %A, %S
+leaw $5 ,%A
+addw %S, %A, %A
+movw (%A), %S
+leaw $SP, %A
+movw (%A), %A
+movw %S, (%A)
+incw %A
+movw %A, %S
+leaw $SP, %A
+movw %S, (%A)
 ; 12 - PUSH temp 1
 leaw $1, %A
 movw %A, %S
@@ -196,20 +202,7 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 13 - PUSH temp 1
-leaw $1, %A
-movw %A, %S
-leaw $5 ,%A
-addw %S, %A, %A
-movw (%A), %S
-leaw $SP, %A
-movw (%A), %A
-movw %S, (%A)
-incw %A
-movw %A, %S
-leaw $SP, %A
-movw %S, (%A)
-; 14 - ADD
+; 13 - ADD
 leaw $SP,%A
 movw (%A),%S
 movw %S,%A
@@ -222,7 +215,7 @@ incw %A
 movw %A,%D
 leaw $SP,%A
 movw %D,(%A)
-; 15 - POP temp 1
+; 14 - POP temp 1
 leaw $SP, %A
 movw (%A), %A
 decw %A

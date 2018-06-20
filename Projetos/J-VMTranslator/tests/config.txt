@@ -6,12 +6,12 @@
 #  - push/pop
 #  - parser
 #--------------------
-SimpleAdd 1 200
-SimpleNeg 1 200
-SimpleSub 1 200
-SimpleEq 3 200
-SimpleGt 3 200
-SimpleLt 3 200
+#SimpleAdd 1 200
+#SimpleNeg 1 200
+#SimpleSub 1 200
+#SimpleEq 3 200
+#SimpleGt 3 200
+#SimpleLt 3 200
 SimpleAnd 1 200
 SimpleOr 1 200
 #SimplePushConst 1 200

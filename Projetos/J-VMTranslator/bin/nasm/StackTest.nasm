@@ -24,47 +24,40 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 2 - EQ
 leaw $SP,%A
-movw (%A),%S
-movw %S,%A
+movw (%A),%A
 decw %A
 movw (%A),%S
 decw %A
-subw (%A),%S,%D
-leaw $592XQIH9KB7NENLRLC, %A
-je %D
+movw (%A),%A
+subw %S, %A, %S
+leaw $lblf79686a843f1c2f768a0,%A
+je %S
 nop
-incw %A
-movw %A, %D
 leaw $0,%A
-movw %A, %S
-leaw $SP,%A
-movw (%A),%A
-decw %A
-decw %A
-movw %S,(%A)
-incw %A
-leaw $SP,%A
-movw %D,(%A)
-leaw $ XB4JUOS3DMG5LHWU3E, %A
-jmp 
+movw %A,%D
+leaw $lblb0a8b6b5d82d8bd863f6,%A
+jmp
 nop
-592XQIH9KB7NENLRLC
-incw %A
-movw %A, %D
-leaw $-1,%A
-movw %A, %S
+lblf79686a843f1c2f768a0:
+leaw $1,%A
+negw %A
+movw %A,%D
+leaw $lblb0a8b6b5d82d8bd863f6,%A
+jmp
+nop
+lblb0a8b6b5d82d8bd863f6:
 leaw $SP,%A
 movw (%A),%A
 decw %A
 decw %A
-movw %S,(%A)
-incw %A
+movw %D,(%A)
+leaw $SP,%A
+movw (%A), %D
+decw %D
 leaw $SP,%A
 movw %D,(%A)
-XB4JUOS3DMG5LHWU3E
-; 3 - PUSH constant 17
+; 2 - PUSH constant 17
 leaw $17, %A
 movw %A, %S
 leaw $SP, %A
@@ -77,6 +70,52 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
+; 3 - PUSH constant 16
+leaw $16, %A
+movw %A, %S
+leaw $SP, %A
+movw (%A), %D
+movw %D, %A
+movw %S, (%A)
+leaw $SP, %A
+movw (%A), %A
+incw %A
+movw %A, %S
+leaw $SP, %A
+movw %S, (%A)
+leaw $SP,%A
+movw (%A),%A
+decw %A
+movw (%A),%S
+decw %A
+movw (%A),%A
+subw %S, %A, %S
+leaw $lbl9293a739aace3dee082c,%A
+je %S
+nop
+leaw $0,%A
+movw %A,%D
+leaw $lbl5b07707946ca5e70943d,%A
+jmp
+nop
+lbl9293a739aace3dee082c:
+leaw $1,%A
+negw %A
+movw %A,%D
+leaw $lbl5b07707946ca5e70943d,%A
+jmp
+nop
+lbl5b07707946ca5e70943d:
+leaw $SP,%A
+movw (%A),%A
+decw %A
+decw %A
+movw %D,(%A)
+leaw $SP,%A
+movw (%A), %D
+decw %D
+leaw $SP,%A
+movw %D,(%A)
 ; 4 - PUSH constant 16
 leaw $16, %A
 movw %A, %S
@@ -90,60 +129,7 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 5 - EQ
-leaw $SP,%A
-movw (%A),%S
-movw %S,%A
-decw %A
-movw (%A),%S
-decw %A
-subw (%A),%S,%D
-leaw $2U9DWFHHS7BF3AY1LT, %A
-je %D
-nop
-incw %A
-movw %A, %D
-leaw $0,%A
-movw %A, %S
-leaw $SP,%A
-movw (%A),%A
-decw %A
-decw %A
-movw %S,(%A)
-incw %A
-leaw $SP,%A
-movw %D,(%A)
-leaw $ IWWGUDHV7BQOQLE3AD, %A
-jmp 
-nop
-2U9DWFHHS7BF3AY1LT
-incw %A
-movw %A, %D
-leaw $-1,%A
-movw %A, %S
-leaw $SP,%A
-movw (%A),%A
-decw %A
-decw %A
-movw %S,(%A)
-incw %A
-leaw $SP,%A
-movw %D,(%A)
-IWWGUDHV7BQOQLE3AD
-; 6 - PUSH constant 16
-leaw $16, %A
-movw %A, %S
-leaw $SP, %A
-movw (%A), %D
-movw %D, %A
-movw %S, (%A)
-leaw $SP, %A
-movw (%A), %A
-incw %A
-movw %A, %S
-leaw $SP, %A
-movw %S, (%A)
-; 7 - PUSH constant 17
+; 5 - PUSH constant 17
 leaw $17, %A
 movw %A, %S
 leaw $SP, %A
@@ -156,47 +142,40 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 8 - EQ
 leaw $SP,%A
-movw (%A),%S
-movw %S,%A
+movw (%A),%A
 decw %A
 movw (%A),%S
 decw %A
-subw (%A),%S,%D
-leaw $FJ6F2V9W5JXPNJHRHI, %A
-je %D
+movw (%A),%A
+subw %S, %A, %S
+leaw $lbl59cfaba4fe6dda9add1f,%A
+je %S
 nop
-incw %A
-movw %A, %D
 leaw $0,%A
-movw %A, %S
-leaw $SP,%A
-movw (%A),%A
-decw %A
-decw %A
-movw %S,(%A)
-incw %A
-leaw $SP,%A
-movw %D,(%A)
-leaw $ 3N0JIU4DFR89DN83FS, %A
-jmp 
+movw %A,%D
+leaw $lbl8f7487f47c7b3bfd9bc,%A
+jmp
 nop
-FJ6F2V9W5JXPNJHRHI
-incw %A
-movw %A, %D
-leaw $-1,%A
-movw %A, %S
+lbl59cfaba4fe6dda9add1f:
+leaw $1,%A
+negw %A
+movw %A,%D
+leaw $lbl8f7487f47c7b3bfd9bc,%A
+jmp
+nop
+lbl8f7487f47c7b3bfd9bc:
 leaw $SP,%A
 movw (%A),%A
 decw %A
 decw %A
-movw %S,(%A)
-incw %A
+movw %D,(%A)
+leaw $SP,%A
+movw (%A), %D
+decw %D
 leaw $SP,%A
 movw %D,(%A)
-3N0JIU4DFR89DN83FS
-; 9 - PUSH constant 892
+; 6 - PUSH constant 892
 leaw $892, %A
 movw %A, %S
 leaw $SP, %A
@@ -209,8 +188,68 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 10 - PUSH constant 891
+; 7 - PUSH constant 891
 leaw $891, %A
+movw %A, %S
+leaw $SP, %A
+movw (%A), %D
+movw %D, %A
+movw %S, (%A)
+leaw $SP, %A
+movw (%A), %A
+incw %A
+movw %A, %S
+leaw $SP, %A
+movw %S, (%A)
+; 8 - LT
+leaw $SP,%A
+movw (%A),%A
+decw %A
+movw (%A),%S
+decw %A
+movw (%A),%A
+subw %A, %S, %S
+leaw $lbleaac4974dac7919ce6a4,%A
+jl %S
+nop
+leaw $0,%A
+movw %A,%D
+leaw $lbldb8395d783f69760bfcd,%A
+jmp
+nop
+lbleaac4974dac7919ce6a4:
+leaw $1,%A
+negw %A
+movw %A,%D
+leaw $lbldb8395d783f69760bfcd,%A
+jmp
+nop
+lbldb8395d783f69760bfcd:
+leaw $SP,%A
+movw (%A),%A
+decw %A
+decw %A
+movw %D,(%A)
+leaw $SP,%A
+movw (%A), %D
+decw %D
+leaw $SP,%A
+movw %D,(%A)
+; 9 - PUSH constant 891
+leaw $891, %A
+movw %A, %S
+leaw $SP, %A
+movw (%A), %D
+movw %D, %A
+movw %S, (%A)
+leaw $SP, %A
+movw (%A), %A
+incw %A
+movw %A, %S
+leaw $SP, %A
+movw %S, (%A)
+; 10 - PUSH constant 892
+leaw $892, %A
 movw %A, %S
 leaw $SP, %A
 movw (%A), %D
@@ -224,43 +263,38 @@ leaw $SP, %A
 movw %S, (%A)
 ; 11 - LT
 leaw $SP,%A
-movw (%A),%S
-movw %S,%A
+movw (%A),%A
+decw %A
 movw (%A),%S
 decw %A
-subw (%A),%S,%D
-leaw $Z3Y5ZYV8IOXEK4435G, %A
-jl %D
+movw (%A),%A
+subw %A, %S, %S
+leaw $lbl9e9252d120ec23902828,%A
+jl %S
 nop
-incw %A
-movw %A, %D
 leaw $0,%A
-movw %A, %S
-leaw $SP,%A
-movw (%A),%A
-decw %A
-decw %A
-movw %S,(%A)
-incw %A
-leaw $SP,%A
-movw %D,(%A)
-leaw $FC4QUCPUY9FDJJR3SX, %A
-jmp 
+movw %A,%D
+leaw $lbl83fbc553e4ee83055cc9,%A
+jmp
 nop
-Z3Y5ZYV8IOXEK4435G
-incw %A
-movw %A, %D
-leaw $-1,%A
-movw %A, %S
+lbl9e9252d120ec23902828:
+leaw $1,%A
+negw %A
+movw %A,%D
+leaw $lbl83fbc553e4ee83055cc9,%A
+jmp
+nop
+lbl83fbc553e4ee83055cc9:
 leaw $SP,%A
 movw (%A),%A
 decw %A
 decw %A
-movw %S,(%A)
-incw %A
+movw %D,(%A)
+leaw $SP,%A
+movw (%A), %D
+decw %D
 leaw $SP,%A
 movw %D,(%A)
-FC4QUCPUY9FDJJR3SX
 ; 12 - PUSH constant 891
 leaw $891, %A
 movw %A, %S
@@ -274,8 +308,8 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 13 - PUSH constant 892
-leaw $892, %A
+; 13 - PUSH constant 891
+leaw $891, %A
 movw %A, %S
 leaw $SP, %A
 movw (%A), %D
@@ -289,109 +323,39 @@ leaw $SP, %A
 movw %S, (%A)
 ; 14 - LT
 leaw $SP,%A
-movw (%A),%S
-movw %S,%A
+movw (%A),%A
+decw %A
 movw (%A),%S
 decw %A
-subw (%A),%S,%D
-leaw $ROJODE41ZP80F8VOAL, %A
-jl %D
+movw (%A),%A
+subw %A, %S, %S
+leaw $lbl8735197f34aedd4e68c4,%A
+jl %S
 nop
-incw %A
-movw %A, %D
 leaw $0,%A
-movw %A, %S
-leaw $SP,%A
-movw (%A),%A
-decw %A
-decw %A
-movw %S,(%A)
-incw %A
-leaw $SP,%A
-movw %D,(%A)
-leaw $8VYL0OVLX4EMIL17F1, %A
-jmp 
+movw %A,%D
+leaw $lbl53d8efd9c9918779c701,%A
+jmp
 nop
-ROJODE41ZP80F8VOAL
-incw %A
-movw %A, %D
-leaw $-1,%A
-movw %A, %S
+lbl8735197f34aedd4e68c4:
+leaw $1,%A
+negw %A
+movw %A,%D
+leaw $lbl53d8efd9c9918779c701,%A
+jmp
+nop
+lbl53d8efd9c9918779c701:
 leaw $SP,%A
 movw (%A),%A
 decw %A
 decw %A
-movw %S,(%A)
-incw %A
-leaw $SP,%A
 movw %D,(%A)
-8VYL0OVLX4EMIL17F1
-; 15 - PUSH constant 891
-leaw $891, %A
-movw %A, %S
-leaw $SP, %A
+leaw $SP,%A
 movw (%A), %D
-movw %D, %A
-movw %S, (%A)
-leaw $SP, %A
-movw (%A), %A
-incw %A
-movw %A, %S
-leaw $SP, %A
-movw %S, (%A)
-; 16 - PUSH constant 891
-leaw $891, %A
-movw %A, %S
-leaw $SP, %A
-movw (%A), %D
-movw %D, %A
-movw %S, (%A)
-leaw $SP, %A
-movw (%A), %A
-incw %A
-movw %A, %S
-leaw $SP, %A
-movw %S, (%A)
-; 17 - LT
-leaw $SP,%A
-movw (%A),%S
-movw %S,%A
-movw (%A),%S
-decw %A
-subw (%A),%S,%D
-leaw $9UURWFL7O1KGU3GK78, %A
-jl %D
-nop
-incw %A
-movw %A, %D
-leaw $0,%A
-movw %A, %S
-leaw $SP,%A
-movw (%A),%A
-decw %A
-decw %A
-movw %S,(%A)
-incw %A
+decw %D
 leaw $SP,%A
 movw %D,(%A)
-leaw $CNT3AJEOELNMDLQIH2, %A
-jmp 
-nop
-9UURWFL7O1KGU3GK78
-incw %A
-movw %A, %D
-leaw $-1,%A
-movw %A, %S
-leaw $SP,%A
-movw (%A),%A
-decw %A
-decw %A
-movw %S,(%A)
-incw %A
-leaw $SP,%A
-movw %D,(%A)
-CNT3AJEOELNMDLQIH2
-; 18 - PUSH constant 32767
+; 15 - PUSH constant 32767
 leaw $32767, %A
 movw %A, %S
 leaw $SP, %A
@@ -404,8 +368,68 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 19 - PUSH constant 32766
+; 16 - PUSH constant 32766
 leaw $32766, %A
+movw %A, %S
+leaw $SP, %A
+movw (%A), %D
+movw %D, %A
+movw %S, (%A)
+leaw $SP, %A
+movw (%A), %A
+incw %A
+movw %A, %S
+leaw $SP, %A
+movw %S, (%A)
+; 17 - GT
+leaw $SP,%A
+movw (%A),%A
+decw %A
+movw (%A),%S
+decw %A
+movw (%A),%A
+subw %A, %S, %S
+leaw $lbl74e3e406e496cde3ecb7,%A
+jg %S
+nop
+leaw $0,%A
+movw %A,%D
+leaw $lbl19baa386a24535e4537d,%A
+jmp
+nop
+lbl74e3e406e496cde3ecb7:
+leaw $1,%A
+negw %A
+movw %A,%D
+leaw $lbl19baa386a24535e4537d,%A
+jmp
+nop
+lbl19baa386a24535e4537d:
+leaw $SP,%A
+movw (%A),%A
+decw %A
+decw %A
+movw %D,(%A)
+leaw $SP,%A
+movw (%A), %D
+decw %D
+leaw $SP,%A
+movw %D,(%A)
+; 18 - PUSH constant 32766
+leaw $32766, %A
+movw %A, %S
+leaw $SP, %A
+movw (%A), %D
+movw %D, %A
+movw %S, (%A)
+leaw $SP, %A
+movw (%A), %A
+incw %A
+movw %A, %S
+leaw $SP, %A
+movw %S, (%A)
+; 19 - PUSH constant 32767
+leaw $32767, %A
 movw %A, %S
 leaw $SP, %A
 movw (%A), %D
@@ -419,43 +443,38 @@ leaw $SP, %A
 movw %S, (%A)
 ; 20 - GT
 leaw $SP,%A
-movw (%A),%S
-movw %S,%A
+movw (%A),%A
+decw %A
 movw (%A),%S
 decw %A
-subw (%A),%S,%D
-leaw $5Y643JO6OBA2H88PSD, %A
-jg %D
+movw (%A),%A
+subw %A, %S, %S
+leaw $lblfa120e4e6fb67e34d88b,%A
+jg %S
 nop
-incw %A
-movw %A, %D
 leaw $0,%A
-movw %A, %S
-leaw $SP,%A
-movw (%A),%A
-decw %A
-decw %A
-movw %S,(%A)
-incw %A
-leaw $SP,%A
-movw %D,(%A)
-leaw $B3R7TZHEC0ZLXHMM3N, %A
-jmp 
+movw %A,%D
+leaw $lblc37c9104406e2e9e9085,%A
+jmp
 nop
-5Y643JO6OBA2H88PSD
-incw %A
-movw %A, %D
-leaw $-1,%A
-movw %A, %S
+lblfa120e4e6fb67e34d88b:
+leaw $1,%A
+negw %A
+movw %A,%D
+leaw $lblc37c9104406e2e9e9085,%A
+jmp
+nop
+lblc37c9104406e2e9e9085:
 leaw $SP,%A
 movw (%A),%A
 decw %A
 decw %A
-movw %S,(%A)
-incw %A
+movw %D,(%A)
+leaw $SP,%A
+movw (%A), %D
+decw %D
 leaw $SP,%A
 movw %D,(%A)
-B3R7TZHEC0ZLXHMM3N
 ; 21 - PUSH constant 32766
 leaw $32766, %A
 movw %A, %S
@@ -469,8 +488,8 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 22 - PUSH constant 32767
-leaw $32767, %A
+; 22 - PUSH constant 32766
+leaw $32766, %A
 movw %A, %S
 leaw $SP, %A
 movw (%A), %D
@@ -484,109 +503,39 @@ leaw $SP, %A
 movw %S, (%A)
 ; 23 - GT
 leaw $SP,%A
-movw (%A),%S
-movw %S,%A
+movw (%A),%A
+decw %A
 movw (%A),%S
 decw %A
-subw (%A),%S,%D
-leaw $UK3FGPLFXXGRBVTPAS, %A
-jg %D
+movw (%A),%A
+subw %A, %S, %S
+leaw $lbl3f3ec9433e8122320cff,%A
+jg %S
 nop
-incw %A
-movw %A, %D
 leaw $0,%A
-movw %A, %S
-leaw $SP,%A
-movw (%A),%A
-decw %A
-decw %A
-movw %S,(%A)
-incw %A
-leaw $SP,%A
-movw %D,(%A)
-leaw $YQKRGHGXOSYSSQRJ55, %A
-jmp 
+movw %A,%D
+leaw $lbl2eb7b83bd93393c5cbca,%A
+jmp
 nop
-UK3FGPLFXXGRBVTPAS
-incw %A
-movw %A, %D
-leaw $-1,%A
-movw %A, %S
+lbl3f3ec9433e8122320cff:
+leaw $1,%A
+negw %A
+movw %A,%D
+leaw $lbl2eb7b83bd93393c5cbca,%A
+jmp
+nop
+lbl2eb7b83bd93393c5cbca:
 leaw $SP,%A
 movw (%A),%A
 decw %A
 decw %A
-movw %S,(%A)
-incw %A
-leaw $SP,%A
 movw %D,(%A)
-YQKRGHGXOSYSSQRJ55
-; 24 - PUSH constant 32766
-leaw $32766, %A
-movw %A, %S
-leaw $SP, %A
+leaw $SP,%A
 movw (%A), %D
-movw %D, %A
-movw %S, (%A)
-leaw $SP, %A
-movw (%A), %A
-incw %A
-movw %A, %S
-leaw $SP, %A
-movw %S, (%A)
-; 25 - PUSH constant 32766
-leaw $32766, %A
-movw %A, %S
-leaw $SP, %A
-movw (%A), %D
-movw %D, %A
-movw %S, (%A)
-leaw $SP, %A
-movw (%A), %A
-incw %A
-movw %A, %S
-leaw $SP, %A
-movw %S, (%A)
-; 26 - GT
-leaw $SP,%A
-movw (%A),%S
-movw %S,%A
-movw (%A),%S
-decw %A
-subw (%A),%S,%D
-leaw $181Q71D1VX3K577ZCV, %A
-jg %D
-nop
-incw %A
-movw %A, %D
-leaw $0,%A
-movw %A, %S
-leaw $SP,%A
-movw (%A),%A
-decw %A
-decw %A
-movw %S,(%A)
-incw %A
+decw %D
 leaw $SP,%A
 movw %D,(%A)
-leaw $YX9L42JEYKSSCQ8G0Q, %A
-jmp 
-nop
-181Q71D1VX3K577ZCV
-incw %A
-movw %A, %D
-leaw $-1,%A
-movw %A, %S
-leaw $SP,%A
-movw (%A),%A
-decw %A
-decw %A
-movw %S,(%A)
-incw %A
-leaw $SP,%A
-movw %D,(%A)
-YX9L42JEYKSSCQ8G0Q
-; 27 - PUSH constant 57
+; 24 - PUSH constant 57
 leaw $57, %A
 movw %A, %S
 leaw $SP, %A
@@ -599,7 +548,7 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 28 - PUSH constant 31
+; 25 - PUSH constant 31
 leaw $31, %A
 movw %A, %S
 leaw $SP, %A
@@ -612,7 +561,7 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 29 - PUSH constant 53
+; 26 - PUSH constant 53
 leaw $53, %A
 movw %A, %S
 leaw $SP, %A
@@ -625,7 +574,7 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 30 - ADD
+; 27 - ADD
 leaw $SP,%A
 movw (%A),%S
 movw %S,%A
@@ -638,7 +587,7 @@ incw %A
 movw %A,%D
 leaw $SP,%A
 movw %D,(%A)
-; 31 - PUSH constant 112
+; 28 - PUSH constant 112
 leaw $112, %A
 movw %A, %S
 leaw $SP, %A
@@ -651,7 +600,7 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 32 - SUB
+; 29 - SUB
 leaw $SP,%A
 movw (%A),%S
 movw %S,%A
@@ -664,25 +613,27 @@ incw %A
 movw %A, %D
 leaw $SP,%A
 movw %D, (%A)
-; 33 - NEG
+; 30 - NEG
 leaw $SP,%A
 movw (%A),%A
 decw %A
 movw (%A),%S
 negw %S
 movw %S, (%A)
-; 34 - AND
-leaw $SP,%A
-movw (%A),%S
-movw %S,%A
-movw (%A),%S
+; 31 - AND
+leaw $SP, %A
+movw (%A), %A
 decw %A
-andw (%A),%S,%D
-movw %A,%S
-incw %S
+movw (%A), %S
+decw %A
+andw %S, (%A), %D
+movw %D, (%A)
 leaw $SP,%A
-movw %S,(%A)
-; 35 - PUSH constant 82
+movw (%A), %D
+decw %D
+leaw $SP,%A
+movw %D,(%A)
+; 32 - PUSH constant 82
 leaw $82, %A
 movw %A, %S
 leaw $SP, %A
@@ -695,18 +646,20 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 36 - OR
-leaw $SP,%A
-movw (%A),%S
-movw %S,%A
-movw (%A),%S
+; 33 - OR
+leaw $SP, %A
+movw (%A), %A
+decw %A
+movw (%A), %S
 decw %A
 orw (%A),%S,%D
-movw %A, %S
-incw %S
+movw %D, (%A)
 leaw $SP,%A
-movw %S,(%A)
-; 37 - NOT
+movw (%A), %D
+decw %D
+leaw $SP,%A
+movw %D,(%A)
+; 34 - NOT
 leaw $SP, %A
 movw (%A), %S
 decw %S

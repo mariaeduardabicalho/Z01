@@ -37,47 +37,40 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 3 - EQ
 leaw $SP,%A
-movw (%A),%S
-movw %S,%A
+movw (%A),%A
 decw %A
 movw (%A),%S
 decw %A
-subw (%A),%S,%D
-leaw $IJM1W3YNCOFPZXV85P, %A
-je %D
+movw (%A),%A
+subw %S, %A, %S
+leaw $lbl9fa7f29085a6186a7e9,%A
+je %S
 nop
-incw %A
-movw %A, %D
 leaw $0,%A
-movw %A, %S
-leaw $SP,%A
-movw (%A),%A
-decw %A
-decw %A
-movw %S,(%A)
-incw %A
-leaw $SP,%A
-movw %D,(%A)
-leaw $ Y9RH4146V7FOPQ76S9, %A
-jmp 
+movw %A,%D
+leaw $lbl6016c5a0e6f7466c6909,%A
+jmp
 nop
-IJM1W3YNCOFPZXV85P
-incw %A
-movw %A, %D
-leaw $-1,%A
-movw %A, %S
+lbl9fa7f29085a6186a7e9:
+leaw $1,%A
+negw %A
+movw %A,%D
+leaw $lbl6016c5a0e6f7466c6909,%A
+jmp
+nop
+lbl6016c5a0e6f7466c6909:
 leaw $SP,%A
 movw (%A),%A
 decw %A
 decw %A
-movw %S,(%A)
-incw %A
+movw %D,(%A)
+leaw $SP,%A
+movw (%A), %D
+decw %D
 leaw $SP,%A
 movw %D,(%A)
-Y9RH4146V7FOPQ76S9
-; 5 - PUSH constant 3
+; 4 - PUSH constant 3
 leaw $3, %A
 movw %A, %S
 leaw $SP, %A
@@ -90,7 +83,7 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 6 - POP temp 0
+; 5 - POP temp 0
 leaw $SP, %A
 movw (%A), %A
 decw %A
@@ -108,7 +101,7 @@ decw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 7 - PUSH constant 15
+; 6 - PUSH constant 15
 leaw $15, %A
 movw %A, %S
 leaw $SP, %A
@@ -121,7 +114,7 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 8 - PUSH constant 9
+; 7 - PUSH constant 9
 leaw $9, %A
 movw %A, %S
 leaw $SP, %A
@@ -134,47 +127,40 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 9 - EQ
 leaw $SP,%A
-movw (%A),%S
-movw %S,%A
+movw (%A),%A
 decw %A
 movw (%A),%S
 decw %A
-subw (%A),%S,%D
-leaw $IE44V56HS91DDY30AT, %A
-je %D
+movw (%A),%A
+subw %S, %A, %S
+leaw $lbl5d0f2cf4db54daad3c83,%A
+je %S
 nop
-incw %A
-movw %A, %D
 leaw $0,%A
-movw %A, %S
-leaw $SP,%A
-movw (%A),%A
-decw %A
-decw %A
-movw %S,(%A)
-incw %A
-leaw $SP,%A
-movw %D,(%A)
-leaw $ 0F2Z51MXLB5VRJG34H, %A
-jmp 
+movw %A,%D
+leaw $lbl7fc24a748d2c08ac8832,%A
+jmp
 nop
-IE44V56HS91DDY30AT
-incw %A
-movw %A, %D
-leaw $-1,%A
-movw %A, %S
+lbl5d0f2cf4db54daad3c83:
+leaw $1,%A
+negw %A
+movw %A,%D
+leaw $lbl7fc24a748d2c08ac8832,%A
+jmp
+nop
+lbl7fc24a748d2c08ac8832:
 leaw $SP,%A
 movw (%A),%A
 decw %A
 decw %A
-movw %S,(%A)
-incw %A
+movw %D,(%A)
+leaw $SP,%A
+movw (%A), %D
+decw %D
 leaw $SP,%A
 movw %D,(%A)
-0F2Z51MXLB5VRJG34H
-; 11 - PUSH constant 2
+; 9 - PUSH constant 2
 leaw $2, %A
 movw %A, %S
 leaw $SP, %A
@@ -187,7 +173,7 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 12 - POP temp 1
+; 10 - POP temp 1
 leaw $SP, %A
 movw (%A), %A
 decw %A

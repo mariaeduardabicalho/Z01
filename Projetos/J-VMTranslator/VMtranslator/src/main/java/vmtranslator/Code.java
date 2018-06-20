@@ -12,6 +12,9 @@ package vmtranslator;
 import java.util.*;
 import java.io.*;
 import java.nio.file.*;
+import java.math.BigInteger;
+import java.security.SecureRandom;
+
 
 /**
  * Traduz da linguagem vm para códigos assembly.
@@ -35,26 +38,13 @@ public class Code {
      * Grava no arquivo de saida as instruções em Assembly para executar o comando aritmético.
      * @param  command comando aritmético a ser analisado.
      */
-    protected String getSaltString() {
-        String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-        StringBuilder salt = new StringBuilder();
-        Random rnd = new Random();
-        while (salt.length() < 18) { // length of the random string.
-            int index = (int) (rnd.nextFloat() * SALTCHARS.length());
-            salt.append(SALTCHARS.charAt(index));
-        }
-        String saltStr = salt.toString();
-        return saltStr;
-        
+    public String getRandomString(){
+        SecureRandom secureRandom = new SecureRandom();
+        byte[] token = new byte[10];
+        secureRandom.nextBytes(token);
+      	String randomString = new BigInteger(1, token).toString(16); 
+        return  "lbl" + randomString;
     }
-    
-    String eqlabelt = getSaltString();
-    String eqlabelf = getSaltString();
-    String gtlabelt = getSaltString();
-    String gtlabelf = getSaltString();
-    String ltlabelt = getSaltString();
-    String ltlabelf = getSaltString();
-    
     
     public void writeArithmetic(String command) {
 
@@ -127,134 +117,93 @@ public class Code {
             System.out.println("negacao realizada");
 
         } else if (command.equals("eq")) {
-            commands.add(String.format("; %d - EQ", lineCode++));
             
-            String eqlabelt = getSaltString();
-            String eqlabelf = getSaltString();
-            
-            // gurda a ram que o sp ta apontando em A e oq essa ram ESta guardando em S
-            commands.add("leaw $SP,%A");
-            commands.add("movw (%A),%S");
-            commands.add("movw %S,%A");
-            commands.add("decw %A");
-            commands.add("movw (%A),%S");
-            //guarda o que esta a cima da ram do sp em A 
-            commands.add("decw %A");
-            // Faz a subtracao
-            commands.add("subw (%A),%S,%D");
-            commands.add("leaw $"+eqlabelt+", %A");
-            // Vai para o if se o resultado da sub for igual a zero
-            commands.add("je %D");
+        	String randomstring1  = getRandomString();
+            String randomstring2 = getRandomString();
+            commands.add("leaw $SP,%A"); //passa o valor do stack pointer (0) para o reg A
+            commands.add("movw (%A),%A"); // move o endereco apontado pelo sp para o reg A
+            commands.add("decw %A"); // pega o endereco do ultimo valor da pilha no reg A
+            commands.add("movw (%A),%S"); // move o ultimo valor da pilha para o reg S 
+            commands.add("decw %A"); // pega o endereco do penultimo valor da pilha no reg A
+            commands.add("movw (%A),%A"); //move o penultimo valor da pilha para o reg S 
+            commands.add("subw %S, %A, %S"); // subtra o que esta no reg A do que esta no reg S  (compara)
+            commands.add("leaw $"+randomstring1+",%A"); //nome da label
+            commands.add("je %S"); //faz um jump se for 0, se os numeros forem iguais
             commands.add("nop");
-           
-            // se nao, adciona 0 na pilha
-            //coloca na ram depois que o SP aponta 
-            commands.add("incw %A");
-            commands.add("movw %A, %D");
-            commands.add("leaw $0,%A");
-            commands.add("movw %A, %S");
-          
-            commands.add("leaw $SP,%A");
-            commands.add("movw (%A),%A");
-            commands.add("decw %A");
-            commands.add("decw %A");
-            commands.add("movw %S,(%A)");
-            commands.add("incw %A");
+   
+            commands.add("leaw $0,%A"); //passa 0 para o reg A
+            commands.add("movw %A,%D"); //move o 0 para o reg D
+            commands.add("leaw $"+randomstring2+",%A");
+            commands.add("jmp"); //faz um jump
+            commands.add("nop"); //necessario
+            commands.add(randomstring1+":"); //comeco da label 1
+            commands.add("leaw $1,%A"); //passa 1 para o reg A
+            commands.add("negw %A"); //nega o 1
+            commands.add("movw %A,%D"); //move o 1 negado para o reg D
+            commands.add("leaw $"+randomstring2+",%A"); //label
+            commands.add("jmp"); //jump
+            commands.add("nop");
+            commands.add(randomstring2+":"); //comeco da label 2
+            //commands.add(randomstring); //comeco da label 2
+            commands.add("leaw $SP,%A"); //passa o sp para o reg A
+            commands.add("movw (%A),%A"); //move o endereco apontado pelo sp para o reg A
+            commands.add("decw %A"); //pega o endereco do ultimo valor da pilha no reg A
+            commands.add("decw %A"); // pega o endereco do penultimo valor da pilha no reg A
+            commands.add("movw %D,(%A)"); //move o que esta no D para a pilha (resultado da comapracao)
+            commands.add("leaw $SP,%A"); 
+            commands.add("movw (%A), %D");
+            commands.add("decw %D");
             commands.add("leaw $SP,%A");
             commands.add("movw %D,(%A)");
-            commands.add("leaw $ "+eqlabelf+", %A");
-            commands.add("jmp ");
-            commands.add("nop");
-            
-            
-            //cria o label 
-            commands.add(eqlabelt);
-            // se sim, adciona -1 na pilha
-            //coloca na ram depois que o SP aponta 
-           // e muda o SP para apontar para ela
-            commands.add("incw %A");
-            commands.add("movw %A, %D");
-            commands.add("leaw $-1,%A");
-            commands.add("movw %A, %S");
-          
-            commands.add("leaw $SP,%A");
-            commands.add("movw (%A),%A");
-            commands.add("decw %A");
-            commands.add("decw %A");
-            commands.add("movw %S,(%A)");
-            commands.add("incw %A");
-            commands.add("leaw $SP,%A");
-            commands.add("movw %D,(%A)");
-            
-            commands.add(eqlabelf);
-            
-            
-            System.out.println("eq realizado");
-            
+            //ajusta a posicao do stack pointer
+            System.out.println("eq feito com sucesso");
             
             
 
         } else if (command.equals("gt")) {
             commands.add(String.format("; %d - GT", lineCode++));
-            String gtlabelt = getSaltString();
-            String gtlabelf = getSaltString();
-         // gurda a ram que o sp ta apontando em A e oq essa ram ESta guardando em S
-            commands.add("leaw $SP,%A");
-            commands.add("movw (%A),%S");
-            commands.add("movw %S,%A");
-            commands.add("movw (%A),%S");
-            //guarda o que esta acima da ram do sp em A 
-            commands.add("decw %A");
-            // Faz a subtracao
-            commands.add("subw (%A),%S,%D");
-            commands.add("leaw $"+gtlabelt+", %A");
-            // Vai para o if se o resultado 
-            commands.add("jg %D");
-            commands.add("nop");
             
-         // se n, adciona 0 na pilha
-            //coloca na ram depois que o SP aponta 
-            commands.add("incw %A");
-            commands.add("movw %A, %D");
-            commands.add("leaw $0,%A");
-            commands.add("movw %A, %S");
-          
-            commands.add("leaw $SP,%A");
-            commands.add("movw (%A),%A");
-            commands.add("decw %A");
-            commands.add("decw %A");
-            commands.add("movw %S,(%A)");
-            commands.add("incw %A");
+        	String randomstring1  = getRandomString();
+            String randomstring2 = getRandomString();
+            System.out.println(randomstring1 +" "+randomstring2);
+            commands.add("leaw $SP,%A"); //passa o valor do stack pointer (0) para o reg A
+            commands.add("movw (%A),%A"); // move o endereco apontado pelo sp para o reg A
+            commands.add("decw %A"); // pega o endereco do ultimo valor da pilha no reg A
+            commands.add("movw (%A),%S"); // move o ultimo valor da pilha para o reg S 
+            commands.add("decw %A"); // pega o endereco do penultimo valor da pilha no reg A
+            commands.add("movw (%A),%A"); //move o penultimo valor da pilha para o reg S 
+            commands.add("subw %A, %S, %S"); // subtra o que esta no reg A do que esta no reg S  (compara)
+            commands.add("leaw $"+randomstring1+",%A"); //nome da label
+            commands.add("jg %S"); //faz um jump se for 0, se os numeros forem iguais
+            commands.add("nop");
+   
+            commands.add("leaw $0,%A"); //passa 0 para o reg A
+            commands.add("movw %A,%D"); //move o 0 para o reg D
+            commands.add("leaw $"+randomstring2+",%A");
+            commands.add("jmp"); //faz um jump
+            commands.add("nop"); //necessario
+            commands.add(randomstring1+":"); //comeco da label 1
+            commands.add("leaw $1,%A"); //passa 1 para o reg A
+            commands.add("negw %A"); //nega o 1
+            commands.add("movw %A,%D"); //move o 1 negado para o reg D
+            commands.add("leaw $"+randomstring2+",%A"); //label
+            commands.add("jmp"); //jump
+            commands.add("nop");
+            commands.add(randomstring2+":"); //comeco da label 2
+            //commands.add(randomstring); //comeco da label 2
+            commands.add("leaw $SP,%A"); //passa o sp para o reg A
+            commands.add("movw (%A),%A"); //move o endereco apontado pelo sp para o reg A
+            commands.add("decw %A"); //pega o endereco do ultimo valor da pilha no reg A
+            commands.add("decw %A"); // pega o endereco do penultimo valor da pilha no reg A
+            commands.add("movw %D,(%A)"); //move o que esta no D para a pilha (resultado da comapracao)
+            commands.add("leaw $SP,%A"); 
+            commands.add("movw (%A), %D");
+            commands.add("decw %D");
             commands.add("leaw $SP,%A");
             commands.add("movw %D,(%A)");
-            commands.add("leaw $"+gtlabelf+", %A");
-            commands.add("jmp ");
-            commands.add("nop");
-            
-            
-            //cria o label 
-            commands.add(gtlabelt);
-            // se sim, adciona 0 na pilha
-            //coloca na ram depois que o SP aponta 
-            commands.add("incw %A");
-            commands.add("movw %A, %D");
-            commands.add("leaw $-1,%A");
-            commands.add("movw %A, %S");
+            //ajusta a posicao do stack pointer
+            System.out.println("eq feito com sucesso");
           
-            commands.add("leaw $SP,%A");
-            commands.add("movw (%A),%A");
-            commands.add("decw %A");
-            commands.add("decw %A");
-            commands.add("movw %S,(%A)");
-            commands.add("incw %A");
-            commands.add("leaw $SP,%A");
-            commands.add("movw %D,(%A)");
-            
-            commands.add(gtlabelf);
-            
-            System.out.println("gt realizado");
-            
-            
             
             
             
@@ -263,82 +212,67 @@ public class Code {
         } else if (command.equals("lt")) {
             commands.add(String.format("; %d - LT", lineCode++));
             
-            String ltlabelt = getSaltString();
-            String ltlabelf = getSaltString();
-            
-         // gurda a ram que o sp ta apontando em A e oq essa ram ESta guardando em S
-            commands.add("leaw $SP,%A");
-            commands.add("movw (%A),%S");
-            commands.add("movw %S,%A");
-            commands.add("movw (%A),%S");
-            //guarda o que esta acima da ram do sp em A 
-            commands.add("decw %A");
-            // Faz a subtracao
-            commands.add("subw (%A),%S,%D");
-            commands.add("leaw $"+ltlabelt+", %A");
-            // Vai para o if se o resultado da sub for igual a zero
-            commands.add("jl %D");
+        	String randomstring1  = getRandomString();
+            String randomstring2 = getRandomString();
+            commands.add("leaw $SP,%A"); //passa o valor do stack pointer (0) para o reg A
+            commands.add("movw (%A),%A"); // move o endereco apontado pelo sp para o reg A
+            commands.add("decw %A"); // pega o endereco do ultimo valor da pilha no reg A
+            commands.add("movw (%A),%S"); // move o ultimo valor da pilha para o reg S 
+            commands.add("decw %A"); // pega o endereco do penultimo valor da pilha no reg A
+            commands.add("movw (%A),%A"); //move o penultimo valor da pilha para o reg S 
+            commands.add("subw %A, %S, %S"); // subtra o que esta no reg A do que esta no reg S  (compara)
+            commands.add("leaw $"+randomstring1+",%A"); //nome da label
+            commands.add("jl %S"); //faz um jump se for 0, se os numeros forem iguais
             commands.add("nop");
-            
-         // se n, adciona 0 na pilha
-            //coloca na ram depois que o SP aponta 
-            commands.add("incw %A");
-            commands.add("movw %A, %D");
-            commands.add("leaw $0,%A");
-            commands.add("movw %A, %S");
-          
-            commands.add("leaw $SP,%A");
-            commands.add("movw (%A),%A");
-            commands.add("decw %A");
-            commands.add("decw %A");
-            commands.add("movw %S,(%A)");
-            commands.add("incw %A");
+   
+            commands.add("leaw $0,%A"); //passa 0 para o reg A
+            commands.add("movw %A,%D"); //move o 0 para o reg D
+            commands.add("leaw $"+randomstring2+",%A");
+            commands.add("jmp"); //faz um jump
+            commands.add("nop"); //necessario
+            commands.add(randomstring1+":"); //comeco da label 1
+            commands.add("leaw $1,%A"); //passa 1 para o reg A
+            commands.add("negw %A"); //nega o 1
+            commands.add("movw %A,%D"); //move o 1 negado para o reg D
+            commands.add("leaw $"+randomstring2+",%A"); //label
+            commands.add("jmp"); //jump
+            commands.add("nop");
+            commands.add(randomstring2+":"); //comeco da label 2
+            //commands.add(randomstring); //comeco da label 2
+            commands.add("leaw $SP,%A"); //passa o sp para o reg A
+            commands.add("movw (%A),%A"); //move o endereco apontado pelo sp para o reg A
+            commands.add("decw %A"); //pega o endereco do ultimo valor da pilha no reg A
+            commands.add("decw %A"); // pega o endereco do penultimo valor da pilha no reg A
+            commands.add("movw %D,(%A)"); //move o que esta no D para a pilha (resultado da comapracao)
+            commands.add("leaw $SP,%A"); 
+            commands.add("movw (%A), %D");
+            commands.add("decw %D");
             commands.add("leaw $SP,%A");
             commands.add("movw %D,(%A)");
-            commands.add("leaw $"+ltlabelf+", %A");
-            commands.add("jmp ");
-            commands.add("nop");
-            
-            
-            //cria o label 
-            commands.add(ltlabelt);
-            // se sim, adciona 0 na pilha
-            //coloca na ram depois que o SP aponta 
-            commands.add("incw %A");
-            commands.add("movw %A, %D");
-            commands.add("leaw $-1,%A");
-            commands.add("movw %A, %S");
-          
-            commands.add("leaw $SP,%A");
-            commands.add("movw (%A),%A");
-            commands.add("decw %A");
-            commands.add("decw %A");
-            commands.add("movw %S,(%A)");
-            commands.add("incw %A");
-            commands.add("leaw $SP,%A");
-            commands.add("movw %D,(%A)");
-            
-            commands.add(ltlabelf);
-            
-            System.out.println("lt realizado");
+            //ajusta a posicao do stack pointer
+            System.out.println("eq feito com sucesso");
+         
 
         } else if (command.equals("and")) {
-            commands.add(String.format("; %d - AND", lineCode++));
+commands.add(String.format("; %d - AND", lineCode++));
             
             // gurda a ram que o sp ta apontando em A e oq essa ram ESta guardando em S
-            commands.add("leaw $SP,%A");
-            commands.add("movw (%A),%S");
-            commands.add("movw %S,%A");
-            commands.add("movw (%A),%S");
+            commands.add("leaw $SP, %A");
+            commands.add("movw (%A), %A");
+            commands.add("decw %A");
+            commands.add("movw (%A), %S");
             //guarda o que esta acima da ram do sp em A 
             commands.add("decw %A");
             // faz o and 
-            commands.add("andw (%A),%S,%D");
-            commands.add("movw %A,%S");
-            //passa a ram que a esta guardando para D para passar a ram para o SP
-            commands.add("incw %S");
+            commands.add("andw %S, (%A), %D");
+            commands.add("movw %D, (%A)");
+            
+
             commands.add("leaw $SP,%A");
-            commands.add("movw %S,(%A)");
+            commands.add("movw (%A), %D");
+            commands.add("decw %D"); 
+            commands.add("leaw $SP,%A");
+            commands.add("movw %D,(%A)"); 
             
             System.out.println("and  realizado");
             
@@ -349,21 +283,23 @@ public class Code {
             commands.add(String.format("; %d - OR", lineCode++));
             
 
-
-            // gurda a ram que o sp ta apontando em A e oq essa ram ESta guardando em S
-            commands.add("leaw $SP,%A");
-            commands.add("movw (%A),%S");
-            commands.add("movw %S,%A");
-            commands.add("movw (%A),%S");
+         // gurda a ram que o sp ta apontando em A e oq essa ram ESta guardando em S
+            commands.add("leaw $SP, %A");
+            commands.add("movw (%A), %A");
+            commands.add("decw %A");
+            commands.add("movw (%A), %S");
             //guarda o que esta acima da ram do sp em A 
             commands.add("decw %A");
             // faz o or 
             commands.add("orw (%A),%S,%D");
-            commands.add("movw %A, %S");
+            commands.add("movw %D, (%A)");
             //passa a ram que a esta guardando para D para passar a ram para o SP
-            commands.add("incw %S");
             commands.add("leaw $SP,%A");
-            commands.add("movw %S,(%A)");
+            commands.add("movw (%A), %D");
+            commands.add("decw %D"); 
+            commands.add("leaw $SP,%A");
+            commands.add("movw %D,(%A)");
+           
             
             System.out.println("or realizado");
             

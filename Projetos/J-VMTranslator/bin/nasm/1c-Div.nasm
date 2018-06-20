@@ -94,43 +94,38 @@ leaw $SP, %A
 movw %S, (%A)
 ; 7 - LT
 leaw $SP,%A
-movw (%A),%S
-movw %S,%A
+movw (%A),%A
+decw %A
 movw (%A),%S
 decw %A
-subw (%A),%S,%D
-leaw $Z5D8MEABI9CJZKOTZM, %A
-jl %D
+movw (%A),%A
+subw %A, %S, %S
+leaw $lbl723c80be2082b03a28ef,%A
+jl %S
 nop
-incw %A
-movw %A, %D
 leaw $0,%A
-movw %A, %S
-leaw $SP,%A
-movw (%A),%A
-decw %A
-decw %A
-movw %S,(%A)
-incw %A
-leaw $SP,%A
-movw %D,(%A)
-leaw $441F9EC1887YYZGDMT, %A
-jmp 
+movw %A,%D
+leaw $lblb6f18b06677b4ce87a26,%A
+jmp
 nop
-Z5D8MEABI9CJZKOTZM
-incw %A
-movw %A, %D
-leaw $-1,%A
-movw %A, %S
+lbl723c80be2082b03a28ef:
+leaw $1,%A
+negw %A
+movw %A,%D
+leaw $lblb6f18b06677b4ce87a26,%A
+jmp
+nop
+lblb6f18b06677b4ce87a26:
 leaw $SP,%A
 movw (%A),%A
 decw %A
 decw %A
-movw %S,(%A)
-incw %A
+movw %D,(%A)
+leaw $SP,%A
+movw (%A), %D
+decw %D
 leaw $SP,%A
 movw %D,(%A)
-441F9EC1887YYZGDMT
 ; 9 - PUSH local 0
 leaw $0, %A
 movw %A, %S

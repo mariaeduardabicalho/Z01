@@ -248,47 +248,40 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 20 - EQ
 leaw $SP,%A
-movw (%A),%S
-movw %S,%A
+movw (%A),%A
 decw %A
 movw (%A),%S
 decw %A
-subw (%A),%S,%D
-leaw $J4086K0EED1Y9CLNKA, %A
-je %D
+movw (%A),%A
+subw %S, %A, %S
+leaw $lbl8f2d4887b8f78fe25f62,%A
+je %S
 nop
-incw %A
-movw %A, %D
 leaw $0,%A
-movw %A, %S
-leaw $SP,%A
-movw (%A),%A
-decw %A
-decw %A
-movw %S,(%A)
-incw %A
-leaw $SP,%A
-movw %D,(%A)
-leaw $ 2RPRDLL0XT6BDLPNYQ, %A
-jmp 
+movw %A,%D
+leaw $lbl67cb3239d7539cfe27ed,%A
+jmp
 nop
-J4086K0EED1Y9CLNKA
-incw %A
-movw %A, %D
-leaw $-1,%A
-movw %A, %S
+lbl8f2d4887b8f78fe25f62:
+leaw $1,%A
+negw %A
+movw %A,%D
+leaw $lbl67cb3239d7539cfe27ed,%A
+jmp
+nop
+lbl67cb3239d7539cfe27ed:
 leaw $SP,%A
 movw (%A),%A
 decw %A
 decw %A
-movw %S,(%A)
-incw %A
+movw %D,(%A)
+leaw $SP,%A
+movw (%A), %D
+decw %D
 leaw $SP,%A
 movw %D,(%A)
-2RPRDLL0XT6BDLPNYQ
-; 22 - PUSH local 0
+; 21 - PUSH local 0
 leaw $0, %A
 movw %A, %S
 leaw $LCL, %A
@@ -303,7 +296,7 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 23 - PUSH argument 0
+; 22 - PUSH argument 0
 leaw $0, %A
 movw %A, %S
 leaw $ARG, %A
@@ -318,7 +311,7 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 24 - ADD
+; 23 - ADD
 leaw $SP,%A
 movw (%A),%S
 movw %S,%A
@@ -331,7 +324,7 @@ incw %A
 movw %A,%D
 leaw $SP,%A
 movw %D,(%A)
-; 25 - POP local 0
+; 24 - POP local 0
 leaw $SP, %A
 movw (%A), %A
 decw %A
@@ -347,7 +340,7 @@ decw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 26 - PUSH local 1
+; 25 - PUSH local 1
 leaw $1, %A
 movw %A, %S
 leaw $LCL, %A
@@ -362,7 +355,7 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 27 - PUSH constant 1
+; 26 - PUSH constant 1
 leaw $1, %A
 movw %A, %S
 leaw $SP, %A
@@ -375,7 +368,7 @@ incw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 28 - SUB
+; 27 - SUB
 leaw $SP,%A
 movw (%A),%S
 movw %S,%A
@@ -388,7 +381,7 @@ incw %A
 movw %A, %D
 leaw $SP,%A
 movw %D, (%A)
-; 29 - POP local 1
+; 28 - POP local 1
 leaw $SP, %A
 movw (%A), %A
 decw %A
@@ -404,7 +397,7 @@ decw %A
 movw %A, %S
 leaw $SP, %A
 movw %S, (%A)
-; 31 - PUSH local 0
+; 30 - PUSH local 0
 leaw $0, %A
 movw %A, %S
 leaw $LCL, %A
