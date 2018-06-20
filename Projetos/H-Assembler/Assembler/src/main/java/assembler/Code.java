@@ -80,8 +80,6 @@ public class Code {
      */
     public static String comp(String[] mnemnonic) {
     	StringBuilder codigoc = new StringBuilder("10000000");
-    	
-    	// adaptando para cada modulo e tendo as diferencas de  quando for zero e quando for jump
  
     	
     	int size = mnemnonic.length - 1;
